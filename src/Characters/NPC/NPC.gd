@@ -1,4 +1,4 @@
-class_name Player
+class_name NPC
 extends "res://src/Characters/Actor.gd"
 
 var node_to_interact: Pickable = null setget _set_node_to_interact
@@ -29,6 +29,8 @@ func change_zoom(out: bool = true) -> void:
 		AudioEvent.emit_signal('play_requested', 'UI', 'ZoomOut')
 	else:
 		AudioEvent.emit_signal('play_requested', 'UI', 'ZoomIn')
+
+	yield($Tween, 'tween_completed')
 
 func toggle_on_ground(body: Node2D, on: = false) -> void:
 	if not body.is_in_group('Floor'): return

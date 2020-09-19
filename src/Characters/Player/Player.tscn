@@ -34,19 +34,6 @@ dialog_color = Color( 0.54902, 0.247059, 0.364706, 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-limit_smoothed = true
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = true
-smoothing_speed = 3.0
-drag_margin_left = 0.1
-drag_margin_top = 0.1
-drag_margin_right = 0.1
-drag_margin_bottom = 0.1
-editor_draw_drag_margin = true
-
 [node name="StateMachine" type="Node2D" parent="."]
 script = ExtResource( 3 )
 

@@ -44,6 +44,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Inventory/Item.gd"
 }, {
+"base": "KinematicBody2D",
+"class": "NPC",
+"language": "GDScript",
+"path": "res://src/Characters/NPC/NPC.gd"
+}, {
 "base": "Area2D",
 "class": "Pickable",
 "language": "GDScript",
@@ -82,6 +87,7 @@ _global_script_class_icons={
 "Hud": "",
 "Inventory": "",
 "Item": "",
+"NPC": "",
 "Pickable": "",
 "Player": "",
 "State": "",
@@ -92,7 +98,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="PerroViejo2DGamesTemplateFTW"
+config/name="ElPajaroQuemamais"
 config/description="Plantilla para juegos 2D bien chimbitas"
 run/main_scene="res://src/Game/Game.tscn"
 boot_splash/bg_color=Color( 0.133333, 0.137255, 0.137255, 1 )
