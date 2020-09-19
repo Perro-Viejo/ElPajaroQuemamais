@@ -7,7 +7,7 @@ enum {IDLE, TRANSITION_IN, TRANSITION_OUT}
 onready var current_scene = null
 onready var current_scene_instance = $Levels.get_child($Levels.get_child_count() - 1)
 
-export var is_mouse_hidden = true
+export var is_mouse_hidden = false
 
 var next_scene
 var transition_state:int = IDLE

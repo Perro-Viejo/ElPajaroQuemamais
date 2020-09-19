@@ -3,7 +3,7 @@ extends Node2D
 export(String, FILE, "*.tscn") var next_scene: String
 export(String) var world_name = 'WORLD'
 
-onready var _player: Player = $WorldLayer/Player
+onready var _player: Player = $Player
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func _ready() -> void:

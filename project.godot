@@ -59,6 +59,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Characters/Player/Player.gd"
 }, {
+"base": "Node",
+"class": "Room",
+"language": "GDScript",
+"path": "res://src/Levels/Hacienda/Room.gd"
+}, {
 "base": "Node2D",
 "class": "State",
 "language": "GDScript",
@@ -90,6 +95,7 @@ _global_script_class_icons={
 "NPC": "",
 "Pickable": "",
 "Player": "",
+"Room": "",
 "State": "",
 "StateMachine": "",
 "Switch": "",

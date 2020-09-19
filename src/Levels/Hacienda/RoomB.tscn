@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/images/world/room_b.png" type="Texture" id=1]
+[ext_resource path="res://src/Levels/Hacienda/Room.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14.1235, 7.19851 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 4.17382, 2.82328 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 3.91025, 4.14112 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 11.0608, 2.2931 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 18.11, 5.88744 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 30.1015, 4.28905 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 45.2904, 4.20701 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 46.6742, 4.47058 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 2.98777, 3.94345 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 9.24751, 6.57914 )
+
+[node name="RoomB" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -35.7957 ]
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.596252, 0.130173 )
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -2.04266, 0.0658932 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -2.70157, -9.94969 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1.38374, 14.2986 )
+rotation = -0.730574
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 28.8607, 8.63186 )
+rotation = -1.56587
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 39.4034, 7.70937 )
+rotation = -4.70481
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -39.5352, 0.461249 )
+rotation = -1.58518
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.0658913, 28.663 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.131794, -30.5739 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 15.0234, 0.19768 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -19.3064, 0.065897 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -21.1513, -21.349 )
+shape = SubResource( 10 )

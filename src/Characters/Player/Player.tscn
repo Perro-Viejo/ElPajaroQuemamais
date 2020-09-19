@@ -4,7 +4,8 @@
 [ext_resource path="res://src/Characters/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://src/StateMachine/StateMachine.gd" type="Script" id=3]
 [ext_resource path="res://src/Characters/Player/States/Idle.gd" type="Script" id=4]
-[ext_resource path="res://assets/images/characters/outline.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/characters/quemamais.png" type="Texture" id=5]
+[ext_resource path="res://src/StateMachine/State.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.64699, 3.57263 )
@@ -17,19 +18,34 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CircleShape2D" id=3]
-radius = 3.06255
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 1, 0.5 )
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Left",
+"speed": 5.0
+} ]
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 5
 collision_mask = 4
 script = ExtResource( 2 )
 dialog_color = Color( 0.54902, 0.247059, 0.364706, 1 )
-
-[node name="Tween" type="Tween" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -44,20 +60,14 @@ script = ExtResource( 4 )
 frames = SubResource( 2 )
 animation = "Idle"
 
-[node name="PlayerArea" type="Area2D" parent="."]
-visible = false
-collision_mask = 0
+[node name="Move" type="Node2D" parent="StateMachine"]
+script = ExtResource( 6 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea"]
-shape = SubResource( 3 )
-
-[node name="FootArea" type="Area2D" parent="."]
-visible = false
-collision_mask = 16
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FootArea"]
-position = Vector2( 0.5, 4.12547 )
-shape = SubResource( 4 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Move"]
+rotation = -1.5708
+frames = SubResource( 3 )
+animation = "Right"
+flip_v = true
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource( 1 )

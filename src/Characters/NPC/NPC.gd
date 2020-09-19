@@ -13,10 +13,6 @@ var dir = Vector2(0, 0)
 onready var foot_area: Area2D = $FootArea
 
 func _ready() -> void:	
-	# Escuchar eventos de los hijos de satán
-	$FootArea.connect('body_entered', self, 'toggle_on_ground', [ true ])
-	$FootArea.connect('body_exited', self, 'toggle_on_ground')
-
 	# Conectarse a eventos del universo
 	DialogEvent.connect('line_triggered', self, '_should_speak')
 	PlayerEvent.connect('control_toggled', self, '_toggle_control')
