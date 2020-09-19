@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/World.gd" type="Script" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://src/Characters/NPC/AnaMaria.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Characters/NPC/Lupe.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Characters/NPC/Rico.tscn" type="PackedScene" id=8]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 285.747, 156.45, 285.479, 117.237, 288.813, 125.085, 304.804, 119.678, 340.583, 119.678, 331.264, 128.192, 304.344, 125.431, 287.893, 95.8642, 286.512, 92.643, 295.026, 91.6076, 358.185, 96.7846, 300.778, 130.032, 294.45, 144.758, 313.778, 156.262, 323.441, 148.554, 335.636, 157.643, 287.433, 56.9792, 340.928, 52.1474, 340.468, 57.4394, 304.574, 58.4748, 288.123, 75.6164, 293.185, 76.3067, 303.654, 84.3598, 337.247, 87.6961, 341.273, 87.6961, 357.495, 89.5368, 329.194, 141.997, 335.567, 134.165, 330.114, 129.227, 390.345, 68.3243, 467.069, 68.0926, 466.837, 159.419, 357.84, 164.431, 357.61, 124.625, 357.61, 115.537, 358.3, 38.5722, 390.345, 38.6547, 340.87, 127.415, 340.87, 132.237 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 3, 4, 5, 6 ), PoolIntArray( 7, 8, 9, 10 ), PoolIntArray( 6, 5, 11, 2 ), PoolIntArray( 0, 2, 11, 12 ), PoolIntArray( 13, 0, 12, 14 ), PoolIntArray( 15, 13, 14 ), PoolIntArray( 16, 17, 18, 19 ), PoolIntArray( 20, 16, 19, 21 ), PoolIntArray( 21, 19, 22, 9 ), PoolIntArray( 10, 9, 22, 23 ), PoolIntArray( 10, 23, 24, 25 ), PoolIntArray( 15, 14, 26 ), PoolIntArray( 27, 15, 26, 28 ), PoolIntArray( 29, 30, 31, 32, 33, 34, 10 ), PoolIntArray( 25, 35, 36, 29, 10 ), PoolIntArray( 37, 38, 27, 28 ), PoolIntArray( 37, 28, 34 ), PoolIntArray( 33, 37, 34 ) ]
+outlines = [ PoolVector2Array( 340.928, 52.1474, 340.468, 57.4394, 304.574, 58.4748, 303.654, 84.3598, 337.247, 87.6961, 341.273, 87.6961, 357.495, 89.5368, 358.3, 38.5722, 390.345, 38.6547, 390.345, 68.3243, 467.069, 68.0926, 466.837, 159.419, 357.84, 164.431, 357.61, 124.625, 340.87, 127.415, 340.87, 132.237, 335.567, 134.165, 335.636, 157.643, 313.778, 156.262, 285.747, 156.45, 285.479, 117.237, 288.813, 125.085, 304.344, 125.431, 304.804, 119.678, 340.583, 119.678, 331.264, 128.192, 300.778, 130.032, 294.45, 144.758, 323.441, 148.554, 329.194, 141.997, 330.114, 129.227, 357.61, 115.537, 358.185, 96.7846, 287.893, 95.8642, 286.512, 92.643, 295.026, 91.6076, 293.185, 76.3067, 288.123, 75.6164, 287.433, 56.9792 ) ]
 
 [node name="World" type="Node2D"]
 position = Vector2( -150.076, -1.8877 )
@@ -34,7 +39,7 @@ position = Vector2( 313.984, 136.56 )
 scale = Vector2( 0.813357, 0.847388 )
 
 [node name="Room" parent="." instance=ExtResource( 4 )]
-position = Vector2( 313.662, 72.8195 )
+position = Vector2( 313.777, 72.3594 )
 scale = Vector2( 0.813357, 0.847388 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -43,10 +48,27 @@ z_index = 1
 collision_mask = 0
 
 [node name="Rico" parent="." instance=ExtResource( 8 )]
-position = Vector2( 299.209, 86.627 )
+position = Vector2( 267.111, 83.4058 )
 
 [node name="Lupe" parent="." instance=ExtResource( 7 )]
-position = Vector2( 323.58, 151.054 )
+position = Vector2( 364.421, 157.037 )
 
 [node name="AnaMaria" parent="." instance=ExtResource( 6 )]
-position = Vector2( 322.8, 89.8066 )
+position = Vector2( 434.738, 86.8154 )
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+visible = false
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -1.49561, -2.55398 )
+navpoly = SubResource( 1 )
+
+[node name="StartPoint" type="Position2D" parent="."]
+position = Vector2( 339.035, 52 )
+
+[node name="EndPoint" type="Position2D" parent="."]
+position = Vector2( 330.016, 120.681 )
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 314.1, 81.5757 )
+width = 3.0

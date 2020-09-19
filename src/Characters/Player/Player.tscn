@@ -19,27 +19,7 @@ animations = [ {
 } ]
 
 [sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "Down",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "Right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "Up",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "Left",
-"speed": 5.0
-} ]
+animations = [  ]
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 5
@@ -57,6 +37,7 @@ script = ExtResource( 3 )
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Idle"]
+rotation = 1.5708
 frames = SubResource( 2 )
 animation = "Idle"
 

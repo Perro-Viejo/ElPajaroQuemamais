@@ -9,4 +9,8 @@ onready var _player: Player = $Player
 func _ready() -> void:
 	# Establecer valores por defecto
 	_player.show()
+
+	_player.path = $Navigation2D.get_simple_path($StartPoint.position, $EndPoint.position)
+	_player.position = _player.path[0]
+	$Line2D.points = _player.path
 	WorldEvent.emit_signal('world_entered')
