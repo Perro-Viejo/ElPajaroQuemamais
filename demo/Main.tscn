@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://demo/InteractionObjectGreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://demo/ExamplePlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/blocking_dialog_box/blocking_dialog_box.gd" type="Script" id=3]
+[ext_resource path="res://demo/background.png" type="Texture" id=4]
+[ext_resource path="res://demo/InteractionObjectRed.tscn" type="PackedScene" id=5]
+[ext_resource path="res://demo/InteractionObjectBlue.tscn" type="PackedScene" id=6]
+[ext_resource path="res://addons/blocking_dialog_box/blocking_input_box.gd" type="Script" id=7]
+[ext_resource path="res://demo/InteractionObjectYellow.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/blocking_dialog_box/blocking_list_selection.gd" type="Script" id=9]
+
+[node name="Main" type="Node"]
+
+[node name="BackgroundTexture" type="TextureRect" parent="."]
+margin_left = -120.665
+margin_top = -303.718
+margin_right = 423.335
+margin_bottom = 254.282
+mouse_filter = 2
+texture = ExtResource( 4 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 143.452, -33.1533 )
+
+[node name="ObjectGreen" parent="." instance=ExtResource( 1 )]
+position = Vector2( 76.0448, -31.9119 )
+
+[node name="ObjectRed" parent="." instance=ExtResource( 5 )]
+position = Vector2( 76.0448, 40 )
+
+[node name="ObjectBlue" parent="." instance=ExtResource( 6 )]
+position = Vector2( 76.1739, 109.528 )
+
+[node name="ObjectYellow" parent="." instance=ExtResource( 8 )]
+position = Vector2( 218.947, 43.3147 )
+
+[node name="BlockingDialogBox" type="CanvasLayer" parent="."]
+script = ExtResource( 3 )
+
+[node name="BlockingInputBox" type="CanvasLayer" parent="."]
+script = ExtResource( 7 )
+
+[node name="BlockingListSelection" type="CanvasLayer" parent="."]
+script = ExtResource( 9 )

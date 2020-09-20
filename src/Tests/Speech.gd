@@ -159,14 +159,19 @@ func _hide_and_emit() -> void:
 		emit_signal('fill_done')
 
 
+func _clear_and_continue(next: String) -> void:
+	clear()
+	yield(get_tree().create_timer(0.1), 'timeout')
+	self.rect_size = default_size
+	self.rect_position = default_position
+	set_text(next)
+
+
 func _on_gui_input(event: InputEvent) -> void:
 	var mouse_event: = event as InputEventMouseButton
 	if mouse_event and mouse_event.button_index == BUTTON_LEFT \
 		and mouse_event.pressed:
 			if not _test_texts.empty():
-				clear()
-				set_size(default_size)
-				set_position(default_position)
-				set_text(_test_texts.pop_front())
+				_clear_and_continue(_test_texts.pop_front())
 			else:
 				set_text('')
