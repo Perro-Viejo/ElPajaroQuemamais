@@ -1,3 +1,4 @@
+class_name Actor
 extends KinematicBody2D
 
 signal died()
@@ -8,6 +9,13 @@ export var dialog_name := ''
 # El spritesheet con las emociones del personaje para que se muestren en el
 # cuadro de diálogo
 export var expressions: Texture
+export var expressions_map := {
+	angry = -1,
+	excited = -1,
+	sad = -1,
+	thinking = -1,
+	worried = -1
+}
 
 var _in_dialog := false
 

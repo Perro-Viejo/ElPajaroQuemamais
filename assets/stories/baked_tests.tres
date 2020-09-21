@@ -20,7 +20,8 @@ story = {
 },
 "text": "{
 	\"actor\": \"Rico\",
-	\"line\": \"Oiga Lupe. ¿Quiere que se la chupe?\"
+	\"line\": \"Oiga Lupe. ¿Quiere que se la chupe?\",
+	\"emotion\": \"thinking\"
 }"
 },
 3: {
@@ -29,7 +30,8 @@ story = {
 },
 "text": "{
 	\"actor\": \"Lupe\",
-	\"line\": \"Pues sí pero pilas. Donde mi mamá nos vea se le une.\"
+	\"line\": \"Pues sí pero pilas. Donde Mamá Is nos vea se le pega al chupo.\",
+	\"emotion\": \"worried\"
 }"
 },
 4: {
@@ -37,8 +39,9 @@ story = {
 0: 5
 },
 "text": "{
-\"actor\": \"Ana María\",
-\"line\": \"¡No puede ser! Lupe le pega con la zurda...\"
+	\"actor\": \"Ana María\",
+	\"line\": \"¡No puede ser! Lupe le pega con la zurda...\",
+	\"emotion\": \"sad\"
 }"
 },
 5: {
@@ -46,11 +49,32 @@ story = {
 0: 6
 },
 "text": "{
-\"actor\": \"Ana María\",
-\"line\": \"Tanto estar rica pa' ni mierda\"
+	\"actor\": \"Ana María\",
+	\"line\": \"Tanto estar rica pa' ni mierda\",
+	\"emotion\": \"angry\"
 }"
 },
 6: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"line\": \"Qué se meta un palo la vieja esa\",
+	\"emotion\": \"angry\"
+}"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"line\": \"Ahora sí se me puso como para partir cocos\",
+	\"emotion\": \"excited\"
+}"
+},
+8: {
 "links": {
 
 },

@@ -17,6 +17,7 @@ margin_top = 28.857
 margin_bottom = 61.6699
 
 [sub_resource type="DynamicFont" id=2]
+size = 24
 font_data = ExtResource( 6 )
 
 [sub_resource type="CanvasItemMaterial" id=3]

@@ -34,7 +34,8 @@ story = {
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Rico\",
-	\"line\": \"Oiga Lupe. ¿Quiere que se la chupe?\"
+	\"line\": \"Oiga Lupe. ¿Quiere que se la chupe?\",
+	\"emotion\": \"thinking\"
 }",
 "type": "line"
 },
@@ -47,7 +48,8 @@ story = {
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Lupe\",
-	\"line\": \"Pues sí pero pilas. Donde mi mamá nos vea se le une.\"
+	\"line\": \"Pues sí pero pilas. Donde Mamá Is nos vea se le pega al chupo.\",
+	\"emotion\": \"worried\"
 }",
 "type": "line"
 },
@@ -59,8 +61,9 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "{
-\"actor\": \"Ana María\",
-\"line\": \"¡No puede ser! Lupe le pega con la zurda...\"
+	\"actor\": \"Ana María\",
+	\"line\": \"¡No puede ser! Lupe le pega con la zurda...\",
+	\"emotion\": \"sad\"
 }",
 "type": "line"
 },
@@ -72,13 +75,42 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "{
-\"actor\": \"Ana María\",
-\"line\": \"Tanto estar rica pa' ni mierda\"
+	\"actor\": \"Ana María\",
+	\"line\": \"Tanto estar rica pa' ni mierda\",
+	\"emotion\": \"angry\"
 }",
 "type": "line"
 },
 6: {
 "graph_offset": Vector2( 220, 840 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"line\": \"Qué se meta un palo la vieja esa\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 260, 1000 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"line\": \"Ahora sí se me puso como para partir cocos\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 300, 1160 ),
 "links": {
 
 },

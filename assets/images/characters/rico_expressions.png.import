@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rico_thinking.png-76755861f4d390ee12d7b2e0c9337266.stex"
+path="res://.import/rico_expressions.png-7cd245c1a658d0542c5ec10c7ecbf5c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/characters/rico_thinking.png"
-dest_files=[ "res://.import/rico_thinking.png-76755861f4d390ee12d7b2e0c9337266.stex" ]
+source_file="res://assets/images/characters/rico_expressions.png"
+dest_files=[ "res://.import/rico_expressions.png-7cd245c1a658d0542c5ec10c7ecbf5c7.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -20,6 +20,7 @@ var _selected_slot := -1
 var _current_options := ''
 # } ----
 var _is_listening_click := true
+var _current_emotion := ''
 
 onready var _story_reader: EXP_StoryReader = _story_reader_class.new()
 onready var _dialog_menu: DialogMenu = find_node('DialogMenu')
@@ -155,9 +156,9 @@ func _play_dialog_line() -> void:
 		line = tr(('dlg_%d_%d_%s' % [_did, _nid, actor]).to_upper())
 
 	# ----[ la emoción ]----------------------------------------------------------
-	var emotion := ''
+	_current_emotion = ''
 	if line_dic.has('emotion'):
-		emotion = line_dic.emotion as String
+		_current_emotion = line_dic.emotion as String
 
 	_wait = false
 	if line_dic.has('wait'):
@@ -229,7 +230,7 @@ func _play_dialog_line() -> void:
 			actor.to_lower(),
 			line,
 			time_to_disappear,
-			emotion
+			_current_emotion
 		)
 
 
@@ -258,7 +259,7 @@ func _on_character_spoke(
 	if message != '':
 		_current_character = character
 
-		_character_frame.set_position(_current_character)
+		_character_frame.set_character(_current_character, _current_emotion)
 		_autofill.set_text(message)
 		_autofill.set_disappear_time(time_to_disappear)
 		_autofill.show()

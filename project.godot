@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://src/Characters/Actor.gd"
+}, {
 "base": "Label",
 "class": "Autofill",
 "language": "GDScript",
@@ -105,6 +110,7 @@ _global_script_classes=[ {
 "path": "res://src/Objects/Switchable.gd"
 } ]
 _global_script_class_icons={
+"Actor": "",
 "Autofill": "",
 "BlockingDialogBox": "",
 "BlockingInputBox": "",
