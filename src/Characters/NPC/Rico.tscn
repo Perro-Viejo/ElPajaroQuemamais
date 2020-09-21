@@ -18,7 +18,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 3.42058, 3.60596 )
+extents = Vector2( 14.5039, 14 )
 
 [node name="Rico" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -30,8 +30,8 @@ script = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Idle"]
+scale = Vector2( 4, 4 )
 frames = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.496109, -0.465105 )
 shape = SubResource( 3 )

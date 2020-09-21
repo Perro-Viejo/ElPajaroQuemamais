@@ -2,7 +2,8 @@ extends KinematicBody2D
 
 signal died()
 
-export(Color) var dialog_color
+export var dialog_color: Color
+export var speed = 300
 
 var _in_dialog := false
 
@@ -11,7 +12,6 @@ onready var state_machine = $StateMachine
 
 var path : = PoolVector2Array()
 
-var speed = 300
 var velocity = Vector2.ZERO
 
 func _ready():

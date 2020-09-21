@@ -8,7 +8,7 @@
 [ext_resource path="res://src/StateMachine/State.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 3.64699, 3.57263 )
+extents = Vector2( 14.7206, 15.105 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -26,6 +26,7 @@ z_index = 5
 collision_mask = 4
 script = ExtResource( 2 )
 dialog_color = Color( 0.54902, 0.247059, 0.364706, 1 )
+speed = 600
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -38,6 +39,7 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Idle"]
 rotation = 1.5708
+scale = Vector2( 4, 4 )
 frames = SubResource( 2 )
 animation = "Idle"
 
@@ -47,7 +49,6 @@ script = ExtResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Move"]
 rotation = -1.5708
 frames = SubResource( 3 )
-animation = "Right"
 flip_v = true
 
 [node name="Inventory" type="Node" parent="."]
