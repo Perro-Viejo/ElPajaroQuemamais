@@ -27,6 +27,7 @@ collision_mask = 4
 script = ExtResource( 2 )
 dialog_color = Color( 0.54902, 0.247059, 0.364706, 1 )
 speed = 600
+dialog_name = "Quemamais"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

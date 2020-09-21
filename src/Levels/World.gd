@@ -14,3 +14,4 @@ func _ready() -> void:
 	_player.position = _player.path[0]
 	$Line2D.points = _player.path
 	WorldEvent.emit_signal('world_entered')
+	DialogEvent.emit_signal('dialog_requested', 'DialogTest')

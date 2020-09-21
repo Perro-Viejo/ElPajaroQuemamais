@@ -22,6 +22,7 @@ extents = Vector2( 15.1619, 19 )
 
 [node name="Lupe" type="KinematicBody2D"]
 script = ExtResource( 1 )
+dialog_name = "Lupe"
 
 [node name="StateMachine" type="Node2D" parent="."]
 script = ExtResource( 2 )

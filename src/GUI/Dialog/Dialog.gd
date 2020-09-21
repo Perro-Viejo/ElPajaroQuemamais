@@ -1,11 +1,13 @@
 class_name Dialog
 extends Control
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Variables ░░░░
+export var use_click_to_progress := false
+
 var _forced_update := false
 var _current_character: Node2D = null
 # Cosas del Godot Dialog System ---- {
 var _story_reader_class := load('res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd')
-var _stories_es = null
+var _stories_es = load('res://assets/stories/baked_tests.tres')
 var _did := 0
 var _nid := 0
 var _final_nid := 0
@@ -30,11 +32,13 @@ func _ready() -> void:
 
 	match TranslationServer.get_locale():
 		_:
-			#_story_reader.read(_stories_es)
+			_story_reader.read(_stories_es)
 			pass
 
-	# Conectarse a eventos de los retoños
+	# Conectarse a eventos de los retoños y de sí mismo
 	_autofill.connect('fill_done', self, '_autofill_completed')
+	if use_click_to_progress:
+		self.connect('gui_input', self,'_on_gui_input')
 
 	# Conectarse a eventos de la vida real
 	DialogEvent.connect('dialog_requested', self, '_play_dialog')
@@ -261,6 +265,14 @@ func _autofill_completed() -> void:
 		_continue_dialog(_selected_slot)
 	elif not _dialog_menu.visible:
 		_continue_dialog(_selected_slot)
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	var mouse_event: = event as InputEventMouseButton
+	if mouse_event and mouse_event.button_index == BUTTON_LEFT \
+		and mouse_event.pressed:
+			_autofill._hide()
+			_continue_dialog()
 
 
 func _finish_dialog() -> void:

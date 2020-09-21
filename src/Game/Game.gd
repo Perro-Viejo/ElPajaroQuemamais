@@ -28,6 +28,8 @@ func _ready()->void:
 
 	if is_mouse_hidden:
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	else:
+		$MouseBlocker/Control.mouse_filter = 2
 
 func on_options(options) -> void:
 	GUIManager.gui_collect_focusgroup()

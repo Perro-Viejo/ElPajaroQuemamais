@@ -1,0 +1,94 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_EditorStory/EXP_EditorStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Story_editor"
+names = {
+"DialogTest": 1
+}
+story = {
+1: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Diálogo de prueba entre Rico, Lupe y Ana María mientras Quemamais escucha.",
+"name": "DialogTest",
+"nodes": {
+1: {
+"graph_offset": Vector2( 20, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "start",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 60, 200 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"line\": \"Oiga Lupe. ¿Quiere que se la chupe?\"
+}",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 100, 360 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"line\": \"Pues sí pero pilas. Donde mi mamá nos vea se le une.\"
+}",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 140, 520 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+\"actor\": \"Ana María\",
+\"line\": \"¡No puede ser! Lupe le pega con la zurda...\"
+}",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 180, 680 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+\"actor\": \"Ana María\",
+\"line\": \"Tanto estar rica pa' ni mierda\"
+}",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 220, 840 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "end",
+"type": "line"
+}
+}
+}
+}
+available_dids = [  ]
+groups = [  ]

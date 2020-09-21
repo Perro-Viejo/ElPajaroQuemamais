@@ -7,11 +7,12 @@
 [node name="Dialog" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-mouse_filter = 2
+mouse_default_cursor_shape = 5
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+use_click_to_progress = true
 
 [node name="Autofill" parent="." instance=ExtResource( 1 )]
 

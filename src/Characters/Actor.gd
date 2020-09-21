@@ -3,7 +3,11 @@ extends KinematicBody2D
 signal died()
 
 export var dialog_color: Color
-export var speed = 300
+export var speed := 300
+export var dialog_name := ''
+# El spritesheet con las emociones del personaje para que se muestren en el
+# cuadro de diálogo
+export var expressions: Texture
 
 var _in_dialog := false
 
@@ -26,7 +30,7 @@ func spoke():
 		DialogEvent.emit_signal('dialog_continued')
 
 func _should_speak(character_name, text, time, emotion) -> void:
-	if name.to_lower() == character_name:
+	if dialog_name == character_name or  name.to_lower() == character_name:
 		speak(text, time)
 		AudioEvent.emit_signal('dx_requested' , character_name, emotion)
 		

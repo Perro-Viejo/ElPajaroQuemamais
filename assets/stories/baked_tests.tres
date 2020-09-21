@@ -1,0 +1,64 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_BakedStory/EXP_BakedStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Baked_Story"
+story = {
+1: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"line\": \"Oiga Lupe. ¿Quiere que se la chupe?\"
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"line\": \"Pues sí pero pilas. Donde mi mamá nos vea se le une.\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+\"actor\": \"Ana María\",
+\"line\": \"¡No puede ser! Lupe le pega con la zurda...\"
+}"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "{
+\"actor\": \"Ana María\",
+\"line\": \"Tanto estar rica pa' ni mierda\"
+}"
+},
+6: {
+"links": {
+
+},
+"text": "end"
+}
+}
+}
+}
+names = {
+"DialogTest": 1
+}
