@@ -29,6 +29,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/blocking_dialog_box/blocking_list_selection.gd"
 }, {
+"base": "CanvasLayer",
+"class": "CharacterFrame",
+"language": "GDScript",
+"path": "res://src/GUI/Dialog/CharacterFrame.gd"
+}, {
 "base": "Control",
 "class": "Dialog",
 "language": "GDScript",
@@ -104,6 +109,7 @@ _global_script_class_icons={
 "BlockingDialogBox": "",
 "BlockingInputBox": "",
 "BlockingListSelection": "",
+"CharacterFrame": "",
 "Dialog": "",
 "DialogMenu": "",
 "EXP_StoryReader": "",
@@ -306,7 +312,7 @@ Testiar={
 
 test="es"
 fallback="es"
-translations=PoolStringArray( "res://assets/localization/localization.en.translation", "res://assets/localization/localization.es.translation" )
+translations=PoolStringArray( "res://assets/localization/localization.es.translation", "res://assets/localization/localization.en.translation" )
 
 [rendering]
 

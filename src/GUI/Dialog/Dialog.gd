@@ -6,7 +6,9 @@ export var use_click_to_progress := false
 var _forced_update := false
 var _current_character: Node2D = null
 # Cosas del Godot Dialog System ---- {
-var _story_reader_class := load('res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd')
+var _story_reader_class := load(
+	'res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd'
+)
 var _stories_es = load('res://assets/stories/baked_tests.tres')
 var _did := 0
 var _nid := 0
@@ -17,10 +19,12 @@ var _wait := false
 var _selected_slot := -1
 var _current_options := ''
 # } ----
+var _is_listening_click := true
 
 onready var _story_reader: EXP_StoryReader = _story_reader_class.new()
 onready var _dialog_menu: DialogMenu = find_node('DialogMenu')
 onready var _autofill: Autofill = find_node('Autofill')
+onready var _character_frame: CharacterFrame = find_node('CharacterFrame')
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func _ready() -> void:
 	# Configurar el Data manager para que vaya guardando información de los
@@ -45,9 +49,44 @@ func _ready() -> void:
 	DialogEvent.connect('dialog_continued', self, '_continue_dialog')
 	DialogEvent.connect('character_spoke', self, '_on_character_spoke')
 	DialogEvent.connect('dialog_option_clicked', self, '_option_clicked')
+	HudEvent.connect('continue_requested', self, '_enable_click_listening')
 	HudEvent.connect('hud_accept_pressed', _autofill, 'stop')
 
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Eventos propios y de hijos ░░░░
+func _autofill_completed() -> void:
+	if _current_character:
+		HudEvent.emit_signal('talking_bubble_requested')
 
+		var character_copy = _current_character
+		_current_character = null
+
+		if character_copy.has_method('spoke'):
+			character_copy.spoke()
+		character_copy = null
+
+	if _wait:
+		# TODO: Puede haber una mejor manera de hacer esto, cosa que la alternación
+		# del control del PC suceda en un único lugar dentro del código de esta
+		# clase
+		PlayerEvent.emit_signal('control_toggled')
+		DialogEvent.emit_signal('dialog_paused')
+		return
+
+	if not _in_dialog_with_options:
+		_continue_dialog(_selected_slot)
+	elif not _dialog_menu.visible:
+		_continue_dialog(_selected_slot)
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	var mouse_event: = event as InputEventMouseButton
+	if _is_listening_click and mouse_event \
+		and mouse_event.button_index == BUTTON_LEFT \
+		and mouse_event.pressed:
+			_autofill.stop()
+
+
+# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Eventos globales ░░░░
 func _play_dialog(dialog_name: String) -> void:
 	_did = _story_reader.get_did_via_record_name(dialog_name)
 	_nid = _story_reader.get_nid_via_exact_text(_did, 'start')
@@ -108,7 +147,7 @@ func _play_dialog_line() -> void:
 	# El actor por defecto será el player
 	var actor := 'player'
 	if line_dic.has('actor'):
-		actor = line_dic.actor as String
+		actor = (line_dic.actor as String).replace(' ', '_')
 
 	# ----[ la línea ]----------------------------------------------------------
 	var line := ''
@@ -195,7 +234,9 @@ func _play_dialog_line() -> void:
 
 
 func _on_character_spoke(
-		character: Node2D = null, message :String = '', time_to_disappear := 0.0
+		character: Node2D = null,
+		message :String = '',
+		time_to_disappear := 0.0
 	):
 	if _autofill.typing:
 		_autofill.stop()
@@ -217,9 +258,11 @@ func _on_character_spoke(
 	if message != '':
 		_current_character = character
 
+		_character_frame.set_position(_current_character)
 		_autofill.set_text(message)
 		_autofill.set_disappear_time(time_to_disappear)
 		_autofill.show()
+
 		HudEvent.emit_signal('talking_bubble_requested', _current_character)
 	else:
 		_current_character = null
@@ -241,38 +284,11 @@ func _option_clicked(opt: Dictionary) -> void:
 	else:
 		_continue_dialog(_selected_slot)
 
-
-func _autofill_completed() -> void:
-	if _current_character:
-		HudEvent.emit_signal('talking_bubble_requested')
-
-		var character_copy = _current_character
-		_current_character = null
-
-		if character_copy.has_method('spoke'):
-			character_copy.spoke()
-		character_copy = null
-
-	if _wait:
-		# TODO: Puede haber una mejor manera de hacer esto, cosa que la alternación
-		# del control del PC suceda en un único lugar dentro del código de esta
-		# clase
-		PlayerEvent.emit_signal('control_toggled')
-		DialogEvent.emit_signal('dialog_paused')
-		return
-
-	if not _in_dialog_with_options:
-		_continue_dialog(_selected_slot)
-	elif not _dialog_menu.visible:
-		_continue_dialog(_selected_slot)
-
-
-func _on_gui_input(event: InputEvent) -> void:
-	var mouse_event: = event as InputEventMouseButton
-	if mouse_event and mouse_event.button_index == BUTTON_LEFT \
-		and mouse_event.pressed:
-			_autofill._hide()
-			_continue_dialog()
+func _enable_click_listening() -> void:
+	# TODO: mostrar algo para que el jugador sepa que puede hacer clic para
+	#       continuar
+	print('Ya se puede hacer clic para continuar con más cuentachistes')
+	_is_listening_click = true
 
 
 func _finish_dialog() -> void:
@@ -305,6 +321,7 @@ func _finish_dialog() -> void:
 		PlayerEvent.emit_signal('control_toggled')
 
 	DialogEvent.emit_signal('dialog_finished')
+	_character_frame.dialog_finished()
 
 
 func _get_options_id() -> String:

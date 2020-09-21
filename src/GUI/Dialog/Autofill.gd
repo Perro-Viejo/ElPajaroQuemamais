@@ -3,15 +3,13 @@ extends Label
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Variables ░░░░
 signal fill_done
 
-export(float) var animation_time = 0.01
-export(int) var character_speed = 2
-export(bool) var animate_on_set_text = true
-export(bool) var animate_on_start = false
-export(bool) var typing = true
-export(float) var disappear_wait = 3.0
-
-var default_position
-var default_size
+export var animation_time := 0.01
+export var character_speed := 2
+export var animate_on_set_text := true
+export var typing := true
+export var disappear_wait := 3.0
+export var can_autohide := true
+export var max_width := 244
 
 var _current_disappear: = 0.0
 var _chars: = []
@@ -20,12 +18,15 @@ var _text: String
 var _forced_update := false
 var _is_disappearing := false
 var _time_to_dissapear := 0.0
+
+onready var default_position = get_position()
+onready var default_size = get_size()
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func _ready():
 	hide()
-
-	default_position = get_position()
-	default_size = get_size()
+	
+	if not can_autohide:
+		_current_disappear = -1.0
 
 	$Timer.set_wait_time(animation_time)
 	$Timer.connect('timeout', self, '_write_character')
@@ -40,6 +41,11 @@ func _process(delta: float) -> void:
 		_time_to_dissapear -= delta
 		if _time_to_dissapear < 0:
 			_hide_and_emit()
+	
+	if rect_size.x > max_width:
+		rect_size.x = max_width
+		autowrap = true
+		rect_position.x = 160 - (max_width / 2)
 
 
 func start_animation():
@@ -64,6 +70,8 @@ func set_text(text):
 		_current_disappear = 0.0
 		_is_disappearing = false
 		_time_to_dissapear = 0.0
+		self.rect_size = default_size
+		self.rect_position = default_position
 
 		hide()
 

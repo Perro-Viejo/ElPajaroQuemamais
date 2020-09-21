@@ -71,7 +71,7 @@ func set_scale(value:int)->void:
 	else:
 		OS.window_fullscreen = false
 		Fullscreen = false
-		OS.window_size = GameResolution * Scale
+		OS.window_size = GameResolution
 		OS.center_window()
 	get_resolution()
 	emit_signal("Resized")

@@ -312,7 +312,7 @@ func _on_Save_i18n_CSV_file_selected(filepath : String):
 			# El actor por defecto será el player
 			var actor := 'player'
 			if dialog_dic.has('actor'):
-				actor = dialog_dic.actor as String
+				actor = (dialog_dic.actor as String).replace(' ', '_')
 
 			# ----[ la línea ]--------------------------------------------------
 			# Se llega a venir un diálogo con opciones, mejor primero poner

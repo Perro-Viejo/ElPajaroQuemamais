@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/character_frame_mask.png-a52f84aeec08cb8afab6b2bece63bba1.stex"
+path="res://.import/character_expression_placeholder.png-c98da02034bdc5d19d67b8de709c2dba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/gui/character_frame_mask.png"
-dest_files=[ "res://.import/character_frame_mask.png-a52f84aeec08cb8afab6b2bece63bba1.stex" ]
+source_file="res://assets/images/gui/character_expression_placeholder.png"
+dest_files=[ "res://.import/character_expression_placeholder.png-c98da02034bdc5d19d67b8de709c2dba.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

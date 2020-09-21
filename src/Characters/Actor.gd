@@ -11,14 +11,18 @@ export var expressions: Texture
 
 var _in_dialog := false
 
-onready var inventory = $Inventory
+#onready var inventory = $Inventory
 onready var state_machine = $StateMachine
+onready var _lower_name := name.to_lower()
 
 var path : = PoolVector2Array()
 
 var velocity = Vector2.ZERO
 
 func _ready():
+	if dialog_name:
+		_lower_name = dialog_name.to_lower().replace(' ', '_')
+	
 	DialogEvent.connect('line_triggered', self, '_should_speak')
 	
 # Called when the node enters the scene tree for the first time.
@@ -30,7 +34,7 @@ func spoke():
 		DialogEvent.emit_signal('dialog_continued')
 
 func _should_speak(character_name, text, time, emotion) -> void:
-	if dialog_name == character_name or  name.to_lower() == character_name:
+	if _lower_name == character_name:
 		speak(text, time)
 		AudioEvent.emit_signal('dx_requested' , character_name, emotion)
 		

@@ -5,9 +5,11 @@
 [ext_resource path="res://assets/images/gui/character_frame_mask.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/gui/talking_bubble.png" type="Texture" id=4]
 [ext_resource path="res://assets/fonts/chuchel.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://src/Tests/Speech.gd" type="Script" id=6]
+[ext_resource path="res://src/Tests/TestSpeech.gd" type="Script" id=6]
 [ext_resource path="res://addons/blocking_dialog_box/blocking_dialog_box.gd" type="Script" id=7]
-[ext_resource path="res://src/Tests/CharacterFrame.gd" type="Script" id=8]
+[ext_resource path="res://src/Tests/TestCharacterFrame.gd" type="Script" id=8]
+
+
 
 [sub_resource type="CanvasItemMaterial" id=1]
 light_mode = 2
@@ -24,7 +26,7 @@ margin_bottom = 61.0
 size = 24
 font_data = ExtResource( 5 )
 
-[node name="CharacterFrame" type="Node2D"]
+[node name="TestCharacterFrame" type="Node2D"]
 script = ExtResource( 8 )
 
 [node name="Background" type="Sprite" parent="."]
