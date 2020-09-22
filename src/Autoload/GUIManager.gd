@@ -32,7 +32,8 @@ func gui_collect_focusgroup()->void:	#Workaround to get initial focus
 			ButtonsSections["DialogMenu"] = btn
 	# Para que por defecto se seleccione la primera opción de cualquier menú que
 	# se abra por aquí
-	force_focus()
+	if Data.get_data(Data.FORCE_FOCUS):
+		force_focus()
 
 func _unhandled_input(event: InputEvent)->void:
 	if event.is_action_pressed("ui_cancel"):

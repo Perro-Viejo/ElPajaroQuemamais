@@ -26,19 +26,22 @@ onready var _story_reader: EXP_StoryReader = _story_reader_class.new()
 onready var _dialog_menu: DialogMenu = find_node('DialogMenu')
 onready var _autofill: Autofill = find_node('Autofill')
 onready var _character_frame: CharacterFrame = find_node('CharacterFrame')
+onready var _subs: Label = $Subtitles
+
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func _ready() -> void:
 	# Configurar el Data manager para que vaya guardando información de los
 	# diálogos (eventualmente esto se guardará en un archivo así como se guardan
 	# las opciones de configuración)
 	Data.set_data(Data.DIALOGS, {})
-	
+
 	_dialog_menu.hide()
+#	_subs.rect_position.y = OS.window_size.y
+	print(_subs.rect_position)
 
 	match TranslationServer.get_locale():
 		_:
 			_story_reader.read(_stories_es)
-			pass
 
 	# Conectarse a eventos de los retoños y de sí mismo
 	_autofill.connect('fill_done', self, '_autofill_completed')
@@ -152,8 +155,14 @@ func _play_dialog_line() -> void:
 
 	# ----[ la línea ]----------------------------------------------------------
 	var line := ''
+	var sub := '[ silence in spanish ]'
 	if line_dic.has('line'):
-		line = tr(('dlg_%d_%d_%s' % [_did, _nid, actor]).to_upper())
+		var code := ('dlg_%d_%d_%s' % [_did, _nid, actor]).to_upper()
+		line = tr(code)
+		# Cambiar temporalmente el idioma para sacar el subtítulo
+		TranslationServer.set_locale('en')
+		_subs.set_text(tr(code))
+		TranslationServer.set_locale('es')
 
 	# ----[ la emoción ]----------------------------------------------------------
 	_current_emotion = ''
@@ -242,7 +251,7 @@ func _on_character_spoke(
 	if _autofill.typing:
 		_autofill.stop()
 		if not is_inside_tree(): return
-		yield(get_tree().create_timer(.3), 'timeout')
+		yield(get_tree(), 'idle_frame')
 
 	# Definir el color del texto
 	var text_color: Color = Color('#222323')
@@ -262,13 +271,12 @@ func _on_character_spoke(
 		_character_frame.set_character(_current_character, _current_emotion)
 		_autofill.set_text(message)
 		_autofill.set_disappear_time(time_to_disappear)
-		_autofill.show()
 
-		HudEvent.emit_signal('talking_bubble_requested', _current_character)
+		_autofill.show()
+		_toggle_subs()
 	else:
 		_current_character = null
 		_autofill.finish_and_hide()
-		HudEvent.emit_signal('talking_bubble_requested')
 
 
 func _option_clicked(opt: Dictionary) -> void:
@@ -290,6 +298,7 @@ func _enable_click_listening() -> void:
 	#       continuar
 	print('Ya se puede hacer clic para continuar con más cuentachistes')
 	_is_listening_click = true
+	_character_frame.show_continue()
 
 
 func _finish_dialog() -> void:
@@ -323,7 +332,19 @@ func _finish_dialog() -> void:
 
 	DialogEvent.emit_signal('dialog_finished')
 	_character_frame.dialog_finished()
+	_toggle_subs(false)
 
 
 func _get_options_id() -> String:
 	return '%s-%s' % [_did, _options_nid]
+
+func _toggle_subs(show := true) -> void:
+	$Tween.interpolate_property(
+		_subs, 'rect_position:y',
+		OS.window_size.y if show else 900,
+		900 if show else OS.window_size.y,
+		0.3 if show else 0.1,
+		Tween.TRANS_BOUNCE if show else Tween.TRANS_SINE,
+		Tween.EASE_OUT if show else Tween.EASE_IN
+	)
+	$Tween.start()

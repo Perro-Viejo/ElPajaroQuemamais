@@ -9,7 +9,7 @@ export var animate_on_set_text := true
 export var typing := true
 export var disappear_wait := 3.0
 export var can_autohide := true
-export var max_width := 244
+export var max_width := 244.0
 
 var _current_disappear: = 0.0
 var _chars: = []

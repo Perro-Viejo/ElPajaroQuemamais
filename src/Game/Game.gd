@@ -15,6 +15,7 @@ var transition_state:int = IDLE
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func _ready()->void:
 	Data.set_data(Data.CURRENT_SCENE, 'MainMenu')
+	Data.set_data(Data.FORCE_FOCUS, is_mouse_hidden)
 
 	GuiEvent.connect("Options",	self, "on_options")
 	GuiEvent.connect("Exit",		self, "on_exit")
@@ -22,7 +23,6 @@ func _ready()->void:
 	GuiEvent.connect("Restart", 	self, "restart_scene")
 	#Background loader
 	SceneLoader.connect("scene_loaded", self, "on_scene_loaded")
-	#SceneLoader.load_scene("res://Levels/TestScene.tscn", {instructions="for what reason it got loaded"})
 
 	GUIManager.gui_collect_focusgroup()
 

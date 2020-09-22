@@ -1,12 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/resources/dynamic_fonts/menu_button_12.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/resources/dynamic_fonts/menu_button.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/images/gui/slider_grabber-highlight.png" type="Texture" id=2]
 [ext_resource path="res://assets/images/gui/slider_grabber.png" type="Texture" id=3]
 [ext_resource path="res://assets/resources/style_box_flat/options_slider.tres" type="StyleBox" id=4]
 [ext_resource path="res://assets/resources/style_box_flat/options_grabber_highlight.tres" type="StyleBox" id=5]
 [ext_resource path="res://assets/resources/style_box_flat/options_grabber.tres" type="StyleBox" id=6]
 [ext_resource path="res://src/GUI/Buttons/OptionsSlider.gd" type="Script" id=7]
+
 
 [node name="OptionsSlider" type="VBoxContainer"]
 margin_right = 47.0

@@ -3,8 +3,7 @@ extends Node
 const DEV_MODE := 'DEV_MODE'
 const CURRENT_SCENE := 'CURRENT_SCENE'
 const DIALOGS := 'DIALOGS'
-
-enum BAITS {NADA, GUSANO, SANGRE}
+const FORCE_FOCUS := 'FORCE_FOCUS'
 
 var _data := {}
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░

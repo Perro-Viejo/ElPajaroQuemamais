@@ -5,8 +5,9 @@
 [ext_resource path="res://assets/images/gui/character_frame_mask.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/gui/talking_bubble.png" type="Texture" id=4]
 [ext_resource path="res://src/GUI/Dialog/Autofill.gd" type="Script" id=5]
-[ext_resource path="res://assets/fonts/chuchel.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_regular_24.tres" type="DynamicFont" id=6]
 [ext_resource path="res://src/GUI/Dialog/CharacterFrame.gd" type="Script" id=7]
+[ext_resource path="res://assets/images/gui/dialog_continue.png" type="Texture" id=8]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 4 )
@@ -16,11 +17,7 @@ margin_right = 31.1343
 margin_top = 28.857
 margin_bottom = 61.6699
 
-[sub_resource type="DynamicFont" id=2]
-size = 24
-font_data = ExtResource( 6 )
-
-[sub_resource type="CanvasItemMaterial" id=3]
+[sub_resource type="CanvasItemMaterial" id=2]
 light_mode = 2
 
 [node name="CharacterFrame" type="CanvasLayer"]
@@ -37,8 +34,8 @@ __meta__ = {
 }
 
 [node name="Background" type="TextureRect" parent="Container"]
-margin_right = 308.0
-margin_bottom = 292.0
+margin_right = 325.0
+margin_bottom = 331.0
 mouse_filter = 2
 texture = ExtResource( 2 )
 __meta__ = {
@@ -52,20 +49,20 @@ margin_right = 312.0
 margin_bottom = 141.0
 grow_vertical = 0
 custom_styles/normal = SubResource( 1 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Holanda"
+text = "Sólo me veo aquí"
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-max_width = 300
+max_width = 300.0
 
 [node name="Timer" type="Timer" parent="Container/Autofill"]
 
 [node name="Character" type="Sprite" parent="Container"]
 light_mask = 1024
-material = SubResource( 3 )
+material = SubResource( 2 )
 position = Vector2( 80, 244 )
 texture = ExtResource( 1 )
 
@@ -77,3 +74,20 @@ mode = 2
 range_layer_max = 9
 range_item_cull_mask = 1024
 shadow_item_cull_mask = 1025
+
+[node name="Continue" type="TextureRect" parent="Container"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -51.9999
+margin_top = -52.0
+margin_right = -8.99994
+margin_bottom = -7.99997
+rect_pivot_offset = Vector2( 22, 22 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

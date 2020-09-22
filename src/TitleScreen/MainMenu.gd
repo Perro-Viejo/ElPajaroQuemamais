@@ -63,10 +63,12 @@ func _on_Credits_pressed() -> void:
 	yield($AnimationPlayer, 'animation_finished')
 	if _is_credits:
 		_credits_back.connect('pressed', self, '_on_Credits_pressed')
-		_credits_back.grab_focus()
+		if Data.get_data(Data.FORCE_FOCUS):
+			_credits_back.grab_focus()
 	else:
 		_credits_back.disconnect('pressed', self, '_on_Credits_pressed')
-		_credits_btn.grab_focus()
+		if Data.get_data(Data.FORCE_FOCUS):
+			_credits_btn.grab_focus()
 
 
 func _on_Exit_pressed()->void:

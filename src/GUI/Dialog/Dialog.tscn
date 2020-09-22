@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_24.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/GUI/Dialog/Dialog.gd" type="Script" id=2]
 [ext_resource path="res://src/GUI/Dialog/DialogMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/GUI/Dialog/CharacterFrame.tscn" type="PackedScene" id=4]
@@ -17,3 +18,23 @@ use_click_to_progress = true
 anchor_top = 1.0
 
 [node name="CharacterFrame" parent="." instance=ExtResource( 4 )]
+
+[node name="Subtitles" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -576.0
+margin_top = -59.9999
+margin_right = 576.0
+margin_bottom = -17.9999
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+text = "subtitles will display here"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

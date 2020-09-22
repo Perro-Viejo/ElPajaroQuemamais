@@ -161,7 +161,7 @@ func _hide_and_emit() -> void:
 
 func _clear_and_continue(next: String) -> void:
 	clear()
-	yield(get_tree().create_timer(0.1), 'timeout')
+	yield(get_tree(), 'idle_frame')
 	self.rect_size = default_size
 	self.rect_position = default_position
 	set_text(next)
