@@ -4,8 +4,8 @@ export (String, FILE, '*.tscn') var first_level: String
 
 var _is_credits := false
 
-onready var _name_container: VBoxContainer = find_node('NameContainer')
-onready var _buttons_container: HBoxContainer = find_node('ButtonsContainer')
+onready var _name_container: VBoxContainer = find_node('GameName')
+onready var _buttons_container: VBoxContainer = find_node('ButtonsContainer')
 onready var _new_game: Button = find_node('NewGame')
 onready var _options: Button = find_node('Options')
 onready var _credits_btn: Button = find_node('CreditsBtn')
@@ -32,6 +32,8 @@ func _ready()->void:
 	Settings.connect('ReTranslate', self, 'retranslate') # Localización
 
 	retranslate()
+	yield(get_tree().create_timer(0.5), 'timeout')
+	$AnimationPlayer.play('show_first_time')
 
 
 func _process(delta):
@@ -73,6 +75,7 @@ func _on_Credits_pressed() -> void:
 
 func _on_Exit_pressed()->void:
 	GuiEvent.emit_signal('Exit')
+
 
 #localization
 func retranslate()->void:

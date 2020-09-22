@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/TitleScreen/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://assets/resources/dynamic_fonts/m5x7_32.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_72.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/GUI/Buttons/DefaultButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/images/gui/perro_viejo_logo.png" type="Texture" id=4]
 [ext_resource path="res://assets/resources/dynamic_fonts/m5x7_16.tres" type="DynamicFont" id=5]
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_regular_32.tres" type="DynamicFont" id=6]
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_64.tres" type="DynamicFont" id=7]
+[ext_resource path="res://assets/images/gui/quemamais_main_menu.png" type="Texture" id=8]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.278431, 0.176471, 0.235294, 0 )
@@ -33,7 +34,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BG/MarginContainer:visible")
+tracks/1/path = NodePath("BG/MainOptions:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -84,7 +85,7 @@ tracks/0/keys = {
 "values": [ true ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("BG/MarginContainer:visible")
+tracks/1/path = NodePath("BG/MainOptions:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -120,6 +121,56 @@ tracks/3/keys = {
 "values": [ Vector2( -1280, 0 ), Vector2( 0, 0 ) ]
 }
 
+[sub_resource type="Animation" id=6]
+resource_name = "show_first_time"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG/MainOptions:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.7, 1.4 ),
+"transitions": PoolRealArray( 0.241484, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 960 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/GameName:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.4, 0.9 ),
+"transitions": PoolRealArray( 0.5, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Bg:rect_position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 0.5, 1 ),
+"update": 0,
+"values": [ Vector2( 1656, 24 ), Vector2( 64, 24 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("BG/Bg:rect_rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 45, -0.25, 0, 0.0750337, -127.5, 0, -0.072013, 126.5, 0.0703587, 32.5 ),
+"times": PoolRealArray( 0, 0.4 )
+}
+
 [node name="MainMenu" type="CanvasLayer"]
 follow_viewport_enable = true
 script = ExtResource( 1 )
@@ -136,9 +187,56 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="BG"]
+[node name="Bg" type="TextureRect" parent="BG"]
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 376.0
+margin_top = -936.0
+margin_right = 826.0
+margin_bottom = 19.0
+rect_rotation = 45.0
+rect_pivot_offset = Vector2( 290, 936 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameName" type="VBoxContainer" parent="BG"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = -2
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameName" type="Label" parent="BG/GameName"]
+margin_top = 417.0
+margin_right = 1280.0
+margin_bottom = 543.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.235294, 0.67451, 0.843137, 1 )
+text = "El pájaro Quemamais"
+align = 1
+
+[node name="Version" type="Label" parent="BG/GameName"]
+visible = false
+margin_top = 535.0
+margin_right = 1280.0
+margin_bottom = 548.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.956863, 0.705882, 0.105882, 1 )
+text = "Game Template"
+align = 2
+
+[node name="MainOptions" type="MarginContainer" parent="BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 921.663
+margin_bottom = 921.662
 custom_constants/margin_right = 16
 custom_constants/margin_top = 4
 custom_constants/margin_left = 16
@@ -147,83 +245,51 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxMain" type="VBoxContainer" parent="BG/MarginContainer"]
+[node name="VBoxMain" type="VBoxContainer" parent="BG/MainOptions"]
 margin_left = 16.0
 margin_top = 4.0
 margin_right = 1264.0
-margin_bottom = 944.0
+margin_bottom = 943.0
 size_flags_vertical = 3
+alignment = 2
 
-[node name="NameContainer" type="VBoxContainer" parent="BG/MarginContainer/VBoxMain"]
-margin_left = 1094.0
+[node name="ButtonsContainer" type="VBoxContainer" parent="BG/MainOptions/VBoxMain"]
+margin_top = 709.0
 margin_right = 1248.0
-margin_bottom = 468.0
-size_flags_horizontal = 8
-size_flags_vertical = 3
-custom_constants/separation = -2
-
-[node name="GameName" type="Label" parent="BG/MarginContainer/VBoxMain/NameContainer"]
-margin_right = 154.0
-margin_bottom = 26.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.235294, 0.67451, 0.843137, 1 )
-text = "Game Template"
-align = 2
-
-[node name="Version" type="Label" parent="BG/MarginContainer/VBoxMain/NameContainer"]
-margin_top = 24.0
-margin_right = 154.0
-margin_bottom = 37.0
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color = Color( 0.956863, 0.705882, 0.105882, 1 )
-text = "Game Template"
-align = 2
-
-[node name="ButtonsContainer" type="HBoxContainer" parent="BG/MarginContainer/VBoxMain"]
-margin_top = 472.0
-margin_right = 1248.0
-margin_bottom = 940.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-alignment = 1
-
-[node name="ButtonContainer" type="VBoxContainer" parent="BG/MarginContainer/VBoxMain/ButtonsContainer"]
-margin_left = 499.0
-margin_top = 238.0
-margin_right = 748.0
-margin_bottom = 468.0
+margin_bottom = 939.0
 size_flags_vertical = 8
 custom_constants/separation = 2
 alignment = 1
 
-[node name="NewGame" parent="BG/MarginContainer/VBoxMain/ButtonsContainer/ButtonContainer" groups=[
+[node name="NewGame" parent="BG/MainOptions/VBoxMain/ButtonsContainer" groups=[
 "FocusGroup",
 "MainMenu",
 ] instance=ExtResource( 3 )]
-margin_right = 249.0
+margin_left = 499.0
+margin_right = 748.0
 margin_bottom = 56.0
 focus_neighbour_top = NodePath("../Exit")
 focus_previous = NodePath("../Exit")
 text = "Nuevo juego"
 
-[node name="Options" parent="BG/MarginContainer/VBoxMain/ButtonsContainer/ButtonContainer" instance=ExtResource( 3 )]
-margin_left = 30.0
+[node name="Options" parent="BG/MainOptions/VBoxMain/ButtonsContainer" instance=ExtResource( 3 )]
+margin_left = 530.0
 margin_top = 58.0
-margin_right = 218.0
+margin_right = 718.0
 margin_bottom = 114.0
 text = "Opciones"
 
-[node name="CreditsBtn" parent="BG/MarginContainer/VBoxMain/ButtonsContainer/ButtonContainer" instance=ExtResource( 3 )]
-margin_left = 36.0
+[node name="CreditsBtn" parent="BG/MainOptions/VBoxMain/ButtonsContainer" instance=ExtResource( 3 )]
+margin_left = 535.0
 margin_top = 116.0
-margin_right = 213.0
+margin_right = 712.0
 margin_bottom = 172.0
 text = "Créditos"
 
-[node name="Exit" parent="BG/MarginContainer/VBoxMain/ButtonsContainer/ButtonContainer" instance=ExtResource( 3 )]
-margin_left = 70.0
+[node name="Exit" parent="BG/MainOptions/VBoxMain/ButtonsContainer" instance=ExtResource( 3 )]
+margin_left = 570.0
 margin_top = 174.0
-margin_right = 178.0
+margin_right = 678.0
 margin_bottom = 230.0
 focus_neighbour_bottom = NodePath("../NewGame")
 focus_next = NodePath("../NewGame")
@@ -305,6 +371,9 @@ text = "Back"
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/credits_exit = SubResource( 4 )
 anims/show_credits = SubResource( 5 )
+anims/show_first_time = SubResource( 6 )
+
+[node name="Tween" type="Tween" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0

@@ -11,12 +11,9 @@
 [ext_resource path="res://src/GUI/Buttons/DefaultButton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/resources/dynamic_fonts/menu_button.tres" type="DynamicFont" id=12]
 
-
 [node name="Main" type="HBoxContainer"]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 312.0
-margin_bottom = 172.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 custom_constants/separation = 0
 script = ExtResource( 1 )
 __meta__ = {
@@ -24,46 +21,47 @@ __meta__ = {
 }
 
 [node name="OptionsContainer" type="MarginContainer" parent="."]
-margin_top = 114.0
-margin_right = 101.0
-margin_bottom = 164.0
+margin_top = 730.0
+margin_right = 426.0
+margin_bottom = 960.0
 size_flags_horizontal = 3
 size_flags_vertical = 8
 
 [node name="VBoxContainer" type="VBoxContainer" parent="OptionsContainer"]
-margin_right = 43.0
-margin_bottom = 50.0
+margin_right = 213.0
+margin_bottom = 230.0
 size_flags_horizontal = 0
 size_flags_vertical = 3
 custom_constants/separation = 2
+alignment = 1
 
 [node name="Resolution" parent="OptionsContainer/VBoxContainer" instance=ExtResource( 9 )]
-margin_right = 43.0
-margin_bottom = 11.0
+margin_right = 213.0
+margin_bottom = 56.0
 focus_neighbour_top = NodePath("../Back")
 focus_previous = NodePath("../Back")
 size_flags_horizontal = 0
 custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
 text = "Resolution"
-align = 0
+focus_animation = "move"
 
 [node name="Audio" parent="OptionsContainer/VBoxContainer" instance=ExtResource( 9 )]
-margin_top = 13.0
-margin_right = 22.0
-margin_bottom = 24.0
+margin_top = 58.0
+margin_right = 130.0
+margin_bottom = 114.0
 size_flags_horizontal = 0
 custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
 text = "Audio"
-align = 0
+focus_animation = "move"
 
 [node name="Languages" parent="OptionsContainer/VBoxContainer" instance=ExtResource( 9 )]
-margin_top = 26.0
-margin_right = 40.0
-margin_bottom = 37.0
+margin_top = 116.0
+margin_right = 196.0
+margin_bottom = 172.0
 size_flags_horizontal = 0
 custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
 text = "Language"
-align = 0
+focus_animation = "move"
 
 [node name="Controls" parent="OptionsContainer/VBoxContainer" instance=ExtResource( 9 )]
 visible = false
@@ -73,30 +71,29 @@ margin_bottom = 50.0
 size_flags_horizontal = 0
 custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
 text = "Controls"
-align = 0
+focus_animation = "move"
 
 [node name="Back" parent="OptionsContainer/VBoxContainer" groups=[
 "FocusGroup",
 "OptionsMain",
 ] instance=ExtResource( 9 )]
-margin_top = 39.0
-margin_right = 39.0
-margin_bottom = 50.0
+margin_top = 174.0
+margin_right = 202.0
+margin_bottom = 230.0
 focus_neighbour_bottom = NodePath("../Resolution")
 focus_next = NodePath("../Resolution")
 size_flags_horizontal = 0
 custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
 text = "Back [ x ]"
-align = 0
+focus_animation = "move"
 
 [node name="PanelsContainer" type="HBoxContainer" parent="."]
-margin_left = 101.0
-margin_top = 58.0
-margin_right = 202.0
-margin_bottom = 164.0
+margin_left = 426.0
+margin_right = 853.0
+margin_bottom = 960.0
 rect_min_size = Vector2( 0, 106 )
 size_flags_horizontal = 7
-size_flags_vertical = 8
+size_flags_vertical = 11
 alignment = 2
 
 [node name="ResolutionMenu" type="Panel" parent="PanelsContainer"]
@@ -239,8 +236,8 @@ custom_constants/margin_left = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer"]
 margin_left = 5.0
-margin_right = 97.0
-margin_bottom = 86.0
+margin_right = 236.0
+margin_bottom = 269.0
 
 [node name="AudioOptions" type="VBoxContainer" parent="PanelsContainer/AudioPanel/VBoxContainer/MarginContainer/HBoxContainer"]
 margin_right = 92.0
@@ -285,8 +282,8 @@ custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
 text = "Cerrar [ X ]"
 
 [node name="LanguagePanel" type="Panel" parent="PanelsContainer"]
-margin_right = 101.0
-margin_bottom = 106.0
+margin_right = 427.0
+margin_bottom = 960.0
 size_flags_horizontal = 3
 custom_styles/panel = ExtResource( 2 )
 script = ExtResource( 8 )
@@ -306,8 +303,8 @@ __meta__ = {
 }
 
 [node name="Languages" type="Label" parent="PanelsContainer/LanguagePanel/VBoxContainer"]
-margin_right = 101.0
-margin_bottom = 12.0
+margin_right = 427.0
+margin_bottom = 58.0
 size_flags_horizontal = 5
 size_flags_vertical = 1
 custom_styles/normal = ExtResource( 2 )
@@ -316,9 +313,9 @@ text = "Languages"
 align = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelsContainer/LanguagePanel/VBoxContainer"]
-margin_top = 16.0
-margin_right = 101.0
-margin_bottom = 27.0
+margin_top = 62.0
+margin_right = 427.0
+margin_bottom = 118.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
 custom_constants/margin_right = 4
@@ -326,14 +323,14 @@ custom_constants/margin_left = 5
 
 [node name="LanguageOptions" type="VBoxContainer" parent="PanelsContainer/LanguagePanel/VBoxContainer/MarginContainer"]
 margin_left = 5.0
-margin_right = 97.0
-margin_bottom = 11.0
+margin_right = 423.0
+margin_bottom = 56.0
 grow_vertical = 0
 
 [node name="Close" parent="PanelsContainer/LanguagePanel/VBoxContainer/MarginContainer/LanguageOptions" instance=ExtResource( 9 )]
-margin_left = 22.0
-margin_right = 70.0
-margin_bottom = 11.0
+margin_left = 93.0
+margin_right = 324.0
+margin_bottom = 56.0
 focus_neighbour_left = NodePath(".")
 focus_neighbour_bottom = NodePath("../Master/HSlider")
 focus_next = NodePath("../Master/HSlider")
@@ -341,9 +338,9 @@ custom_colors/font_color = Color( 0.262745, 0.262745, 0.309804, 1 )
 text = "Cerrar [ X ]"
 
 [node name="EmptySpace" type="MarginContainer" parent="."]
-margin_left = 202.0
-margin_right = 304.0
-margin_bottom = 164.0
+margin_left = 853.0
+margin_right = 1280.0
+margin_bottom = 960.0
 size_flags_horizontal = 3
 [connection signal="pressed" from="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer/Fullscreen" to="." method="_on_Fullscreen_pressed"]
 [connection signal="pressed" from="PanelsContainer/ResolutionMenu/VBoxContainer/HBoxContainer/VBoxContainer/Borderless" to="." method="_on_Borderless_pressed"]
