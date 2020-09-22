@@ -36,8 +36,7 @@ func _ready() -> void:
 	Data.set_data(Data.DIALOGS, {})
 
 	_dialog_menu.hide()
-#	_subs.rect_position.y = OS.window_size.y
-	print(_subs.rect_position)
+	_hide_subs()
 
 	match TranslationServer.get_locale():
 		_:
@@ -76,9 +75,7 @@ func _autofill_completed() -> void:
 		DialogEvent.emit_signal('dialog_paused')
 		return
 
-	if not _in_dialog_with_options:
-		_continue_dialog(_selected_slot)
-	elif not _dialog_menu.visible:
+	if not _in_dialog_with_options or not _dialog_menu.visible:
 		_continue_dialog(_selected_slot)
 
 
@@ -111,6 +108,7 @@ func _continue_dialog(slot := 0) -> void:
 	# --------------------------------------------------------------------------
 
 	if _autofill.is_visible(): return
+	_hide_subs()
 
 	if _selected_slot < 0 and _nid == _options_nid:
 		# Para mostrar el menú de opciones de diálogo al final de la línea
@@ -268,7 +266,11 @@ func _on_character_spoke(
 	if message != '':
 		_current_character = character
 
-		_character_frame.set_character(_current_character, _current_emotion)
+		yield(
+			_character_frame.set_character(_current_character, _current_emotion),
+			'completed'
+		)
+
 		_autofill.set_text(message)
 		_autofill.set_disappear_time(time_to_disappear)
 
@@ -348,3 +350,7 @@ func _toggle_subs(show := true) -> void:
 		Tween.EASE_OUT if show else Tween.EASE_IN
 	)
 	$Tween.start()
+
+
+func _hide_subs() -> void:
+	_subs.rect_position.y = OS.window_size.y

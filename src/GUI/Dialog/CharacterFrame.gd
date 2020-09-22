@@ -1,6 +1,8 @@
 class_name CharacterFrame
 extends CanvasLayer
 
+export var appear_time := 0.3
+
 var _offset := Vector2.ZERO
 
 onready var _cnt := $Container
@@ -39,10 +41,19 @@ func set_character(node: Actor, emotion: String) -> void:
 	_char.texture = node.expressions
 	_char.hframes = 2
 	_char.frame = 0
+
 	if node.expressions_map.has(emotion):
 		_char.frame = node.expressions_map[emotion]
 
 	_cnt.show()
+	
+	$Tween.interpolate_property(
+		_cnt, 'rect_scale',
+		Vector2.RIGHT, Vector2.ONE,
+		appear_time, Tween.TRANS_QUINT, Tween.EASE_OUT
+	)
+	$Tween.start()
+	yield($Tween, 'tween_completed')
 
 
 func show_continue() -> void:

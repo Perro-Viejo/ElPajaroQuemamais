@@ -22,31 +22,40 @@ light_mode = 2
 
 [node name="CharacterFrame" type="CanvasLayer"]
 script = ExtResource( 7 )
+appear_time = 0.5
 
 [node name="Container" type="Control" parent="."]
 anchor_right = 0.241
 anchor_bottom = 0.304
 margin_right = -0.480011
 margin_bottom = 0.159973
+rect_pivot_offset = Vector2( 164, 328 )
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Background" type="TextureRect" parent="Container"]
-margin_right = 325.0
-margin_bottom = 331.0
+anchor_left = 0.528
+anchor_top = 1.134
+anchor_right = 0.528
+anchor_bottom = 1.134
+margin_left = -162.624
+margin_top = -331.128
+margin_right = 162.376
+margin_bottom = -0.127991
+grow_horizontal = 0
 mouse_filter = 2
 texture = ExtResource( 2 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Autofill" type="Label" parent="Container"]
-margin_left = 12.0
-margin_top = 23.0
-margin_right = 312.0
-margin_bottom = 141.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 316.0
+margin_bottom = 150.0
 grow_vertical = 0
 custom_styles/normal = SubResource( 1 )
 custom_fonts/font = ExtResource( 6 )
@@ -82,9 +91,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -51.9999
 margin_top = -52.0
-margin_right = -8.99994
-margin_bottom = -7.99997
-rect_pivot_offset = Vector2( 22, 22 )
+margin_right = -12.9999
+margin_bottom = -13.0
+rect_pivot_offset = Vector2( 19, 19 )
 texture = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
