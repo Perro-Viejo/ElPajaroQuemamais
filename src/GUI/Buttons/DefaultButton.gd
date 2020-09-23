@@ -12,9 +12,11 @@ func _ready() -> void:
 	if focus_animation != 'none':
 		self.connect('focus_entered', self, '_%s' % focus_animation)
 		self.connect('mouse_entered', self, '_%s' % focus_animation)
+		self.connect('button_down', self, 'play_sfx')
 
 
 func _bounce() -> void:
+	AudioEvent.emit_signal("play_requested","UI", "hover")
 	$Tween.interpolate_property(
 		self, 'rect_scale',
 		Vector2.DOWN, Vector2.ONE,
@@ -23,9 +25,13 @@ func _bounce() -> void:
 	$Tween.start()
 
 func _move() -> void:
+	AudioEvent.emit_signal("play_requested","UI", "move")
 	$Tween.interpolate_property(
 		self, 'rect_position:x',
 		_defaults.pos.x + 32.0, _defaults.pos.x,
 		animation_time, Tween.TRANS_SINE, Tween.EASE_OUT
 	)
 	$Tween.start()
+
+func play_sfx():
+	AudioEvent.emit_signal("play_requested","UI", "select")

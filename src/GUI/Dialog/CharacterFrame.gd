@@ -53,10 +53,12 @@ func set_character(node: Actor, emotion: String) -> void:
 		appear_time, Tween.TRANS_QUINT, Tween.EASE_OUT
 	)
 	$Tween.start()
+	AudioEvent.emit_signal("play_requested","UI", "bubble_op")
 	yield($Tween, 'tween_completed')
 
 
 func show_continue() -> void:
+	AudioEvent.emit_signal("play_requested","UI", "button_pop")
 	$Tween.interpolate_property(
 		_continue, 'rect_scale',
 		Vector2.ZERO, Vector2.ONE,

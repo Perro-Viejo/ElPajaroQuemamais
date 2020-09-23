@@ -1,10 +1,106 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/Audio/AudioManager.gd" type="Script" id=1]
+[ext_resource path="res://assets/audio/ui_whoosh.ogg" type="AudioStream" id=2]
+[ext_resource path="res://assets/audio/ui_open.ogg" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/ui_hover_01.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/ui_select.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/audio/ui_sub.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/audio/ui_transition.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/audio/ui_hover_02.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/audio/ui_title.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/audio/ui_bubble_op.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/audio/ui_button_pop.ogg" type="AudioStream" id=11]
+[ext_resource path="res://assets/audio/ui_close.ogg" type="AudioStream" id=12]
+[ext_resource path="res://src/Audio/RandomTool.gd" type="Script" id=13]
+[ext_resource path="res://assets/audio/archive/ui_back.ogg" type="AudioStream" id=14]
+[ext_resource path="res://assets/audio/ui_write.ogg" type="AudioStream" id=15]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="UI" type="Node2D" parent="."]
+
+[node name="bubble_op" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 10 )
+
+[node name="popup_close" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 12 )
+
+[node name="popup_open" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 3 )
+
+[node name="sub" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 6 )
+volume_db = -3.0
+pitch_scale = 1.5
+
+[node name="title" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 9 )
+
+[node name="transition" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 7 )
+
+[node name="whoosh" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 2 )
+
+[node name="whoosh_2" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 2 )
+pitch_scale = 0.7
+
+[node name="select" type="Node2D" parent="UI"]
+script = ExtResource( 13 )
+volume = -3.0
+random_pitch = true
+min_pitch = -5.0
+max_pitch = 8.0
+
+[node name="select" type="AudioStreamPlayer" parent="UI/select"]
+stream = ExtResource( 5 )
+pitch_scale = 0.8
+
+[node name="hover" type="Node2D" parent="UI"]
+script = ExtResource( 13 )
+random_pitch = true
+min_pitch = -3.0
+max_pitch = 5.0
+
+[node name="hover_01" type="AudioStreamPlayer" parent="UI/hover"]
+stream = ExtResource( 4 )
+
+[node name="hover_02" type="AudioStreamPlayer" parent="UI/hover"]
+stream = ExtResource( 8 )
+
+[node name="move" type="Node2D" parent="UI"]
+script = ExtResource( 13 )
+volume = -9.0
+Pitch = -5.0
+random_pitch = true
+min_pitch = -3.0
+max_pitch = 5.0
+
+[node name="hover_01" type="AudioStreamPlayer" parent="UI/move"]
+stream = ExtResource( 14 )
+
+[node name="write" type="Node2D" parent="UI"]
+script = ExtResource( 13 )
+volume = -4.0
+random_pitch = true
+min_pitch = -5.0
+max_pitch = 6.0
+
+[node name="write" type="AudioStreamPlayer" parent="UI/write"]
+stream = ExtResource( 15 )
+volume_db = -6.0
+
+[node name="button_pop" type="Node2D" parent="UI"]
+script = ExtResource( 13 )
+volume = -8.0
+random_pitch = true
+min_pitch = -3.0
+max_pitch = 3.0
+
+[node name="button_pop" type="AudioStreamPlayer" parent="UI/button_pop"]
+stream = ExtResource( 11 )
 
 [node name="MX" type="Node2D" parent="."]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ui_hover_01.ogg-6a9fb89756bc55da67c057473a82a21b.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/ui_hover_01.ogg"
+dest_files=[ "res://.import/ui_hover_01.ogg-6a9fb89756bc55da67c057473a82a21b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

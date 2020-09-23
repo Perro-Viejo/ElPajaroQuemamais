@@ -48,6 +48,7 @@ func _exit_tree()->void:
 
 
 func _on_NewGame_pressed()->void:
+	AudioEvent.emit_signal("play_requested","UI", "transition")
 	GuiEvent.emit_signal('NewGame')
 	GuiEvent.emit_signal('ChangeScene', first_level)
 
@@ -76,6 +77,8 @@ func _on_Credits_pressed() -> void:
 func _on_Exit_pressed()->void:
 	GuiEvent.emit_signal('Exit')
 
+func _play_sfx(source, sound):
+	AudioEvent.emit_signal("play_requested", source, sound)
 
 #localization
 func retranslate()->void:

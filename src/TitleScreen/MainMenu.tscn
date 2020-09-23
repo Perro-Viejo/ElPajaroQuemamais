@@ -124,6 +124,7 @@ tracks/3/keys = {
 [sub_resource type="Animation" id=6]
 resource_name = "show_first_time"
 length = 1.5
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("BG/MainOptions:rect_position")
 tracks/0/interp = 1
@@ -170,6 +171,26 @@ tracks/3/keys = {
 "points": PoolRealArray( 45, -0.25, 0, 0.0750337, -127.5, 0, -0.072013, 126.5, 0.0703587, 32.5 ),
 "times": PoolRealArray( 0, 0.4 )
 }
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.1, 0.5, 0.85 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [ "UI", "whoosh" ],
+"method": "_play_sfx"
+}, {
+"args": [ "UI", "title" ],
+"method": "_play_sfx"
+}, {
+"args": [ "UI", "whoosh_2" ],
+"method": "_play_sfx"
+} ]
+}
 
 [node name="MainMenu" type="CanvasLayer"]
 follow_viewport_enable = true
@@ -204,7 +225,7 @@ __meta__ = {
 }
 
 [node name="GameName" type="VBoxContainer" parent="BG"]
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.0251733 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = -2
@@ -235,8 +256,8 @@ align = 2
 [node name="MainOptions" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 921.663
-margin_bottom = 921.662
+margin_top = 924.54
+margin_bottom = 924.539
 custom_constants/margin_right = 16
 custom_constants/margin_top = 4
 custom_constants/margin_left = 16
@@ -298,8 +319,6 @@ text = "Salir"
 [node name="Credits" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1280.0
-margin_right = -1280.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

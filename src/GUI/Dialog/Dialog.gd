@@ -21,6 +21,7 @@ var _current_options := ''
 # } ----
 var _is_listening_click := true
 var _current_emotion := ''
+var sub_shown = false
 
 onready var _story_reader: EXP_StoryReader = _story_reader_class.new()
 onready var _dialog_menu: DialogMenu = find_node('DialogMenu')
@@ -43,6 +44,7 @@ func _ready() -> void:
 			_story_reader.read(_stories_es)
 
 	# Conectarse a eventos de los retoños y de sí mismo
+	$Tween.connect("tween_completed", self, "play_sfx")
 	_autofill.connect('fill_done', self, '_autofill_completed')
 	if use_click_to_progress:
 		self.connect('gui_input', self,'_on_gui_input')
@@ -54,7 +56,7 @@ func _ready() -> void:
 	DialogEvent.connect('dialog_option_clicked', self, '_option_clicked')
 	HudEvent.connect('continue_requested', self, '_enable_click_listening')
 	HudEvent.connect('hud_accept_pressed', _autofill, 'stop')
-
+	
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Eventos propios y de hijos ░░░░
 func _autofill_completed() -> void:
 	if _current_character:
@@ -341,6 +343,7 @@ func _get_options_id() -> String:
 	return '%s-%s' % [_did, _options_nid]
 
 func _toggle_subs(show := true) -> void:
+	sub_shown = show
 	$Tween.interpolate_property(
 		_subs, 'rect_position:y',
 		OS.window_size.y if show else 900,
@@ -354,3 +357,7 @@ func _toggle_subs(show := true) -> void:
 
 func _hide_subs() -> void:
 	_subs.rect_position.y = OS.window_size.y
+
+func play_sfx(obj, key):
+	if sub_shown:
+		AudioEvent.emit_signal("play_requested","UI", "sub")

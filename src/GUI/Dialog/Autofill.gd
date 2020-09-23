@@ -59,7 +59,6 @@ func set_text(text):
 
 	if text != '':
 		_text = text
-		AudioEvent.emit_signal('play_requested', 'UI', 'Dialogue')
 		if animate_on_set_text:
 			start_animation()
 		else:
@@ -115,6 +114,7 @@ func finish_and_hide() -> void:
 
 
 func _write_character():
+	AudioEvent.emit_signal("play_requested","UI", "write")
 	if text.length() < _text.length():
 		text += _text[_count]
 		_count += 1
