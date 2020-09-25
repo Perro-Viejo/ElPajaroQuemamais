@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/World.gd" type="Script" id=2]
@@ -8,14 +8,21 @@
 [ext_resource path="res://src/Characters/NPC/AnaMaria.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Characters/NPC/Lupe.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Characters/NPC/Rico.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Objects/Clickable.gd" type="Script" id=9]
 
-[sub_resource type="NavigationPolygon" id=1]
+[sub_resource type="NavigationPolygon" id=3]
 vertices = PoolVector2Array( 337, 41.25, 351, 39.25, 351, 45.25, 337, 51.25, 369, 81.25, 369, 39.25, 391, 39.25, 391, 79.25, 465, 79.25, 465, 159.25, 369, 159.25, 369, 125.25, 281, 123.25, 325, 123.25, 325, 129.25, 293, 129.25, 281, 163.25, 293, 149.25, 325, 163.25, 329, 149.25, 333, 161.25, 349, 87.25, 349, 93.25, 279, 93.25, 337, 81.25, 279, 41.25, 369, 87.25, 345, 125.25, 345, 159.25, 339, 161.25, 329, 119.25, 369, 119.25 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 7, 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14, 15 ), PoolIntArray( 16, 12, 15, 17 ), PoolIntArray( 18, 16, 17, 19, 20 ), PoolIntArray( 21, 22, 23, 24 ), PoolIntArray( 23, 25, 0, 3 ), PoolIntArray( 23, 3, 24 ), PoolIntArray( 21, 24, 4, 26 ), PoolIntArray( 26, 4, 7 ), PoolIntArray( 27, 28, 29, 20, 19, 30 ), PoolIntArray( 27, 30, 31, 11 ), PoolIntArray( 7, 11, 31 ), PoolIntArray( 26, 7, 31 ) ]
 outlines = [ PoolVector2Array( 351, 45.25, 337, 51.25, 337, 81.25, 369, 81.25, 369, 39.25, 391, 39.25, 391, 79.25, 465, 79.25, 465, 159.25, 369, 159.25, 369, 125.25, 345, 125.25, 345, 159.25, 339, 161.25, 333, 161.25, 325, 163.25, 281, 163.25, 281, 123.25, 325, 123.25, 325, 129.25, 293, 129.25, 293, 149.25, 329, 149.25, 329, 119.25, 369, 119.25, 369, 87.25, 349, 87.25, 349, 93.25, 279, 93.25, 279, 41.25, 337, 41.25, 351, 39.25 ) ]
 
+[sub_resource type="CircleShape2D" id=2]
+radius = 66.4464
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.6609, 11.5556 )
+
 [node name="World" type="Node2D"]
-position = Vector2( -150.076, -1.8877 )
+position = Vector2( -124.849, 171.337 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 180.0, -720.0, 720.0 ],
@@ -37,25 +44,46 @@ position = Vector2( 0, 305 )
 [node name="Room" parent="." instance=ExtResource( 4 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 340.414, 54.6119 )
+position = Vector2( 313.475, 200.532 )
 z_index = 1
 collision_mask = 0
 
 [node name="Rico" parent="." instance=ExtResource( 8 )]
 position = Vector2( -73.924, 54.8877 )
+expressions_map = {
+"angry": 0,
+"excited": -1,
+"sad": -1,
+"thinking": 1,
+"worried": -1
+}
 
 [node name="Lupe" parent="." instance=ExtResource( 7 )]
 position = Vector2( 30.076, 81.8877 )
+expressions_map = {
+"angry": -1,
+"excited": 0,
+"sad": -1,
+"thinking": -1,
+"worried": 1
+}
 
 [node name="AnaMaria" parent="." instance=ExtResource( 6 )]
 position = Vector2( -49.924, -30.1123 )
+expressions_map = {
+"angry": 0,
+"excited": -1,
+"sad": 1,
+"thinking": -1,
+"worried": -1
+}
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 position = Vector2( -1261.92, -251.112 )
 scale = Vector2( 4, 4 )
-navpoly = SubResource( 1 )
+navpoly = SubResource( 3 )
 
 [node name="StartPoint" type="Position2D" parent="."]
 position = Vector2( 138, -82 )
@@ -65,4 +93,65 @@ position = Vector2( 79, 391 )
 
 [node name="Line2D" type="Line2D" parent="."]
 points = PoolVector2Array( 314.1, 81.5757 )
-width = 3.0
+width = 5.0
+default_color = Color( 0.556863, 0.745098, 0.333333, 1 )
+
+[node name="TargetPoints" type="Node2D" parent="."]
+
+[node name="Clickable2" type="Area2D" parent="TargetPoints"]
+position = Vector2( 82.2814, 395.768 )
+z_index = 5
+script = ExtResource( 9 )
+interaction_type = "target"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable2"]
+shape = SubResource( 2 )
+
+[node name="Clickable3" type="Area2D" parent="TargetPoints"]
+position = Vector2( 295.549, 299.237 )
+z_index = 5
+script = ExtResource( 9 )
+interaction_type = "target"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable3"]
+shape = SubResource( 2 )
+
+[node name="Clickable4" type="Area2D" parent="TargetPoints"]
+position = Vector2( 472.898, 160.052 )
+z_index = 5
+script = ExtResource( 9 )
+interaction_type = "target"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable4"]
+shape = SubResource( 2 )
+
+[node name="Clickable" type="Area2D" parent="TargetPoints"]
+position = Vector2( -34.4547, 14.1313 )
+z_index = 5
+script = ExtResource( 9 )
+interaction_type = "target"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable"]
+shape = SubResource( 2 )
+
+[node name="Test_Obj" type="Node2D" parent="."]
+
+[node name="InteractableObject" type="Area2D" parent="Test_Obj"]
+position = Vector2( 441.827, 20.9186 )
+z_index = 5
+script = ExtResource( 9 )
+interaction_type = "object"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Test_Obj/InteractableObject"]
+position = Vector2( 29.4596, 57.0518 )
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="Test_Obj"]
+margin_left = 461.47
+margin_top = 67.2884
+margin_right = 481.47
+margin_bottom = 87.2884
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}

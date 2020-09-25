@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/Audio/AudioManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/ui_whoosh.ogg" type="AudioStream" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://src/Audio/RandomTool.gd" type="Script" id=13]
 [ext_resource path="res://assets/audio/archive/ui_back.ogg" type="AudioStream" id=14]
 [ext_resource path="res://assets/audio/ui_write.ogg" type="AudioStream" id=15]
+[ext_resource path="res://assets/audio/sfx_fly.ogg" type="AudioStream" id=16]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource( 1 )
@@ -104,3 +105,18 @@ max_pitch = 3.0
 stream = ExtResource( 11 )
 
 [node name="MX" type="Node2D" parent="."]
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Move" type="Node2D" parent="Player"]
+script = ExtResource( 13 )
+random_volume = true
+min_volume = -3.0
+max_volume = 2.0
+random_pitch = true
+min_pitch = 3.0
+max_pitch = -2.0
+
+[node name="Fly" type="AudioStreamPlayer" parent="Player/Move"]
+stream = ExtResource( 16 )
+volume_db = -7.0

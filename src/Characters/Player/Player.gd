@@ -9,6 +9,9 @@ var is_paused := false
 var is_out: bool = false
 var is_moving = false
 
+func _ready():
+	PlayerEvent.connect('check_object', self, '_on_object_check')
+
 func _set_node_to_interact(new_node: Pickable) -> void:
 	if node_to_interact:
 		node_to_interact.hide_interaction()
@@ -23,4 +26,11 @@ func _set_fishing(value: bool) -> void:
 func _process(delta):
 	if path.size() > 0:
 		rotation = path[0].angle_to_point(position)
+
+func _on_object_check(obj_pos, max_dist):
+	print(position.distance_to(obj_pos))
+	if position.distance_to(obj_pos) < max_dist:
+		speak("Interactuamelo")
+	else:
+		speak("ta lejambres")
 
