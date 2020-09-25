@@ -1,6 +1,9 @@
 class_name DialogMenu
 extends VBoxContainer
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Variables ░░░░
+signal option_hovered(opt)
+signal option_left
+
 export(PackedScene) var option
 export var tween_path: NodePath
 
@@ -11,9 +14,7 @@ var current_options := []
 func _ready() -> void:
 	_tween_ref = get_node(tween_path) as Tween
 
-	for btn in get_children():
-		btn.connect('mouse_entered', self, '_on_option_hover', [btn, true])
-		btn.connect('mouse_exited', self, '_on_option_hover', [btn, false])
+	_test()
 #	hide()
 
 
@@ -31,6 +32,8 @@ func create_options(options := [], autoshow := false) -> void:
 		btn.connect('pressed', self, '_on_option_clicked', [opt])
 		btn.connect('mouse_entered', self, '_on_option_hover', [btn, true])
 		btn.connect('mouse_exited', self, '_on_option_hover', [btn, false])
+		btn.connect('focus_entered', self, '_on_option_hover', [btn, true])
+		btn.connect('focus_exited', self, '_on_option_hover', [btn, false])
 
 		add_child(btn)
 
@@ -98,6 +101,20 @@ func _on_option_hover(btn: DialogOption, hover: bool) -> void:
 		btn, 'rect_position:x',
 		btn.defaults.pos.x if hover else btn.defaults.pos.x + 16,
 		btn.defaults.pos.x + 16 if hover else btn.defaults.pos.x,
-		0.3, Tween.TRANS_SINE, Tween.EASE_OUT
+		0.2, Tween.TRANS_SINE, Tween.EASE_OUT
 	)
 	_tween_ref.start()
+	
+	if hover:
+		emit_signal('option_hovered', btn)
+	else:
+		emit_signal('option_left')
+
+func _test() -> void:
+	var voices := ['ana_maría', 'rico', 'lupe', 'quemamais']
+	for btn in get_children():
+		btn.connect('mouse_entered', self, '_on_option_hover', [btn, true])
+		btn.connect('mouse_exited', self, '_on_option_hover', [btn, false])
+		btn.connect('focus_entered', self, '_on_option_hover', [btn, true])
+		btn.connect('focus_exited', self, '_on_option_hover', [btn, false])
+		btn.voice = voices.pop_front()
