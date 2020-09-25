@@ -16,6 +16,7 @@ export var expressions_map := {
 	thinking = -1,
 	worried = -1
 }
+export var expressions_offset := Vector2.ZERO
 
 var _in_dialog := false
 

@@ -12,7 +12,7 @@ var dir = Vector2(0, 0)
 
 #onready var foot_area: Area2D = $FootArea
 
-func _ready() -> void:	
+func _ready() -> void:
 	# Conectarse a eventos del universo
 	if not DialogEvent.is_connected('line_triggered', self, '_should_speak'):
 		DialogEvent.connect('line_triggered', self, '_should_speak')

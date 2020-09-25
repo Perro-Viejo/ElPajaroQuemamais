@@ -32,6 +32,7 @@ expressions_map = {
 "thinking": -1,
 "worried": 1
 }
+expressions_offset = Vector2( 20, -8 )
 
 [node name="StateMachine" type="Node2D" parent="."]
 script = ExtResource( 2 )
@@ -45,3 +46,9 @@ frames = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 3 )
+
+[node name="Expressions" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 5 )
+offset = Vector2( 20, -64 )
+hframes = 2

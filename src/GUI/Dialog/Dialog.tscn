@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_24.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/GUI/Dialog/Dialog.gd" type="Script" id=2]
-[ext_resource path="res://src/GUI/Dialog/DialogMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/GUI/Dialog/DialogMenuContainer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/GUI/Dialog/CharacterFrame.tscn" type="PackedScene" id=4]
 
 [node name="Dialog" type="Control"]
@@ -14,8 +14,14 @@ __meta__ = {
 }
 use_click_to_progress = true
 
-[node name="DialogMenu" parent="." instance=ExtResource( 3 )]
+[node name="DialogMenuContainer" parent="." instance=ExtResource( 3 )]
+anchor_left = 1.0
 anchor_top = 1.0
+margin_left = -760.0
+margin_top = -272.0
+margin_right = -67.0
+margin_bottom = -67.0001
+rect_pivot_offset = Vector2( -1168, -344 )
 
 [node name="CharacterFrame" parent="." instance=ExtResource( 4 )]
 

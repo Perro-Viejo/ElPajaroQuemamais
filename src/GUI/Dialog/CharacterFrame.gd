@@ -39,6 +39,7 @@ func set_character(node: Actor, emotion: String) -> void:
 
 	_cnt.rect_position = Utils.get_screen_coords_for(node) - _offset
 	_char.texture = node.expressions
+	_char.offset = node.expressions_offset
 	_char.hframes = 2
 	_char.frame = 0
 

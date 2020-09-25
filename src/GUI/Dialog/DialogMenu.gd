@@ -2,11 +2,19 @@ class_name DialogMenu
 extends VBoxContainer
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Variables ░░░░
 export(PackedScene) var option
+export var tween_path: NodePath
+
+var _tween_ref: Tween = null
 
 var current_options := []
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func _ready() -> void:
-	hide()
+	_tween_ref = get_node(tween_path) as Tween
+
+	for btn in get_children():
+		btn.connect('mouse_entered', self, '_on_option_hover', [btn, true])
+		btn.connect('mouse_exited', self, '_on_option_hover', [btn, false])
+#	hide()
 
 
 func create_options(options := [], autoshow := false) -> void:
@@ -21,6 +29,8 @@ func create_options(options := [], autoshow := false) -> void:
 		# btn.text = opt.line
 		btn.text = tr(opt.tr_code.to_upper())
 		btn.connect('pressed', self, '_on_option_clicked', [opt])
+		btn.connect('mouse_entered', self, '_on_option_hover', [btn, true])
+		btn.connect('mouse_exited', self, '_on_option_hover', [btn, false])
 
 		add_child(btn)
 
@@ -81,3 +91,13 @@ func _on_option_clicked(opt: Dictionary) -> void:
 	SectionEvent.dialog = false
 	hide()
 	DialogEvent.emit_signal('dialog_option_clicked', opt)
+
+
+func _on_option_hover(btn: DialogOption, hover: bool) -> void:
+	_tween_ref.interpolate_property(
+		btn, 'rect_position:x',
+		btn.defaults.pos.x if hover else btn.defaults.pos.x + 16,
+		btn.defaults.pos.x + 16 if hover else btn.defaults.pos.x,
+		0.3, Tween.TRANS_SINE, Tween.EASE_OUT
+	)
+	_tween_ref.start()
