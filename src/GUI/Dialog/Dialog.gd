@@ -337,6 +337,7 @@ func _finish_dialog() -> void:
 	DialogEvent.emit_signal('dialog_finished')
 	_character_frame.dialog_finished()
 	_toggle_subs(false)
+	hide()
 
 
 func _get_options_id() -> String:

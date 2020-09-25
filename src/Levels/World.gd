@@ -9,9 +9,12 @@ onready var _player: Player = $Player
 func _ready() -> void:
 	# Establecer valores por defecto
 	_player.show()
-
-	_player.path = $Navigation2D.get_simple_path($StartPoint.position, $EndPoint.position)
-	_player.position = _player.path[0]
-	$Line2D.points = _player.path
 	WorldEvent.emit_signal('world_entered')
 	DialogEvent.emit_signal('dialog_requested', 'DialogTest')
+	PlayerEvent.connect('move_player', self, '_move_player')
+
+func _move_player(end_pos) -> void:
+	AudioEvent.emit_signal("play_requested","Player","Move")
+	_player.path = $Navigation2D.get_simple_path(_player.position, end_pos)
+	_player.position = _player.path[0]
+	$Line2D.points = _player.path
