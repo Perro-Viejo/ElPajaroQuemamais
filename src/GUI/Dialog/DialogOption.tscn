@@ -1,15 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/GUI/Dialog/dialog_option_normal.tres" type="StyleBox" id=1]
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_regular_24.tres" type="DynamicFont" id=2]
 [ext_resource path="res://src/GUI/Dialog/dialog_option_hover.tres" type="StyleBox" id=3]
 [ext_resource path="res://src/GUI/Dialog/DialogOption.gd" type="Script" id=4]
+[ext_resource path="res://assets/resources/themes/quemamais_theme.tres" type="Theme" id=5]
 
 [node name="DialogOption" type="Button"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -840.0
 margin_bottom = -918.0
+hint_tooltip = "Saperoco"
+theme = ExtResource( 5 )
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 1 )
 custom_styles/focus = ExtResource( 3 )

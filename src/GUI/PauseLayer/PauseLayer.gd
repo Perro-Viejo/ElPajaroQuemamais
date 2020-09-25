@@ -24,7 +24,7 @@ func _on_Resume_pressed():
 	SectionEvent.Paused = false #setget triggers signal and responding to it hide GUI
 
 func _on_Restart_pressed():
-	GuiEvent.emit_signal('play_requested', 'UI', 'Gen_Button')
+	AudioEvent.emit_signal('play_requested', 'UI', 'Gen_Button')
 	GuiEvent.emit_signal("Restart")
 	SectionEvent.Paused = false #setget triggers signal and responding to it hide GUI
 

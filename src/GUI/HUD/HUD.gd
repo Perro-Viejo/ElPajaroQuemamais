@@ -7,7 +7,7 @@ onready var _dialog: Dialog = find_node('Dialog')
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func _ready() -> void:
 	_dialog.hide()
-	
+
 	# Conectarse a los eventos del señor
 	WorldEvent.connect('world_entered', self, '_on_world_entered')
 

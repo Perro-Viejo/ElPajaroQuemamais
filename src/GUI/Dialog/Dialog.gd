@@ -21,7 +21,8 @@ var _current_options := ''
 # } ----
 var _is_listening_click := true
 var _current_emotion := ''
-var sub_shown = false
+var _sub_shown = false
+var _played = false
 
 onready var _story_reader: EXP_StoryReader = _story_reader_class.new()
 onready var _dialog_menu: DialogMenu = find_node('DialogMenu')
@@ -44,10 +45,12 @@ func _ready() -> void:
 			_story_reader.read(_stories_es)
 
 	# Conectarse a eventos de los retoños y de sí mismo
-	$Tween.connect("tween_completed", self, "play_sfx")
+	$Tween.connect('tween_step', self, '_play_subs_sfx')
 	_autofill.connect('fill_done', self, '_autofill_completed')
 	if use_click_to_progress:
 		self.connect('gui_input', self,'_on_gui_input')
+	# Esta es de prueba:
+	_dialog_menu.connect('test_option_clicked', self, '_hide_dialog_menu')
 
 	# Conectarse a eventos de la vida real
 	DialogEvent.connect('dialog_requested', self, '_play_dialog')
@@ -94,6 +97,8 @@ func _play_dialog(dialog_name: String) -> void:
 	_did = _story_reader.get_did_via_record_name(dialog_name)
 	_nid = _story_reader.get_nid_via_exact_text(_did, 'start')
 	_final_nid = _story_reader.get_nid_via_exact_text(_did, 'end')
+	
+	self.mouse_filter = 0 # Escuchar los clics
 
 	if _story_reader.get_nid_via_exact_text(_did, 'return') > 0:
 		_in_dialog_with_options = true
@@ -337,18 +342,26 @@ func _finish_dialog() -> void:
 	DialogEvent.emit_signal('dialog_finished')
 	_character_frame.dialog_finished()
 	_toggle_subs(false)
-	hide()
+	self.mouse_filter = 2 # Ignorar los clics
+	
+	# ---- Esto es temporal mientras se pone el botón pa' activar el menú de
+	#      diálogos ------------------------------------------------------------
+	_dialog_menu.show()
+	AudioEvent.emit_signal('play_requested', 'UI', 'whoosh')
+	$AnimationPlayer.play('show_dialog_menu')
+	# --------------------------------------------------------------------------
 
 
 func _get_options_id() -> String:
 	return '%s-%s' % [_did, _options_nid]
 
 func _toggle_subs(show := true) -> void:
-	sub_shown = show
+	_sub_shown = show
+	_played = false
 	$Tween.interpolate_property(
 		_subs, 'rect_position:y',
-		OS.window_size.y if show else 900,
-		900 if show else OS.window_size.y,
+		OS.window_size.y if show else 900.0,
+		900.0 if show else OS.window_size.y,
 		0.3 if show else 0.1,
 		Tween.TRANS_BOUNCE if show else Tween.TRANS_SINE,
 		Tween.EASE_OUT if show else Tween.EASE_IN
@@ -359,6 +372,12 @@ func _toggle_subs(show := true) -> void:
 func _hide_subs() -> void:
 	_subs.rect_position.y = OS.window_size.y
 
-func play_sfx(obj, key):
-	if sub_shown:
-		AudioEvent.emit_signal("play_requested","UI", "sub")
+func _play_subs_sfx(obj: Object, key: NodePath, elapsed: float, val: Object):
+	if _sub_shown and not _played and (obj as Control).rect_position.y < 905:
+		_played = true
+		AudioEvent.emit_signal('play_requested', 'UI', 'sub')
+
+
+func _hide_dialog_menu() -> void:
+	AudioEvent.emit_signal('play_requested', 'UI', 'whoosh_2')
+	$AnimationPlayer.play('show_dialog_menu', -1.0, -1.5, true)

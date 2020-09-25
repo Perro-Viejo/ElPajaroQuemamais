@@ -3,6 +3,7 @@ extends VBoxContainer
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Variables ░░░░
 signal option_hovered(opt)
 signal option_left
+signal test_option_clicked
 
 export(PackedScene) var option
 export var tween_path: NodePath
@@ -106,15 +107,22 @@ func _on_option_hover(btn: DialogOption, hover: bool) -> void:
 	_tween_ref.start()
 	
 	if hover:
+		AudioEvent.emit_signal('play_requested', 'UI', 'move')
 		emit_signal('option_hovered', btn)
 	else:
 		emit_signal('option_left')
 
 func _test() -> void:
 	var voices := ['ana_maría', 'rico', 'lupe', 'quemamais']
-	for btn in get_children():
+	for _btn in get_children():
+		var btn: Button = _btn
+		btn.connect('pressed', self, '_on_test_option_clicked')
 		btn.connect('mouse_entered', self, '_on_option_hover', [btn, true])
 		btn.connect('mouse_exited', self, '_on_option_hover', [btn, false])
 		btn.connect('focus_entered', self, '_on_option_hover', [btn, true])
 		btn.connect('focus_exited', self, '_on_option_hover', [btn, false])
 		btn.voice = voices.pop_front()
+		btn.hint_tooltip = 'Con la voz de: %s' % btn.voice
+
+func _on_test_option_clicked() -> void:
+	emit_signal('test_option_clicked')
