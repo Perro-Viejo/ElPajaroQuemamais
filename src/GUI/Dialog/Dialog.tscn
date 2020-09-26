@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_24.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/GUI/Dialog/Dialog.gd" type="Script" id=2]
 [ext_resource path="res://src/GUI/Dialog/DialogMenuContainer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/GUI/Dialog/CharacterFrame.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/images/gui/quemamais_talk.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/gui/quemamais_normal.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "show_dialog_menu"
@@ -123,3 +125,17 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/show_dialog_menu = SubResource( 1 )
+
+[node name="DialogButton" type="TextureButton" parent="."]
+margin_left = 1033.0
+margin_top = 722.0
+margin_right = 1073.0
+margin_bottom = 762.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+texture_focused = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

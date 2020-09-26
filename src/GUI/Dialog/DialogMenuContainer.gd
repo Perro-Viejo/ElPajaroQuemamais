@@ -1,6 +1,6 @@
 extends NinePatchRect
 
-export var voice_disappear_timeout := 0.25
+export var voice_disappear_timeout := 0.1
 
 var _first_hover := true
 var _voice_disappear_time := 0.0
@@ -54,12 +54,7 @@ func _hide_voice_icon() -> void:
 	$Tween.start()
 
 func _hide_voice() -> void:
-	$Tween.interpolate_property(
-		_voice, 'self_modulate:a',
-		1.0, 0.0,
-		0.1, Tween.TRANS_LINEAR, Tween.EASE_OUT
-	)
-	$Tween.start()
+	_voice.self_modulate.a = 0.0
 	_voice_icon.rect_position.y = _defaults.voice_icon.y
 	_voice_icon.self_modulate.a = 0.0
 	_first_hover = true
