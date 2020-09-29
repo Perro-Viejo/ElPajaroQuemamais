@@ -138,13 +138,13 @@ func _continue_dialog(slot := 0) -> void:
 	if _nid == _final_nid:
 		_finish_dialog()
 	else:
-		_play_dialog_line()
+		_read_dialog_line()
 
 
 func _next_dialog_line(slot := 0) -> void:
 	_nid = _story_reader.get_nid_from_slot(_did, _nid, slot)
 
-func _play_dialog_line() -> void:
+func _read_dialog_line() -> void:
 	var line_txt := _story_reader.get_text(_did, _nid)
 
 	if _nid == _final_nid:
@@ -167,94 +167,123 @@ func _play_dialog_line() -> void:
 	var actor := 'player'
 	if line_dic.has('actor'):
 		actor = (line_dic.actor as String).replace(' ', '_')
-
-	# ----[ la línea ]----------------------------------------------------------
-	var line := ''
-	if line_dic.has('line'):
-		var code := ('dlg_%d_%d_%s' % [_did, _nid, actor]).to_upper()
-		line = tr(code)
-		# Cambiar temporalmente el idioma para sacar el subtítulo
-		TranslationServer.set_locale('en')
-		_subs.set_text(tr(code))
-		TranslationServer.set_locale('es')
-
-	# ----[ la emoción ]----------------------------------------------------------
-	_current_emotion = ''
-	if line_dic.has('emotion'):
-		_current_emotion = line_dic.emotion as String
-
-	_wait = false
-	if line_dic.has('wait'):
-		_wait = true
-
-	# Por defecto se asume que el diálogo continuará con base en una acción del
-	# jugador
-	var time_to_disappear := -1.0
-	if line_dic.has('time'):
-		time_to_disappear = line_dic.time as float
-
-	# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ ON START (event) ▮▮▮▮
-	if line_dic.has('on_start'):
-		var on_start_dict = line_dic.on_start
-		if on_start_dict.params.size() == 1:
-			get_node("/root/"+on_start_dict.type).emit_signal(on_start_dict.event, on_start_dict.params[0])
-		else:
-			get_node("/root/"+on_start_dict.type).emit_signal(on_start_dict.event)
-
-	# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ OPCIONES ▮▮▮▮
-	if line_dic.has('options'):
-		_options_nid = _nid
-		_selected_slot = -1
-
-		var options_state := {}
-		var dialogs_state: Dictionary = Data.get_data(Data.DIALOGS)
-		if dialogs_state.has(_get_options_id()):
-			options_state = dialogs_state[_get_options_id()]
-
-		var id := 0
-		for opt in line_dic.options:
-			opt.id = id
-			opt.tr_code = 'dlg_%d_%d_%s_opt_%d' % [_did, _nid, actor, id]
-
-			if options_state:
-				opt.show = options_state[opt.id]
-
-			if not opt.has('actor'):
-				opt.actor = 'player'
-			if not opt.has('time'):
-				opt.time = 3
-			if not opt.has('emotion'):
-				opt.emotion = ''
-
-			id += 1
-
-		_dialog_mnu.create_options(line_dic.options)
-
-	# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ APAGAR OPCIONES ▮▮▮▮
-	if line_dic.has('off') or line_dic.has('on'):
-		# En este nodo se apagarán opciones
-		var cfg := {}
-
-		if line_dic.has('off'):
-			for opt in line_dic.off:
-				cfg[String(opt)] = false
-
-		if line_dic.has('on'):
-			for opt in line_dic.on:
-				cfg[String(opt)] = true
-
-		_dialog_mnu.update_options(cfg)
-
-	# Lo último que se hace es disparar la línea de diálogo
 	
-	if line:
-		DialogEvent.emit_signal(
-			'line_triggered',
-			actor.to_lower(),
-			line,
-			time_to_disappear,
-			_current_emotion
-		)
+	var action: String = line_dic.get('action', 'SPEAK')
+	
+	match action:
+		'SPEAK':
+			# ----[ la línea ]--------------------------------------------------
+			var line := ''
+			if line_dic.has('line'):
+				var code := ('dlg_%d_%d_%s' % [_did, _nid, actor]).to_upper()
+				line = tr(code)
+				# Cambiar temporalmente el idioma para sacar el subtítulo
+				TranslationServer.set_locale('en')
+				_subs.set_text(tr(code))
+				TranslationServer.set_locale('es')
+
+			# ----[ la emoción ]------------------------------------------------
+			_current_emotion = ''
+			if line_dic.has('emotion'):
+				_current_emotion = line_dic.emotion as String
+
+			_wait = false
+			if line_dic.has('wait'):
+				_wait = true
+
+			# Por defecto se asume que el diálogo continuará con base en una acción del
+			# jugador
+			var time_to_disappear := -1.0
+			if line_dic.has('time'):
+				time_to_disappear = line_dic.time as float
+
+			# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ ON START (event) ▮▮▮▮
+			if line_dic.has('on_start'):
+				var on_start_dict = line_dic.on_start
+				if on_start_dict.params.size() == 1:
+					get_node("/root/"+on_start_dict.type).emit_signal(
+						on_start_dict.event, on_start_dict.params[0]
+					)
+				else:
+					get_node("/root/"+on_start_dict.type).emit_signal(
+						on_start_dict.event
+					)
+
+			# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ OPCIONES ▮▮▮▮
+			if line_dic.has('options'):
+				_options_nid = _nid
+				_selected_slot = -1
+
+				var options_state := {}
+				var dialogs_state: Dictionary = Data.get_data(Data.DIALOGS)
+				if dialogs_state.has(_get_options_id()):
+					options_state = dialogs_state[_get_options_id()]
+
+				var id := 0
+				for opt in line_dic.options:
+					opt.id = id
+					opt.tr_code = 'dlg_%d_%d_%s_opt_%d' % [_did, _nid, actor, id]
+
+					if options_state:
+						opt.show = options_state[opt.id]
+
+					if not opt.has('actor'):
+						opt.actor = 'player'
+					if not opt.has('time'):
+						opt.time = 3
+					if not opt.has('emotion'):
+						opt.emotion = ''
+
+					id += 1
+
+				_dialog_mnu.create_options(line_dic.options)
+
+			# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ APAGAR OPCIONES ▮▮▮▮
+			if line_dic.has('off') or line_dic.has('on'):
+				# En este nodo se apagarán opciones
+				var cfg := {}
+
+				if line_dic.has('off'):
+					for opt in line_dic.off:
+						cfg[String(opt)] = false
+
+				if line_dic.has('on'):
+					for opt in line_dic.on:
+						cfg[String(opt)] = true
+
+				_dialog_mnu.update_options(cfg)
+
+			# Lo último que se hace es disparar la línea de diálogo
+			
+			if line:
+				DialogEvent.emit_signal(
+					'line_triggered',
+					actor.to_lower(),
+					line,
+					time_to_disappear,
+					_current_emotion
+				)
+		'MOVE':
+			var final_direction = Vector2(
+				line_dic.final_direction[0], line_dic.final_direction[1]
+			)
+			if line_dic.position.type == "COORDINATE":
+				var position = Vector2(line_dic.position.x, line_dic.position.y)
+
+				DialogEvent.emit_signal(
+					'moved_to_coordinate',
+					actor,
+					position,
+					final_direction
+				)
+			else:
+				DialogEvent.emit_signal(
+					'moved_to_reference',
+					actor,
+					line_dic.position.room,
+					line_dic.position.reference,
+					final_direction
+				)
 
 
 func _on_character_spoke(

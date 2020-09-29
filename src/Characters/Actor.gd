@@ -2,6 +2,8 @@ class_name Actor
 extends KinematicBody2D
 
 signal died()
+signal moved_to_coordinate(cfg)
+signal moved_to_reference(cfg)
 
 export var dialog_color: Color
 export var speed := 300
@@ -34,24 +36,12 @@ func _ready():
 		_lower_name = dialog_name.to_lower().replace(' ', '_')
 	
 	DialogEvent.connect('line_triggered', self, '_should_speak')
-	
-# Called when the node enters the scene tree for the first time.
-func speak(text := '', time_to_disappear := 0):
-	DialogEvent.emit_signal('character_spoke', self, text, time_to_disappear)
+	DialogEvent.connect('moved_to_coordinate', self, '_move_to_coordinate')
+	DialogEvent.connect('moved_to_reference', self, '_move_to_reference')
 
-func spoke():
-	if _in_dialog:
-		DialogEvent.emit_signal('dialog_continued')
-
-func _should_speak(character_name, text, time, emotion) -> void:
-	if _lower_name == character_name:
-		speak(text, time)
-		AudioEvent.emit_signal('dx_requested' , character_name, emotion)
-		
 func _physics_process(delta):
-	
 	var direction = Vector2(0,0)
-	
+
 	if path.size() > 0:
 		var next_position = path[0]
 		var distance_to_next_point = position.distance_to(next_position)
@@ -66,5 +56,38 @@ func _physics_process(delta):
 		direction.normalized()
 		
 		move_and_slide(direction * speed * delta)
-		
-		
+
+# Called when the node enters the scene tree for the first time.
+func speak(text := '', time_to_disappear := 0):
+	DialogEvent.emit_signal('character_spoke', self, text, time_to_disappear)
+
+func spoke():
+	if _in_dialog:
+		DialogEvent.emit_signal('dialog_continued')
+
+func _its_me(target_name := '') -> bool:
+	return _lower_name == target_name.to_lower()
+
+func _should_speak(character_name, text, time, emotion) -> void:
+	if _its_me(character_name):
+		speak(text, time)
+		AudioEvent.emit_signal('dx_requested' , character_name, emotion)
+
+func _move_to_coordinate(
+		actor: String, target_position: Vector2, final_direction: Vector2
+	):
+	if _its_me(actor):
+		emit_signal('moved_to_coordinate', {
+			actor = self,
+			target = target_position
+		})
+
+func _move_to_reference(
+		actor: String, room: String, reference: String, final_direction: Vector2
+	):
+	if _its_me(actor):
+		emit_signal('moved_to_reference', {
+			actor = self,
+			room = room,
+			point_name = reference
+		})
