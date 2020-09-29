@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://src/Audio/AudioManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/ui_whoosh.ogg" type="AudioStream" id=2]
@@ -16,6 +16,13 @@
 [ext_resource path="res://assets/audio/archive/ui_back.ogg" type="AudioStream" id=14]
 [ext_resource path="res://assets/audio/ui_write.ogg" type="AudioStream" id=15]
 [ext_resource path="res://assets/audio/sfx_fly.ogg" type="AudioStream" id=16]
+[ext_resource path="res://assets/audio/ui_player_change_02.ogg" type="AudioStream" id=17]
+[ext_resource path="res://assets/audio/ui_player_hover_01.ogg" type="AudioStream" id=18]
+[ext_resource path="res://assets/audio/ui_player_change_01.ogg" type="AudioStream" id=19]
+[ext_resource path="res://assets/audio/ui_player_cl.ogg" type="AudioStream" id=20]
+[ext_resource path="res://assets/audio/ui_player_op.ogg" type="AudioStream" id=21]
+[ext_resource path="res://assets/audio/ui_player_hover_02.ogg" type="AudioStream" id=22]
+[ext_resource path="res://assets/audio/ui_player_show.ogg" type="AudioStream" id=23]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource( 1 )
@@ -103,6 +110,41 @@ max_pitch = 3.0
 
 [node name="button_pop" type="AudioStreamPlayer" parent="UI/button_pop"]
 stream = ExtResource( 11 )
+
+[node name="player_op" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 21 )
+
+[node name="player_cl" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 20 )
+
+[node name="player_show" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 23 )
+
+[node name="player_hover" type="Node2D" parent="UI"]
+script = ExtResource( 13 )
+volume = -8.0
+random_pitch = true
+min_pitch = -1.0
+max_pitch = 1.0
+
+[node name="player_hover_01" type="AudioStreamPlayer" parent="UI/player_hover"]
+stream = ExtResource( 18 )
+
+[node name="player_hover_02" type="AudioStreamPlayer" parent="UI/player_hover"]
+stream = ExtResource( 22 )
+
+[node name="player_change" type="Node2D" parent="UI"]
+script = ExtResource( 13 )
+volume = -8.0
+random_pitch = true
+min_pitch = -3.0
+max_pitch = 3.0
+
+[node name="player_change_01" type="AudioStreamPlayer" parent="UI/player_change"]
+stream = ExtResource( 19 )
+
+[node name="player_change_02" type="AudioStreamPlayer" parent="UI/player_change"]
+stream = ExtResource( 17 )
 
 [node name="MX" type="Node2D" parent="."]
 

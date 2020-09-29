@@ -57,6 +57,7 @@ func _ready() -> void:
 	# Esta es de prueba:
 	_dialog_mnu.connect('test_option_clicked', self, '_hide_dialog_menu')
 	_dialog_btn.connect('pressed', self, '_show_dialog_menu')
+	_dialog_btn.connect('mouse_entered', self, '_dialog_btn_hover')
 	_dialog_mnu_cnt.connect('close_pressed', self, '_hide_dialog_menu')
 
 	# Conectarse a eventos de la vida real
@@ -416,7 +417,7 @@ func _show_dialog_menu() -> void:
 	_dialog_btn.disabled = true
 
 	_dialog_mnu.show()
-	AudioEvent.emit_signal('play_requested', 'UI', 'whoosh')
+	AudioEvent.emit_signal('play_requested', 'UI', 'player_op')
 	$AnimationPlayer.play('show_dialog_menu')
 	yield($AnimationPlayer, 'animation_finished')
 
@@ -424,7 +425,7 @@ func _show_dialog_menu() -> void:
 
 
 func _hide_dialog_menu(opt: Button = null) -> void:
-	AudioEvent.emit_signal('play_requested', 'UI', 'whoosh_2')
+	AudioEvent.emit_signal('play_requested', 'UI', 'player_cl')
 	$AnimationPlayer.play('show_dialog_menu', -1.0, -1.5, true)
 	if opt:
 		DialogEvent.emit_signal(
@@ -451,4 +452,8 @@ func _toggle_dialog_btn(show := true) -> void:
 		Tween.EASE_OUT if show else Tween.EASE_IN
 	)
 	$Tween.start()
+	AudioEvent.emit_signal('play_requested', 'UI', 'player_show')
 	_dialog_btn.disabled = !show
+
+func _dialog_btn_hover():
+	AudioEvent.emit_signal('play_requested', 'UI', 'player_hover')
