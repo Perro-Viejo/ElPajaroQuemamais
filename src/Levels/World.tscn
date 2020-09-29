@@ -10,7 +10,7 @@
 [ext_resource path="res://src/Characters/NPC/Rico.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Objects/Clickable.gd" type="Script" id=9]
 
-[sub_resource type="NavigationPolygon" id=3]
+[sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 337, 41.25, 351, 39.25, 351, 45.25, 337, 51.25, 369, 81.25, 369, 39.25, 391, 39.25, 391, 79.25, 465, 79.25, 465, 159.25, 369, 159.25, 369, 125.25, 281, 123.25, 325, 123.25, 325, 129.25, 293, 129.25, 281, 163.25, 293, 149.25, 325, 163.25, 329, 149.25, 333, 161.25, 349, 87.25, 349, 93.25, 279, 93.25, 337, 81.25, 279, 41.25, 369, 87.25, 345, 125.25, 345, 159.25, 339, 161.25, 329, 119.25, 369, 119.25 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7 ), PoolIntArray( 7, 8, 9, 10, 11 ), PoolIntArray( 12, 13, 14, 15 ), PoolIntArray( 16, 12, 15, 17 ), PoolIntArray( 18, 16, 17, 19, 20 ), PoolIntArray( 21, 22, 23, 24 ), PoolIntArray( 23, 25, 0, 3 ), PoolIntArray( 23, 3, 24 ), PoolIntArray( 21, 24, 4, 26 ), PoolIntArray( 26, 4, 7 ), PoolIntArray( 27, 28, 29, 20, 19, 30 ), PoolIntArray( 27, 30, 31, 11 ), PoolIntArray( 7, 11, 31 ), PoolIntArray( 26, 7, 31 ) ]
 outlines = [ PoolVector2Array( 351, 45.25, 337, 51.25, 337, 81.25, 369, 81.25, 369, 39.25, 391, 39.25, 391, 79.25, 465, 79.25, 465, 159.25, 369, 159.25, 369, 125.25, 345, 125.25, 345, 159.25, 339, 161.25, 333, 161.25, 325, 163.25, 281, 163.25, 281, 123.25, 325, 123.25, 325, 129.25, 293, 129.25, 293, 149.25, 329, 149.25, 329, 119.25, 369, 119.25, 369, 87.25, 349, 87.25, 349, 93.25, 279, 93.25, 279, 41.25, 337, 41.25, 351, 39.25 ) ]
@@ -18,7 +18,7 @@ outlines = [ PoolVector2Array( 351, 45.25, 337, 51.25, 337, 81.25, 369, 81.25, 3
 [sub_resource type="CircleShape2D" id=2]
 radius = 66.4464
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 15.6609, 11.5556 )
 
 [node name="World" type="Node2D"]
@@ -85,7 +85,7 @@ expressions_map = {
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 position = Vector2( -1261.92, -251.112 )
 scale = Vector2( 4, 4 )
-navpoly = SubResource( 3 )
+navpoly = SubResource( 1 )
 
 [node name="StartPoint" type="Position2D" parent="."]
 position = Vector2( 138, -82 )
@@ -146,7 +146,7 @@ interaction_type = "object"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Test_Obj/InteractableObject"]
 position = Vector2( 29.4596, 57.0518 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="Test_Obj"]
 margin_left = 461.47

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Inventory/Inventory.gd" type="Script" id=1]
 [ext_resource path="res://src/Characters/Player/Player.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/Characters/Player/States/Idle.gd" type="Script" id=4]
 [ext_resource path="res://assets/images/characters/quemamais.png" type="Texture" id=5]
 [ext_resource path="res://src/StateMachine/State.gd" type="Script" id=6]
+[ext_resource path="res://assets/images/characters/quemamais_expressions.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.7206, 15.105 )
@@ -28,6 +29,16 @@ script = ExtResource( 2 )
 dialog_color = Color( 0.54902, 0.247059, 0.364706, 1 )
 speed = 600
 dialog_name = "Quemamais"
+expressions = ExtResource( 7 )
+expressions_map = {
+"angry": 0,
+"excited": 1,
+"normal": -1,
+"sad": 2,
+"thinking": 3,
+"worried": -1
+}
+expressions_offset = Vector2( 76, 80 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

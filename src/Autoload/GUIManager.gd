@@ -2,18 +2,23 @@ extends Node
 
 signal newScrollContainerButton
 
-###Probably all GUI controlling functions will be there to separate mixing functions
-
-onready var FocusDetect:Control = Control.new() #Use to detect if no button in focus
 var FocusGroup:Array
 var ButtonsSections:Dictionary = {}
 
+onready var focus_detect:Control = Control.new() # Use to detect if no button in focus
+onready var _arrow: Resource = load('res://assets/images/gui/cursor_arrow.png')
+onready var _hand: Resource = load('res://assets/images/gui/cursor_hand.png')
+
 func _ready()->void:
-	add_child(FocusDetect) #Without this it can't detect buttons in focus
-	
+	add_child(focus_detect) #Without this it can't detect buttons in focus
+
 	pause_mode = Node.PAUSE_MODE_PROCESS
 	set_process_unhandled_key_input(true)
 	GuiEvent.connect("Refocus", self, "force_focus")
+
+	# Modificar los cursores por defecto del sistema operativo
+	Input.set_custom_mouse_cursor(_arrow, Input.CURSOR_ARROW)
+	Input.set_custom_mouse_cursor(_hand, Input.CURSOR_POINTING_HAND)
 
 func gui_collect_focusgroup()->void:	#Workaround to get initial focus
 	FocusGroup.clear()
@@ -42,7 +47,7 @@ func _unhandled_input(event: InputEvent)->void:
 				SectionEvent.Paused = true
 			elif !SectionEvent.Options:
 				SectionEvent.Paused = false
-	elif FocusDetect.get_focus_owner() != null:	#There's already button in focus
+	elif focus_detect.get_focus_owner() != null:	#There's already button in focus
 		return
 	elif event.is_action_pressed("ui_right"):
 		GuiEvent.emit_signal("Refocus")

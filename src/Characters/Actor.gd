@@ -14,7 +14,8 @@ export var expressions_map := {
 	excited = -1,
 	sad = -1,
 	thinking = -1,
-	worried = -1
+	worried = -1,
+	normal = -1
 }
 export var expressions_offset := Vector2.ZERO
 

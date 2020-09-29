@@ -12,6 +12,7 @@ anchor_bottom = 1.0
 margin_right = -840.0
 margin_bottom = -918.0
 hint_tooltip = "Saperoco"
+mouse_default_cursor_shape = 2
 theme = ExtResource( 5 )
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 1 )
