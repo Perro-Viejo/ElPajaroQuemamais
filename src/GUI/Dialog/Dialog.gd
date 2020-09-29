@@ -3,7 +3,7 @@ extends Control
 
 export var use_click_to_progress := false
 
-# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables privadas ▒▒▒▒
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables privadas ▒▒▒▒
 var _forced_update := false
 var _current_character: Node2D = null
 # Cosas del Godot Dialog System ---- {
@@ -76,14 +76,15 @@ func _ready() -> void:
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
 func _autofill_completed() -> void:
 	if _current_character:
-		HudEvent.emit_signal('talking_bubble_requested')
-
+		yield(_character_frame.line_finished(), 'completed')
 		var character_copy = _current_character
 		_current_character = null
 
 		if character_copy.has_method('spoke'):
 			character_copy.spoke()
+
 		character_copy = null
+		return
 
 	if _wait:
 		# TODO: Puede haber una mejor manera de hacer esto, cosa que la alternación
@@ -270,29 +271,40 @@ func _read_dialog_line() -> void:
 					_current_emotion
 				)
 		'MOVE':
-			var final_direction = Vector2.ZERO
+			var final_direction := Vector2.ZERO
+			var speed := 0
 			
 			if line_dic.has('final_direction'):
 				final_direction = Vector2(
 					line_dic.final_direction[0], line_dic.final_direction[1]
 				)
 			
+			if line_dic.has('speed'):
+				speed = line_dic.speed
+			
 			if line_dic.position.type == "COORDINATE":
 				var position = Vector2(line_dic.position.x, line_dic.position.y)
 
 				DialogEvent.emit_signal(
 					'moved_to_coordinate',
-					actor,
-					position,
-					final_direction
+					{
+						actor = actor,
+						target_position = position,
+						final_direction = final_direction,
+						speed = speed,
+						is_relative = line_dic.position.has('relative')
+					}
 				)
 			else:
 				DialogEvent.emit_signal(
 					'moved_to_reference',
-					actor,
-					line_dic.position.room,
-					line_dic.position.reference,
-					final_direction
+					{
+						actor = actor,
+						room = line_dic.position.room,
+						reference = line_dic.position.reference,
+						final_direction = final_direction,
+						speed = speed
+					}
 				)
 
 

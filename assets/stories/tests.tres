@@ -58,35 +58,35 @@ story = {
 4: {
 "graph_offset": Vector2( 140, 520 ),
 "links": {
-0: 5
+0: 11
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡No puede ser! Lupe le pega con la zurda...\",
+	\"line\": \"¡No puede ser! Lupe es de los que ve la Champions...\",
 	\"emotion\": \"sad\"
 }",
 "type": "line"
 },
 5: {
-"graph_offset": Vector2( 180, 680 ),
+"graph_offset": Vector2( 260, 1000 ),
 "links": {
-0: 6
+0: 10
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Tanto estar rica pa' ni mierda\",
+	\"line\": \"Tanto ir al gimnasio y hacer dieta pa' ni mierda\",
 	\"emotion\": \"angry\"
 }",
 "type": "line"
 },
 6: {
-"graph_offset": Vector2( 220, 840 ),
+"graph_offset": Vector2( 340, 1320 ),
 "links": {
 0: 7
 },
@@ -101,7 +101,7 @@ story = {
 "type": "line"
 },
 7: {
-"graph_offset": Vector2( 260, 1000 ),
+"graph_offset": Vector2( 380, 1480 ),
 "links": {
 0: 8
 },
@@ -116,7 +116,7 @@ story = {
 "type": "line"
 },
 8: {
-"graph_offset": Vector2( 300, 1160 ),
+"graph_offset": Vector2( 420, 1640 ),
 "links": {
 
 },
@@ -139,7 +139,67 @@ story = {
 		\"type\": \"REFERENCE\",
 		\"room\": \"RoomA\",
 		\"reference\": \"Desk\"
+	},
+	\"speed\": 500
+}",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( 300, 1160 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"COORDINATE\",
+		\"x\": 90,
+		\"y\": 0,
+		\"relative\": true
 	}
+}",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( 180, 680 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"COORDINATE\",
+		\"x\": 40,
+		\"y\": 0,
+		\"relative\": true
+	},
+	\"speed\": 600
+}",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( 220, 840 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"COORDINATE\",
+		\"x\": -40,
+		\"y\": 0,
+		\"relative\": true
+	},
+	\"speed\": 600
 }",
 "type": "line"
 }

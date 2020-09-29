@@ -29,8 +29,9 @@ var path := PoolVector2Array() setget _set_path
 var velocity := Vector2.ZERO
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables privadas ▒▒▒▒
-var _in_dialog := false setget set_in_dialog,is_in_dialog
+var _in_dialog := false setget set_in_dialog, is_in_dialog
 var _is_moving := false setget _set_is_moving, is_moving
+var _temporary_speed := 0
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables onready ▒▒▒▒
 #onready var inventory = $Inventory
@@ -50,6 +51,10 @@ func _physics_process(delta):
 	var direction = Vector2(0,0)
 
 	if path.size() > 0:
+		var _speed := speed
+		if _temporary_speed > 0:
+			_speed = _temporary_speed
+		
 		var next_position = path[0]
 		var distance_to_next_point = position.distance_to(next_position)
 		
@@ -59,13 +64,13 @@ func _physics_process(delta):
 			
 		if(distance_to_next_point != 0):
 			next_position = position.linear_interpolate(
-				next_position, (speed*delta)/distance_to_next_point
+				next_position, (_speed*delta)/distance_to_next_point
 			)
 
 		direction = next_position - position;
 		direction.normalized()
 		
-		move_and_slide(direction * speed * delta)
+		move_and_slide(direction * _speed * delta)
 	elif _is_moving:
 		self._is_moving = false
 
@@ -77,6 +82,7 @@ func speak(text := '', time_to_disappear := 0):
 
 func spoke():
 	if _in_dialog:
+		_in_dialog = false
 		DialogEvent.emit_signal('dialog_continued')
 
 
@@ -105,6 +111,7 @@ func _set_is_moving(new_state: bool) -> void:
 	else:
 		emit_signal('movement_finished', self)
 		_in_dialog = false
+		_temporary_speed = 0
 
 
 func _its_me(target_name := '') -> bool:
@@ -118,26 +125,51 @@ func _its_me(target_name := '') -> bool:
 
 func _should_speak(character_name, text, time, emotion) -> void:
 	if _its_me(character_name):
+		_in_dialog = true
 		speak(text, time)
 		AudioEvent.emit_signal('dx_requested' , character_name, emotion)
 
-func _move_to_coordinate(
-		actor: String, target_position: Vector2, final_direction: Vector2
-	):
-	if _its_me(actor):
+
+# Hace que el actor se mueva a una coordenada dentro de la escena:
+# 	props: { 
+# 		actor: String,
+# 		target_position: Vector2,
+# 		final_direction: Vector2,
+# 		speed: float,
+# 		is_relative: bool,
+# 	}
+func _move_to_coordinate(props: Dictionary):
+	if props.has('speed'):
+		_temporary_speed = props.speed
+	if _its_me(props.actor):
 		_in_dialog = true
+		var target: Vector2 = props.target_position
+		
+		if props.has('is_relative'):
+			target += self.position
+		
 		emit_signal('moved_to_coordinate', {
 			actor = self,
-			target = target_position
+			target = target
 		})
 
-func _move_to_reference(
-		actor: String, room: String, reference: String, final_direction: Vector2
-	):
-	if _its_me(actor):
+
+# Hace que el actor se mueva a un punto (Position2D) dentro de una habitación
+# del mundo (Node2D).
+# 	props: { 
+# 		actor: String,
+# 		room: String,
+# 		reference: String,
+# 		final_direction: Vector2,
+# 		speed: float
+# 	}
+func _move_to_reference(props: Dictionary):
+	if props.has('speed'):
+		_temporary_speed = props.speed
+	if _its_me(props.actor):
 		_in_dialog = true
 		emit_signal('moved_to_reference', {
 			actor = self,
-			room = room,
-			point_name = reference
+			room = props.room,
+			point_name = props.reference
 		})

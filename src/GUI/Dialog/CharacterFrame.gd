@@ -3,8 +3,10 @@ extends CanvasLayer
 
 export var appear_time := 0.3
 
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables privadas ▒▒▒▒
 var _offset := Vector2.ZERO
 
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables onready ▒▒▒▒
 onready var _cnt := $Container
 onready var _bg: TextureRect = find_node('Background')
 onready var _char: Sprite = find_node('Character')
@@ -13,6 +15,7 @@ onready var _defaults := {
 }
 onready var _continue: TextureRect = find_node('Continue')
 
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready() -> void:
 	var _bg_size: Vector2 = _bg.get_rect().size
 	_offset = Vector2(_bg_size.x / 2, _bg_size.y + 12)
@@ -21,6 +24,7 @@ func _ready() -> void:
 	_continue.rect_scale = Vector2.ZERO
 
 
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
 func dialog_started() -> void:
 	_cnt.show()
 
@@ -32,6 +36,7 @@ func dialog_finished() -> void:
 	# Poner la textura por defecto (la sombra de...)
 	_char.texture = _defaults.character
 	_char.hframes = 1
+	_char.frame = 0
 
 
 func set_character(node: Actor, emotion: String) -> void:
@@ -77,3 +82,13 @@ func show_continue() -> void:
 		0.3, Tween.TRANS_ELASTIC, Tween.EASE_OUT
 	)
 	$Tween.start()
+
+
+func line_finished() -> void:
+	$Tween.interpolate_property(
+		_cnt, 'rect_scale',
+		Vector2.ONE, Vector2.RIGHT,
+		0.1, Tween.TRANS_SINE, Tween.EASE_IN
+	)
+	$Tween.start()
+	yield($Tween, 'tween_completed')

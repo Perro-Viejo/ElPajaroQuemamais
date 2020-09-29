@@ -50,4 +50,5 @@ func _actor_moved(actor: Actor) -> void:
 	if actor.is_current_player:
 		DialogEvent.emit_signal('dialog_requested', 'DialogTest')
 	if actor.is_in_dialog():
+		yield(get_tree(), 'idle_frame')
 		DialogEvent.emit_signal('dialog_continued')
