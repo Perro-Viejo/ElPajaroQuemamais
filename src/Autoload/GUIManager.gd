@@ -8,6 +8,7 @@ var ButtonsSections:Dictionary = {}
 onready var focus_detect:Control = Control.new() # Use to detect if no button in focus
 onready var _arrow: Resource = load('res://assets/images/gui/cursor_arrow.png')
 onready var _hand: Resource = load('res://assets/images/gui/cursor_hand.png')
+onready var _move: Resource = load('res://assets/images/gui/cursor_move.png')
 
 func _ready()->void:
 	add_child(focus_detect) #Without this it can't detect buttons in focus
@@ -19,6 +20,7 @@ func _ready()->void:
 	# Modificar los cursores por defecto del sistema operativo
 	Input.set_custom_mouse_cursor(_arrow, Input.CURSOR_ARROW)
 	Input.set_custom_mouse_cursor(_hand, Input.CURSOR_POINTING_HAND)
+	Input.set_custom_mouse_cursor(_move, Input.CURSOR_MOVE)
 
 func gui_collect_focusgroup()->void:	#Workaround to get initial focus
 	FocusGroup.clear()

@@ -125,7 +125,7 @@ story = {
 	\"action\": \"MOVE\",
 	\"position\": {
 		\"type\": \"COORDINATE\",
-		\"x\": 40,
+		\"x\": 80,
 		\"y\": 0,
 		\"relative\": true
 	},
@@ -141,7 +141,7 @@ story = {
 	\"action\": \"MOVE\",
 	\"position\": {
 		\"type\": \"COORDINATE\",
-		\"x\": -40,
+		\"x\": -80,
 		\"y\": 0,
 		\"relative\": true
 	},

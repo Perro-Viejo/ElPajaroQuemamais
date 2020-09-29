@@ -8,31 +8,32 @@
 [ext_resource path="res://src/StateMachine/State.gd" type="Script" id=6]
 [ext_resource path="res://assets/images/characters/quemamais_expressions.png" type="Texture" id=7]
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 5 )
 region = Rect2( 0, 0, 7, 8 )
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ SubResource( 2 ) ],
+"frames": [ SubResource( 1 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 10.0
 } ]
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 5 )
 region = Rect2( 7, 0, 7, 8 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ SubResource( 4 ) ],
+"frames": [ SubResource( 3 ) ],
 "loop": true,
 "name": "Move",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=6]
+[sub_resource type="CapsuleShape2D" id=5]
+custom_solver_bias = 1.0
 radius = 6.0
 height = 8.16039
 
@@ -41,7 +42,7 @@ z_index = 5
 collision_mask = 4
 script = ExtResource( 2 )
 dialog_color = Color( 0.54902, 0.247059, 0.364706, 1 )
-speed = 700
+speed = 600
 dialog_name = "Quemamais"
 expressions = ExtResource( 7 )
 expressions_map = {
@@ -63,7 +64,7 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Idle"]
 scale = Vector2( 4, 4 )
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "Idle"
 
 [node name="Move" type="Node2D" parent="StateMachine"]
@@ -72,14 +73,14 @@ script = ExtResource( 6 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Move"]
 rotation = -1.5708
 scale = Vector2( 4, 4 )
-frames = SubResource( 5 )
+frames = SubResource( 4 )
 animation = "Move"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -2 )
 rotation = 1.5708
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource( 1 )

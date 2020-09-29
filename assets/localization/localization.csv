@@ -1,40 +1,40 @@
-id,en,es
-Right,Right,Derecha
-Left,Left,Izquierda
-Up,Up,Arriba
-Down,Down,Abajo
-Jump,Jump,Saltar
-Shoot,Shoot,Disparar
-NEW_GAME,New game,Nuevo juego
-CONTINUE,Continue,Continuar
-RESUME,Resume,Reanudar
-RESTART,Restart,Reiniciar
-CREDITS,Credits,Créditos
-OPTIONS,Options,Opciones
-MAIN_MENU,Main Menu,Menú principal
-BACK,Back,Atrás
-EXIT,Exit,Salir
-PAUSE,Pause,Pausa
-LOADING,Loading,Cargando
-RESOLUTION,Resolution,Resolución
-FULLSCREEN,Fullscreen window,Pantalla completa
-BORDERLESS,Borderless window,Pantalla sin bordes
-SCALE,Scale,Escalado
-VOLUME,Volume,Volumen
-MASTER,Master,General
-MUSIC,Music,Música
-SFX,Sounds,Efectos de Sonido
-CONTROLS,Controls,Controles
-ACTIONS,Actions,Acciones
-KEYBOARD,Keyboard,Teclado
+id,es,en
+Right,Derecha,Right
+Left,Izquierda,Left
+Up,Arriba,Up
+Down,Abajo,Down
+Jump,Saltar,Jump
+Shoot,Disparar,Shoot
+NEW_GAME,Nuevo juego,New game
+CONTINUE,Continuar,Continue
+RESUME,Reanudar,Resume
+RESTART,Reiniciar,Restart
+CREDITS,Créditos,Credits
+OPTIONS,Opciones,Options
+MAIN_MENU,Menú principal,Main Menu
+BACK,Atrás,Back
+EXIT,Salir,Exit
+PAUSE,Pausa,Pause
+LOADING,Cargando,Loading
+RESOLUTION,Resolución,Resolution
+FULLSCREEN,Pantalla completa,Fullscreen window
+BORDERLESS,Pantalla sin bordes,Borderless window
+SCALE,Escalado,Scale
+VOLUME,Volumen,Volume
+MASTER,General,Master
+MUSIC,Música,Music
+SFX,Efectos de Sonido,Sounds
+CONTROLS,Controles,Controls
+ACTIONS,Acciones,Actions
+KEYBOARD,Teclado,Keyboard
 GAMEPAD,Gamepad,Gamepad
-DEFAULT,Default,Defecto
-USE_NEW_CONTROLS,Use new control!,Usar nuevos controles!
-CANCEL,Cancel,Cancelar
-LANGUAGES,Languages,Idiomas
-DLG_1_2_RICO,Hey Lupe. Wanna a candy?,Oiga Lupe. ¿Quiere que se la chupe?
-DLG_1_3_LUPE,"Ye...yes. But it doesn't taste like lemon, does it?",Pues sí pero pilas. Donde Mamá Is nos vea...
-DLG_1_4_ANA_MARÍA,What!? Lupe doesn't like lemon?,¡No puede ser! Lupe le pega con la zurda...
-DLG_1_5_ANA_MARÍA,What have he done with those that I give him!,Tanto estar rica pa' ni mierda
-DLG_1_6_RICO,No worries man. I know you don't like lemon,Qué se meta un palo la vieja esa
-DLG_1_7_LUPE,Mmmmm.... I love asparagus candy,Ahora sí se me puso como pa' partir coco
+DEFAULT,Defecto,Default
+USE_NEW_CONTROLS,Usar nuevos controles!,Use new control!
+CANCEL,Cancelar,Cancel
+LANGUAGES,Idiomas,Languages
+DLG_1_2_RICO,Oiga Lupe. ¿Quiere que se la chupe?,Hey Lupe. Wanna a candy?
+DLG_1_3_LUPE,Pues sí pero pilas. Donde La señora nos vea...,"Ye...yes. But it doesn't taste like lemon, does it?"
+DLG_1_4_ANA_MARÍA,¡No puede ser! Lupe le pega con la zurda...,What!? Lupe doesn't like lemon?
+DLG_1_5_ANA_MARÍA,Tanto ir al gimnasio y hacer dieta pa' ni mierda,What have he done with those that I give him!
+DLG_1_6_RICO,Qué se meta un palo la vieja esa...,No worries man. I know you don't like lemon
+DLG_1_7_LUPE,Ahora sí se me puso como pa' partir coco,Mmmmm.... I love asparagus candy

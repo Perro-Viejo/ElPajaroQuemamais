@@ -24,7 +24,7 @@ export var expressions_map := {
 export var expressions_offset := Vector2.ZERO
 export var is_current_player := false
 
-# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables públicas ▒▒▒▒
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒variables públicas ▒▒▒▒
 var path := PoolVector2Array() setget _set_path
 var velocity := Vector2.ZERO
 
@@ -77,10 +77,12 @@ func _physics_process(delta):
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
 # Called when the node enters the scene tree for the first time.
 func speak(text := '', time_to_disappear := 0):
+	$StateMachine.transition_to_key('Talk')
 	DialogEvent.emit_signal('character_spoke', self, text, time_to_disappear)
 
 
 func spoke():
+	$StateMachine.transition_to_key('Idle')
 	if _in_dialog:
 		_in_dialog = false
 		DialogEvent.emit_signal('dialog_continued')
