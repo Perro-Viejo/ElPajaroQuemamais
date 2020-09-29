@@ -1,4 +1,7 @@
+class_name DialogMenuContainer
 extends NinePatchRect
+
+signal close_pressed
 
 export var voice_disappear_timeout := 0.1
 
@@ -13,9 +16,10 @@ onready var _defaults := {
 
 func _ready() -> void:
 	_voice.self_modulate.a = 0.0
-	
+
 	$DialogMenu.connect('option_hovered', self, '_show_voice_icon')
 	$DialogMenu.connect('option_left', self, '_hide_voice_icon')
+	$Close.connect('pressed', self, '_emit_close')
 
 
 func _process(delta):
@@ -58,3 +62,7 @@ func _hide_voice() -> void:
 	_voice_icon.rect_position.y = _defaults.voice_icon.y
 	_voice_icon.self_modulate.a = 0.0
 	_first_hover = true
+
+
+func _emit_close() -> void:
+	emit_signal('close_pressed')

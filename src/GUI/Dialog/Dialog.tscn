@@ -129,13 +129,14 @@ anims/show_dialog_menu = SubResource( 1 )
 [node name="DialogButton" type="TextureButton" parent="."]
 margin_left = 1033.0
 margin_top = 722.0
-margin_right = 1073.0
-margin_bottom = 762.0
+margin_right = 1065.0
+margin_bottom = 754.0
 rect_scale = Vector2( 4, 4 )
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 5 )
-texture_focused = ExtResource( 5 )
+texture_disabled = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

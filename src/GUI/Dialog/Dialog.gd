@@ -25,10 +25,15 @@ var _sub_shown = false
 var _played = false
 
 onready var _story_reader: EXP_StoryReader = _story_reader_class.new()
-onready var _dialog_menu: DialogMenu = find_node('DialogMenu')
+onready var _dialog_mnu_cnt: NinePatchRect = find_node('DialogMenuContainer')
+onready var _dialog_mnu: DialogMenu = find_node('DialogMenu')
 onready var _autofill: Autofill = find_node('Autofill')
 onready var _character_frame: CharacterFrame = find_node('CharacterFrame')
 onready var _subs: Label = $Subtitles
+onready var _dialog_btn: TextureButton = $DialogButton
+onready var _defaults := {
+	dialog_btn = _dialog_btn.rect_position
+}
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func _ready() -> void:
@@ -37,7 +42,7 @@ func _ready() -> void:
 	# las opciones de configuración)
 	Data.set_data(Data.DIALOGS, {})
 
-	_dialog_menu.hide()
+	_dialog_mnu.hide()
 	_hide_subs()
 
 	match TranslationServer.get_locale():
@@ -50,7 +55,9 @@ func _ready() -> void:
 	if use_click_to_progress:
 		self.connect('gui_input', self,'_on_gui_input')
 	# Esta es de prueba:
-	_dialog_menu.connect('test_option_clicked', self, '_hide_dialog_menu')
+	_dialog_mnu.connect('test_option_clicked', self, '_hide_dialog_menu')
+	_dialog_btn.connect('pressed', self, '_show_dialog_menu')
+	_dialog_mnu_cnt.connect('close_pressed', self, '_hide_dialog_menu')
 
 	# Conectarse a eventos de la vida real
 	DialogEvent.connect('dialog_requested', self, '_play_dialog')
@@ -80,7 +87,7 @@ func _autofill_completed() -> void:
 		DialogEvent.emit_signal('dialog_paused')
 		return
 
-	if not _in_dialog_with_options or not _dialog_menu.visible:
+	if not _in_dialog_with_options or not _dialog_mnu.visible:
 		_continue_dialog(_selected_slot)
 
 
@@ -103,6 +110,9 @@ func _play_dialog(dialog_name: String) -> void:
 	if _story_reader.get_nid_via_exact_text(_did, 'return') > 0:
 		_in_dialog_with_options = true
 		PlayerEvent.emit_signal('control_toggled')
+	
+	if _dialog_btn.rect_position.x == _defaults.dialog_btn.x:
+		_toggle_dialog_btn(false)
 
 	_continue_dialog()
 
@@ -120,7 +130,7 @@ func _continue_dialog(slot := 0) -> void:
 	if _selected_slot < 0 and _nid == _options_nid:
 		# Para mostrar el menú de opciones de diálogo al final de la línea
 		# que este posiblemente dispare
-		_dialog_menu.show_options()
+		_dialog_mnu.show_options()
 		return
 
 	_next_dialog_line(max(0, slot))
@@ -147,7 +157,7 @@ func _play_dialog_line() -> void:
 		_selected_slot = -1
 		if line_txt == 'return':
 			_nid = _options_nid
-			_dialog_menu.show_options()
+			_dialog_mnu.show_options()
 			return
 
 	var line_dic: Dictionary = JSON.parse(line_txt).result
@@ -160,7 +170,6 @@ func _play_dialog_line() -> void:
 
 	# ----[ la línea ]----------------------------------------------------------
 	var line := ''
-	var sub := '[ silence in spanish ]'
 	if line_dic.has('line'):
 		var code := ('dlg_%d_%d_%s' % [_did, _nid, actor]).to_upper()
 		line = tr(code)
@@ -219,7 +228,7 @@ func _play_dialog_line() -> void:
 
 			id += 1
 
-		_dialog_menu.create_options(line_dic.options)
+		_dialog_mnu.create_options(line_dic.options)
 
 	# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ APAGAR OPCIONES ▮▮▮▮
 	if line_dic.has('off') or line_dic.has('on'):
@@ -234,7 +243,7 @@ func _play_dialog_line() -> void:
 			for opt in line_dic.on:
 				cfg[String(opt)] = true
 
-		_dialog_menu.update_options(cfg)
+		_dialog_mnu.update_options(cfg)
 
 	# Lo último que se hace es disparar la línea de diálogo
 	
@@ -285,6 +294,7 @@ func _on_character_spoke(
 		_toggle_subs()
 	else:
 		_current_character = null
+		_current_emotion = ''
 		_autofill.finish_and_hide()
 
 
@@ -303,53 +313,48 @@ func _option_clicked(opt: Dictionary) -> void:
 		_continue_dialog(_selected_slot)
 
 func _enable_click_listening() -> void:
-	# TODO: mostrar algo para que el jugador sepa que puede hacer clic para
-	#       continuar
-	print('Ya se puede hacer clic para continuar con más cuentachistes')
 	_is_listening_click = true
 	_character_frame.show_continue()
 
 
 func _finish_dialog() -> void:
-	# Para la forma de diálogo anterior al plugin ------------------------------
-	if _final_nid == 0: return
-	# --------------------------------------------------------------------------
-	
-	if _in_dialog_with_options:
-		var options_id := _get_options_id()
-		var dialogs_state: Dictionary = Data.get_data(Data.DIALOGS)
-		var options_state := {}
+	if not _final_nid == 0:
+		# Para los diálogos hechos con el plugin
+		if _in_dialog_with_options:
+			var options_id := _get_options_id()
+			var dialogs_state: Dictionary = Data.get_data(Data.DIALOGS)
+			var options_state := {}
 
-		if dialogs_state.has(options_id):
-			options_state = dialogs_state[options_id]
+			if dialogs_state.has(options_id):
+				options_state = dialogs_state[options_id]
 
-		for opt in _dialog_menu.current_options:
-			options_state[opt.id] = opt.show
-		
-		dialogs_state[options_id] = options_state
-		Data.set_data(Data.DIALOGS, dialogs_state)
+			for opt in _dialog_mnu.current_options:
+				options_state[opt.id] = opt.show
+			
+			dialogs_state[options_id] = options_state
+			Data.set_data(Data.DIALOGS, dialogs_state)
 
-	_did = 0
-	_nid = 0
-	_final_nid = 0
+		_did = 0
+		_nid = 0
+		_final_nid = 0
 
-	if _in_dialog_with_options:
-		_options_nid = 0
-		_in_dialog_with_options = false
-		_dialog_menu.remove_options()
-		PlayerEvent.emit_signal('control_toggled')
+		if _in_dialog_with_options:
+			_options_nid = 0
+			_in_dialog_with_options = false
+			_dialog_mnu.remove_options()
+			PlayerEvent.emit_signal('control_toggled')
 
+	# Para cualquier diálogo
+	_current_emotion = ''
+	_current_character = null
+	_subs.set_text('[ gibberish in spanish ]')
 	DialogEvent.emit_signal('dialog_finished')
 	_character_frame.dialog_finished()
 	_toggle_subs(false)
 	self.mouse_filter = 2 # Ignorar los clics
 	
-	# ---- Esto es temporal mientras se pone el botón pa' activar el menú de
-	#      diálogos ------------------------------------------------------------
-	_dialog_menu.show()
-	AudioEvent.emit_signal('play_requested', 'UI', 'whoosh')
-	$AnimationPlayer.play('show_dialog_menu')
-	# --------------------------------------------------------------------------
+	# Mostrar el botón que permite a Quemamais decir algo
+	_toggle_dialog_btn()
 
 
 func _get_options_id() -> String:
@@ -378,6 +383,43 @@ func _play_subs_sfx(obj: Object, key: NodePath, elapsed: float, val: Object):
 		AudioEvent.emit_signal('play_requested', 'UI', 'sub')
 
 
-func _hide_dialog_menu() -> void:
+func _show_dialog_menu() -> void:
+	_dialog_btn.disabled = true
+
+	_dialog_mnu.show()
+	AudioEvent.emit_signal('play_requested', 'UI', 'whoosh')
+	$AnimationPlayer.play('show_dialog_menu')
+	yield($AnimationPlayer, 'animation_finished')
+
+	_dialog_btn.hide()
+
+
+func _hide_dialog_menu(opt: Button = null) -> void:
 	AudioEvent.emit_signal('play_requested', 'UI', 'whoosh_2')
 	$AnimationPlayer.play('show_dialog_menu', -1.0, -1.5, true)
+	if opt:
+		DialogEvent.emit_signal(
+			'line_triggered',
+			'quemamais',
+			opt.text,
+			-1.0,
+			''
+		)
+	else:
+		_dialog_btn.show()
+		_dialog_btn.disabled = false
+	self.mouse_filter = 0 # Escuchar los clics
+
+
+func _toggle_dialog_btn(show := true) -> void:
+	_dialog_btn.show()
+	$Tween.interpolate_property(
+		_dialog_btn, 'rect_position:x',
+		OS.window_size.x + 16 if show else _defaults.dialog_btn.x,
+		_defaults.dialog_btn.x if show else OS.window_size.x + 16,
+		0.3 if show else 0.1,
+		Tween.TRANS_BOUNCE if show else Tween.TRANS_SINE,
+		Tween.EASE_OUT if show else Tween.EASE_IN
+	)
+	$Tween.start()
+	_dialog_btn.disabled = !show

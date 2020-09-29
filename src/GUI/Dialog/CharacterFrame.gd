@@ -40,14 +40,24 @@ func set_character(node: Actor, emotion: String) -> void:
 	_cnt.rect_position = Utils.get_screen_coords_for(node) - _offset
 	_char.texture = node.expressions
 	_char.offset = node.expressions_offset
-	_char.hframes = 2
+	
+	var expressions_count := 0
+	for val in node.expressions_map.values():
+		if val > -1:
+			expressions_count += 1
+	
+	_char.hframes = expressions_count
 	_char.frame = 0
 
-	if node.expressions_map.has(emotion):
+	if not emotion:
+		# Si no hay emoción, coger cualquiera entre los posibles fotogramas
+		randomize()
+		_char.frame = randi() % expressions_count
+	elif node.expressions_map.has(emotion):
 		_char.frame = node.expressions_map[emotion]
 
 	_cnt.show()
-	
+
 	$Tween.interpolate_property(
 		_cnt, 'rect_scale',
 		Vector2.RIGHT, Vector2.ONE,
@@ -59,6 +69,7 @@ func set_character(node: Actor, emotion: String) -> void:
 
 
 func show_continue() -> void:
+	_continue.show()
 	AudioEvent.emit_signal("play_requested","UI", "button_pop")
 	$Tween.interpolate_property(
 		_continue, 'rect_scale',

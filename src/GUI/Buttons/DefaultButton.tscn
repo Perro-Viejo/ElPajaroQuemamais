@@ -9,6 +9,7 @@
 [node name="DefaultButton" type="Button"]
 margin_right = 36.0
 margin_bottom = 15.0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 custom_styles/hover = ExtResource( 3 )

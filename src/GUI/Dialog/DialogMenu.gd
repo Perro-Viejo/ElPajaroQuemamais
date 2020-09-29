@@ -116,7 +116,7 @@ func _test() -> void:
 	var voices := ['ana_maría', 'rico', 'lupe', 'quemamais']
 	for _btn in get_children():
 		var btn: Button = _btn
-		btn.connect('pressed', self, '_on_test_option_clicked')
+		btn.connect('pressed', self, '_on_test_option_clicked', [btn])
 		btn.connect('mouse_entered', self, '_on_option_hover', [btn, true])
 		btn.connect('mouse_exited', self, '_on_option_hover', [btn, false])
 		btn.connect('focus_entered', self, '_on_option_hover', [btn, true])
@@ -124,5 +124,5 @@ func _test() -> void:
 		btn.voice = voices.pop_front()
 		btn.hint_tooltip = 'Con la voz de: %s' % btn.voice
 
-func _on_test_option_clicked() -> void:
-	emit_signal('test_option_clicked')
+func _on_test_option_clicked(opt: Button) -> void:
+	emit_signal('test_option_clicked', opt)

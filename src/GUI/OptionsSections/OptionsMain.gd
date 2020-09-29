@@ -73,7 +73,7 @@ func _on_option_pressed(id := -1) -> void:
 	AudioEvent.emit_signal('play_requested', 'UI', 'Gen_Button')
 	_hide_panels()
 	
-	_last_focus_owner = GUIManager.FocusDetect.get_focus_owner()
+	_last_focus_owner = GUIManager.focus_detect.get_focus_owner()
 	match id:
 		OPT.RESOLUTION:
 			_panels.resolution.visible = true
