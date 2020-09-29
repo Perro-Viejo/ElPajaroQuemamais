@@ -7,6 +7,7 @@ onready var _previous_state
 
 var STATES = {}
 
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _init() -> void:
 	add_to_group('state_machine')
 
@@ -25,6 +26,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	state.physics_process(delta)
 
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
 func transition_to_key(target_state_path: String, msg: Dictionary = {}) -> void:
 	if not has_node(target_state_path):
 		print('ERROR: State not found: ' + target_state_path)

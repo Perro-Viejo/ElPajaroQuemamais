@@ -144,10 +144,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.4, 0.9 ),
-"transitions": PoolRealArray( 0.5, 1 ),
+"times": PoolRealArray( 0, 0.4, 0.9 ),
+"transitions": PoolRealArray( 0.5, 0.5, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("BG/Bg:rect_position")
@@ -225,7 +225,7 @@ __meta__ = {
 }
 
 [node name="GameName" type="VBoxContainer" parent="BG"]
-modulate = Color( 1, 1, 1, 0.0251733 )
+modulate = Color( 1, 1, 1, 0.00409719 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = -2
@@ -256,8 +256,8 @@ align = 2
 [node name="MainOptions" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 924.54
-margin_bottom = 924.539
+margin_top = 954.159
+margin_bottom = 954.158
 custom_constants/margin_right = 16
 custom_constants/margin_top = 4
 custom_constants/margin_left = 16
@@ -319,6 +319,8 @@ text = "Salir"
 [node name="Credits" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1280.0
+margin_right = -1280.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

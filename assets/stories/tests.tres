@@ -16,9 +16,9 @@ story = {
 "name": "DialogTest",
 "nodes": {
 1: {
-"graph_offset": Vector2( 20, 40 ),
+"graph_offset": Vector2( -20, -120 ),
 "links": {
-0: 2
+0: 9
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
@@ -34,9 +34,9 @@ story = {
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
 	\"line\": \"Oiga Lupe. ¿Quiere que se la chupe?\",
-	\"emotion\": \"thinking\",
-	\"action\": \"SPEAK\"
+	\"emotion\": \"thinking\"
 }",
 "type": "line"
 },
@@ -49,15 +49,9 @@ story = {
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Lupe\",
-	\"line\": \"Pues sí pero pilas. Donde Mamá Is nos vea se le pega al chupo.\",
-	\"emotion\": \"worried\",
 	\"action\": \"SPEAK\",
-	\"position\": {
-		\"type\": \"REFERENCE\",
-		\"room\": \"RoomA\",
-		\"reference\": \"Window\"
-	},
-	\"final_direction\": [1, 0]
+	\"line\": \"Pues sí pero pilas. Donde Mamá Is nos vea se le pega al chupo.\",
+	\"emotion\": \"worried\"
 }",
 "type": "line"
 },
@@ -70,9 +64,9 @@ story = {
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
 	\"line\": \"¡No puede ser! Lupe le pega con la zurda...\",
-	\"emotion\": \"sad\",
-	\"action\": \"SPEAK\"
+	\"emotion\": \"sad\"
 }",
 "type": "line"
 },
@@ -85,9 +79,9 @@ story = {
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
 	\"line\": \"Tanto estar rica pa' ni mierda\",
-	\"emotion\": \"angry\",
-	\"action\": \"SPEAK\"
+	\"emotion\": \"angry\"
 }",
 "type": "line"
 },
@@ -100,15 +94,9 @@ story = {
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Rico\",
-	\"line\": \"Que se meta un palo la vieja esa\",
-	\"emotion\": \"angry\",
 	\"action\": \"SPEAK\",
-	\"position\": {
-		\"type\": \"REFERENCE\",
-		\"room\": \"RoomA\",
-		\"reference\": \"Bed\"
-	},
-	\"final_direction\": [1, 0]
+	\"line\": \"Que se meta un palo la vieja esa\",
+	\"emotion\": \"angry\"
 }",
 "type": "line"
 },
@@ -121,9 +109,9 @@ story = {
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
 	\"line\": \"Ahora sí se me puso como para partir cocos\",
-	\"emotion\": \"excited\",
-	\"action\": \"SPEAK\"
+	\"emotion\": \"excited\"
 }",
 "type": "line"
 },
@@ -135,6 +123,24 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "end",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( 20, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomA\",
+		\"reference\": \"Desk\"
+	}
+}",
 "type": "line"
 }
 }

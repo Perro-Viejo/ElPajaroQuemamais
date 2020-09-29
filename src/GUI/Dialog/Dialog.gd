@@ -1,8 +1,9 @@
 class_name Dialog
 extends Control
-# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Variables ░░░░
+
 export var use_click_to_progress := false
 
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables privadas ▒▒▒▒
 var _forced_update := false
 var _current_character: Node2D = null
 # Cosas del Godot Dialog System ---- {
@@ -24,6 +25,7 @@ var _current_emotion := ''
 var _sub_shown = false
 var _played = false
 
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables onready ▒▒▒▒
 onready var _story_reader: EXP_StoryReader = _story_reader_class.new()
 onready var _dialog_mnu_cnt: NinePatchRect = find_node('DialogMenuContainer')
 onready var _dialog_mnu: DialogMenu = find_node('DialogMenu')
@@ -35,7 +37,7 @@ onready var _defaults := {
 	dialog_btn = _dialog_btn.rect_position
 }
 
-# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready() -> void:
 	# Configurar el Data manager para que vaya guardando información de los
 	# diálogos (eventualmente esto se guardará en un archivo así como se guardan
@@ -68,7 +70,10 @@ func _ready() -> void:
 	HudEvent.connect('continue_requested', self, '_enable_click_listening')
 	HudEvent.connect('hud_accept_pressed', _autofill, 'stop')
 	
-# ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Eventos propios y de hijos ░░░░
+	# No capturar clics mientras no esté reproduciendo una conversación
+	self.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
 func _autofill_completed() -> void:
 	if _current_character:
 		HudEvent.emit_signal('talking_bubble_requested')
@@ -106,7 +111,7 @@ func _play_dialog(dialog_name: String) -> void:
 	_nid = _story_reader.get_nid_via_exact_text(_did, 'start')
 	_final_nid = _story_reader.get_nid_via_exact_text(_did, 'end')
 	
-	self.mouse_filter = 0 # Escuchar los clics
+	self.mouse_filter = Control.MOUSE_FILTER_STOP
 
 	if _story_reader.get_nid_via_exact_text(_did, 'return') > 0:
 		_in_dialog_with_options = true
@@ -265,9 +270,13 @@ func _read_dialog_line() -> void:
 					_current_emotion
 				)
 		'MOVE':
-			var final_direction = Vector2(
-				line_dic.final_direction[0], line_dic.final_direction[1]
-			)
+			var final_direction = Vector2.ZERO
+			
+			if line_dic.has('final_direction'):
+				final_direction = Vector2(
+					line_dic.final_direction[0], line_dic.final_direction[1]
+				)
+			
 			if line_dic.position.type == "COORDINATE":
 				var position = Vector2(line_dic.position.x, line_dic.position.y)
 
@@ -381,7 +390,7 @@ func _finish_dialog() -> void:
 	DialogEvent.emit_signal('dialog_finished')
 	_character_frame.dialog_finished()
 	_toggle_subs(false)
-	self.mouse_filter = 2 # Ignorar los clics
+	self.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	
 	# Mostrar el botón que permite a Quemamais decir algo
 	_toggle_dialog_btn()
@@ -438,7 +447,7 @@ func _hide_dialog_menu(opt: Button = null) -> void:
 	else:
 		_dialog_btn.show()
 		_dialog_btn.disabled = false
-	self.mouse_filter = 0 # Escuchar los clics
+	self.mouse_filter = Control.MOUSE_FILTER_STOP
 
 
 func _toggle_dialog_btn(show := true) -> void:

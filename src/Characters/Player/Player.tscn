@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/Inventory/Inventory.gd" type="Script" id=1]
 [ext_resource path="res://src/Characters/Player/Player.gd" type="Script" id=2]
@@ -11,16 +11,29 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.7206, 15.105 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 7, 8 )
+
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ SubResource( 2 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 10.0
 } ]
 
-[sub_resource type="SpriteFrames" id=3]
-animations = [  ]
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 5 )
+region = Rect2( 7, 0, 7, 8 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 4 ) ],
+"loop": true,
+"name": "Move",
+"speed": 5.0
+} ]
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 5
@@ -39,6 +52,7 @@ expressions_map = {
 "worried": -1
 }
 expressions_offset = Vector2( 76, 80 )
+is_current_player = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -50,9 +64,8 @@ script = ExtResource( 3 )
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Idle"]
-rotation = 1.5708
 scale = Vector2( 4, 4 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "Idle"
 
 [node name="Move" type="Node2D" parent="StateMachine"]
@@ -60,7 +73,9 @@ script = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Move"]
 rotation = -1.5708
-frames = SubResource( 3 )
+scale = Vector2( 4, 4 )
+frames = SubResource( 5 )
+animation = "Move"
 flip_v = true
 
 [node name="Inventory" type="Node" parent="."]

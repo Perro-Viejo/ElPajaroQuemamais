@@ -10,7 +10,7 @@ story = {
 "nodes": {
 1: {
 "links": {
-0: 2
+0: 9
 },
 "text": "start"
 },
@@ -20,9 +20,9 @@ story = {
 },
 "text": "{
 	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
 	\"line\": \"Oiga Lupe. ¿Quiere que se la chupe?\",
-	\"emotion\": \"thinking\",
-	\"action\": \"SPEAK\"
+	\"emotion\": \"thinking\"
 }"
 },
 3: {
@@ -31,15 +31,9 @@ story = {
 },
 "text": "{
 	\"actor\": \"Lupe\",
-	\"line\": \"Pues sí pero pilas. Donde Mamá Is nos vea se le pega al chupo.\",
-	\"emotion\": \"worried\",
 	\"action\": \"SPEAK\",
-	\"position\": {
-		\"type\": \"REFERENCE\",
-		\"room\": \"RoomA\",
-		\"reference\": \"Window\"
-	},
-	\"final_direction\": [1, 0]
+	\"line\": \"Pues sí pero pilas. Donde Mamá Is nos vea se le pega al chupo.\",
+	\"emotion\": \"worried\"
 }"
 },
 4: {
@@ -48,9 +42,9 @@ story = {
 },
 "text": "{
 	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
 	\"line\": \"¡No puede ser! Lupe le pega con la zurda...\",
-	\"emotion\": \"sad\",
-	\"action\": \"SPEAK\"
+	\"emotion\": \"sad\"
 }"
 },
 5: {
@@ -59,9 +53,9 @@ story = {
 },
 "text": "{
 	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
 	\"line\": \"Tanto estar rica pa' ni mierda\",
-	\"emotion\": \"angry\",
-	\"action\": \"SPEAK\"
+	\"emotion\": \"angry\"
 }"
 },
 6: {
@@ -70,15 +64,9 @@ story = {
 },
 "text": "{
 	\"actor\": \"Rico\",
-	\"line\": \"Que se meta un palo la vieja esa\",
-	\"emotion\": \"angry\",
 	\"action\": \"SPEAK\",
-	\"position\": {
-		\"type\": \"REFERENCE\",
-		\"room\": \"RoomA\",
-		\"reference\": \"Bed\"
-	},
-	\"final_direction\": [1, 0]
+	\"line\": \"Que se meta un palo la vieja esa\",
+	\"emotion\": \"angry\"
 }"
 },
 7: {
@@ -87,9 +75,9 @@ story = {
 },
 "text": "{
 	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
 	\"line\": \"Ahora sí se me puso como para partir cocos\",
-	\"emotion\": \"excited\",
-	\"action\": \"SPEAK\"
+	\"emotion\": \"excited\"
 }"
 },
 8: {
@@ -97,6 +85,20 @@ story = {
 
 },
 "text": "end"
+},
+9: {
+"links": {
+0: 2
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomA\",
+		\"reference\": \"Desk\"
+	}
+}"
 }
 }
 }
