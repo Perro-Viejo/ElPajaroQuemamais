@@ -9,3 +9,10 @@ signal pause_requested(source, sound)
 signal stream_finished(source, sound)
 signal change_volume(source, sound, volume)
 signal position_amb(source, sound, position, max_distance)
+
+# Eventos de Metronomo ------------------------------------------------------------
+signal bar_started(current_bar)
+signal half_ticked(current_bar)
+signal quarter_ticked(current_bar)
+signal eight_ticked(current_bar)
+signal sixteenth_ticked(current_bar)
