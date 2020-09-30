@@ -50,8 +50,15 @@ func _move_actor_to_reference(props: Dictionary) -> void:
 
 func _actor_moved(actor: Actor) -> void:
 	if actor.is_current_player:
-		if _current_clickable and _current_clickable.trigger_dialog:
-			DialogEvent.emit_signal('dialog_requested', _current_clickable.trigger_dialog)
+		$Line2D.points = PoolVector2Array()
+		if _current_clickable:
+			if not SectionEvent.in_dialog and _current_clickable.trigger_dialog:
+				DialogEvent.emit_signal(
+					'dialog_requested', _current_clickable.trigger_dialog
+				)
+			if _current_clickable.look_to != Clickable.DIR.NONE:
+				yield(get_tree(), 'idle_frame')
+				actor.look_to(_current_clickable.look_to)
 	if actor.is_in_dialog():
 		yield(get_tree(), 'idle_frame')
 		DialogEvent.emit_signal('dialog_continued')

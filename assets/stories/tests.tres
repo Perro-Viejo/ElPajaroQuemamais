@@ -116,7 +116,7 @@ story = {
 "type": "line"
 },
 8: {
-"graph_offset": Vector2( 460, 1800 ),
+"graph_offset": Vector2( 1500, 1680 ),
 "links": {
 
 },
@@ -206,10 +206,12 @@ story = {
 13: {
 "graph_offset": Vector2( 420, 1640 ),
 "links": {
-0: 8
+0: 14,
+1: 15,
+2: 16
 },
 "rect_size": Vector2( 324, 137 ),
-"slot_amount": 1,
+"slot_amount": 3,
 "text": "{
 	\"actor\": \"Player\",
 	\"action\": \"INTERACT\",
@@ -230,6 +232,51 @@ story = {
 			\"voice\": \"Quemamais\"
 		}
 	]
+}",
+"type": "line"
+},
+14: {
+"graph_offset": Vector2( 960, 1520 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Ugh! Qué asco... mejor me voy a pellizcar frijoles\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+15: {
+"graph_offset": Vector2( 960, 1680 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La puta que nos parió, ahí viene la vieja\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+16: {
+"graph_offset": Vector2( 960, 1840 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Este pájaro también sabe hablar, ¿quieres oirlo?\",
+	\"emotion\": \"angry\"
 }",
 "type": "line"
 }

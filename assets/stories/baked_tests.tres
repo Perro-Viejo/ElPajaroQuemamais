@@ -150,7 +150,9 @@ story = {
 },
 13: {
 "links": {
-0: 8
+0: 14,
+1: 15,
+2: 16
 },
 "text": "{
 	\"actor\": \"Player\",
@@ -172,6 +174,39 @@ story = {
 			\"voice\": \"Quemamais\"
 		}
 	]
+}"
+},
+14: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Ugh! Qué asco... mejor me voy a pellizcar frijoles\",
+	\"emotion\": \"angry\"
+}"
+},
+15: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La puta que nos parió, ahí viene la vieja\",
+	\"emotion\": \"worried\"
+}"
+},
+16: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Este pájaro también sabe hablar, ¿quieres oirlo?\",
+	\"emotion\": \"angry\"
 }"
 }
 }

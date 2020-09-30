@@ -1,7 +1,7 @@
 class_name DialogOption
 extends Button
 
-var voice := 'quemamais'
+var voice := 'Player'
 
 onready var defaults := {
 	pos = rect_position

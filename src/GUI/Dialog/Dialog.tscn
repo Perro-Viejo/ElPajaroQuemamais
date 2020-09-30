@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_24.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/GUI/Dialog/Dialog.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/GUI/Dialog/CharacterFrame.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/images/gui/quemamais_talk.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/gui/quemamais_normal.png" type="Texture" id=6]
+[ext_resource path="res://src/GUI/Dialog/Subtitles.gd" type="Script" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "show_dialog_menu"
@@ -122,9 +123,12 @@ custom_colors/font_color = Color( 1, 1, 0, 1 )
 text = "subtitles will display here"
 align = 1
 autowrap = true
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Tween" type="Tween" parent="Subtitles"]
 
 [node name="DialogButton" type="TextureButton" parent="."]
 margin_left = 1033.0

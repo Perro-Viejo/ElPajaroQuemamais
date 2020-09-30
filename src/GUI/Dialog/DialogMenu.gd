@@ -28,7 +28,7 @@ func create_options(options := [], autoshow := false) -> void:
 	for opt in options:
 		var btn: Button = option.instance() as Button
 		# btn.text = opt.line
-		btn.text = tr(opt.tr_code.to_upper())
+		btn.text = tr(opt.tr_code)
 		btn.voice = opt.voice
 		btn.hint_tooltip = 'Con la voz de: %s' % btn.voice
 		
@@ -82,7 +82,7 @@ func update_options(updates_cfg := {}) -> void:
 func show_options() -> void:
 	# Establecer cuál será la primera opción a seleccionar cuando se presione
 	# una flecha del teclado
-	SectionEvent.dialog = true
+	SectionEvent.in_dialog = true
 	for btn in get_children():
 		if btn.visible:
 			btn.add_to_group('FocusGroup')
@@ -94,7 +94,7 @@ func show_options() -> void:
 
 
 func _on_option_clicked(opt: Dictionary) -> void:
-	SectionEvent.dialog = false
+	SectionEvent.in_dialog = false
 	hide()
 	DialogEvent.emit_signal('dialog_option_clicked', opt)
 

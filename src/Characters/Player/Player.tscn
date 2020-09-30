@@ -70,6 +70,7 @@ frames = SubResource( 2 )
 animation = "Idle"
 
 [node name="Move" type="Node2D" parent="StateMachine"]
+visible = false
 script = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Move"]

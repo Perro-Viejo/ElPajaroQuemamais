@@ -81,7 +81,7 @@ func force_focus():
 		else:
 			if SectionEvent.Paused:
 				btn = ButtonsSections.Pause
-			elif SectionEvent.dialog:
+			elif SectionEvent.in_dialog:
 				btn = ButtonsSections.DialogMenu
 	if btn != null:
 		btn.grab_focus()

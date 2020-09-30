@@ -125,6 +125,7 @@ position = Vector2( 82.2814, 395.768 )
 z_index = 5
 script = ExtResource( 9 )
 interaction_type = "target"
+look_to = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable2"]
 shape = SubResource( 2 )
@@ -134,6 +135,7 @@ position = Vector2( 295.549, 299.237 )
 z_index = 5
 script = ExtResource( 9 )
 interaction_type = "target"
+look_to = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable3"]
 shape = SubResource( 2 )
@@ -143,6 +145,7 @@ position = Vector2( 472.898, 160.052 )
 z_index = 5
 script = ExtResource( 9 )
 interaction_type = "target"
+look_to = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable4"]
 shape = SubResource( 2 )
@@ -153,6 +156,7 @@ z_index = 5
 script = ExtResource( 9 )
 interaction_type = "target"
 trigger_dialog = "DialogTest"
+look_to = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable"]
 shape = SubResource( 2 )

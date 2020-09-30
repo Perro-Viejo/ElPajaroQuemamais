@@ -93,6 +93,20 @@ func spoke():
 		DialogEvent.emit_signal('dialog_continued')
 
 
+func look_to(dir: int) -> void:
+	match dir:
+		Clickable.DIR.LEFT:
+			rotation_degrees = 0
+			scale.x = 1.0
+		Clickable.DIR.UP:
+			rotation_degrees = 90
+		Clickable.DIR.RIGHT:
+			rotation_degrees = 0
+			scale.x = -1.0
+		Clickable.DIR.DOWN:
+			rotation_degrees = -90
+
+
 func set_in_dialog(new_val: bool) -> void:
 	_in_dialog = new_val
 

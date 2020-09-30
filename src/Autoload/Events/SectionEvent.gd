@@ -5,7 +5,7 @@ var Options:bool = false setget set_options
 var Controls:bool = false setget set_controls
 var Languages:bool = false setget set_languages
 var Paused: bool = false setget set_paused
-var dialog: bool = false
+var in_dialog: bool = false
 
 func set_main_menu(value:bool)->void:
 	MainMenu = value

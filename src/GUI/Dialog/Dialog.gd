@@ -22,8 +22,7 @@ var _current_options := ''
 # } ----
 var _is_listening_click := true
 var _current_emotion := ''
-var _sub_shown = false
-var _played = false
+var _option_selected := false
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables onready ▒▒▒▒
 onready var _story_reader: EXP_StoryReader = _story_reader_class.new()
@@ -45,14 +44,14 @@ func _ready() -> void:
 	Data.set_data(Data.DIALOGS, {})
 
 	_dialog_mnu.hide()
-	_hide_subs()
+	_subs.put_out()
+	_dialog_btn.rect_position.x = OS.window_size.x + 16
 
 	match TranslationServer.get_locale():
 		_:
 			_story_reader.read(_stories_es)
 
 	# Conectarse a eventos de los retoños y de sí mismo
-	$Tween.connect('tween_step', self, '_play_subs_sfx')
 	_autofill.connect('fill_done', self, '_autofill_completed')
 	if use_click_to_progress:
 		self.connect('gui_input', self,'_on_gui_input')
@@ -84,18 +83,6 @@ func _autofill_completed() -> void:
 			character_copy.spoke()
 
 		character_copy = null
-		return
-
-	if _wait:
-		# TODO: Puede haber una mejor manera de hacer esto, cosa que la alternación
-		# del control del PC suceda en un único lugar dentro del código de esta
-		# clase
-		PlayerEvent.emit_signal('control_toggled')
-		DialogEvent.emit_signal('dialog_paused')
-		return
-
-	if not _in_dialog_with_options or not _dialog_mnu.visible:
-		_continue_dialog(_selected_slot)
 
 
 func _on_gui_input(event: InputEvent) -> void:
@@ -132,13 +119,16 @@ func _continue_dialog(slot := 0) -> void:
 	# --------------------------------------------------------------------------
 
 	if _autofill.is_visible(): return
-	_hide_subs()
+	_subs.put_out()
 
 	if _selected_slot < 0 and _nid == _options_nid:
 		# Para mostrar el menú de opciones de diálogo al final de la línea
 		# que este posiblemente dispare
 		_dialog_mnu.show_options()
 		return
+
+	if _option_selected:
+		slot = _selected_slot
 
 	_next_dialog_line(max(0, slot))
 
@@ -150,6 +140,11 @@ func _continue_dialog(slot := 0) -> void:
 
 func _next_dialog_line(slot := 0) -> void:
 	_nid = _story_reader.get_nid_from_slot(_did, _nid, slot)
+
+
+func _get_options_id() -> String:
+	return '%s-%s' % [_did, _options_nid]
+
 
 func _read_dialog_line() -> void:
 	var line_txt := _story_reader.get_text(_did, _nid)
@@ -166,6 +161,8 @@ func _read_dialog_line() -> void:
 			_nid = _options_nid
 			_dialog_mnu.show_options()
 			return
+
+	_option_selected = false
 
 	var line_dic: Dictionary = JSON.parse(line_txt).result
 
@@ -215,35 +212,6 @@ func _read_dialog_line() -> void:
 					get_node("/root/"+on_start_dict.type).emit_signal(
 						on_start_dict.event
 					)
-
-			# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ OPCIONES ▮▮▮▮
-#			if line_dic.has('options'):
-#				_options_nid = _nid
-#				_selected_slot = -1
-#
-#				var options_state := {}
-#				var dialogs_state: Dictionary = Data.get_data(Data.DIALOGS)
-#				if dialogs_state.has(_get_options_id()):
-#					options_state = dialogs_state[_get_options_id()]
-#
-#				var id := 0
-#				for opt in line_dic.options:
-#					opt.id = id
-#					opt.tr_code = 'dlg_%d_%d_%s_opt_%d' % [_did, _nid, actor, id]
-#
-#					if options_state:
-#						opt.show = options_state[opt.id]
-#
-#					if not opt.has('actor'):
-#						opt.actor = 'player'
-#					if not opt.has('time'):
-#						opt.time = 3
-#					if not opt.has('emotion'):
-#						opt.emotion = ''
-#
-#					id += 1
-#
-#				_dialog_mnu.create_options(line_dic.options)
 
 			# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ APAGAR OPCIONES ▮▮▮▮
 			if line_dic.has('off') or line_dic.has('on'):
@@ -318,7 +286,12 @@ func _read_dialog_line() -> void:
 			var id := 0
 			for opt in line_dic.options:
 				opt.id = id
-				opt.tr_code = 'dlg_%d_%d_%s_opt_%d' % [_did, _nid, actor, id]
+				opt.tr_code = ('dlg_%d_%d_%s_opt_%d' % [_did, _nid, actor, id])\
+					.to_upper()
+				
+				TranslationServer.set_locale('en')
+				opt.subs = tr(opt.tr_code)
+				TranslationServer.set_locale('es')
 
 				if options_state:
 					opt.show = options_state[opt.id]
@@ -333,9 +306,9 @@ func _read_dialog_line() -> void:
 				id += 1
 
 			_dialog_mnu.create_options(line_dic.options)
+
 			# Mostrar el botón que permite a Quemamais decir algo
 			_toggle_dialog_btn()
-#			_continue_dialog()
 
 
 func _on_character_spoke(
@@ -372,7 +345,7 @@ func _on_character_spoke(
 		_autofill.set_disappear_time(time_to_disappear)
 
 		_autofill.show()
-		_toggle_subs()
+		_subs.toggle_subs()
 	else:
 		_current_character = null
 		_current_emotion = ''
@@ -381,17 +354,18 @@ func _on_character_spoke(
 
 func _option_clicked(opt: Dictionary) -> void:
 	_selected_slot = opt.id
+	_option_selected = true
 
-	if opt.has('say') and opt.say:
-		DialogEvent.emit_signal(
-			'line_triggered',
-			(opt.actor as String).to_lower(),
-			opt.line as String,
-			opt.time,
-			opt.emotion as String
-		)
-	else:
-		_continue_dialog(_selected_slot)
+	_hide_dialog_menu(false)
+	_subs.set_text(opt.subs)
+	DialogEvent.emit_signal(
+		'line_triggered',
+		(opt.actor as String).to_lower(),
+		opt.line as String,
+		opt.time,
+		opt.emotion as String
+	)
+
 
 func _enable_click_listening() -> void:
 	_is_listening_click = true
@@ -431,39 +405,11 @@ func _finish_dialog() -> void:
 	_subs.set_text('[ gibberish in spanish ]')
 	DialogEvent.emit_signal('dialog_finished')
 	_character_frame.dialog_finished()
-	_toggle_subs(false)
+	_subs.toggle_subs(false)
 	self.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	
-	# Mostrar el botón que permite a Quemamais decir algo
-	_toggle_dialog_btn()
-
-
-func _get_options_id() -> String:
-	return '%s-%s' % [_did, _options_nid]
-
-func _toggle_subs(show := true) -> void:
-	_sub_shown = show
-	_played = false
-	$Tween.interpolate_property(
-		_subs, 'rect_position:y',
-		OS.window_size.y if show else 900.0,
-		900.0 if show else OS.window_size.y,
-		0.3 if show else 0.1,
-		Tween.TRANS_BOUNCE if show else Tween.TRANS_SINE,
-		Tween.EASE_OUT if show else Tween.EASE_IN
-	)
-	$Tween.start()
-
-
-func _hide_subs() -> void:
-	_subs.rect_position.y = OS.window_size.y
-
-func _play_subs_sfx(obj: Object, key: NodePath, elapsed: float, val: Object):
-	if _sub_shown and not _played and (obj as Control).rect_position.y < 905:
-		_played = true
-		AudioEvent.emit_signal('play_requested', 'UI', 'sub')
-
-
+# ------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 func _show_dialog_menu() -> void:
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
 	_dialog_btn.disabled = true
@@ -476,18 +422,12 @@ func _show_dialog_menu() -> void:
 	_dialog_btn.hide()
 
 
-func _hide_dialog_menu(opt: Button = null) -> void:
+func _hide_dialog_menu(closed: bool = true) -> void:
 	AudioEvent.emit_signal('play_requested', 'UI', 'player_cl')
 	$AnimationPlayer.play('show_dialog_menu', -1.0, -1.5, true)
-	if opt:
-		DialogEvent.emit_signal(
-			'line_triggered',
-			'quemamais',
-			opt.text,
-			-1.0,
-			''
-		)
-	else:
+
+	if closed:
+		# Cuando el jugador cierra el menú de diálogo
 		_dialog_btn.show()
 		_dialog_btn.disabled = false
 		self.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -506,6 +446,7 @@ func _toggle_dialog_btn(show := true) -> void:
 	$Tween.start()
 	AudioEvent.emit_signal('play_requested', 'UI', 'player_show')
 	_dialog_btn.disabled = !show
+
 
 func _dialog_btn_hover():
 	AudioEvent.emit_signal('play_requested', 'UI', 'player_hover')

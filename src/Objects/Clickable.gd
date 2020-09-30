@@ -1,9 +1,12 @@
 class_name Clickable
 extends Area2D
 
+enum DIR {NONE, LEFT, UP, RIGHT, DOWN}
+
 export (String, "target", "object") var interaction_type 
 export var max_distance := 200.0
 export var trigger_dialog := ''
+export(DIR) var look_to := DIR.NONE
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready():
