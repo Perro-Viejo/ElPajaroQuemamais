@@ -217,33 +217,33 @@ func _read_dialog_line() -> void:
 					)
 
 			# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ OPCIONES ▮▮▮▮
-			if line_dic.has('options'):
-				_options_nid = _nid
-				_selected_slot = -1
-
-				var options_state := {}
-				var dialogs_state: Dictionary = Data.get_data(Data.DIALOGS)
-				if dialogs_state.has(_get_options_id()):
-					options_state = dialogs_state[_get_options_id()]
-
-				var id := 0
-				for opt in line_dic.options:
-					opt.id = id
-					opt.tr_code = 'dlg_%d_%d_%s_opt_%d' % [_did, _nid, actor, id]
-
-					if options_state:
-						opt.show = options_state[opt.id]
-
-					if not opt.has('actor'):
-						opt.actor = 'player'
-					if not opt.has('time'):
-						opt.time = 3
-					if not opt.has('emotion'):
-						opt.emotion = ''
-
-					id += 1
-
-				_dialog_mnu.create_options(line_dic.options)
+#			if line_dic.has('options'):
+#				_options_nid = _nid
+#				_selected_slot = -1
+#
+#				var options_state := {}
+#				var dialogs_state: Dictionary = Data.get_data(Data.DIALOGS)
+#				if dialogs_state.has(_get_options_id()):
+#					options_state = dialogs_state[_get_options_id()]
+#
+#				var id := 0
+#				for opt in line_dic.options:
+#					opt.id = id
+#					opt.tr_code = 'dlg_%d_%d_%s_opt_%d' % [_did, _nid, actor, id]
+#
+#					if options_state:
+#						opt.show = options_state[opt.id]
+#
+#					if not opt.has('actor'):
+#						opt.actor = 'player'
+#					if not opt.has('time'):
+#						opt.time = 3
+#					if not opt.has('emotion'):
+#						opt.emotion = ''
+#
+#					id += 1
+#
+#				_dialog_mnu.create_options(line_dic.options)
 
 			# ▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮▮ APAGAR OPCIONES ▮▮▮▮
 			if line_dic.has('off') or line_dic.has('on'):
@@ -306,6 +306,36 @@ func _read_dialog_line() -> void:
 						speed = speed
 					}
 				)
+		'INTERACT':
+			_options_nid = _nid
+			_selected_slot = -1
+
+			var options_state := {}
+			var dialogs_state: Dictionary = Data.get_data(Data.DIALOGS)
+			if dialogs_state.has(_get_options_id()):
+				options_state = dialogs_state[_get_options_id()]
+
+			var id := 0
+			for opt in line_dic.options:
+				opt.id = id
+				opt.tr_code = 'dlg_%d_%d_%s_opt_%d' % [_did, _nid, actor, id]
+
+				if options_state:
+					opt.show = options_state[opt.id]
+
+				if not opt.has('actor'):
+					opt.actor = 'player'
+				if not opt.has('time'):
+					opt.time = 3
+				if not opt.has('emotion'):
+					opt.emotion = ''
+
+				id += 1
+
+			_dialog_mnu.create_options(line_dic.options)
+			# Mostrar el botón que permite a Quemamais decir algo
+			_toggle_dialog_btn()
+#			_continue_dialog()
 
 
 func _on_character_spoke(
@@ -435,6 +465,7 @@ func _play_subs_sfx(obj: Object, key: NodePath, elapsed: float, val: Object):
 
 
 func _show_dialog_menu() -> void:
+	self.mouse_filter = Control.MOUSE_FILTER_STOP
 	_dialog_btn.disabled = true
 
 	_dialog_mnu.show()
@@ -459,7 +490,7 @@ func _hide_dialog_menu(opt: Button = null) -> void:
 	else:
 		_dialog_btn.show()
 		_dialog_btn.disabled = false
-	self.mouse_filter = Control.MOUSE_FILTER_STOP
+		self.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 
 func _toggle_dialog_btn(show := true) -> void:

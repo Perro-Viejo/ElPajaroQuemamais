@@ -23,6 +23,7 @@ export var expressions_map := {
 }
 export var expressions_offset := Vector2.ZERO
 export var is_current_player := false
+export var voice: Texture = null
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒variables públicas ▒▒▒▒
 var path := PoolVector2Array() setget _set_path
@@ -42,6 +43,10 @@ onready var _lower_name := name.to_lower()
 func _ready():
 	if dialog_name:
 		_lower_name = dialog_name.to_lower().replace(' ', '_')
+	
+	Data.set_data(dialog_name, {
+		voice = voice
+	})
 
 	DialogEvent.connect('line_triggered', self, '_should_speak')
 	DialogEvent.connect('moved_to_coordinate', self, '_move_to_coordinate')

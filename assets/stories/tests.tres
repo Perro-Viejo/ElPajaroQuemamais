@@ -103,7 +103,7 @@ story = {
 7: {
 "graph_offset": Vector2( 380, 1480 ),
 "links": {
-0: 8
+0: 13
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
@@ -116,7 +116,7 @@ story = {
 "type": "line"
 },
 8: {
-"graph_offset": Vector2( 420, 1640 ),
+"graph_offset": Vector2( 460, 1800 ),
 "links": {
 
 },
@@ -200,6 +200,36 @@ story = {
 		\"relative\": true
 	},
 	\"speed\": 600
+}",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( 420, 1640 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Player\",
+	\"action\": \"INTERACT\",
+	\"options\": [
+		{
+			\"line\": \"Te la voy a meter hasta faca\",
+			\"time\": -1,
+			\"voice\": \"Rico\"
+		},
+		{
+			\"line\": \"Rico, ¿estás por aquí?\",
+			\"time\": -1,
+			\"voice\": \"Ana María\"
+		},
+		{
+			\"line\": \"¡Les gusta por Detroit!\",
+			\"time\": -1,
+			\"voice\": \"Quemamais\"
+		}
+	]
 }",
 "type": "line"
 }

@@ -1,8 +1,9 @@
 extends Node2D
 
-
 export(String, FILE, "*.tscn") var next_scene: String
-export(String) var world_name = 'WORLD'
+export var world_name := 'WORLD'
+
+var _current_clickable: Clickable = null
 
 onready var _player: Player = $Actors/Player
 
@@ -23,17 +24,18 @@ func _ready() -> void:
 	PlayerEvent.connect('move_player', self, '_move_player')
 
 
-# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
 func move_actor(actor: Actor, target: Vector2) -> void:
 	actor.path = $Navigation2D.get_simple_path(actor.position, target)
 
 
-# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
-func _move_player(end_pos) -> void:
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
+func _move_player(clickable: Clickable) -> void:
 	AudioEvent.emit_signal("play_requested","Player","Move")
-	_player.path = $Navigation2D.get_simple_path(_player.position, end_pos)
+	_player.path = $Navigation2D.get_simple_path(_player.position, clickable.position)
 	_player.position = _player.path[0]
 	$Line2D.points = _player.path
+	_current_clickable = clickable
 
 
 func _move_actor_to_coordinate(props: Dictionary) -> void:
@@ -48,7 +50,8 @@ func _move_actor_to_reference(props: Dictionary) -> void:
 
 func _actor_moved(actor: Actor) -> void:
 	if actor.is_current_player:
-		DialogEvent.emit_signal('dialog_requested', 'DialogTest')
+		if _current_clickable and _current_clickable.trigger_dialog:
+			DialogEvent.emit_signal('dialog_requested', _current_clickable.trigger_dialog)
 	if actor.is_in_dialog():
 		yield(get_tree(), 'idle_frame')
 		DialogEvent.emit_signal('dialog_continued')

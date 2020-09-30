@@ -37,9 +37,7 @@ func _show_voice_icon(btn: DialogOption) -> void:
 		if _voice_disappear_time < 0.0: return
 	_voice.self_modulate.a = 1.0
 	_first_hover = false
-	_voice_icon.texture = load(
-		'res://assets/images/gui/voice_%s.png' % btn.voice
-	)
+	_voice_icon.texture = (Data.get_data(btn.voice) as Dictionary).voice
 	_voice_icon.rect_position.y = _defaults.voice_icon.y
 	_voice_icon.self_modulate.a = 1.0
 

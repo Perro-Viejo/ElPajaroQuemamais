@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://src/StateMachine/StateMachine.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/characters/ana_mar.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://src/Characters/NPC/Talk.gd" type="Script" id=7]
 [ext_resource path="res://src/Characters/NPC/Move.gd" type="Script" id=8]
 [ext_resource path="res://assets/images/characters/ana_mar_walk.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/characters/voice_ana_maría.png" type="Texture" id=10]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -292,6 +293,7 @@ expressions_map = {
 "thinking": -1,
 "worried": -1
 }
+voice = ExtResource( 10 )
 
 [node name="StateMachine" type="Node2D" parent="."]
 script = ExtResource( 1 )

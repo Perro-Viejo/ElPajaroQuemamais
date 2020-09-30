@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/voice_rico.png-d563f5555c5142a4df4e706ee81952b8.stex"
+path="res://.import/voice_rico.png-0dd2649cdae019b3981f11fbd6872ef8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/gui/voice_rico.png"
-dest_files=[ "res://.import/voice_rico.png-d563f5555c5142a4df4e706ee81952b8.stex" ]
+source_file="res://assets/images/characters/voice_rico.png"
+dest_files=[ "res://.import/voice_rico.png-0dd2649cdae019b3981f11fbd6872ef8.stex" ]
 
 [params]
 

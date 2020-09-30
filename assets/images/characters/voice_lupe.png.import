@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/voice_quemamais.png-1336ca4e0bf76e7684e5ff8c97ef3267.stex"
+path="res://.import/voice_lupe.png-27b0ae1517655674f9142ac74667334a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/gui/voice_quemamais.png"
-dest_files=[ "res://.import/voice_quemamais.png-1336ca4e0bf76e7684e5ff8c97ef3267.stex" ]
+source_file="res://assets/images/characters/voice_lupe.png"
+dest_files=[ "res://.import/voice_lupe.png-27b0ae1517655674f9142ac74667334a.stex" ]
 
 [params]
 

@@ -152,6 +152,7 @@ position = Vector2( 137.849, -82.337 )
 z_index = 5
 script = ExtResource( 9 )
 interaction_type = "target"
+trigger_dialog = "DialogTest"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable"]
 shape = SubResource( 2 )

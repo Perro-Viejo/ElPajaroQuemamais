@@ -1,19 +1,23 @@
+class_name Clickable
 extends Area2D
 
 export (String, "target", "object") var interaction_type 
+export var max_distance := 200.0
+export var trigger_dialog := ''
 
-export (float) var max_distance = 200
-
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready():
 	connect('input_event', self, '_on_input_event')
 	connect('mouse_entered', self, '_on_hover', [true])
 	connect('mouse_exited', self, '_on_hover', [false])
 
-func _on_input_event(vp, event, shape):
+
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
+func _on_input_event(vp: Node, event: InputEvent, shape: int):
 	if event.is_pressed():
 		match interaction_type:
 			"target":
-				PlayerEvent.emit_signal('move_player', position)
+				PlayerEvent.emit_signal('move_player', self)
 			"object":
 				PlayerEvent.emit_signal('check_object', position, max_distance)
 

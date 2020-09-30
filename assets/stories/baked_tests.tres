@@ -71,7 +71,7 @@ story = {
 },
 7: {
 "links": {
-0: 8
+0: 13
 },
 "text": "{
 	\"actor\": \"Lupe\",
@@ -146,6 +146,32 @@ story = {
 		\"relative\": true
 	},
 	\"speed\": 600
+}"
+},
+13: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Player\",
+	\"action\": \"INTERACT\",
+	\"options\": [
+		{
+			\"line\": \"Te la voy a meter hasta faca\",
+			\"time\": -1,
+			\"voice\": \"Rico\"
+		},
+		{
+			\"line\": \"Rico, ¿estás por aquí?\",
+			\"time\": -1,
+			\"voice\": \"Ana María\"
+		},
+		{
+			\"line\": \"¡Les gusta por Detroit!\",
+			\"time\": -1,
+			\"voice\": \"Quemamais\"
+		}
+	]
 }"
 }
 }

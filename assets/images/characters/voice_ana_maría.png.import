@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/voice_ana_maría.png-e31628216c74dbae493b1d82e861c59a.stex"
+path="res://.import/voice_ana_maría.png-35d5859d330d2572f209ebc5ee47afda.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/gui/voice_ana_maría.png"
-dest_files=[ "res://.import/voice_ana_maría.png-e31628216c74dbae493b1d82e861c59a.stex" ]
+source_file="res://assets/images/characters/voice_ana_maría.png"
+dest_files=[ "res://.import/voice_ana_maría.png-35d5859d330d2572f209ebc5ee47afda.stex" ]
 
 [params]
 

@@ -15,8 +15,7 @@ var current_options := []
 func _ready() -> void:
 	_tween_ref = get_node(tween_path) as Tween
 
-	_test()
-#	hide()
+	hide()
 
 
 func create_options(options := [], autoshow := false) -> void:
@@ -30,6 +29,9 @@ func create_options(options := [], autoshow := false) -> void:
 		var btn: Button = option.instance() as Button
 		# btn.text = opt.line
 		btn.text = tr(opt.tr_code.to_upper())
+		btn.voice = opt.voice
+		btn.hint_tooltip = 'Con la voz de: %s' % btn.voice
+		
 		btn.connect('pressed', self, '_on_option_clicked', [opt])
 		btn.connect('mouse_entered', self, '_on_option_hover', [btn, true])
 		btn.connect('mouse_exited', self, '_on_option_hover', [btn, false])
