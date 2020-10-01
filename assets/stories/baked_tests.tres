@@ -178,12 +178,12 @@ story = {
 },
 14: {
 "links": {
-0: 8
+0: 17
 },
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡Ugh! Qué asco... mejor me voy a pellizcar frijoles\",
+	\"line\": \"¡Ugh! Qué asco...\",
 	\"emotion\": \"angry\"
 }"
 },
@@ -194,7 +194,7 @@ story = {
 "text": "{
 	\"actor\": \"Lupe\",
 	\"action\": \"SPEAK\",
-	\"line\": \"La puta que nos parió, ahí viene la vieja\",
+	\"line\": \"La puta que nos parió, viene Ana María\",
 	\"emotion\": \"worried\"
 }"
 },
@@ -205,8 +205,19 @@ story = {
 "text": "{
 	\"actor\": \"Rico\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Este pájaro también sabe hablar, ¿quieres oirlo?\",
+	\"line\": \"Pajarraco hijueputa\",
 	\"emotion\": \"angry\"
+}"
+},
+17: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No quiero ver cómo se machucan la popó\",
+	\"emotion\": \"sad\"
 }"
 }
 }

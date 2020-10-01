@@ -32,9 +32,7 @@ onready var _autofill: Autofill = find_node('Autofill')
 onready var _character_frame: CharacterFrame = find_node('CharacterFrame')
 onready var _subs: Label = $Subtitles
 onready var _dialog_btn: TextureButton = $DialogButton
-onready var _defaults := {
-	dialog_btn = _dialog_btn.rect_position
-}
+
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready() -> void:
@@ -45,7 +43,6 @@ func _ready() -> void:
 
 	_dialog_mnu.hide()
 	_subs.put_out()
-	_dialog_btn.rect_position.x = OS.window_size.x + 16
 
 	match TranslationServer.get_locale():
 		_:
@@ -58,7 +55,6 @@ func _ready() -> void:
 	# Esta es de prueba:
 	_dialog_mnu.connect('test_option_clicked', self, '_hide_dialog_menu')
 	_dialog_btn.connect('pressed', self, '_show_dialog_menu')
-	_dialog_btn.connect('mouse_entered', self, '_dialog_btn_hover')
 	_dialog_mnu_cnt.connect('close_pressed', self, '_hide_dialog_menu')
 
 	# Conectarse a eventos de la vida real
@@ -105,8 +101,8 @@ func _play_dialog(dialog_name: String) -> void:
 		_in_dialog_with_options = true
 		PlayerEvent.emit_signal('control_toggled')
 	
-	if _dialog_btn.rect_position.x == _defaults.dialog_btn.x:
-		_toggle_dialog_btn(false)
+	if _dialog_btn.is_in_view():
+		_dialog_btn.toggle(false)
 
 	_continue_dialog()
 
@@ -308,7 +304,7 @@ func _read_dialog_line() -> void:
 			_dialog_mnu.create_options(line_dic.options)
 
 			# Mostrar el botón que permite a Quemamais decir algo
-			_toggle_dialog_btn()
+			_dialog_btn.toggle()
 
 
 func _on_character_spoke(
@@ -407,9 +403,8 @@ func _finish_dialog() -> void:
 	_character_frame.dialog_finished()
 	_subs.toggle_subs(false)
 	self.mouse_filter = Control.MOUSE_FILTER_IGNORE
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
-# ------------------------------------------------------------------------------
+
+
 func _show_dialog_menu() -> void:
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
 	_dialog_btn.disabled = true
@@ -431,22 +426,3 @@ func _hide_dialog_menu(closed: bool = true) -> void:
 		_dialog_btn.show()
 		_dialog_btn.disabled = false
 		self.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
-
-func _toggle_dialog_btn(show := true) -> void:
-	_dialog_btn.show()
-	$Tween.interpolate_property(
-		_dialog_btn, 'rect_position:x',
-		OS.window_size.x + 16 if show else _defaults.dialog_btn.x,
-		_defaults.dialog_btn.x if show else OS.window_size.x + 16,
-		0.3 if show else 0.1,
-		Tween.TRANS_BOUNCE if show else Tween.TRANS_SINE,
-		Tween.EASE_OUT if show else Tween.EASE_IN
-	)
-	$Tween.start()
-	AudioEvent.emit_signal('play_requested', 'UI', 'player_show')
-	_dialog_btn.disabled = !show
-
-
-func _dialog_btn_hover():
-	AudioEvent.emit_signal('play_requested', 'UI', 'player_hover')

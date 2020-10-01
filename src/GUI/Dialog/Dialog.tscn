@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_24.tres" type="DynamicFont" id=1]
 [ext_resource path="res://src/GUI/Dialog/Dialog.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/images/gui/quemamais_talk.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/gui/quemamais_normal.png" type="Texture" id=6]
 [ext_resource path="res://src/GUI/Dialog/Subtitles.gd" type="Script" id=7]
+[ext_resource path="res://src/GUI/Dialog/DialogButton.gd" type="Script" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "show_dialog_menu"
@@ -141,6 +142,9 @@ texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 5 )
 texture_disabled = ExtResource( 5 )
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Tween" type="Tween" parent="DialogButton"]

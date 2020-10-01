@@ -32,7 +32,10 @@ func move_actor(actor: Actor, target: Vector2) -> void:
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
 func _move_player(clickable: Clickable) -> void:
 	AudioEvent.emit_signal("play_requested","Player","Move")
-	_player.path = $Navigation2D.get_simple_path(_player.position, clickable.position)
+	_player.path = $Navigation2D.get_simple_path(
+		_player.position,
+		clickable.position
+	)
 	_player.position = _player.path[0]
 	$Line2D.points = _player.path
 	_current_clickable = clickable
@@ -43,7 +46,7 @@ func _move_actor_to_coordinate(props: Dictionary) -> void:
 
 
 func _move_actor_to_reference(props: Dictionary) -> void:
-	var path := NodePath('%s/%s' % [props.room, props.point_name])
+	var path := NodePath('%s/Points/%s' % [props.room, props.point_name])
 	var _target := (get_node(path) as Position2D).position
 	move_actor(props.actor, _target)
 

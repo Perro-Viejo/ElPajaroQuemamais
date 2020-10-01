@@ -116,7 +116,7 @@ story = {
 "type": "line"
 },
 8: {
-"graph_offset": Vector2( 1500, 1680 ),
+"graph_offset": Vector2( 2000, 1680 ),
 "links": {
 
 },
@@ -236,16 +236,16 @@ story = {
 "type": "line"
 },
 14: {
-"graph_offset": Vector2( 960, 1520 ),
+"graph_offset": Vector2( 960, 1480 ),
 "links": {
-0: 8
+0: 17
 },
-"rect_size": Vector2( 324, 137 ),
+"rect_size": Vector2( 441, 150 ),
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡Ugh! Qué asco... mejor me voy a pellizcar frijoles\",
+	\"line\": \"¡Ugh! Qué asco...\",
 	\"emotion\": \"angry\"
 }",
 "type": "line"
@@ -260,13 +260,13 @@ story = {
 "text": "{
 	\"actor\": \"Lupe\",
 	\"action\": \"SPEAK\",
-	\"line\": \"La puta que nos parió, ahí viene la vieja\",
+	\"line\": \"La puta que nos parió, viene Ana María\",
 	\"emotion\": \"worried\"
 }",
 "type": "line"
 },
 16: {
-"graph_offset": Vector2( 960, 1840 ),
+"graph_offset": Vector2( 960, 1860 ),
 "links": {
 0: 8
 },
@@ -275,8 +275,23 @@ story = {
 "text": "{
 	\"actor\": \"Rico\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Este pájaro también sabe hablar, ¿quieres oirlo?\",
+	\"line\": \"Pajarraco hijueputa\",
 	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+17: {
+"graph_offset": Vector2( 1480, 1480 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No quiero ver cómo se machucan la popó\",
+	\"emotion\": \"sad\"
 }",
 "type": "line"
 }

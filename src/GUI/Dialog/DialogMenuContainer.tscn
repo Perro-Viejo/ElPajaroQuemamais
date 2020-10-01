@@ -24,11 +24,10 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="."]
 
 [node name="DialogMenu" parent="." instance=ExtResource( 1 )]
-margin_left = 104.0
+margin_left = 80.0
 margin_top = 12.0
-margin_right = -181.0
+margin_right = -245.0
 margin_bottom = -9.0
-grow_horizontal = 0
 custom_constants/separation = 4
 alignment = 1
 tween_path = NodePath("../Tween")
@@ -66,9 +65,9 @@ __meta__ = {
 }
 
 [node name="Close" type="TextureButton" parent="."]
-margin_left = 32.0
+margin_left = 16.0
 margin_top = 81.0
-margin_right = 70.0
+margin_right = 54.0
 margin_bottom = 119.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 6 )
