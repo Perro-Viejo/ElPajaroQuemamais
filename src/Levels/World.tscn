@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/World.gd" type="Script" id=2]
@@ -13,12 +13,9 @@
 [ext_resource path="res://src/Levels/Hacienda/RoomD.tscn" type="PackedScene" id=11]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 337, 41.25, 351, 39.25, 351, 45.25, 340.692, 51.9437, 324.692, 51.9437, 279, 41.25, 279, 93.25, 324.692, 67.9437, 349, 93.25, 348.692, 85.9437, 329, 149.25, 328.692, 117.944, 348.692, 117.944, 344.692, 127.944, 428.692, 215.444, 373.692, 215.444, 374.192, 127.944, 374.692, 116.944, 406.692, 234.444, 406.692, 231.944, 428.692, 231.986, 412.192, 234.444, 348.692, 67.9437, 348.692, 77.9437, 374.192, 84.9437, 374.692, 93.9437, 374.692, 26.4437, 490.692, 26.4437, 490.692, 215.444, 437.212, 215.444, 437.197, 231.846, 470.692, 231.944, 470.692, 267.944, 454.692, 267.944, 454.692, 322.444, 465.692, 322.444, 465.692, 331.944, 398.692, 331.944, 398.692, 291.444, 412.192, 291.444, 345, 159.25, 339, 161.25, 333, 161.25, 293, 149.25, 325, 163.25, 281, 163.25, 281, 123.25, 293, 129.25, 325, 123.25, 325, 129.25 )
+vertices = PoolVector2Array( 337, 41.25, 358.692, 35.9437, 358.692, 46.4437, 340.692, 51.9437, 324.692, 51.9437, 279, 41.25, 279, 93.25, 324.692, 67.9437, 349, 93.25, 348.692, 85.9437, 329, 149.25, 328.692, 117.944, 348.692, 117.944, 344.692, 127.944, 428.692, 215.444, 373.692, 215.444, 374.192, 127.944, 374.692, 116.944, 406.692, 234.444, 406.692, 231.944, 428.692, 231.986, 412.192, 234.444, 348.692, 67.9437, 348.692, 77.9437, 374.192, 84.9437, 374.692, 93.9437, 374.692, 26.4437, 490.692, 26.4437, 490.692, 215.444, 437.212, 215.444, 437.197, 231.846, 470.692, 231.944, 470.692, 267.944, 454.692, 267.944, 454.692, 322.444, 465.692, 322.444, 465.692, 331.944, 398.692, 331.944, 398.692, 291.444, 412.192, 291.444, 345, 159.25, 339, 161.25, 333, 161.25, 293, 149.25, 325, 163.25, 281, 163.25, 281, 123.25, 293, 129.25, 325, 123.25, 325, 129.25 )
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4 ), PoolIntArray( 6, 5, 4, 7 ), PoolIntArray( 8, 6, 7, 9 ), PoolIntArray( 10, 11, 12, 13 ), PoolIntArray( 14, 15, 16, 17 ), PoolIntArray( 18, 19, 20, 21 ), PoolIntArray( 7, 22, 23 ), PoolIntArray( 9, 7, 23 ), PoolIntArray( 9, 23, 24, 25 ), PoolIntArray( 24, 26, 27, 28, 25 ), PoolIntArray( 17, 25, 28, 29 ), PoolIntArray( 30, 31, 32, 33, 21, 20 ), PoolIntArray( 34, 35, 36, 37 ), PoolIntArray( 34, 37, 38, 39 ), PoolIntArray( 33, 34, 39, 21 ), PoolIntArray( 30, 20, 14, 29 ), PoolIntArray( 17, 29, 14 ), PoolIntArray( 12, 17, 16, 13 ), PoolIntArray( 10, 13, 40, 41, 42 ), PoolIntArray( 43, 10, 42, 44, 45 ), PoolIntArray( 43, 45, 46, 47 ), PoolIntArray( 47, 46, 48, 49 ) ]
-outlines = [ PoolVector2Array( 351, 45.25, 340.692, 51.9437, 324.692, 51.9437, 324.692, 67.9437, 348.692, 67.9437, 348.692, 77.9437, 374.192, 84.9437, 374.692, 26.4437, 490.692, 26.4437, 490.692, 215.444, 437.212, 215.444, 437.197, 231.846, 470.692, 231.944, 470.692, 267.944, 454.692, 267.944, 454.692, 322.444, 465.692, 322.444, 465.692, 331.944, 398.692, 331.944, 398.692, 291.444, 412.192, 291.444, 412.192, 234.444, 406.692, 234.444, 406.692, 231.944, 428.692, 231.986, 428.692, 215.444, 373.692, 215.444, 374.192, 127.944, 344.692, 127.944, 345, 159.25, 339, 161.25, 333, 161.25, 325, 163.25, 281, 163.25, 281, 123.25, 325, 123.25, 325, 129.25, 293, 129.25, 293, 149.25, 329, 149.25, 328.692, 117.944, 348.692, 117.944, 374.692, 116.944, 374.692, 93.9437, 348.692, 85.9437, 349, 93.25, 279, 93.25, 279, 41.25, 337, 41.25, 351, 39.25 ) ]
-
-[sub_resource type="CircleShape2D" id=2]
-radius = 66.4464
+outlines = [ PoolVector2Array( 358.692, 46.4437, 340.692, 51.9437, 324.692, 51.9437, 324.692, 67.9437, 348.692, 67.9437, 348.692, 77.9437, 374.192, 84.9437, 374.692, 26.4437, 490.692, 26.4437, 490.692, 215.444, 437.212, 215.444, 437.197, 231.846, 470.692, 231.944, 470.692, 267.944, 454.692, 267.944, 454.692, 322.444, 465.692, 322.444, 465.692, 331.944, 398.692, 331.944, 398.692, 291.444, 412.192, 291.444, 412.192, 234.444, 406.692, 234.444, 406.692, 231.944, 428.692, 231.986, 428.692, 215.444, 373.692, 215.444, 374.192, 127.944, 344.692, 127.944, 345, 159.25, 339, 161.25, 333, 161.25, 325, 163.25, 281, 163.25, 281, 123.25, 325, 123.25, 325, 129.25, 293, 129.25, 293, 149.25, 329, 149.25, 328.692, 117.944, 348.692, 117.944, 374.692, 116.944, 374.692, 93.9437, 348.692, 85.9437, 349, 93.25, 279, 93.25, 279, 41.25, 337, 41.25, 358.692, 35.9437 ) ]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 15.6609, 11.5556 )
@@ -115,69 +112,6 @@ position = Vector2( 79, 391 )
 points = PoolVector2Array( 314.1, 81.5757 )
 width = 5.0
 default_color = Color( 0.556863, 0.745098, 0.333333, 1 )
-
-[node name="TargetPoints" type="Node2D" parent="."]
-visible = false
-modulate = Color( 1, 0.498039, 0, 1 )
-
-[node name="Clickable" type="Area2D" parent="TargetPoints"]
-position = Vector2( 137.849, -82.337 )
-z_index = 5
-script = ExtResource( 9 )
-trigger_dialog = "DialogTest"
-look_to = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable"]
-shape = SubResource( 2 )
-
-[node name="Clickable2" type="Area2D" parent="TargetPoints"]
-position = Vector2( 82.2814, 395.768 )
-z_index = 5
-script = ExtResource( 9 )
-look_to = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable2"]
-shape = SubResource( 2 )
-
-[node name="Clickable3" type="Area2D" parent="TargetPoints"]
-visible = false
-position = Vector2( 246.849, 424.663 )
-z_index = 5
-script = ExtResource( 9 )
-look_to = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable3"]
-shape = SubResource( 2 )
-
-[node name="Clickable4" type="Area2D" parent="TargetPoints"]
-visible = false
-position = Vector2( 348.849, -109.337 )
-z_index = 5
-script = ExtResource( 9 )
-look_to = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable4"]
-shape = SubResource( 2 )
-
-[node name="Clickable5" type="Area2D" parent="TargetPoints"]
-visible = false
-position = Vector2( 580.898, 778.663 )
-z_index = 5
-script = ExtResource( 9 )
-look_to = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable5"]
-shape = SubResource( 2 )
-
-[node name="Clickable6" type="Area2D" parent="TargetPoints"]
-visible = false
-position = Vector2( 364.898, 950.663 )
-z_index = 5
-script = ExtResource( 9 )
-look_to = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TargetPoints/Clickable6"]
-shape = SubResource( 2 )
 
 [node name="Test_Obj" type="Node2D" parent="."]
 

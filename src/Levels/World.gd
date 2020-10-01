@@ -34,7 +34,7 @@ func _move_player(clickable: Clickable) -> void:
 	AudioEvent.emit_signal("play_requested","Player","Move")
 	_player.path = $Navigation2D.get_simple_path(
 		_player.position,
-		clickable.position
+		clickable.position + clickable.get_node('../../').position
 	)
 	_player.position = _player.path[0]
 	$Line2D.points = _player.path

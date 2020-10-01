@@ -30,9 +30,10 @@ position = Vector2( 68, -60 )
 modulate = Color( 0, 0.321569, 0.964706, 1 )
 
 [node name="Clickable" type="Area2D" parent="Targets"]
+position = Vector2( 138, -82 )
 script = ExtResource( 3 )
+trigger_dialog = "DialogTest"
 look_to = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Targets/Clickable"]
-position = Vector2( 136, -84 )
 shape = SubResource( 1 )

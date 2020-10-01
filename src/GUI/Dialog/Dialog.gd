@@ -94,7 +94,7 @@ func _play_dialog(dialog_name: String) -> void:
 	_did = _story_reader.get_did_via_record_name(dialog_name)
 	_nid = _story_reader.get_nid_via_exact_text(_did, 'start')
 	_final_nid = _story_reader.get_nid_via_exact_text(_did, 'end')
-	
+
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
 
 	if _story_reader.get_nid_via_exact_text(_did, 'return') > 0:
