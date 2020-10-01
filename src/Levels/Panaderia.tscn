@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/audio/mx_panaderia.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/fonts/Bangers-Regular.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,11 @@
 [ext_resource path="res://assets/images/panaderia/changua_2.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/panaderia/tamal_1.png" type="Texture" id=6]
 [ext_resource path="res://assets/images/panaderia/Panaderia.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/panaderia/combo_1.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/panaderia/combo_2.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/panaderia/pony.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/panaderia/huevos_pericos.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/panaderia/vaso.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 300
@@ -199,6 +204,114 @@ tracks/13/keys = {
 "update": 1,
 "values": [ false, true ]
 }
+tracks/14/type = "value"
+tracks/14/path = NodePath("Tinto:scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 2.7, 3.2, 3.3, 3.7, 4, 4.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ), Vector2( 0.7, 1 ), Vector2( 0.871, 0.7 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Pony:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 3.7, 4, 6.3, 7.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Pony:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 4, 5.7, 6.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 642.741, 709.928 ), Vector2( 234.741, 709.928 ), Vector2( 234.741, 429.928 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("HuevoPerico:scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4, 2.7, 3, 3.3, 3.6, 6, 6.3, 6.6, 6.9, 7.2, 7.5, 7.8, 8.1, 8.4, 8.7, 9, 9.3, 9.6, 9.9, 10.2, 10.5, 10.8, 11.1, 11.4, 11.7, 12, 12.3, 12.6, 12.9, 13.2, 13.5, 13.8, 14.1, 16.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("HuevoPerico:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 3.5, 6, 13.9, 16.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 404.741, 713.928 ), Vector2( 852.741, 217.928 ), Vector2( 852.741, 217.928 ), Vector2( -587.259, 1369.93 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Combo_2:scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.5, 1.2 ), Vector2( 1.5, 1.2 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Combo_2:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 2.9, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 988.174, 1266.52 ), Vector2( 985.654, 427.408 ), Vector2( 968.015, -381.461 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Combo_1:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 4.6, 7.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -233.95, 1132.96 ), Vector2( 285.138, 691.991 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Combo_1:scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 4.7, 5.2, 7.7, 10.5, 11.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.838711, 0.838711 ), Vector2( 1e-05, 1e-05 ), Vector2( 1.2, 1.2 ), Vector2( 10, 10 ), Vector2( 1e-05, 1e-05 ) ]
+}
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 7 )
@@ -250,6 +363,59 @@ position = Vector2( 656.741, 487.928 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 6 )
 
+[node name="Tinto" type="Sprite" parent="."]
+position = Vector2( 987.091, 327.956 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 12 )
+
+[node name="Pony" type="Sprite" parent="."]
+position = Vector2( 642.741, 709.928 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
+[node name="Combo_1" type="Sprite" parent="."]
+position = Vector2( -233.95, 1132.96 )
+scale = Vector2( 0.838711, 0.838711 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
+[node name="Combo_2" type="Sprite" parent="."]
+position = Vector2( 988.174, 1266.52 )
+scale = Vector2( 1.5, 1.2 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
+[node name="HuevoPerico" type="Sprite" parent="."]
+position = Vector2( 404.741, 713.928 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
+[node name="Rollito1" type="Sprite" parent="."]
+position = Vector2( 2097.54, 114.614 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
+[node name="Rollito2" type="Sprite" parent="."]
+position = Vector2( 1580.98, -318.798 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
 [node name="Tamal" type="Label" parent="."]
 margin_left = 313.366
 margin_top = 1009.24
@@ -267,8 +433,8 @@ __meta__ = {
 [node name="Changua" type="Label" parent="."]
 margin_left = 1335.25
 margin_top = 626.707
-margin_right = 2108.22
-margin_bottom = 893.709
+margin_right = 2108.21
+margin_bottom = 893.71
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.45098, 0.254902, 0.235294, 1 )
 text = "Changua"
@@ -295,7 +461,6 @@ margin_top = 217.223
 margin_right = 713.525
 margin_bottom = 520.223
 rect_rotation = -28.4862
-rect_scale = Vector2( 1.05246, 1.05246 )
 rect_pivot_offset = Vector2( 318, 151 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.45098, 0.254902, 0.235294, 1 )
@@ -353,5 +518,4 @@ __meta__ = {
 position = Vector2( 636.396, 449.72 )
 scale = Vector2( 1.7, 2 )
 frames = SubResource( 10 )
-frame = 3
 playing = true
