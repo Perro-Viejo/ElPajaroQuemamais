@@ -46,7 +46,7 @@ func _move_actor_to_coordinate(props: Dictionary) -> void:
 
 
 func _move_actor_to_reference(props: Dictionary) -> void:
-	var path := NodePath('%s/Points/%s' % [props.room, props.point_name])
+	var path := NodePath('Rooms/%s/Points/%s' % [props.room, props.point_name])
 	var _target := (get_node(path) as Position2D).position
 	move_actor(props.actor, _target)
 

@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/Levels/Hacienda/RoomTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Clickable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/images/world/room_d.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28, 36 )
 
 [node name="RoomD" instance=ExtResource( 1 )]
 
@@ -18,3 +21,14 @@ look_to = 1
 modulate = Color( 0, 0, 1, 1 )
 position = Vector2( -108, 68 )
 look_to = 3
+
+[node name="Clickable" parent="Objects" index="0" instance=ExtResource( 2 )]
+modulate = Color( 0, 0, 1, 1 )
+position = Vector2( 108, 64 )
+interaction_type = "object"
+
+[node name="CollisionShape2D" parent="Objects/Clickable" index="0"]
+position = Vector2( 0, -88 )
+shape = SubResource( 1 )
+
+[editable path="Objects/Clickable"]

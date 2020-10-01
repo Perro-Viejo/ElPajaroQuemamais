@@ -19,7 +19,7 @@ func _ready():
 		'target':
 			self.modulate = Color.blue
 		'object':
-			self.modulate = Color.red
+			self.modulate = Color.yellow
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
