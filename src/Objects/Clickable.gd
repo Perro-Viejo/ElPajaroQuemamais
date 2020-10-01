@@ -1,3 +1,4 @@
+tool
 class_name Clickable
 extends Area2D
 
@@ -13,6 +14,12 @@ func _ready():
 	connect('input_event', self, '_on_input_event')
 	connect('mouse_entered', self, '_on_hover', [true])
 	connect('mouse_exited', self, '_on_hover', [false])
+	
+	match interaction_type:
+		'target':
+			self.modulate = Color.blue
+		'object':
+			self.modulate = Color.red
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
