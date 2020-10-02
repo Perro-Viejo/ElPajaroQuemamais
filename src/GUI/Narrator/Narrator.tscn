@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/images/gui/quemamais_normal.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/world/palito_descanso.png" type="Texture" id=1]
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_24.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/GUI/Narrator/Narrator.gd" type="Script" id=3]
+[ext_resource path="res://assets/images/gui/cursor_move.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/world/palito_outline.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/gui/cursor_hand.png" type="Texture" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 16.0
@@ -13,6 +17,7 @@ bg_color = Color( 0, 0.321569, 0.964706, 1 )
 [node name="Narrator" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -31,28 +36,92 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+[node name="Tutorials" type="CenterContainer" parent="Panel"]
 margin_left = 16.0
 margin_top = 16.0
-margin_right = 897.0
+margin_right = 996.0
 margin_bottom = 94.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer"]
-margin_right = 881.0
+[node name="Movement" type="VBoxContainer" parent="Panel/Tutorials"]
+visible = false
+margin_left = 43.0
+margin_right = 936.0
 margin_bottom = 78.0
 custom_constants/separation = 4
 alignment = 1
 
-[node name="RichTextLabel" type="Label" parent="Panel/CenterContainer/VBoxContainer"]
-margin_right = 881.0
+[node name="RichTextLabel" type="Label" parent="Panel/Tutorials/Movement"]
+margin_right = 893.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 2 )
-text = "Puedes hacer que Quemamais se mueva por el escenario con estos:"
+text = "Ház click en los palitos          de descanso para mover a Quemamais:"
 
-[node name="TextureRect" type="TextureRect" parent="Panel/CenterContainer/VBoxContainer"]
-margin_left = 424.0
+[node name="TextureRect" type="TextureRect" parent="Panel/Tutorials/Movement"]
+margin_left = 430.0
 margin_top = 46.0
-margin_right = 456.0
+margin_right = 462.0
 margin_bottom = 78.0
 size_flags_horizontal = 4
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Interact" type="VBoxContainer" parent="Panel/Tutorials"]
+visible = false
+margin_left = 39.0
+margin_right = 941.0
+margin_bottom = 78.0
+custom_constants/separation = 4
+alignment = 1
+
+[node name="RichTextLabel" type="Label" parent="Panel/Tutorials/Interact"]
+margin_right = 902.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 2 )
+text = "Quemamais puede interactuar con objetos a su alcance haciendo clíc:"
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Tutorials/Interact"]
+margin_left = 435.0
+margin_top = 46.0
+margin_right = 467.0
+margin_bottom = 78.0
+size_flags_horizontal = 4
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MovementIcons" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Palito" type="TextureRect" parent="MovementIcons"]
+margin_left = 517.856
+margin_top = 481.049
+margin_right = 525.856
+margin_bottom = 494.049
+rect_rotation = -90.0
+rect_scale = Vector2( 4, 4 )
+size_flags_horizontal = 4
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outline" type="TextureRect" parent="MovementIcons"]
+margin_left = 662.008
+margin_top = 694.314
+margin_right = 672.008
+margin_bottom = 709.314
+rect_rotation = -90.0
+rect_scale = Vector2( 2, 2 )
+size_flags_horizontal = 4
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
