@@ -3,12 +3,26 @@ extends Control
 var current_tutorial
 var first_move = true
 
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready():
-	WorldEvent.connect('world_entered', self, '_show_tutorial', [0])
-	PlayerEvent.connect('movement_finished', self, '_show_tutorial', [1])
+	# Conectarse a eventos propios y de los hijos
 	connect('gui_input', self, '_on_input_event')
+	
+	# Conectarse a eventos del universo
+	HudEvent.connect('tutorial_requested', self, '_show_tutorial')
+	DialogEvent.connect('dialog_finished', self, '_check_tutorial_after_dialog')
 
-func _show_tutorial(tutorial):
+
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
+func _on_input_event(event: InputEvent):
+	if event.is_pressed():
+		WorldEvent.emit_signal('tutorial_shown', current_tutorial)
+		Data.set_data(Data.CURRENT_TUTORIAL, current_tutorial + 1)
+		hide()
+
+
+func _show_tutorial(tutorial := -1):
+	if tutorial < 0: return
 	current_tutorial = tutorial
 	show()
 	match tutorial:
@@ -16,13 +30,14 @@ func _show_tutorial(tutorial):
 			$Panel/Tutorials/Movement.show()
 			$MovementIcons.show()
 		1:
-			if first_move:
-				$Panel/Tutorials/Interact.show()
-				$Panel/Tutorials/Movement.hide()
-				$MovementIcons.hide()
-				PlayerEvent.disconnect("movement_finished", self, '_show_tutorial')
+			$Panel/Tutorials/Interact.show()
+			$Panel/Tutorials/Movement.hide()
+			$MovementIcons.hide()
 
-func _on_input_event(event: InputEvent):
-	if event.is_pressed():
-		WorldEvent.emit_signal('tutorial_shown', current_tutorial)
-		hide()
+
+func _check_tutorial_after_dialog(dialog_name) -> void:
+	match dialog_name:
+		'Ep1Sc1':
+			_show_tutorial(0)
+		'Ep1Sc2':
+			_show_tutorial(1)

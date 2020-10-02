@@ -23,6 +23,7 @@ var _current_options := ''
 var _is_listening_click := true
 var _current_emotion := ''
 var _option_selected := false
+var _current_dialog_name := ''
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables onready ▒▒▒▒
 onready var _story_reader: EXP_StoryReader = _story_reader_class.new()
@@ -91,6 +92,7 @@ func _on_gui_input(event: InputEvent) -> void:
 
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Eventos globales ░░░░
 func _play_dialog(dialog_name: String) -> void:
+	_current_dialog_name = dialog_name
 	_did = _story_reader.get_did_via_record_name(dialog_name)
 	_nid = _story_reader.get_nid_via_exact_text(_did, 'start')
 	_final_nid = _story_reader.get_nid_via_exact_text(_did, 'end')
@@ -401,12 +403,14 @@ func _finish_dialog() -> void:
 			PlayerEvent.emit_signal('control_toggled')
 
 	# Para cualquier diálogo
-	_current_emotion = ''
+	DialogEvent.emit_signal('dialog_finished', _current_dialog_name)
 	_current_character = null
-	DialogEvent.emit_signal('dialog_finished')
+	_current_emotion = ''
+	_current_dialog_name = ''
+	self.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 	_character_frame.dialog_finished()
 	_subs.toggle_subs(false)
-	self.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 
 func _show_dialog_menu() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/World.gd" type="Script" id=2]
@@ -16,25 +16,38 @@ vertices = PoolVector2Array( 337, 41.25, 358.692, 35.9437, 358.692, 46.4437, 340
 polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4 ), PoolIntArray( 6, 5, 4, 7 ), PoolIntArray( 8, 6, 7, 9 ), PoolIntArray( 10, 11, 12, 13 ), PoolIntArray( 14, 13, 12, 15, 16 ), PoolIntArray( 7, 17, 18 ), PoolIntArray( 9, 7, 18 ), PoolIntArray( 9, 18, 19, 20 ), PoolIntArray( 19, 21, 22, 23 ), PoolIntArray( 20, 19, 23 ), PoolIntArray( 24, 20, 23 ), PoolIntArray( 23, 25, 26 ), PoolIntArray( 24, 23, 26, 27 ), PoolIntArray( 28, 29, 30, 31 ), PoolIntArray( 32, 31, 30, 14 ), PoolIntArray( 32, 14, 16, 33 ), PoolIntArray( 34, 33, 16, 35, 27, 26 ) ]
 outlines = [ PoolVector2Array( 358.692, 46.4437, 340.692, 51.9437, 324.692, 51.9437, 324.692, 67.9437, 348.692, 67.9437, 348.692, 77.9437, 375.692, 85.4437, 375.692, 33.9437, 490.692, 33.9437, 490.692, 211.944, 375.692, 211.944, 375.692, 126.944, 370.692, 127.944, 355.192, 127.444, 344.692, 129.944, 345, 163.944, 300.692, 163.944, 300.692, 148.944, 323.192, 148.944, 323.192, 128.444, 289.192, 128.444, 289.192, 163.944, 280.192, 163.944, 280.192, 115.944, 348.692, 115.944, 348.692, 120.444, 355.192, 116.444, 370.692, 114.944, 375.692, 115.944, 375.692, 94.4437, 348.692, 85.9437, 349, 93.25, 279, 93.25, 279, 41.25, 337, 41.25, 358.692, 35.9437 ) ]
 
-[sub_resource type="Gradient" id=2]
+[sub_resource type="NavigationPolygon" id=2]
+vertices = PoolVector2Array( 2140.85, 356.663, 2540.85, 356.663, 2540.85, 1172.66, 2140.85, 1172.66 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 2140.85, 356.663, 2540.85, 356.663, 2540.85, 1172.66, 2140.85, 1172.66 ) ]
+
+[sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 1, 1, 0, 1, 0, 1, 0, 1 )
 
 [node name="World" type="Node2D"]
 position = Vector2( -124.849, 171.337 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_horizontal_guides_": [ 180.0, -720.0, 720.0 ],
-"_edit_vertical_guides_": [ 1913.0, 1280.0, -1280.0 ]
-}
 
 [node name="Cameras" type="Node2D" parent="."]
 
 [node name="HouseCamera" type="Camera2D" parent="Cameras"]
 zoom = Vector2( 2, 2 )
+limit_left = -100000
+limit_top = -100000
+limit_right = 100000
+limit_bottom = 100000
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="StableCamera" type="Camera2D" parent="Cameras"]
-position = Vector2( 2340.85, 794.663 )
+position = Vector2( 2344, 798 )
 zoom = Vector2( 2, 2 )
+limit_left = 1064
+limit_top = -162
+limit_right = 3624
+limit_bottom = 1758
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -42,7 +55,7 @@ zoom = Vector2( 2, 2 )
 motion_mirroring = Vector2( 2560, 0 )
 
 [node name="Background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -124.849, 171.337 )
+position = Vector2( -124, 170 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 
@@ -54,15 +67,14 @@ texture = ExtResource( 3 )
 position = Vector2( 0, 308 )
 
 [node name="RoomC" parent="Rooms" instance=ExtResource( 10 )]
-position = Vector2( 471.287, 240.663 )
+position = Vector2( 468, 242 )
 
 [node name="Stable" parent="Rooms" instance=ExtResource( 9 )]
-position = Vector2( 2344, 798 )
+position = Vector2( 2472, 948 )
 
 [node name="Actors" type="Node2D" parent="."]
 
 [node name="Player" parent="Actors" instance=ExtResource( 1 )]
-position = Vector2( 132.849, -81.337 )
 z_index = 1
 collision_mask = 0
 expressions_map = {
@@ -75,7 +87,7 @@ expressions_map = {
 }
 
 [node name="Rico" parent="Actors" instance=ExtResource( 8 )]
-position = Vector2( -35, 36 )
+visible = false
 expressions_map = {
 "angry": 0,
 "excited": -1,
@@ -85,7 +97,7 @@ expressions_map = {
 }
 
 [node name="Lupe" parent="Actors" instance=ExtResource( 7 )]
-position = Vector2( 2378.85, 680.663 )
+visible = false
 expressions_map = {
 "angry": -1,
 "excited": 0,
@@ -95,7 +107,7 @@ expressions_map = {
 }
 
 [node name="AnaMaria" parent="Actors" instance=ExtResource( 6 )]
-position = Vector2( 2338.85, 402.663 )
+visible = false
 speed = 600
 expressions_map = {
 "angry": 0,
@@ -109,16 +121,20 @@ expressions_map = {
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+[node name="House" type="NavigationPolygonInstance" parent="Navigation2D"]
 position = Vector2( -1261.92, -251.112 )
 scale = Vector2( 4, 4 )
 navpoly = SubResource( 1 )
+
+[node name="Stable" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 132, 138 )
+navpoly = SubResource( 2 )
 
 [node name="Line2D" type="Line2D" parent="."]
 points = PoolVector2Array( 314.1, 81.5757 )
 width = 8.0
 default_color = Color( 0, 1, 0, 1 )
-gradient = SubResource( 2 )
+gradient = SubResource( 3 )
 joint_mode = 1
 begin_cap_mode = 2
 end_cap_mode = 2

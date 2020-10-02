@@ -1,7 +1,9 @@
+tool
 extends Node2D
 
 export(String, FILE, "*.tscn") var next_scene: String
 export var world_name := 'WORLD'
+export var episode := 1 setget _set_episode
 
 var _current_clickable: Clickable = null
 
@@ -27,11 +29,15 @@ func _ready() -> void:
 	
 	match Data.get_data(Data.EPISODE):
 		1:
-			# TODO: Que aquí se muestre el primer tutorial
-			$Cameras/HouseCamera.make_current()
+			_setup_set(1)
+			yield(get_tree().create_timer(2), 'timeout')
+			DialogEvent.emit_signal('dialog_requested', 'Ep1Sc1')
 		2:
-			$Cameras/StableCamera.make_current()
+			_setup_set(2)
+			yield(get_tree().create_timer(2), 'timeout')
 			DialogEvent.emit_signal('dialog_requested', 'Ep2Sc1')
+		_:
+			_setup_set(1)
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
@@ -56,10 +62,8 @@ func _move_actor_to_coordinate(props: Dictionary) -> void:
 
 
 func _move_actor_to_reference(props: Dictionary) -> void:
-	var room: Node2D = get_node('Rooms/%s' % props.room)
-	var path: Position2D = room.get_node('Points/%s' % props.point_name)
-	var _target := room.position + path.position
-	move_actor(props.actor, _target)
+	var room: Room = get_node('Rooms/%s' % props.room)
+	move_actor(props.actor, room.get_point_position(props.point_name))
 
 
 func _actor_moved(actor: Actor) -> void:
@@ -76,3 +80,31 @@ func _actor_moved(actor: Actor) -> void:
 	if actor.is_in_dialog():
 		yield(get_tree(), 'idle_frame')
 		DialogEvent.emit_signal('dialog_continued')
+
+
+func _setup_set(_episode: int) -> void:
+	match _episode:
+		1:
+			$Actors/Player.position = $Rooms/RoomC.get_target_position('Clickable2')
+			$Actors/AnaMaria.position = $Rooms/RoomB.get_point_position('Entrance')
+			$Actors/AnaMaria.show()
+			$Actors/Lupe.hide()
+			$Actors/Rico.hide()
+			$Cameras/HouseCamera.make_current()
+		2:
+			$Actors/AnaMaria.position = $Rooms/Stable.get_point_position('Entrance')
+			$Actors/Lupe.position = $Rooms/Stable.get_point_position('Arrecha')
+			$Actors/AnaMaria.show()
+			$Actors/Lupe.show()
+			$Actors/Rico.hide()
+			$Cameras/StableCamera.make_current()
+		_:
+			for actor in $Actors.get_children():
+				actor.position = 0
+				actor.hide()
+
+
+func _set_episode(new_val: int) -> void:
+	episode = new_val
+	_setup_set(new_val)
+	property_list_changed_notify()

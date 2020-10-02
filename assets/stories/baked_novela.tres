@@ -10,7 +10,7 @@ story = {
 "nodes": {
 1: {
 "links": {
-0: 2
+0: 4
 },
 "text": "start"
 },
@@ -20,23 +20,15 @@ story = {
 },
 "text": "{
 	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"Necesito un abrecartas\",
-	\"emotion\": \"thinking\"
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Bookcase\"
+	}
 }"
 },
 3: {
-"links": {
-0: 4
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"Tal vez mamá tenga uno en el estudio\",
-	\"emotion\": \"thinking\"
-}"
-},
-4: {
 "links": {
 0: 5
 },
@@ -46,18 +38,32 @@ story = {
 	\"position\": {
 		\"type\": \"REFERENCE\",
 		\"room\": \"RoomB\",
-		\"reference\": \"Entrance\"
+		\"reference\": \"Window\"
 	}
 }"
 },
-5: {
+4: {
 "links": {
 0: 6
 },
 "text": "{
 	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Window\"
+	}
+}"
+},
+5: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡En la biblioteca!\",
+	\"line\": \"La cucha debe tener uno por aquí\",
 	\"emotion\": \"thinking\"
 }"
 },
@@ -71,19 +77,19 @@ story = {
 	\"position\": {
 		\"type\": \"REFERENCE\",
 		\"room\": \"RoomB\",
-		\"reference\": \"Bookcase\"
+		\"reference\": \"Entrance\"
 	}
 }"
 },
 7: {
 "links": {
-0: 8
+0: 2
 },
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Pos aquí no hay na'\",
-	\"emotion\": \"thinking\"
+	\"line\": \"¡Necesito un abrecartas!\",
+	\"emotion\": \"angry\"
 }"
 },
 8: {
@@ -109,121 +115,19 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡Quemamais! pájaro de mierda\",
+	\"line\": \"¡Quemamais! ayude a buscar un abrecartas\",
 	\"emotion\": \"angry\"
 }"
 },
 3: {
-"links": {
-0: 4
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"¿Cuántas veces le he dicho que no abra las cosas?\",
-	\"emotion\": \"angry\"
-}"
-},
-4: {
-"links": {
-0: 5
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"MOVE\",
-	\"position\": {
-		\"type\": \"REFERENCE\",
-		\"room\": \"RoomB\",
-		\"reference\": \"Desk\"
-	}
-}"
-},
-5: {
-"links": {
-0: 6
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"Un día de estos lo voy a meter en el culo de un caballo\",
-	\"emotion\": \"angry\"
-}"
-},
-6: {
-"links": {
-0: 7
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"Para que aprenda que hay cosas que no deben abrir\",
-	\"emotion\": \"angry\"
-}"
-},
-7: {
-"links": {
-0: 8
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"¿Y esto? ¿una carta de Agustina?\",
-	\"emotion\": \"thinking\"
-}"
-},
-8: {
-"links": {
-0: 9
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"La que se cagó en la cocina\",
-	\"emotion\": \"happy\"
-}"
-},
-9: {
-"links": {
-0: 10
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"Chiste tan marica\",
-	\"emotion\": \"happy\"
-}"
-},
-10: {
-"links": {
-0: 11
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"¿Por qué la cucha tiene una carta de la criada?\",
-	\"emotion\": \"thinking\"
-}"
-},
-11: {
-"links": {
-0: 12
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"La que murió pariendo a Lupe\",
-	\"emotion\": \"thinking\"
-}"
-},
-12: {
 "links": {
 0: 13
 },
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡Y la escribió mi taita!\",
-	\"emotion\": \"\"
+	\"line\": \"Sirvapalgo pájaro carechimba\",
+	\"emotion\": \"angry\"
 }"
 },
 13: {
@@ -390,12 +294,12 @@ story = {
 },
 15: {
 "links": {
-0: 16
+0: 17
 },
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Tú no sabes una mierda Lupe... pero quiero que me la metas igual\",
+	\"line\": \"Tú no sabes una mierda Lupe...\",
 	\"emotion\": \"angry\"
 }"
 },
@@ -404,6 +308,157 @@ story = {
 
 },
 "text": "end"
+},
+17: {
+"links": {
+0: 18
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Pero de todos modos quiero que me la metas\",
+	\"emotion\": \"happy\"
+}"
+},
+18: {
+"links": {
+0: 19
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Cuando quiera quiero\",
+	\"emotion\": \"excited\"
+}"
+},
+19: {
+"links": {
+0: 20
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Ya estoy cansado de jalarme el ganzo pensando en usted\",
+	\"emotion\": \"worried\"
+}"
+},
+20: {
+"links": {
+0: 16
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Viera cómo lo tengo... todo hinchao\",
+	\"emotion\": \"worried\"
+}"
+}
+}
+},
+4: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Buena la rata\",
+	\"emotion\": \"happy\"
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Desk\"
+	}
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Aquí segurito que encuentro uno\",
+	\"emotion\": \"happy\"
+}"
+},
+5: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Déjame ver...\",
+	\"emotion\": \"happy\"
+}"
+},
+6: {
+"links": {
+
+},
+"text": "end"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"...\",
+	\"emotion\": \"thinking\"
+}"
+},
+8: {
+"links": {
+0: 9
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Una carta para Agustina?\",
+	\"emotion\": \"thinking\"
+}"
+},
+9: {
+"links": {
+0: 10
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Qué hace en el escritorio de mi mamá?\",
+	\"emotion\": \"thinking\"
+}"
+},
+10: {
+"links": {
+0: 6
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Lo mejor será leerla en voz alta\",
+	\"emotion\": \"thinking\"
+}"
 }
 }
 }
@@ -411,5 +466,6 @@ story = {
 names = {
 "Ep1Sc1": 1,
 "Ep1Sc2": 2,
+"Ep1Sc3": 4,
 "Ep2Sc1": 3
 }

@@ -22,6 +22,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Overlay" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+color = Color( 0.196078, 0.0392157, 0.27451, 0.25098 )
+
 [node name="Panel" type="PanelContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -39,14 +45,15 @@ __meta__ = {
 [node name="Tutorials" type="CenterContainer" parent="Panel"]
 margin_left = 16.0
 margin_top = 16.0
-margin_right = 996.0
-margin_bottom = 94.0
+margin_right = 897.0
+margin_bottom = 83.0
 
 [node name="Movement" type="VBoxContainer" parent="Panel/Tutorials"]
 visible = false
-margin_left = 43.0
-margin_right = 936.0
-margin_bottom = 78.0
+margin_left = -6.0
+margin_top = -6.0
+margin_right = 887.0
+margin_bottom = 72.0
 custom_constants/separation = 4
 alignment = 1
 
@@ -69,9 +76,10 @@ __meta__ = {
 
 [node name="Interact" type="VBoxContainer" parent="Panel/Tutorials"]
 visible = false
-margin_left = 39.0
-margin_right = 941.0
-margin_bottom = 78.0
+margin_left = -11.0
+margin_top = -6.0
+margin_right = 891.0
+margin_bottom = 72.0
 custom_constants/separation = 4
 alignment = 1
 

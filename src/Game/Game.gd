@@ -18,7 +18,10 @@ var transition_state:int = IDLE
 func _ready()->void:
 	Data.set_data(Data.CURRENT_SCENE, 'MainMenu')
 	Data.set_data(Data.FORCE_FOCUS, is_mouse_hidden)
+	# mateo: 	Estaría chimba que esto se guarde en disco y se pueda cargar al
+	# 			iniciar el juego
 	Data.set_data(Data.EPISODE, current_episode)
+	Data.set_data(Data.CURRENT_TUTORIAL, 0)
 
 	GuiEvent.connect("Options",	self, "on_options")
 	GuiEvent.connect("Exit",		self, "on_exit")

@@ -5,6 +5,7 @@ const CURRENT_SCENE := 'CURRENT_SCENE'
 const DIALOGS := 'DIALOGS'
 const FORCE_FOCUS := 'FORCE_FOCUS'
 const EPISODE := 'EPISODE'
+const CURRENT_TUTORIAL := 'CURRENT_TUTORIAL'
 
 var _data := {}
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░

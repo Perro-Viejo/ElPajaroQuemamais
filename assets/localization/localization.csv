@@ -45,18 +45,35 @@ DLG_1_14_ANA_MARÍA,¡Ugh! Qué asco...,I can't see this!
 DLG_1_15_LUPE,"La puta que nos parió, viene Ana María","Wait, Ana María is calling me..."
 DLG_1_16_RICO,¡Pajarraco hijueputa!,Shut up Quemamais!
 DLG_1_17_ANA_MARÍA,No quiero ver cómo se machucan la popó,I better go
-NOVELA,NOVELA,NOVELA
-DLG_1_2_ANA_MARÍA,Quiero abrir esta cosa,I need something to open this letter
-DLG_1_3_ANA_MARÍA,Seguro la cucha tiene algo en el estudio,Maybe mom has one
-DLG_1_5_ANA_MARÍA,¡En la biblioteca!,In the bookcase!... smart of me
-DLG_1_7_ANA_MARÍA,Pos no... vieja marica,Nothing...
-DLG_2_2_ANA_MARÍA,¡Quemamais! pájaro de mierda,Quemamais! don't do that
-DLG_2_3_ANA_MARÍA,¿Cuántas veces le he dicho que no abra las cosas?,How many times have I told you...
-DLG_2_5_ANA_MARÍA,Un día de estos lo voy a meter en el culo de un caballo,Don't mess everything around you
-DLG_2_6_ANA_MARÍA,Para que aprenda que hay cosas que es mejor no abrir,I don't want to put you in your cage
-DLG_2_7_ANA_MARÍA,¿Y esto? ¿una carta de Agustina?,What is this? A letter from Agustina?
-DLG_2_8_ANA_MARÍA,La que se cagó en la cocina,---
-DLG_2_9_ANA_MARÍA,jajajaja....chiste tan marica,---
-DLG_2_10_ANA_MARÍA,¿Por qué la cucha tiene una carta de la criada?,Why is this here?
-DLG_2_11_ANA_MARÍA,La que murió pariendo a Lupe,The servant who died pariendo
-DLG_2_12_ANA_MARÍA,¡Y la escribió mi taita!,And dad wrote it!
+---- EPISODIO 1 ----,---- ESCENA 1 ----,
+DLG_1_7_ANA_MARÍA,¡Necesito un abrecartas!,I need a letter opener
+DLG_1_5_ANA_MARÍA,La cucha debe tener uno por aquí,Mom should have one somewhere here
+---- EPISODIO 1 ----,---- ESCENA 2 ----,
+DLG_2_2_ANA_MARÍA,¡Quemamais! ayude a buscar un abrecartas,Help me find a letter opener Quemamais
+DLG_2_3_ANA_MARÍA,Sirvapalgo pájaro carechimba,Pleeeeeease
+---- EPISODIO 1 ----,---- ESCENA 3 ----,
+DLG_4_2_ANA_MARÍA,Buena la rata,"The desk! of course, thanks Quemamais"
+DLG_4_4_ANA_MARÍA,Aquí segurito que encuentro uno,There should be one here for sure
+DLG_4_5_ANA_MARÍA,Déjame ver...,Lets see...
+DLG_4_7_ANA_MARÍA,...,[ searching in spanish ]
+DLG_4_8_ANA_MARÍA,¿Una carta para Agustina?,A letter for Agustina?
+DLG_4_9_ANA_MARÍA,¿Qué hace en el escritorio de mi mamá?,What is this doing here?
+DLG_4_10_ANA_MARÍA,Lo mejor será leerla en voz alta,[ starts reading the letter ]
+---- EPISODIO 2 ----,---- ESCENA 1 ----,
+DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿Qué haces?","Hola Lupe, ¿Qué tranza? ¿Qué haces?"
+DLG_3_4_ANA_MARÍA,"Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?","Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?"
+DLG_3_5_ANA_MARÍA,jijijijijiji,[ laughts in spanish ]
+DLG_3_6_LUPE,Señorita Ana María. No esperaba verla aquí. ¿Necesita algo? ¿Quiere que le prepare un caballo?,Señorita Ana María. No esperaba verla aquí. ¿Necesita algo? ¿Quiere que le prepare un caballo?
+DLG_3_7_ANA_MARÍA,"No, ya no como carne. Gracias.",[ jokes in spanish ]
+DLG_3_8_ANA_MARÍA,Quería hacerte una pregunta.,Quería hacerte una pregunta.
+DLG_3_9_LUPE,"Claro, lo que usted quiera.","Claro, lo que usted quiera."
+DLG_3_10_LUPE,"Puede preguntarme lo que quiera, para eso estamos patrona.","Puede preguntarme lo que quiera, para eso estamos patrona."
+DLG_3_11_ANA_MARÍA,¿Sabes si tu mamá era amiga de mi padre?,¿Sabes si tu mamá era amiga de mi padre?
+DLG_3_12_LUPE,¿Mi madre?,¿Mi madre?
+DLG_3_13_LUPE,"No sé patrona, la verdad no sé mucho sobre ella","No sé patrona, la verdad no sé mucho sobre ella"
+DLG_3_14_LUPE,Sólo lo que me han contado las otras sirvientas de la casa,Sólo lo que me han contado las otras sirvientas de la casa
+DLG_3_15_ANA_MARÍA,Tú no sabes una mierda Lupe...,You are so bruto Lupe
+DLG_3_17_ANA_MARÍA,Pero de todos modos quiero que me la metas,But I think I love you
+DLG_3_18_LUPE,Cuando quiera quiero,I love you too señorita
+DLG_3_19_LUPE,Ya estoy cansado de jalarme el ganso pensando en usted,I'm tired of hiding my feelings about you
+DLG_3_20_LUPE,Viera cómo lo tengo... todo hinchao,Give me a chance to show you my love
