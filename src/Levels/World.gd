@@ -1,4 +1,3 @@
-tool
 extends Node2D
 
 export(String, FILE, "*.tscn") var next_scene: String
@@ -11,6 +10,8 @@ onready var _player: Player = $Actors/Player
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready() -> void:
+	TranslationServer.set_locale('es')
+
 	# Establecer valores por defecto
 	_player.show()
 	

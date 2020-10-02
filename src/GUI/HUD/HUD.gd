@@ -10,6 +10,7 @@ func _ready() -> void:
 
 	# Conectarse a los eventos del señor
 	WorldEvent.connect('world_entered', self, '_on_world_entered')
+	DialogEvent.connect('dialog_finished', self, '_post_dialog_action')
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -20,3 +21,9 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_world_entered():
 	world_entered = true
 	_dialog.show()
+
+
+func _post_dialog_action(dialog_name: String) -> void:
+	match dialog_name:
+		'Ep1Sc3':
+			$Control/Letter.show()

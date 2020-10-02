@@ -9,6 +9,7 @@ names = {
 "Ep1Sc1": 1,
 "Ep1Sc2": 2,
 "Ep1Sc3": 4,
+"Ep1Sc4": 5,
 "Ep2Sc1": 3
 }
 story = {
@@ -648,6 +649,202 @@ story = {
 	\"line\": \"Lo mejor será leerla en voz alta\",
 	\"emotion\": \"thinking\"
 }",
+"type": "line"
+}
+}
+},
+5: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Ana María reacciona al contenido de la carta para Agustina.",
+"name": "Ep1Sc4",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "start",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 80, 200 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 120, 360 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y aquí dice que la escribió el 12 de Diciembre de 1980…\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 160, 520 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿El día en que murió escribió esto?\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 200, 680 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿pero a qué hora si lo atropellaron al medio día?\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 240, 840 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Estaba enamorado de la mamá de Lupe?\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 280, 1000 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Entrance\"
+	}
+}",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 320, 1160 ),
+"links": {
+0: 9
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Y si Lupe y yo somo...?\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( 360, 1320 ),
+"links": {
+0: 10
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Vida perra... y yo que estoy que me tomo esa leche caliente\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( 400, 1480 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Aunque si fuera cierto sería más rico\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( 440, 1640 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"jijijijiji\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( 480, 1800 ),
+"links": {
+0: 13
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Agh! ahora me tengo que cambiar los calzones\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( 520, 1960 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "end",
 "type": "line"
 }
 }

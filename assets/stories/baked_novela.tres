@@ -461,11 +461,152 @@ story = {
 }"
 }
 }
+},
+5: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?\",
+	\"emotion\": \"thinking\"
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y aquí dice que la escribió el 12 de Diciembre de 1980…\",
+	\"emotion\": \"sad\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿El día en que murió escribió esto?\",
+	\"emotion\": \"thinking\"
+}"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿pero a qué hora si lo atropellaron al medio día?\",
+	\"emotion\": \"thinking\"
+}"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Estaba enamorado de la mamá de Lupe?\",
+	\"emotion\": \"happy\"
+}"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Entrance\"
+	}
+}"
+},
+8: {
+"links": {
+0: 9
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Y si Lupe y yo somo...?\",
+	\"emotion\": \"sad\"
+}"
+},
+9: {
+"links": {
+0: 10
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Vida perra... y yo que estoy que me tomo esa leche caliente\",
+	\"emotion\": \"sad\"
+}"
+},
+10: {
+"links": {
+0: 11
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Aunque si fuera cierto sería más rico\",
+	\"emotion\": \"thinking\"
+}"
+},
+11: {
+"links": {
+0: 12
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"jijijijiji\",
+	\"emotion\": \"happy\"
+}"
+},
+12: {
+"links": {
+0: 13
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Agh! ahora me tengo que cambiar los calzones\",
+	\"emotion\": \"angry\"
+}"
+},
+13: {
+"links": {
+
+},
+"text": "end"
+}
+}
 }
 }
 names = {
 "Ep1Sc1": 1,
 "Ep1Sc2": 2,
 "Ep1Sc3": 4,
+"Ep1Sc4": 5,
 "Ep2Sc1": 3
 }
