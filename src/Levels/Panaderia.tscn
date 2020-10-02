@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://assets/audio/mx_panaderia.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/fonts/Bangers-Regular.ttf" type="DynamicFontData" id=2]
@@ -12,6 +12,10 @@
 [ext_resource path="res://assets/images/panaderia/pony.png" type="Texture" id=10]
 [ext_resource path="res://assets/images/panaderia/huevos_pericos.png" type="Texture" id=11]
 [ext_resource path="res://assets/images/panaderia/vaso.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/panaderia/rollo_2.png" type="Texture" id=13]
+[ext_resource path="res://assets/images/panaderia/rollo_1.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/panaderia/jugo.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/panaderia/hit.png" type="Texture" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 300
@@ -307,10 +311,70 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 4.7, 5.2, 7.7, 10.5, 11.3 ),
+"times": PoolRealArray( 4.7, 5.2, 7.7, 7.9, 11.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.838711, 0.838711 ), Vector2( 1e-05, 1e-05 ), Vector2( 1.2, 1.2 ), Vector2( 10, 10 ), Vector2( 1e-05, 1e-05 ) ]
+"values": [ Vector2( 0.838711, 0.838711 ), Vector2( 1e-05, 1e-05 ), Vector2( 1.2, 1.2 ), Vector2( 1.82857, 1.82857 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("Rollito2:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 8.6, 10.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 635.939, 1261.92 ), Vector2( 674.08, -470.018 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Jugo:rotation_degrees")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 10.8, 11.7, 12.6, 13.5, 14.4, 15.3, 16.2, 17.1, 18, 18.9, 19.8, 20.7, 21.6, 22.5, 23.4, 24.3, 25.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 180.0, 270.0, 0.0, 90.0, 180.0, 270.0, 0.0, 90.0, 180.0, 270.0, 0.0, 90.0, 180.0, 270.0, 360.0 ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Jugo:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 10.8, 11.4, 13.5, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -136.795, 576.253 ), Vector2( 301.032, 442.769 ), Vector2( 301.032, 442.769 ), Vector2( 2556.91, -133.882 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("Jugo2:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 12.8, 13.7, 14.1, 16.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -412.434, 1319.58 ), Vector2( 216.488, 700 ), Vector2( 216.488, 700 ), Vector2( 1233.76, -495.334 ) ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("Jugo3:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 12.8, 13.7, 14.1, 16.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1704.2, 1280.78 ), Vector2( 1040.67, 700 ), Vector2( 1040.67, 700 ), Vector2( 285.228, -528.97 ) ]
 }
 
 [sub_resource type="AtlasTexture" id=6]
@@ -359,7 +423,7 @@ scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 5 )
 
 [node name="Tamal_1" type="Sprite" parent="."]
-position = Vector2( 656.741, 487.928 )
+position = Vector2( 653.377, 484.564 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 6 )
 
@@ -378,7 +442,7 @@ __meta__ = {
 
 [node name="Combo_1" type="Sprite" parent="."]
 position = Vector2( -233.95, 1132.96 )
-scale = Vector2( 0.838711, 0.838711 )
+scale = Vector2( 0.83871, 0.83871 )
 texture = ExtResource( 8 )
 __meta__ = {
 "_editor_description_": "wq"
@@ -403,15 +467,41 @@ __meta__ = {
 [node name="Rollito1" type="Sprite" parent="."]
 position = Vector2( 2097.54, 114.614 )
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 11 )
+texture = ExtResource( 14 )
 __meta__ = {
 "_editor_description_": "wq"
 }
 
 [node name="Rollito2" type="Sprite" parent="."]
-position = Vector2( 1580.98, -318.798 )
+position = Vector2( 635.939, 1261.92 )
 scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 11 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
+[node name="Jugo" type="Sprite" parent="."]
+position = Vector2( -136.795, 576.253 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
+[node name="Jugo2" type="Sprite" parent="."]
+position = Vector2( -412.434, 1319.58 )
+rotation = 0.785398
+scale = Vector2( 1.70024, 1.67784 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
+[node name="Jugo3" type="Sprite" parent="."]
+position = Vector2( 1704.2, 1280.78 )
+rotation = -0.785398
+scale = Vector2( 1.70024, 1.67784 )
+texture = ExtResource( 16 )
 __meta__ = {
 "_editor_description_": "wq"
 }
@@ -431,10 +521,10 @@ __meta__ = {
 }
 
 [node name="Changua" type="Label" parent="."]
-margin_left = 1335.25
-margin_top = 626.707
-margin_right = 2108.21
-margin_bottom = 893.71
+margin_left = 1406.64
+margin_top = 634.34
+margin_right = 2179.58
+margin_bottom = 901.344
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.45098, 0.254902, 0.235294, 1 )
 text = "Changua"
@@ -518,4 +608,5 @@ __meta__ = {
 position = Vector2( 636.396, 449.72 )
 scale = Vector2( 1.7, 2 )
 frames = SubResource( 10 )
+frame = 3
 playing = true
