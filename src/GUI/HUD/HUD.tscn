@@ -21,5 +21,6 @@ __meta__ = {
 light_mask = 1025
 
 [node name="Narrator" parent="Control" instance=ExtResource( 1 )]
+visible = false
 
 [node name="Tween" type="Tween" parent="."]
