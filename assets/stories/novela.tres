@@ -7,7 +7,8 @@ script = ExtResource( 1 )
 TYPE = "EXP_Story_editor"
 names = {
 "Ep1Sc1": 1,
-"Ep1Sc2": 2
+"Ep1Sc2": 2,
+"Ep2Sc1": 3
 }
 story = {
 1: {
@@ -320,6 +321,247 @@ story = {
 },
 13: {
 "graph_offset": Vector2( 520, 1740 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "end",
+"type": "line"
+}
+}
+},
+3: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Ana María habla con Lupe en el establo acerca de la carta.",
+"name": "Ep2Sc1",
+"nodes": {
+1: {
+"graph_offset": Vector2( 140, 180 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "start",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 180, 340 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"Stable\",
+		\"reference\": \"Entrance\"
+	}
+}",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 220, 500 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Hola Lupe, ¿Qué tranza? ¿Qué haces?\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 260, 660 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 300, 820 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"jijijijijiji\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 340, 980 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Señorita Ana María. No esperaba verla aquí. ¿Necesita algo? ¿Quiere que le prepare un caballo?\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 380, 1140 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No, ya no como carne. Gracias.\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 420, 1300 ),
+"links": {
+0: 9
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Quería hacerte una pregunta.\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( 460, 1460 ),
+"links": {
+0: 10
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Claro, lo que usted quiera.\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( 500, 1620 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Puede preguntarme lo que quiera, para eso estamos patrona.\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( 540, 1780 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Sabes si tu mamá era amiga de mi padre?\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( 580, 1940 ),
+"links": {
+0: 13
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Mi madre?\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( 620, 2100 ),
+"links": {
+0: 14
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No sé patrona, la verdad no sé mucho sobre ella\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+14: {
+"graph_offset": Vector2( 660, 2260 ),
+"links": {
+0: 15
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Sólo lo que me han contado las otras sirvientas de la casa\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+15: {
+"graph_offset": Vector2( 700, 2420 ),
+"links": {
+0: 16
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tú no sabes una mierda Lupe... pero quiero que me la metas igual\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+16: {
+"graph_offset": Vector2( 740, 2580 ),
 "links": {
 
 },

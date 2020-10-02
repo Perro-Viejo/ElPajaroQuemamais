@@ -233,9 +233,183 @@ story = {
 "text": "end"
 }
 }
+},
+3: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"Stable\",
+		\"reference\": \"Entrance\"
+	}
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Hola Lupe, ¿Qué tranza? ¿Qué haces?\",
+	\"emotion\": \"happy\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?\",
+	\"emotion\": \"happy\"
+}"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"jijijijijiji\",
+	\"emotion\": \"happy\"
+}"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Señorita Ana María. No esperaba verla aquí. ¿Necesita algo? ¿Quiere que le prepare un caballo?\",
+	\"emotion\": \"worried\"
+}"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No, ya no como carne. Gracias.\",
+	\"emotion\": \"happy\"
+}"
+},
+8: {
+"links": {
+0: 9
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Quería hacerte una pregunta.\",
+	\"emotion\": \"thinking\"
+}"
+},
+9: {
+"links": {
+0: 10
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Claro, lo que usted quiera.\",
+	\"emotion\": \"excited\"
+}"
+},
+10: {
+"links": {
+0: 11
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Puede preguntarme lo que quiera, para eso estamos patrona.\",
+	\"emotion\": \"excited\"
+}"
+},
+11: {
+"links": {
+0: 12
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Sabes si tu mamá era amiga de mi padre?\",
+	\"emotion\": \"thinking\"
+}"
+},
+12: {
+"links": {
+0: 13
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Mi madre?\",
+	\"emotion\": \"worried\"
+}"
+},
+13: {
+"links": {
+0: 14
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No sé patrona, la verdad no sé mucho sobre ella\",
+	\"emotion\": \"worried\"
+}"
+},
+14: {
+"links": {
+0: 15
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Sólo lo que me han contado las otras sirvientas de la casa\",
+	\"emotion\": \"worried\"
+}"
+},
+15: {
+"links": {
+0: 16
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tú no sabes una mierda Lupe... pero quiero que me la metas igual\",
+	\"emotion\": \"angry\"
+}"
+},
+16: {
+"links": {
+
+},
+"text": "end"
+}
+}
 }
 }
 names = {
 "Ep1Sc1": 1,
-"Ep1Sc2": 2
+"Ep1Sc2": 2,
+"Ep2Sc1": 3
 }

@@ -4,6 +4,7 @@ const DEV_MODE := 'DEV_MODE'
 const CURRENT_SCENE := 'CURRENT_SCENE'
 const DIALOGS := 'DIALOGS'
 const FORCE_FOCUS := 'FORCE_FOCUS'
+const EPISODE := 'EPISODE'
 
 var _data := {}
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
