@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/resources/dynamic_fonts/menu_button.tres" type="DynamicFont" id=1]
-[ext_resource path="res://src/GUI/Buttons/ButtonStyle_Normal.tres" type="StyleBox" id=2]
 [ext_resource path="res://assets/resources/style_box_flat/button_focus.tres" type="StyleBox" id=3]
 [ext_resource path="res://assets/resources/style_box_flat/button_normal.tres" type="StyleBox" id=4]
 [ext_resource path="res://src/GUI/Buttons/DefaultButton.gd" type="Script" id=5]
@@ -14,13 +13,11 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
-custom_styles/focus = ExtResource( 3 )
-custom_styles/disabled = ExtResource( 2 )
 custom_styles/normal = ExtResource( 4 )
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 0.917647, 0.290196, 1 )
 custom_colors/font_color_hover = Color( 0.854902, 0.12549, 0.878431, 1 )
-custom_colors/font_color_pressed = Color( 0.854902, 0.12549, 0.878431, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.917647, 0.290196, 1 )
 text = "Button"
 script = ExtResource( 5 )
 __meta__ = {

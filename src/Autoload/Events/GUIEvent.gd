@@ -12,3 +12,5 @@ signal Languages
 signal Paused
 signal Exit
 signal Refocus
+signal curtain_hidden
+signal curtain_shown

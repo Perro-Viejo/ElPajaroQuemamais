@@ -6,7 +6,9 @@ export var episode := 1 setget _set_episode
 
 var _current_clickable: Clickable = null
 
-onready var _player: Player = $Actors/Player
+onready var _actors: Node2D = find_node('Actors')
+onready var _rooms: Node2D = find_node('Rooms')
+onready var _player: Player = _actors.get_node('Player')
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready() -> void:
@@ -14,31 +16,22 @@ func _ready() -> void:
 
 	# Establecer valores por defecto
 	_player.show()
+	_setup_set(Data.get_data(Data.EPISODE))
 	
 	# Conectarse a señales de los hijos de la mamá
-	for actor in $Actors.get_children():
+	for actor in _actors.get_children():
 		var _actor: Actor = actor
 		_actor.connect('moved_to_coordinate', self, '_move_actor_to_coordinate')
 		_actor.connect('moved_to_reference', self, '_move_actor_to_reference')
 		_actor.connect('movement_finished', self, '_actor_moved')
 	
 	# Conectarse a señales del universo pokémon
-	WorldEvent.emit_signal('world_entered')
 	PlayerEvent.connect('move_player', self, '_move_player')
-	
-	yield(get_tree(), 'idle_frame')
-	
-	match Data.get_data(Data.EPISODE):
-		1:
-			_setup_set(1)
-			yield(get_tree().create_timer(2), 'timeout')
-			DialogEvent.emit_signal('dialog_requested', 'Ep1Sc1')
-		2:
-			_setup_set(2)
-			yield(get_tree().create_timer(2), 'timeout')
-			DialogEvent.emit_signal('dialog_requested', 'Ep2Sc1')
-		_:
-			_setup_set(1)
+	GuiEvent.connect('curtain_hidden', self, '_start_episode')
+	DialogEvent.connect('dialog_finished', self, '_end_episode')
+
+	WorldEvent.emit_signal('world_entered')
+	WorldEvent.emit_signal('episode_started')
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
@@ -63,7 +56,8 @@ func _move_actor_to_coordinate(props: Dictionary) -> void:
 
 
 func _move_actor_to_reference(props: Dictionary) -> void:
-	var room: Room = get_node('Rooms/%s' % props.room)
+	var room: Room = _rooms.get_node(props.room)
+	(props.actor as Actor).current_room = room
 	move_actor(props.actor, room.get_point_position(props.point_name))
 
 
@@ -86,18 +80,18 @@ func _actor_moved(actor: Actor) -> void:
 func _setup_set(_episode: int) -> void:
 	match _episode:
 		1:
-			$Actors/Player.position = $Rooms/RoomC.get_target_position('Clickable2')
-			$Actors/AnaMaria.position = $Rooms/RoomB.get_point_position('Entrance')
-			$Actors/AnaMaria.show()
-			$Actors/Lupe.hide()
-			$Actors/Rico.hide()
+			_actors.get_node('Player').position = _rooms.get_node('RoomC').get_target_position('Clickable2')
+			_actors.get_node('AnaMaria').position = _rooms.get_node('RoomB').get_point_position('Entrance')
+			_actors.get_node('AnaMaria').show()
+			_actors.get_node('Lupe').hide()
+			_actors.get_node('Rico').hide()
 			$Cameras/HouseCamera.make_current()
 		2:
-			$Actors/AnaMaria.position = $Rooms/Stable.get_point_position('Entrance')
-			$Actors/Lupe.position = $Rooms/Stable.get_point_position('Arrecha')
-			$Actors/AnaMaria.show()
-			$Actors/Lupe.show()
-			$Actors/Rico.hide()
+			_actors.get_node('AnaMaria').position = _rooms.get_node('Stable').get_point_position('Entrance')
+			_actors.get_node('Lupe').position = _rooms.get_node('Stable').get_point_position('Arrecha')
+			_actors.get_node('AnaMaria').show()
+			_actors.get_node('Lupe').show()
+			_actors.get_node('Rico').hide()
 			$Cameras/StableCamera.make_current()
 		_:
 			for actor in $Actors.get_children():
@@ -109,3 +103,20 @@ func _set_episode(new_val: int) -> void:
 	episode = new_val
 	_setup_set(new_val)
 	property_list_changed_notify()
+
+
+func _start_episode() -> void:
+	match Data.get_data(Data.EPISODE):
+		1:
+			yield(get_tree().create_timer(1), 'timeout')
+			DialogEvent.emit_signal('dialog_requested', 'Ep1Sc1')
+		2:
+			yield(get_tree().create_timer(1), 'timeout')
+			DialogEvent.emit_signal('dialog_requested', 'Ep2Sc1')
+
+
+func _end_episode(dialog_name) -> void:
+	match Data.get_data(Data.EPISODE):
+		1:
+			if dialog_name == 'Ep1Sc4':
+				WorldEvent.emit_signal('episode_ended')

@@ -29,6 +29,7 @@ export var voice: Texture = null
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒variables públicas ▒▒▒▒
 var path := PoolVector2Array() setget _set_path
 var velocity := Vector2.ZERO
+var current_room: Room = null
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables privadas ▒▒▒▒
 var _in_dialog := false setget set_in_dialog, is_in_dialog
@@ -75,6 +76,12 @@ func _physics_process(delta):
 
 		direction = next_position - position;
 		direction.normalized()
+		
+		if current_room:
+			if position.y > current_room.position.y:
+				self.z_index = 4
+			else:
+				self.z_index = 0
 		
 		move_and_slide(direction * _speed * delta)
 	elif _is_moving:
