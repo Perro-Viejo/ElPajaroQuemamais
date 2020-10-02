@@ -19,7 +19,8 @@ export var expressions_map := {
 	sad = -1,
 	thinking = -1,
 	worried = -1,
-	normal = -1
+	normal = -1,
+	happy = -1
 }
 export var expressions_offset := Vector2.ZERO
 export var is_current_player := false

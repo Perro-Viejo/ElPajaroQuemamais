@@ -13,18 +13,25 @@ extents = Vector2( 84, 16 )
 texture = ExtResource( 2 )
 
 [node name="Clickable1" parent="Targets" index="0" instance=ExtResource( 3 )]
-modulate = Color( 0, 0, 1, 1 )
-position = Vector2( -124, -352 )
+position = Vector2( -138, -350 )
+max_distance = 200.06
+look_to = 4
 
 [node name="Clickable2" parent="Targets" index="1" instance=ExtResource( 3 )]
-modulate = Color( 0, 0, 1, 1 )
-position = Vector2( -224, 184 )
+position = Vector2( -224, 280 )
+max_distance = 200.06
+look_to = 3
+
+[node name="Clickable3" parent="Targets" index="2" instance=ExtResource( 3 )]
+position = Vector2( 224, 120 )
+max_distance = 200.06
+trigger_dialog = "Ep1Sc1"
+look_to = 1
 
 [node name="Clickable" parent="Objects" index="0" instance=ExtResource( 3 )]
-modulate = Color( 0, 0, 1, 1 )
+modulate = Color( 1, 1, 0, 1 )
 position = Vector2( 0, -324 )
 interaction_type = "object"
-max_distance = 500.0
 
 [node name="CollisionShape2D" parent="Objects/Clickable" index="0"]
 shape = SubResource( 1 )

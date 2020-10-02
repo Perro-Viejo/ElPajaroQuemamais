@@ -22,6 +22,9 @@ func _ready() -> void:
 	# Conectarse a señales del universo pokémon
 	WorldEvent.emit_signal('world_entered')
 	PlayerEvent.connect('move_player', self, '_move_player')
+	
+	yield(get_tree(), 'idle_frame')
+#	DialogEvent.emit_signal('dialog_requested', 'Ep1Sc1')
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
@@ -34,7 +37,7 @@ func _move_player(clickable: Clickable) -> void:
 	AudioEvent.emit_signal("play_requested","Player","Move")
 	_player.path = $Navigation2D.get_simple_path(
 		_player.position,
-		clickable.position + clickable.get_node('../../').position
+		clickable.get_room_relative_position()
 	)
 	_player.position = _player.path[0]
 	$Line2D.points = _player.path
@@ -46,8 +49,9 @@ func _move_actor_to_coordinate(props: Dictionary) -> void:
 
 
 func _move_actor_to_reference(props: Dictionary) -> void:
-	var path := NodePath('Rooms/%s/Points/%s' % [props.room, props.point_name])
-	var _target := (get_node(path) as Position2D).position
+	var room: Node2D = get_node('Rooms/%s' % props.room)
+	var path: Position2D = room.get_node('Points/%s' % props.point_name)
+	var _target := room.position + path.position
 	move_actor(props.actor, _target)
 
 

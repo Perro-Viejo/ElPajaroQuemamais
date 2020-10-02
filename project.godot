@@ -99,7 +99,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Characters/Player/Player.gd"
 }, {
-"base": "Node",
+"base": "Node2D",
 "class": "Room",
 "language": "GDScript",
 "path": "res://src/Levels/Hacienda/Room.gd"
@@ -219,6 +219,9 @@ texture={
 "size_limit": 0,
 "stream": false,
 "svg/scale": 1.0
+}
+csv={
+
 }
 
 [input]

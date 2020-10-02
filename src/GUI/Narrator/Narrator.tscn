@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/images/gui/quemamais_normal.png" type="Texture" id=1]
+[ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_24.tres" type="DynamicFont" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 16.0
+content_margin_right = 16.0
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color( 0, 0.321569, 0.964706, 1 )
+
+[node name="Narrator" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -456.5
+margin_top = -49.5
+margin_right = 456.5
+margin_bottom = 49.5
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 897.0
+margin_bottom = 94.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/CenterContainer"]
+margin_right = 881.0
+margin_bottom = 78.0
+custom_constants/separation = 4
+alignment = 1
+
+[node name="RichTextLabel" type="Label" parent="Panel/CenterContainer/VBoxContainer"]
+margin_right = 881.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 2 )
+text = "Puedes hacer que Quemamais se mueva por el escenario con estos:"
+
+[node name="TextureRect" type="TextureRect" parent="Panel/CenterContainer/VBoxContainer"]
+margin_left = 424.0
+margin_top = 46.0
+margin_right = 456.0
+margin_bottom = 78.0
+size_flags_horizontal = 4
+texture = ExtResource( 1 )

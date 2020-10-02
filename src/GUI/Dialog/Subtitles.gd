@@ -23,6 +23,9 @@ func toggle_subs(show := true) -> void:
 		Tween.EASE_OUT if show else Tween.EASE_IN
 	)
 	$Tween.start()
+	if not show:
+		yield($Tween, 'tween_completed')
+		set_text('[ gibberish in spanish ]')
 
 
 func put_out() -> void:

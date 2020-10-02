@@ -1,17 +1,14 @@
 class_name Room
-extends Node
+extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	_assign_self_to([$Targets, $Objects])
+	
+#	for obj in $Objects.get_children():
+#		obj.connect
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _assign_self_to(containers := []) -> void:
+	for cnt in containers:
+		for child in cnt.get_children():
+			child.room = self

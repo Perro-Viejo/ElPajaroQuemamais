@@ -9,12 +9,14 @@
 [ext_resource path="res://src/Characters/NPC/Lupe.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Characters/NPC/Rico.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Levels/Hacienda/RoomC.tscn" type="PackedScene" id=10]
-[ext_resource path="res://src/Levels/Hacienda/RoomD.tscn" type="PackedScene" id=11]
 
 [sub_resource type="NavigationPolygon" id=1]
-vertices = PoolVector2Array( 337, 41.25, 358.692, 35.9437, 358.692, 46.4437, 340.692, 51.9437, 324.692, 51.9437, 279, 41.25, 279, 93.25, 324.692, 67.9437, 349, 93.25, 348.692, 85.9437, 329, 149.25, 328.692, 117.944, 348.692, 117.944, 344.692, 127.944, 428.692, 215.444, 373.692, 215.444, 374.192, 127.944, 374.692, 116.944, 406.692, 234.444, 406.692, 231.944, 428.692, 231.986, 412.192, 234.444, 348.692, 67.9437, 348.692, 77.9437, 374.192, 84.9437, 374.692, 93.9437, 374.692, 26.4437, 490.692, 26.4437, 490.692, 215.444, 437.212, 215.444, 437.197, 231.846, 470.692, 231.944, 470.692, 267.944, 454.692, 267.944, 454.692, 322.444, 465.692, 322.444, 465.692, 331.944, 398.692, 331.944, 398.692, 291.444, 412.192, 291.444, 345, 159.25, 339, 161.25, 333, 161.25, 293, 149.25, 325, 163.25, 281, 163.25, 281, 123.25, 293, 129.25, 325, 123.25, 325, 129.25 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4 ), PoolIntArray( 6, 5, 4, 7 ), PoolIntArray( 8, 6, 7, 9 ), PoolIntArray( 10, 11, 12, 13 ), PoolIntArray( 14, 15, 16, 17 ), PoolIntArray( 18, 19, 20, 21 ), PoolIntArray( 7, 22, 23 ), PoolIntArray( 9, 7, 23 ), PoolIntArray( 9, 23, 24, 25 ), PoolIntArray( 24, 26, 27, 28, 25 ), PoolIntArray( 17, 25, 28, 29 ), PoolIntArray( 30, 31, 32, 33, 21, 20 ), PoolIntArray( 34, 35, 36, 37 ), PoolIntArray( 34, 37, 38, 39 ), PoolIntArray( 33, 34, 39, 21 ), PoolIntArray( 30, 20, 14, 29 ), PoolIntArray( 17, 29, 14 ), PoolIntArray( 12, 17, 16, 13 ), PoolIntArray( 10, 13, 40, 41, 42 ), PoolIntArray( 43, 10, 42, 44, 45 ), PoolIntArray( 43, 45, 46, 47 ), PoolIntArray( 47, 46, 48, 49 ) ]
-outlines = [ PoolVector2Array( 358.692, 46.4437, 340.692, 51.9437, 324.692, 51.9437, 324.692, 67.9437, 348.692, 67.9437, 348.692, 77.9437, 374.192, 84.9437, 374.692, 26.4437, 490.692, 26.4437, 490.692, 215.444, 437.212, 215.444, 437.197, 231.846, 470.692, 231.944, 470.692, 267.944, 454.692, 267.944, 454.692, 322.444, 465.692, 322.444, 465.692, 331.944, 398.692, 331.944, 398.692, 291.444, 412.192, 291.444, 412.192, 234.444, 406.692, 234.444, 406.692, 231.944, 428.692, 231.986, 428.692, 215.444, 373.692, 215.444, 374.192, 127.944, 344.692, 127.944, 345, 159.25, 339, 161.25, 333, 161.25, 325, 163.25, 281, 163.25, 281, 123.25, 325, 123.25, 325, 129.25, 293, 129.25, 293, 149.25, 329, 149.25, 328.692, 117.944, 348.692, 117.944, 374.692, 116.944, 374.692, 93.9437, 348.692, 85.9437, 349, 93.25, 279, 93.25, 279, 41.25, 337, 41.25, 358.692, 35.9437 ) ]
+vertices = PoolVector2Array( 337, 41.25, 358.692, 35.9437, 358.692, 46.4437, 340.692, 51.9437, 324.692, 51.9437, 279, 41.25, 279, 93.25, 324.692, 67.9437, 349, 93.25, 348.692, 85.9437, 289.192, 163.944, 280.192, 163.944, 280.192, 115.944, 289.192, 128.444, 323.192, 128.444, 348.692, 115.944, 348.692, 120.444, 348.692, 67.9437, 348.692, 77.9437, 375.692, 85.4437, 375.692, 94.4437, 375.692, 33.9437, 490.692, 33.9437, 490.692, 211.944, 375.692, 115.944, 375.692, 211.944, 375.692, 126.944, 370.692, 114.944, 300.692, 163.944, 300.692, 148.944, 323.192, 148.944, 345, 163.944, 344.692, 129.944, 355.192, 127.444, 370.692, 127.944, 355.192, 116.444 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4 ), PoolIntArray( 6, 5, 4, 7 ), PoolIntArray( 8, 6, 7, 9 ), PoolIntArray( 10, 11, 12, 13 ), PoolIntArray( 14, 13, 12, 15, 16 ), PoolIntArray( 7, 17, 18 ), PoolIntArray( 9, 7, 18 ), PoolIntArray( 9, 18, 19, 20 ), PoolIntArray( 19, 21, 22, 23 ), PoolIntArray( 20, 19, 23 ), PoolIntArray( 24, 20, 23 ), PoolIntArray( 23, 25, 26 ), PoolIntArray( 24, 23, 26, 27 ), PoolIntArray( 28, 29, 30, 31 ), PoolIntArray( 32, 31, 30, 14 ), PoolIntArray( 32, 14, 16, 33 ), PoolIntArray( 34, 33, 16, 35, 27, 26 ) ]
+outlines = [ PoolVector2Array( 358.692, 46.4437, 340.692, 51.9437, 324.692, 51.9437, 324.692, 67.9437, 348.692, 67.9437, 348.692, 77.9437, 375.692, 85.4437, 375.692, 33.9437, 490.692, 33.9437, 490.692, 211.944, 375.692, 211.944, 375.692, 126.944, 370.692, 127.944, 355.192, 127.444, 344.692, 129.944, 345, 163.944, 300.692, 163.944, 300.692, 148.944, 323.192, 148.944, 323.192, 128.444, 289.192, 128.444, 289.192, 163.944, 280.192, 163.944, 280.192, 115.944, 348.692, 115.944, 348.692, 120.444, 355.192, 116.444, 370.692, 114.944, 375.692, 115.944, 375.692, 94.4437, 348.692, 85.9437, 349, 93.25, 279, 93.25, 279, 41.25, 337, 41.25, 358.692, 35.9437 ) ]
+
+[sub_resource type="Gradient" id=2]
+colors = PoolColorArray( 1, 1, 0, 1, 0, 1, 0, 1 )
 
 [node name="World" type="Node2D"]
 position = Vector2( -124.849, 171.337 )
@@ -45,13 +47,10 @@ position = Vector2( 0, 308 )
 [node name="RoomC" parent="Rooms" instance=ExtResource( 10 )]
 position = Vector2( 471.287, 240.663 )
 
-[node name="RoomD" parent="Rooms" instance=ExtResource( 11 )]
-position = Vector2( 472.898, 880.663 )
-
 [node name="Actors" type="Node2D" parent="."]
 
 [node name="Player" parent="Actors" instance=ExtResource( 1 )]
-position = Vector2( 79, 396 )
+position = Vector2( 132.849, -81.337 )
 z_index = 1
 collision_mask = 0
 expressions_map = {
@@ -64,6 +63,7 @@ expressions_map = {
 }
 
 [node name="Rico" parent="Actors" instance=ExtResource( 8 )]
+visible = false
 position = Vector2( -35, 36 )
 expressions_map = {
 "angry": 0,
@@ -74,7 +74,8 @@ expressions_map = {
 }
 
 [node name="Lupe" parent="Actors" instance=ExtResource( 7 )]
-position = Vector2( 37, 85 )
+visible = false
+position = Vector2( -81.151, -59.337 )
 expressions_map = {
 "angry": -1,
 "excited": 0,
@@ -84,12 +85,15 @@ expressions_map = {
 }
 
 [node name="AnaMaria" parent="Actors" instance=ExtResource( 6 )]
-position = Vector2( 268.849, 45 )
+position = Vector2( 556.849, 396.663 )
+speed = 600
 expressions_map = {
 "angry": 0,
 "excited": -1,
-"sad": 1,
-"thinking": -1,
+"happy": 1,
+"normal": -1,
+"sad": 2,
+"thinking": 3,
 "worried": -1
 }
 
@@ -102,5 +106,10 @@ navpoly = SubResource( 1 )
 
 [node name="Line2D" type="Line2D" parent="."]
 points = PoolVector2Array( 314.1, 81.5757 )
-width = 5.0
-default_color = Color( 0.556863, 0.745098, 0.333333, 1 )
+width = 8.0
+default_color = Color( 0, 1, 0, 1 )
+gradient = SubResource( 2 )
+joint_mode = 1
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true

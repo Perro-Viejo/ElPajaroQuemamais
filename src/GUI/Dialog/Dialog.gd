@@ -10,7 +10,7 @@ var _current_character: Node2D = null
 var _story_reader_class := load(
 	'res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd'
 )
-var _stories_es = load('res://assets/stories/baked_tests.tres')
+var _stories_es = load('res://assets/stories/baked_novela.tres')
 var _did := 0
 var _nid := 0
 var _final_nid := 0
@@ -177,9 +177,14 @@ func _read_dialog_line() -> void:
 			if line_dic.has('line'):
 				var code := ('dlg_%d_%d_%s' % [_did, _nid, actor]).to_upper()
 				line = tr(code)
+
 				# Cambiar temporalmente el idioma para sacar el subtítulo
 				TranslationServer.set_locale('en')
-				_subs.set_text(tr(code))
+				var in_en := tr(code)
+				if in_en == '---':
+					_subs.set_text('[ gibberish in spanish ]')
+				else:
+					_subs.set_text(in_en)
 				TranslationServer.set_locale('es')
 
 			# ----[ la emoción ]------------------------------------------------
@@ -398,7 +403,6 @@ func _finish_dialog() -> void:
 	# Para cualquier diálogo
 	_current_emotion = ''
 	_current_character = null
-	_subs.set_text('[ gibberish in spanish ]')
 	DialogEvent.emit_signal('dialog_finished')
 	_character_frame.dialog_finished()
 	_subs.toggle_subs(false)

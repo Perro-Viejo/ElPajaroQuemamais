@@ -14,7 +14,7 @@ texture = ExtResource( 3 )
 
 [node name="Clickable1" parent="Targets" index="0" instance=ExtResource( 2 )]
 modulate = Color( 0, 0, 1, 1 )
-position = Vector2( 108, -104 )
+position = Vector2( 108, -102 )
 look_to = 1
 
 [node name="Clickable2" parent="Targets" index="1" instance=ExtResource( 2 )]
@@ -23,7 +23,7 @@ position = Vector2( -108, 68 )
 look_to = 3
 
 [node name="Clickable" parent="Objects" index="0" instance=ExtResource( 2 )]
-modulate = Color( 0, 0, 1, 1 )
+modulate = Color( 1, 1, 0, 1 )
 position = Vector2( 108, 64 )
 interaction_type = "object"
 

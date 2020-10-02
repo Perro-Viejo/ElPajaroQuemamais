@@ -1,5 +1,5 @@
 class_name Player
-extends "res://src/Characters/Actor.gd"
+extends 'res://src/Characters/Actor.gd'
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ variables públicas ▒▒▒▒
 var node_to_interact: Pickable = null setget _set_node_to_interact
@@ -37,11 +37,11 @@ func _set_fishing(value: bool) -> void:
 	$StateMachine.state.play_animation()
 
 
-func _on_object_check(obj_pos, max_dist):
-	if position.distance_to(obj_pos) < max_dist:
-		speak("Interactuamelo")
+func _on_object_check(clickable: Clickable):
+	if clickable.is_near_to(self.global_position):
+		clickable.interact()
 	else:
-		speak("ta lejambres")
+		speak('ta lejambres')
 
 
 func _movement_changed(actor: Actor) -> void:

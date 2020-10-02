@@ -1,0 +1,10 @@
+[remap]
+
+importer="csv"
+type="TextFile"
+
+[deps]
+
+source_file="res://assets/localization/i18n_novela.csv"
+[params]
+

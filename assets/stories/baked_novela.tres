@@ -1,0 +1,241 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_BakedStory/EXP_BakedStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Baked_Story"
+story = {
+1: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Necesito un abrecartas\",
+	\"emotion\": \"thinking\"
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tal vez mamá tenga uno en el estudio\",
+	\"emotion\": \"thinking\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Entrance\"
+	}
+}"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡En la biblioteca!\",
+	\"emotion\": \"thinking\"
+}"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Bookcase\"
+	}
+}"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Pos aquí no hay na'\",
+	\"emotion\": \"thinking\"
+}"
+},
+8: {
+"links": {
+
+},
+"text": "end"
+}
+}
+},
+2: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Quemamais! pájaro de mierda\",
+	\"emotion\": \"angry\"
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Cuántas veces le he dicho que no abra las cosas?\",
+	\"emotion\": \"angry\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Desk\"
+	}
+}"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Un día de estos lo voy a meter en el culo de un caballo\",
+	\"emotion\": \"angry\"
+}"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Para que aprenda que hay cosas que no deben abrir\",
+	\"emotion\": \"angry\"
+}"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Y esto? ¿una carta de Agustina?\",
+	\"emotion\": \"thinking\"
+}"
+},
+8: {
+"links": {
+0: 9
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La que se cagó en la cocina\",
+	\"emotion\": \"happy\"
+}"
+},
+9: {
+"links": {
+0: 10
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Chiste tan marica\",
+	\"emotion\": \"happy\"
+}"
+},
+10: {
+"links": {
+0: 11
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Por qué la cucha tiene una carta de la criada?\",
+	\"emotion\": \"thinking\"
+}"
+},
+11: {
+"links": {
+0: 12
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La que murió pariendo a Lupe\",
+	\"emotion\": \"thinking\"
+}"
+},
+12: {
+"links": {
+0: 13
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Y la escribió mi taita!\",
+	\"emotion\": \"\"
+}"
+},
+13: {
+"links": {
+
+},
+"text": "end"
+}
+}
+}
+}
+names = {
+"Ep1Sc1": 1,
+"Ep1Sc2": 2
+}
