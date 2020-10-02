@@ -4,6 +4,8 @@ signal scene_is_loaded
 
 enum {IDLE, TRANSITION_IN, TRANSITION_OUT}
 
+export var current_episode := 1
+
 onready var current_scene = null
 onready var current_scene_instance = $Levels.get_child($Levels.get_child_count() - 1)
 
@@ -16,6 +18,7 @@ var transition_state:int = IDLE
 func _ready()->void:
 	Data.set_data(Data.CURRENT_SCENE, 'MainMenu')
 	Data.set_data(Data.FORCE_FOCUS, is_mouse_hidden)
+	Data.set_data(Data.EPISODE, current_episode)
 
 	GuiEvent.connect("Options",	self, "on_options")
 	GuiEvent.connect("Exit",		self, "on_exit")

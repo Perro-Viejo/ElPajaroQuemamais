@@ -24,7 +24,14 @@ func _ready() -> void:
 	PlayerEvent.connect('move_player', self, '_move_player')
 	
 	yield(get_tree(), 'idle_frame')
-#	DialogEvent.emit_signal('dialog_requested', 'Ep1Sc1')
+	
+	match Data.get_data(Data.EPISODE):
+		1:
+			# TODO: Que aquí se muestre el primer tutorial
+			$Cameras/HouseCamera.make_current()
+		2:
+			$Cameras/StableCamera.make_current()
+			DialogEvent.emit_signal('dialog_requested', 'Ep2Sc1')
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
