@@ -19,11 +19,13 @@ func _on_input_event(event: InputEvent):
 		WorldEvent.emit_signal('tutorial_shown', current_tutorial)
 		Data.set_data(Data.CURRENT_TUTORIAL, current_tutorial + 1)
 		hide()
+		DialogEvent.emit_signal('subs_done')
 
 
 func _show_tutorial(tutorial := -1):
 	if tutorial < 0: return
 	current_tutorial = tutorial
+	DialogEvent.emit_signal('subs_requested', 'TUTORIAL_%d' % tutorial)
 	show()
 	match tutorial:
 		0:
@@ -31,9 +33,9 @@ func _show_tutorial(tutorial := -1):
 			$MovementIcons.show()
 		1:
 			$Panel/Tutorials/Interact.show()
+			$Interact.show()
 			$Panel/Tutorials/Movement.hide()
 			$MovementIcons.hide()
-
 
 func _check_tutorial_after_dialog(dialog_name) -> void:
 	match dialog_name:
