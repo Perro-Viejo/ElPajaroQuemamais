@@ -64,7 +64,7 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"La cucha debe tener uno por aquí\",
+	\"line\": \"Mamá Is debe tener uno por aquí\",
 	\"emotion\": \"thinking\"
 }"
 },
@@ -90,7 +90,7 @@ story = {
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
 	\"line\": \"¡Necesito un abrecartas!\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"\"
 }"
 },
 8: {
@@ -116,8 +116,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡Quemamais! ayude a buscar un abrecartas\",
-	\"emotion\": \"angry\"
+	\"line\": \"¡Quemamais! ponte a buscar un abrecartas\",
+	\"emotion\": \"normal\"
 }"
 },
 3: {
@@ -127,8 +127,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Sirvapalgo pájaro carechimba\",
-	\"emotion\": \"angry\"
+	\"line\": \"Si me ayudas luego te daré una galletita\",
+	\"emotion\": \"happy\"
 }"
 },
 13: {
@@ -371,7 +371,7 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Buena la rata\",
+	\"line\": \"El escritorio, claro. ¡Gracias Quemamais!\",
 	\"emotion\": \"happy\"
 }"
 },
@@ -397,7 +397,7 @@ story = {
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Aquí segurito que encuentro uno\",
-	\"emotion\": \"happy\"
+	\"emotion\": \"normal\"
 }"
 },
 5: {
@@ -407,8 +407,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Déjame ver...\",
-	\"emotion\": \"happy\"
+	\"line\": \"A ver...\",
+	\"emotion\": \"normal\"
 }"
 },
 6: {
@@ -424,7 +424,7 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"...\",
+	\"line\": \"...mmm...mmm...mmm\",
 	\"emotion\": \"thinking\"
 }"
 },
@@ -435,8 +435,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¿Una carta para Agustina?\",
-	\"emotion\": \"thinking\"
+	\"line\": \"¿Qué es esto? ¿una carta para Agustina?\",
+	\"emotion\": \"normal\"
 }"
 },
 9: {
@@ -458,7 +458,7 @@ story = {
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Lo mejor será leerla en voz alta\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"happy\"
 }"
 }
 }
@@ -478,8 +478,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?\",
-	\"emotion\": \"thinking\"
+	\"line\": \"¡No puedo creerlo! ¿esta carta la escribió mi papá para Agustina la sirvienta?\",
+	\"emotion\": \"surprised\"
 }"
 },
 3: {
@@ -489,8 +489,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Y aquí dice que la escribió el 12 de Diciembre de 1980…\",
-	\"emotion\": \"sad\"
+	\"line\": \"Y lo hizo el 12 de Diciembre de 1980…\",
+	\"emotion\": \"\"
 }"
 },
 4: {
@@ -501,7 +501,7 @@ story = {
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
 	\"line\": \"¿El día en que murió escribió esto?\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"sad\"
 }"
 },
 5: {
@@ -511,7 +511,7 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¿pero a qué hora si lo atropellaron al medio día?\",
+	\"line\": \"¿Pero a qué hora si lo atropellaron después del almuerzo?\",
 	\"emotion\": \"thinking\"
 }"
 },
@@ -522,8 +522,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¿Estaba enamorado de la mamá de Lupe?\",
-	\"emotion\": \"happy\"
+	\"line\": \"¿Y estaba enamorado de la mamá de Lupe?\",
+	\"emotion\": \"surprised\"
 }"
 },
 7: {
@@ -542,57 +542,13 @@ story = {
 },
 8: {
 "links": {
-0: 9
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"¿Y si Lupe y yo somo...?\",
-	\"emotion\": \"sad\"
-}"
-},
-9: {
-"links": {
-0: 10
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"Vida perra... y yo que estoy que me tomo esa leche caliente\",
-	\"emotion\": \"sad\"
-}"
-},
-10: {
-"links": {
-0: 11
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"Aunque si fuera cierto sería más rico\",
-	\"emotion\": \"thinking\"
-}"
-},
-11: {
-"links": {
-0: 12
-},
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"jijijijiji\",
-	\"emotion\": \"happy\"
-}"
-},
-12: {
-"links": {
 0: 13
 },
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡Agh! ahora me tengo que cambiar los calzones\",
-	\"emotion\": \"angry\"
+	\"line\": \"Esto está raro... tengo que investigar\",
+	\"emotion\": \"thinking\"
 }"
 },
 13: {
