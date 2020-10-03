@@ -8,6 +8,8 @@ onready var _out_position_y := OS.window_size.y
 
 func _ready() -> void:
 	$Tween.connect('tween_step', self, '_play_subs_sfx')
+	DialogEvent.connect('subs_requested', self, '_one_shot_subs')
+	DialogEvent.connect('subs_done', self, 'toggle_subs', [false])
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
@@ -36,3 +38,10 @@ func _play_subs_sfx(obj: Object, key: NodePath, elapsed: float, val: Object):
 	if _sub_shown and not _played and (obj as Control).rect_position.y < 905:
 		_played = true
 		AudioEvent.emit_signal('play_requested', 'UI', 'sub')
+
+
+func _one_shot_subs(tr_code: String) -> void:
+	TranslationServer.set_locale('en')
+	text = tr(tr_code)
+	TranslationServer.set_locale('es')
+	toggle_subs()

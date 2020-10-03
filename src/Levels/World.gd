@@ -5,6 +5,7 @@ export var world_name := 'WORLD'
 export var episode := 1 setget _set_episode
 
 var _current_clickable: Clickable = null
+var _current_post_wait := 0
 
 onready var _actors: Node2D = find_node('Actors')
 onready var _rooms: Node2D = find_node('Rooms')
@@ -29,6 +30,7 @@ func _ready() -> void:
 	PlayerEvent.connect('move_player', self, '_move_player')
 	GuiEvent.connect('curtain_hidden', self, '_start_episode')
 	DialogEvent.connect('dialog_finished', self, '_end_episode')
+	GuiEvent.connect('curtain_shown', self, '_load_next_episode')
 
 	WorldEvent.emit_signal('world_entered')
 	WorldEvent.emit_signal('episode_started')
@@ -58,10 +60,15 @@ func _move_actor_to_coordinate(props: Dictionary) -> void:
 func _move_actor_to_reference(props: Dictionary) -> void:
 	var room: Room = _rooms.get_node(props.room)
 	(props.actor as Actor).current_room = room
+	_current_post_wait = props.post_wait
+
 	move_actor(props.actor, room.get_point_position(props.point_name))
 
 
 func _actor_moved(actor: Actor) -> void:
+	var actor_in_dialog := actor.is_in_dialog()
+	if _current_post_wait > 0:
+		yield(get_tree().create_timer(_current_post_wait), 'timeout')
 	if actor.is_current_player:
 		$Line2D.points = PoolVector2Array()
 		if _current_clickable:
@@ -72,7 +79,7 @@ func _actor_moved(actor: Actor) -> void:
 			if _current_clickable.look_to != Clickable.DIR.NONE:
 				yield(get_tree(), 'idle_frame')
 				actor.look_to(_current_clickable.look_to)
-	if actor.is_in_dialog():
+	if actor_in_dialog:
 		yield(get_tree(), 'idle_frame')
 		DialogEvent.emit_signal('dialog_continued')
 
@@ -120,3 +127,11 @@ func _end_episode(dialog_name) -> void:
 		1:
 			if dialog_name == 'Ep1Sc4':
 				WorldEvent.emit_signal('episode_ended')
+
+
+func _load_next_episode() -> void:
+	# Sumar 1 al episodio actual pa' cargar el siguiente
+	Data.data_sumi(Data.EPISODE, 1)
+	yield(get_tree().create_timer(3), 'timeout')
+	_setup_set(Data.get_data(Data.EPISODE))
+	WorldEvent.emit_signal('episode_started')

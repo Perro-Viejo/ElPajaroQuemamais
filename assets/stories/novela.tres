@@ -79,7 +79,8 @@ story = {
 		\"type\": \"REFERENCE\",
 		\"room\": \"RoomB\",
 		\"reference\": \"Window\"
-	}
+	},
+	\"post_wait\": 1
 }",
 "type": "line"
 },

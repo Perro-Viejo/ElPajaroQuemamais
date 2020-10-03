@@ -244,6 +244,7 @@ func _read_dialog_line() -> void:
 		'MOVE':
 			var final_direction := Vector2.ZERO
 			var speed := 0
+			var post_wait := 0
 			
 			if line_dic.has('final_direction'):
 				final_direction = Vector2(
@@ -252,6 +253,9 @@ func _read_dialog_line() -> void:
 			
 			if line_dic.has('speed'):
 				speed = line_dic.speed
+			
+			if line_dic.has('post_wait'):
+				post_wait = line_dic.post_wait
 			
 			if line_dic.position.type == "COORDINATE":
 				var position = Vector2(line_dic.position.x, line_dic.position.y)
@@ -263,7 +267,8 @@ func _read_dialog_line() -> void:
 						target_position = position,
 						final_direction = final_direction,
 						speed = speed,
-						is_relative = line_dic.position.has('relative')
+						is_relative = line_dic.position.has('relative'),
+						post_wait = post_wait
 					}
 				)
 			else:
@@ -274,7 +279,8 @@ func _read_dialog_line() -> void:
 						room = line_dic.position.room,
 						reference = line_dic.position.reference,
 						final_direction = final_direction,
-						speed = speed
+						speed = speed,
+						post_wait = post_wait
 					}
 				)
 		'INTERACT':

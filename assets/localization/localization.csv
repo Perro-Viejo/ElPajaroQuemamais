@@ -46,6 +46,7 @@ DLG_1_15_LUPE,"La puta que nos parió, viene Ana María","Wait, Ana María is ca
 DLG_1_16_RICO,¡Pajarraco hijueputa!,Shut up Quemamais!
 DLG_1_17_ANA_MARÍA,No quiero ver cómo se machucan la popó,I better go
 ---- EPISODIO 1 ----,---- ESCENA 1 ----,
+EPISODE_1_INTRO,Una mañana de Agosto en la Hacienda Santa Catarina,Santa Catarina Hacienda. August. Morning. Hot.
 DLG_1_7_ANA_MARÍA,¡Necesito un abrecartas!,I need a letter opener
 DLG_1_5_ANA_MARÍA,La cucha debe tener uno por aquí,Mom should have one somewhere here
 ---- EPISODIO 1 ----,---- ESCENA 2 ----,
@@ -71,31 +72,32 @@ Drinking water and staying hydrated will help the fluids in your sinuses from be
 Always yours,
 Antonio de la Cruz"
 AGUSTINA_LETTER_BTN,Read it in English,Leer en español
-DLG_5_2_ANA_MARÍA,¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?,¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?
-DLG_5_3_ANA_MARÍA,Y aquí dice que la escribió el 12 de Diciembre de 1980…,Y aquí dice que la escribió el 12 de Diciembre de 1980…
-DLG_5_4_ANA_MARÍA,¿¡El día en que murió escribió esto!?,¿El día en que murió escribió esto?
-DLG_5_5_ANA_MARÍA,¿pero a qué hora si lo atropellaron al medio día?,¿pero a qué hora si lo atropellaron al medio día?
-DLG_5_6_ANA_MARÍA,¿Estaba enamorado de la mamá de Lupe?,¿Estaba enamorado de la mamá de Lupe?
-DLG_5_8_ANA_MARÍA,¿Y si Lupe y yo somos...?,¿Y si Lupe y yo somo...?
-DLG_5_9_ANA_MARÍA,Vida perra... y yo que estoy que me tomo esa leche caliente,Vida perra... y yo que estoy que me tomo esa leche caliente
-DLG_5_10_ANA_MARÍA,Aunque si fuera cierto sería más rico,Aunque si fuera cierto sería más rico
+DLG_5_2_ANA_MARÍA,¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?,He was an introvert that extroverts seemed to love.
+DLG_5_3_ANA_MARÍA,Y aquí dice que la escribió el 12 de Diciembre de 1980…,Nothing is as cautiously cuddly as a pet porcupine.
+DLG_5_4_ANA_MARÍA,¿¡El día en que murió escribió esto!?,Nothing seemed out of place except the washing machine in the bar.
+DLG_5_5_ANA_MARÍA,¿pero a qué hora si lo atropellaron al medio día?,They're playing the piano while flying in the plane.
+DLG_5_6_ANA_MARÍA,¿Estaba enamorado de la mamá de Lupe?,The golden retriever loved the fireworks each Fourth of July.
+DLG_5_8_ANA_MARÍA,¿Y si Lupe y yo somos...?,"The tears of a clown make my lipstick run, but my shower cap is still intact."
+DLG_5_9_ANA_MARÍA,Vida perra... y yo que estoy que me tomo esa leche caliente,It's a skateboarding penguin with a sunhat!
+DLG_5_10_ANA_MARÍA,Aunque si fuera cierto sería más rico,Three generations with six decades of life experience.
 DLG_5_11_ANA_MARÍA,jijijijiji...,[ jokes in spanish ]
-DLG_5_12_ANA_MARÍA,¡Agh! me tengo que cambiar los calzones,¡Agh! me tengo que cambiar los calzones
+DLG_5_12_ANA_MARÍA,¡Agh! me tengo que cambiar los calzones,Sometimes you have to just give up and win by cheating.
 ---- EPISODIO 2 ----,---- ESCENA 1 ----,
-DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿Qué haces?","Hola Lupe, ¿Qué tranza? ¿Qué haces?"
-DLG_3_4_ANA_MARÍA,"Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?","Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?"
+EPISODE_2_INTRO,500 galletas y 24 almuerzos después,24 days later in a sunny afternoon
+DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿Qué haces?",He liked to play with words in the bathtub.
+DLG_3_4_ANA_MARÍA,"Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?",Flesh-colored yoga pants were far worse than even he feared.
 DLG_3_5_ANA_MARÍA,jijijijijiji,[ laughts in spanish ]
-DLG_3_6_LUPE,Señorita Ana María. No esperaba verla aquí. ¿Necesita algo? ¿Quiere que le prepare un caballo?,Señorita Ana María. No esperaba verla aquí. ¿Necesita algo? ¿Quiere que le prepare un caballo?
+DLG_3_6_LUPE,Señorita Ana María. No esperaba verla aquí. ¿Necesita algo? ¿Quiere que le prepare un caballo?,She borrowed the book from him many years ago and hasn't yet returned it.
 DLG_3_7_ANA_MARÍA,"No, ya no como carne. Gracias.",[ jokes in spanish ]
-DLG_3_8_ANA_MARÍA,Quería hacerte una pregunta.,Quería hacerte una pregunta.
-DLG_3_9_LUPE,"Claro, lo que usted quiera.","Claro, lo que usted quiera."
-DLG_3_10_LUPE,"Puede preguntarme lo que quiera, para eso estamos patrona.","Puede preguntarme lo que quiera, para eso estamos patrona."
-DLG_3_11_ANA_MARÍA,¿Sabes si tu mamá era amiga de mi padre?,¿Sabes si tu mamá era amiga de mi padre?
-DLG_3_12_LUPE,¿Mi madre?,¿Mi madre?
-DLG_3_13_LUPE,"No sé patrona, la verdad no sé mucho sobre ella","No sé patrona, la verdad no sé mucho sobre ella"
-DLG_3_14_LUPE,Sólo lo que me han contado las otras sirvientas de la casa,Sólo lo que me han contado las otras sirvientas de la casa
+DLG_3_8_ANA_MARÍA,Quería hacerte una pregunta.,Nobody has encountered an explosive daisy and lived to tell the tale.
+DLG_3_9_LUPE,"Claro, lo que usted quiera.",He created a pig burger out of beef.
+DLG_3_10_LUPE,"Puede preguntarme lo que quiera, para eso estamos patrona.","It was getting dark, and we weren’t there yet."
+DLG_3_11_ANA_MARÍA,¿Sabes si tu mamá era amiga de mi padre?,I don’t respect anybody who can’t tell the difference between Pepsi and Coke.
+DLG_3_12_LUPE,¿Mi madre?,My mama?
+DLG_3_13_LUPE,"No sé patrona, la verdad no sé mucho sobre ella","He didn’t want to go to the dentist, yet he went anyway."
+DLG_3_14_LUPE,Sólo lo que me han contado las otras sirvientas de la casa,The light in his life was actually a fire burning all around him.
 DLG_3_15_ANA_MARÍA,Tú no sabes una mierda Lupe...,You are so bruto Lupe
 DLG_3_17_ANA_MARÍA,Pero de todos modos quiero que me la metas,But I think I love you
-DLG_3_18_LUPE,Cuando quiera quiero,I love you too señorita
+DLG_3_18_LUPE,Cuando quiera quiero,"I love you too, señorita"
 DLG_3_19_LUPE,Ya estoy cansado de jalarme el ganso pensando en usted,I'm tired of hiding my feelings about you
 DLG_3_20_LUPE,Viera cómo lo tengo... todo hinchao,Give me a chance to show you my love

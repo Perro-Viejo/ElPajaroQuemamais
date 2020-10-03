@@ -14,3 +14,5 @@ signal dialog_menu_updated(cfg)
 signal dialog
 signal moved_to_coordinate(character_name, coordinate, final_direction)
 signal moved_to_reference(character_name, room, reference_node, final_direction)
+signal subs_requested(tr_code)
+signal subs_done

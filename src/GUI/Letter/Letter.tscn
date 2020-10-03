@@ -5,7 +5,7 @@
 [ext_resource path="res://src/GUI/Buttons/DefaultButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/GUI/Letter/Letter.gd" type="Script" id=4]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "show_letter"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Overlay:self_modulate")
@@ -32,31 +32,19 @@ tracks/1/keys = {
 "values": [ Vector2( 411.5, 1040 ), Vector2( 411.5, 1040 ), Vector2( 411.5, 872 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("TextWrapper:rect_position")
+tracks/2/path = NodePath("TextWrapper:rect_scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 2, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1280, 192.5 ), Vector2( 1280, 192.5 ), Vector2( 312, 192.5 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("TextWrapper:rect_scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5, 0.6, 0.9 ),
-"transitions": PoolRealArray( 1, 2, 2, 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1e-05 ), Vector2( 1, 1e-05 ), Vector2( 1, 2 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1e-05 ), Vector2( 1, 1e-05 ), Vector2( 1, 1.5 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="StyleBoxTexture" id=1]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 676, 545 )
 margin_left = 32.9843
@@ -73,7 +61,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/show_letter = SubResource( 2 )
+anims/show_letter = SubResource( 1 )
 
 [node name="Overlay" type="ColorRect" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -89,13 +77,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 640.0
+margin_left = -328.0
 margin_top = -287.5
-margin_right = 1296.0
+margin_right = 328.0
 margin_bottom = 287.5
 rect_scale = Vector2( 1, 1e-05 )
 rect_pivot_offset = Vector2( 328, 287 )
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -103,7 +91,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="TextWrapper"]
 margin_left = 32.9843
 margin_top = 216.748
-margin_right = 616.729
+margin_right = 616.727
 margin_bottom = 244.748
 custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0.211765, 0.211765, 0.211765, 1 )

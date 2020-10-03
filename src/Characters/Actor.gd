@@ -179,7 +179,8 @@ func _move_to_coordinate(props: Dictionary):
 		
 		emit_signal('moved_to_coordinate', {
 			actor = self,
-			target = target
+			target = target,
+			post_wait = props.post_wait
 		})
 
 
@@ -200,5 +201,6 @@ func _move_to_reference(props: Dictionary):
 		emit_signal('moved_to_reference', {
 			actor = self,
 			room = props.room,
-			point_name = props.reference
+			point_name = props.reference,
+			post_wait = props.post_wait
 		})
