@@ -14,6 +14,8 @@ func _ready() -> void:
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos públicos ▒▒▒▒
 func toggle_subs(show := true) -> void:
+	if not show and self.rect_position.y == _out_position_y: return
+	
 	_sub_shown = show
 	_played = false
 	$Tween.interpolate_property(

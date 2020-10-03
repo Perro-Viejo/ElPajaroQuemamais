@@ -10,7 +10,8 @@ names = {
 "Ep1Sc2": 2,
 "Ep1Sc3": 4,
 "Ep1Sc4": 5,
-"Ep2Sc1": 3
+"Ep2Sc1": 3,
+"Ep3Sc1": 6
 }
 story = {
 1: {
@@ -840,6 +841,64 @@ story = {
 },
 13: {
 "graph_offset": Vector2( 520, 1960 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "end",
+"type": "line"
+}
+}
+},
+6: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Diálogo temporal de pruebas",
+"name": "Ep3Sc1",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 60 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "start",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 80, 220 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Player\",
+	\"action\": \"INTERACT\",
+	\"options\": [
+		{
+			\"line\": \"Te la voy a meter hasta faca\",
+			\"time\": -1,
+			\"voice\": \"Rico\"
+		},
+		{
+			\"line\": \"Rico, ¿estás por aquí?\",
+			\"time\": -1,
+			\"voice\": \"Ana María\"
+		},
+		{
+			\"line\": \"¡Les gusta por Detroit!\",
+			\"time\": -1,
+			\"voice\": \"Quemamais\"
+		}
+	]
+}",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 120, 380 ),
 "links": {
 
 },

@@ -85,6 +85,8 @@ func _actor_moved(actor: Actor) -> void:
 
 
 func _setup_set(_episode: int) -> void:
+	# TODO	Que esto quede definido fuera de aquí en algún script que sirva como
+	# 		diccionario o algo así.
 	match _episode:
 		1:
 			_actors.get_node('Player').position = _rooms.get_node('RoomC').get_target_position('Clickable2')
@@ -101,9 +103,11 @@ func _setup_set(_episode: int) -> void:
 			_actors.get_node('Rico').hide()
 			$Cameras/StableCamera.make_current()
 		_:
-			for actor in $Actors.get_children():
-				actor.position = 0
-				actor.hide()
+			for actor in _actors.get_children():
+				actor.position = Vector2.ZERO
+				if not actor.is_current_player:
+					actor.hide()
+			$Cameras/HouseCamera.make_current()
 
 
 func _set_episode(new_val: int) -> void:
@@ -113,13 +117,9 @@ func _set_episode(new_val: int) -> void:
 
 
 func _start_episode() -> void:
-	match Data.get_data(Data.EPISODE):
-		1:
-			yield(get_tree().create_timer(1), 'timeout')
-			DialogEvent.emit_signal('dialog_requested', 'Ep1Sc1')
-		2:
-			yield(get_tree().create_timer(1), 'timeout')
-			DialogEvent.emit_signal('dialog_requested', 'Ep2Sc1')
+	yield(get_tree().create_timer(1), 'timeout')
+	var dialog_name: String = 'Ep%dSc1' % Data.get_data(Data.EPISODE)
+	DialogEvent.emit_signal('dialog_requested', dialog_name)
 
 
 func _end_episode(dialog_name) -> void:

@@ -602,6 +602,48 @@ story = {
 "text": "end"
 }
 }
+},
+6: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Player\",
+	\"action\": \"INTERACT\",
+	\"options\": [
+		{
+			\"line\": \"Te la voy a meter hasta faca\",
+			\"time\": -1,
+			\"voice\": \"Rico\"
+		},
+		{
+			\"line\": \"Rico, ¿estás por aquí?\",
+			\"time\": -1,
+			\"voice\": \"Ana María\"
+		},
+		{
+			\"line\": \"¡Les gusta por Detroit!\",
+			\"time\": -1,
+			\"voice\": \"Quemamais\"
+		}
+	]
+}"
+},
+3: {
+"links": {
+
+},
+"text": "end"
+}
+}
 }
 }
 names = {
@@ -609,5 +651,6 @@ names = {
 "Ep1Sc2": 2,
 "Ep1Sc3": 4,
 "Ep1Sc4": 5,
-"Ep2Sc1": 3
+"Ep2Sc1": 3,
+"Ep3Sc1": 6
 }

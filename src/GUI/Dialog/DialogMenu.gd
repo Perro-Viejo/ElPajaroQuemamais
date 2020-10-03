@@ -28,6 +28,7 @@ func create_options(options := [], autoshow := false) -> void:
 	for opt in options:
 		var btn: Button = option.instance() as Button
 		# btn.text = opt.line
+		btn.tr_code = opt.tr_code
 		btn.text = tr(opt.tr_code)
 		btn.voice = opt.voice
 		btn.hint_tooltip = 'Con la voz de: %s' % btn.voice
@@ -111,6 +112,7 @@ func _on_option_hover(btn: DialogOption, hover: bool) -> void:
 	if hover:
 		AudioEvent.emit_signal('play_requested', 'UI', 'move')
 		emit_signal('option_hovered', btn)
+		DialogEvent.emit_signal('subs_requested', btn.tr_code)
 	else:
 		emit_signal('option_left')
 

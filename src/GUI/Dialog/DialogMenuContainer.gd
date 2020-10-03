@@ -61,7 +61,9 @@ func _hide_voice() -> void:
 	_voice_icon.rect_position.y = _defaults.voice_icon.y
 	_voice_icon.self_modulate.a = 0.0
 	_first_hover = true
+	DialogEvent.emit_signal('subs_done')
 
 
 func _emit_close() -> void:
+	DialogEvent.emit_signal('subs_done')
 	emit_signal('close_pressed')
