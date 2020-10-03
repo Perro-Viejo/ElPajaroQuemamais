@@ -132,6 +132,6 @@ func _end_episode(dialog_name) -> void:
 func _load_next_episode() -> void:
 	# Sumar 1 al episodio actual pa' cargar el siguiente
 	Data.data_sumi(Data.EPISODE, 1)
-	yield(get_tree().create_timer(3), 'timeout')
+	yield(get_tree().create_timer(1.5), 'timeout')
 	_setup_set(Data.get_data(Data.EPISODE))
 	WorldEvent.emit_signal('episode_started')

@@ -1,8 +1,8 @@
 keys,es,en
-DLG_1_5_ANA_MARÍA,La cucha debe tener uno por aquí,La cucha debe tener uno por aquí
+DLG_1_5_ANA_MARÍA,Mamá Is debe tener uno por aquí,Mamá Is debe tener uno por aquí
 DLG_1_7_ANA_MARÍA,¡Necesito un abrecartas!,¡Necesito un abrecartas!
-DLG_2_2_ANA_MARÍA,¡Quemamais! ayude a buscar un abrecartas,¡Quemamais! ayude a buscar un abrecartas
-DLG_2_3_ANA_MARÍA,Sirvapalgo pájaro carechimba,Sirvapalgo pájaro carechimba
+DLG_2_2_ANA_MARÍA,¡Quemamais! ponte a buscar un abrecartas,¡Quemamais! ponte a buscar un abrecartas
+DLG_2_3_ANA_MARÍA,Si me ayudas luego te daré una galletita,Si me ayudas luego te daré una galletita
 DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿Qué haces?","Hola Lupe, ¿Qué tranza? ¿Qué haces?"
 DLG_3_4_ANA_MARÍA,"Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?","Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?"
 DLG_3_5_ANA_MARÍA,jijijijijiji,jijijijijiji
@@ -20,23 +20,19 @@ DLG_3_17_ANA_MARÍA,Pero de todos modos quiero que me la metas,Pero de todos mod
 DLG_3_18_LUPE,Cuando quiera quiero,Cuando quiera quiero
 DLG_3_19_LUPE,Ya estoy cansado de jalarme el ganzo pensando en usted,Ya estoy cansado de jalarme el ganzo pensando en usted
 DLG_3_20_LUPE,Viera cómo lo tengo... todo hinchao,Viera cómo lo tengo... todo hinchao
-DLG_4_2_ANA_MARÍA,Buena la rata,Buena la rata
+DLG_4_2_ANA_MARÍA,"El escritorio, claro. Gracias Quemamais.","El escritorio, claro. Gracias Quemamais."
 DLG_4_4_ANA_MARÍA,Aquí segurito que encuentro uno,Aquí segurito que encuentro uno
-DLG_4_5_ANA_MARÍA,Déjame ver...,Déjame ver...
-DLG_4_7_ANA_MARÍA,...,...
-DLG_4_8_ANA_MARÍA,¿Una carta para Agustina?,¿Una carta para Agustina?
+DLG_4_5_ANA_MARÍA,A ver...,A ver...
+DLG_4_7_ANA_MARÍA,...mmm...mmm...mmm,...mmm...mmm...mmm
+DLG_4_8_ANA_MARÍA,¿Qué es esto? ¿una carta para Agustina?,¿Qué es esto? ¿una carta para Agustina?
 DLG_4_9_ANA_MARÍA,¿Qué hace en el escritorio de mi mamá?,¿Qué hace en el escritorio de mi mamá?
 DLG_4_10_ANA_MARÍA,Lo mejor será leerla en voz alta,Lo mejor será leerla en voz alta
-DLG_5_2_ANA_MARÍA,¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?,¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?
-DLG_5_3_ANA_MARÍA,Y aquí dice que la escribió el 12 de Diciembre de 1980…,Y aquí dice que la escribió el 12 de Diciembre de 1980…
+DLG_5_2_ANA_MARÍA,¡No puedo creerlo! ¿esta carta la escribió mi papá para Agustina la sirvienta?,¡No puedo creerlo! ¿esta carta la escribió mi papá para Agustina la sirvienta?
+DLG_5_3_ANA_MARÍA,Y lo hizo el 12 de Diciembre de 1980…,Y lo hizo el 12 de Diciembre de 1980…
 DLG_5_4_ANA_MARÍA,¿El día en que murió escribió esto?,¿El día en que murió escribió esto?
-DLG_5_5_ANA_MARÍA,¿pero a qué hora si lo atropellaron al medio día?,¿pero a qué hora si lo atropellaron al medio día?
-DLG_5_6_ANA_MARÍA,¿Estaba enamorado de la mamá de Lupe?,¿Estaba enamorado de la mamá de Lupe?
-DLG_5_8_ANA_MARÍA,¿Y si Lupe y yo somo...?,¿Y si Lupe y yo somo...?
-DLG_5_9_ANA_MARÍA,Vida perra... y yo que estoy que me tomo esa leche caliente,Vida perra... y yo que estoy que me tomo esa leche caliente
-DLG_5_10_ANA_MARÍA,Aunque si fuera cierto sería más rico,Aunque si fuera cierto sería más rico
-DLG_5_11_ANA_MARÍA,jijijijiji,jijijijiji
-DLG_5_12_ANA_MARÍA,¡Agh! ahora me tengo que cambiar los calzones,¡Agh! ahora me tengo que cambiar los calzones
+DLG_5_5_ANA_MARÍA,¿Pero a qué hora si lo atropellaron después del almuerzo?,¿Pero a qué hora si lo atropellaron después del almuerzo?
+DLG_5_6_ANA_MARÍA,¿Y estaba enamorado de la mamá de Lupe?,¿Y estaba enamorado de la mamá de Lupe?
+DLG_5_8_ANA_MARÍA,Esto está raro... tengo que investigar,Esto está raro... tengo que investigar
 DLG_6_2_PLAYER_OPT_0,Te la voy a meter hasta faca,Te la voy a meter hasta faca
 DLG_6_2_PLAYER_OPT_1,"Rico, ¿estás por aquí?","Rico, ¿estás por aquí?"
 DLG_6_2_PLAYER_OPT_2,¡Les gusta por Detroit!,¡Les gusta por Detroit!

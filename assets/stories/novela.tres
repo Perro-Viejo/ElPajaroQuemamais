@@ -95,7 +95,7 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"La cucha debe tener uno por aquí\",
+	\"line\": \"Mamá Is debe tener uno por aquí\",
 	\"emotion\": \"thinking\"
 }",
 "type": "line"
@@ -129,7 +129,7 @@ story = {
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
 	\"line\": \"¡Necesito un abrecartas!\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"\"
 }",
 "type": "line"
 },
@@ -171,8 +171,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡Quemamais! ayude a buscar un abrecartas\",
-	\"emotion\": \"angry\"
+	\"line\": \"¡Quemamais! ponte a buscar un abrecartas\",
+	\"emotion\": \"normal\"
 }",
 "type": "line"
 },
@@ -186,8 +186,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Sirvapalgo pájaro carechimba\",
-	\"emotion\": \"angry\"
+	\"line\": \"Si me ayudas luego te daré una galletita\",
+	\"emotion\": \"happy\"
 }",
 "type": "line"
 },
@@ -530,7 +530,7 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Buena la rata\",
+	\"line\": \"El escritorio, claro. ¡Gracias Quemamais!\",
 	\"emotion\": \"happy\"
 }",
 "type": "line"
@@ -564,7 +564,7 @@ story = {
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Aquí segurito que encuentro uno\",
-	\"emotion\": \"happy\"
+	\"emotion\": \"normal\"
 }",
 "type": "line"
 },
@@ -578,8 +578,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Déjame ver...\",
-	\"emotion\": \"happy\"
+	\"line\": \"A ver...\",
+	\"emotion\": \"normal\"
 }",
 "type": "line"
 },
@@ -603,7 +603,7 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"...\",
+	\"line\": \"...mmm...mmm...mmm\",
 	\"emotion\": \"thinking\"
 }",
 "type": "line"
@@ -618,8 +618,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¿Una carta para Agustina?\",
-	\"emotion\": \"thinking\"
+	\"line\": \"¿Qué es esto? ¿una carta para Agustina?\",
+	\"emotion\": \"normal\"
 }",
 "type": "line"
 },
@@ -649,14 +649,14 @@ story = {
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Lo mejor será leerla en voz alta\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"happy\"
 }",
 "type": "line"
 }
 }
 },
 5: {
-"available_nid": [  ],
+"available_nid": [ 9, 10, 11, 12 ],
 "groups": [  ],
 "human_readable_description": "Ana María reacciona al contenido de la carta para Agustina.",
 "name": "Ep1Sc4",
@@ -681,8 +681,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?\",
-	\"emotion\": \"thinking\"
+	\"line\": \"¡No puedo creerlo! ¿esta carta la escribió mi papá para Agustina la sirvienta?\",
+	\"emotion\": \"surprised\"
 }",
 "type": "line"
 },
@@ -696,8 +696,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"Y aquí dice que la escribió el 12 de Diciembre de 1980…\",
-	\"emotion\": \"sad\"
+	\"line\": \"Y lo hizo el 12 de Diciembre de 1980…\",
+	\"emotion\": \"\"
 }",
 "type": "line"
 },
@@ -712,7 +712,7 @@ story = {
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
 	\"line\": \"¿El día en que murió escribió esto?\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"sad\"
 }",
 "type": "line"
 },
@@ -726,7 +726,7 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¿pero a qué hora si lo atropellaron al medio día?\",
+	\"line\": \"¿Pero a qué hora si lo atropellaron después del almuerzo?\",
 	\"emotion\": \"thinking\"
 }",
 "type": "line"
@@ -741,8 +741,8 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¿Estaba enamorado de la mamá de Lupe?\",
-	\"emotion\": \"happy\"
+	\"line\": \"¿Y estaba enamorado de la mamá de Lupe?\",
+	\"emotion\": \"surprised\"
 }",
 "type": "line"
 },
@@ -767,66 +767,6 @@ story = {
 8: {
 "graph_offset": Vector2( 320, 1160 ),
 "links": {
-0: 9
-},
-"rect_size": Vector2( 324, 137 ),
-"slot_amount": 1,
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"¿Y si Lupe y yo somo...?\",
-	\"emotion\": \"sad\"
-}",
-"type": "line"
-},
-9: {
-"graph_offset": Vector2( 360, 1320 ),
-"links": {
-0: 10
-},
-"rect_size": Vector2( 324, 137 ),
-"slot_amount": 1,
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"Vida perra... y yo que estoy que me tomo esa leche caliente\",
-	\"emotion\": \"sad\"
-}",
-"type": "line"
-},
-10: {
-"graph_offset": Vector2( 400, 1480 ),
-"links": {
-0: 11
-},
-"rect_size": Vector2( 324, 137 ),
-"slot_amount": 1,
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"Aunque si fuera cierto sería más rico\",
-	\"emotion\": \"thinking\"
-}",
-"type": "line"
-},
-11: {
-"graph_offset": Vector2( 440, 1640 ),
-"links": {
-0: 12
-},
-"rect_size": Vector2( 324, 137 ),
-"slot_amount": 1,
-"text": "{
-	\"actor\": \"Ana María\",
-	\"action\": \"SPEAK\",
-	\"line\": \"jijijijiji\",
-	\"emotion\": \"happy\"
-}",
-"type": "line"
-},
-12: {
-"graph_offset": Vector2( 480, 1800 ),
-"links": {
 0: 13
 },
 "rect_size": Vector2( 324, 137 ),
@@ -834,13 +774,13 @@ story = {
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¡Agh! ahora me tengo que cambiar los calzones\",
-	\"emotion\": \"angry\"
+	\"line\": \"Esto está raro... tengo que investigar\",
+	\"emotion\": \"thinking\"
 }",
 "type": "line"
 },
 13: {
-"graph_offset": Vector2( 520, 1960 ),
+"graph_offset": Vector2( 360, 1320 ),
 "links": {
 
 },

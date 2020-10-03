@@ -52,16 +52,16 @@ DLG_1_17_ANA_MARÍA,No quiero ver cómo se machucan la popó,I better go
 ---- EPISODIO 1 ----,---- ESCENA 1 ----,
 EPISODE_1_INTRO,Una mañana de Agosto en la Hacienda Santa Catarina,Santa Catarina Hacienda. August. Morning. Hot.
 DLG_1_7_ANA_MARÍA,¡Necesito un abrecartas!,I need a letter opener
-DLG_1_5_ANA_MARÍA,La cucha debe tener uno por aquí,Mom should have one somewhere here
+DLG_1_5_ANA_MARÍA,Mamá Is debe tener uno por aquí,Mom should have one somewhere here
 ---- EPISODIO 1 ----,---- ESCENA 2 ----,
-DLG_2_2_ANA_MARÍA,¡Quemamais! ayude a buscar un abrecartas,Help me find a letter opener Quemamais
-DLG_2_3_ANA_MARÍA,Sirvapalgo pájaro carechimba,Pleeeeeease
+DLG_2_2_ANA_MARÍA,¡Quemamais! ponte a buscar un abrecartas,Help me find a letter opener Quemamais
+DLG_2_3_ANA_MARÍA,Si me ayudas luego te daré una galletita,Pleeeeeease
 ---- EPISODIO 1 ----,---- ESCENA 3 ----,
-DLG_4_2_ANA_MARÍA,Buena la rata,"The desk! of course, thanks Quemamais"
+DLG_4_2_ANA_MARÍA,"El escritorio, claro. ¡Gracias Quemamais!","The desk! of course, thanks Quemamais"
 DLG_4_4_ANA_MARÍA,Aquí segurito que encuentro uno,There should be one here for sure
-DLG_4_5_ANA_MARÍA,Déjame ver...,Lets see...
-DLG_4_7_ANA_MARÍA,...,[ searching in spanish ]
-DLG_4_8_ANA_MARÍA,¿Una carta para Agustina?,A letter for Agustina?
+DLG_4_5_ANA_MARÍA,A ver...,Lets see...
+DLG_4_7_ANA_MARÍA,...mmm...mmm...mmm,[ searching in spanish ]
+DLG_4_8_ANA_MARÍA,¿Qué es esto? ¿una carta para Agustina?,A letter for Agustina?
 DLG_4_9_ANA_MARÍA,¿Qué hace en el escritorio de mi mamá?,What is this doing here?
 DLG_4_10_ANA_MARÍA,Lo mejor será leerla en voz alta,[ starts reading the letter ]
 AGUSTINA_LETTER,"Querida Agustina
@@ -76,16 +76,12 @@ Drinking water and staying hydrated will help the fluids in your sinuses from be
 Always yours,
 Antonio de la Cruz"
 AGUSTINA_LETTER_BTN,Read it in English,Leer en español
-DLG_5_2_ANA_MARÍA,¡No puedo creerlo! ¿Esta carta la escribió mi papá para Agustina la sirvienta?,He was an introvert that extroverts seemed to love.
-DLG_5_3_ANA_MARÍA,Y aquí dice que la escribió el 12 de Diciembre de 1980…,Nothing is as cautiously cuddly as a pet porcupine.
-DLG_5_4_ANA_MARÍA,¿¡El día en que murió escribió esto!?,Nothing seemed out of place except the washing machine in the bar.
-DLG_5_5_ANA_MARÍA,¿pero a qué hora si lo atropellaron al medio día?,They're playing the piano while flying in the plane.
-DLG_5_6_ANA_MARÍA,¿Estaba enamorado de la mamá de Lupe?,The golden retriever loved the fireworks each Fourth of July.
-DLG_5_8_ANA_MARÍA,¿Y si Lupe y yo somos...?,"The tears of a clown make my lipstick run, but my shower cap is still intact."
-DLG_5_9_ANA_MARÍA,Vida perra... y yo que estoy que me tomo esa leche caliente,It's a skateboarding penguin with a sunhat!
-DLG_5_10_ANA_MARÍA,Aunque si fuera cierto sería más rico,Three generations with six decades of life experience.
-DLG_5_11_ANA_MARÍA,jijijijiji...,[ jokes in spanish ]
-DLG_5_12_ANA_MARÍA,¡Agh! me tengo que cambiar los calzones,Sometimes you have to just give up and win by cheating.
+DLG_5_2_ANA_MARÍA,¡No puedo creerlo! ¿esta carta la escribió mi papá para Agustina la sirvienta?,He was an introvert that extroverts seemed to love.
+DLG_5_3_ANA_MARÍA,Y lo hizo el 12 de Diciembre de 1980…,Nothing is as cautiously cuddly as a pet porcupine.
+DLG_5_4_ANA_MARÍA,¿El día en que murió escribió esto?,Nothing seemed out of place except the washing machine in the bar.
+DLG_5_5_ANA_MARÍA,¿Pero a qué hora si lo atropellaron después del almuerzo?,They're playing the piano while flying in the plane.
+DLG_5_6_ANA_MARÍA,¿Y estaba enamorado de la mamá de Lupe?,The golden retriever loved the fireworks each Fourth of July.
+DLG_5_8_ANA_MARÍA,Esto está raro... tengo que investigar,"The tears of a clown make my lipstick run, but my shower cap is still intact."
 ---- EPISODIO 2 ----,---- ESCENA 1 ----,
 EPISODE_2_INTRO,500 galletas y 24 almuerzos después,24 days later in a sunny afternoon
 DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿Qué haces?",He liked to play with words in the bathtub.

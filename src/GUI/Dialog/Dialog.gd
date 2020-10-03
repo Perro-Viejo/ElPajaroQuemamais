@@ -193,6 +193,7 @@ func _read_dialog_line() -> void:
 			_current_emotion = ''
 			if line_dic.has('emotion'):
 				_current_emotion = line_dic.emotion as String
+				if _current_emotion == '': _current_emotion = 'normal'
 
 			_wait = false
 			if line_dic.has('wait'):
