@@ -19,11 +19,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dialog" parent="Control" instance=ExtResource( 3 )]
-light_mask = 1025
-
 [node name="Narrator" parent="Control" instance=ExtResource( 1 )]
 visible = false
+
+[node name="Dialog" parent="Control" instance=ExtResource( 3 )]
+light_mask = 1025
 
 [node name="Letter" parent="Control" instance=ExtResource( 4 )]
 visible = false
