@@ -14,3 +14,4 @@ signal Exit
 signal Refocus
 signal curtain_hidden
 signal curtain_shown
+signal html5_clicked

@@ -32,8 +32,12 @@ func _ready()->void:
 	Settings.connect('ReTranslate', self, 'retranslate') # Localización
 
 	retranslate()
-	yield(get_tree().create_timer(0.5), 'timeout')
-	$AnimationPlayer.play('show_first_time')
+	
+	# Si estamos en HTML5 hay que esperar a que le den clic al de empezar
+	if not Settings.HTML5:
+		_start()
+	else:
+		GuiEvent.connect('html5_clicked', self, '_start')
 
 
 func _process(delta):
@@ -77,8 +81,15 @@ func _on_Credits_pressed() -> void:
 func _on_Exit_pressed()->void:
 	GuiEvent.emit_signal('Exit')
 
+
 func _play_sfx(source, sound):
 	AudioEvent.emit_signal("play_requested", source, sound)
+
+
+func _start() -> void:
+	yield(get_tree().create_timer(0.5), 'timeout')
+	$AnimationPlayer.play('show_first_time')
+
 
 #localization
 func retranslate()->void:

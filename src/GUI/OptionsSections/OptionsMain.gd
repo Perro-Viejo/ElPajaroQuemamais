@@ -183,6 +183,8 @@ func retranslate()->void:
 	get_node('OptionsContainer/VBoxContainer/Languages').text = tr('LANGUAGES')
 	find_node('Controls').text = tr('CONTROLS')
 	find_node('Back').text = tr('BACK')
+	for btn in get_tree().get_nodes_in_group('CloseButton'):
+		btn.text = tr('CLOSE')
 
 func set_node_in_focus()->void:
 	var FocusGroup:Array = get_groups()

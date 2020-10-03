@@ -8,4 +8,5 @@ func _ready()->void:
 	$Button.show()
 
 func _on_Button_pressed()->void:
+	GuiEvent.emit_signal('html5_clicked')
 	queue_free()

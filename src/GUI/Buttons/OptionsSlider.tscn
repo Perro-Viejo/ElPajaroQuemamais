@@ -8,7 +8,6 @@
 [ext_resource path="res://assets/resources/style_box_flat/options_grabber.tres" type="StyleBox" id=6]
 [ext_resource path="res://src/GUI/Buttons/OptionsSlider.gd" type="Script" id=7]
 
-
 [node name="OptionsSlider" type="VBoxContainer"]
 margin_right = 47.0
 margin_bottom = 13.0
@@ -19,8 +18,8 @@ __meta__ = {
 highlight = Color( 1, 1, 0.921569, 1 )
 
 [node name="ScaleName" type="Label" parent="."]
-margin_right = 72.0
-margin_bottom = 26.0
+margin_right = 118.0
+margin_bottom = 56.0
 rect_min_size = Vector2( 36, 0 )
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 1 )
@@ -30,10 +29,9 @@ align = 1
 valign = 1
 
 [node name="HSlider" type="HSlider" parent="."]
-margin_top = 30.0
-margin_right = 72.0
-margin_bottom = 37.0
-rect_scale = Vector2( 4, 4 )
+margin_top = 60.0
+margin_right = 118.0
+margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 custom_icons/tick = ExtResource( 2 )

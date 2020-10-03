@@ -14,7 +14,7 @@ var GameResolution:Vector2
 var WindowResolution:Vector2
 var ScreenResolution:Vector2
 var ScreenAspectRatio:float
-var Scale:int = 3 setget set_scale
+var Scale:int = 1 setget set_scale
 var MaxScale:int
 #AUDIO
 var VolumeMaster:float = 0.0 setget set_volume_master
@@ -244,7 +244,7 @@ func get_resolution_data()->Dictionary:
 func set_resolution_data(resolution:Dictionary)->void:
 	set_fullscreen(resolution.Fullscreen)
 	set_borderless(resolution.Borderless)
-	set_scale(resolution.Scale)
+	set_scale(1)
 
 func get_audio_data()->Dictionary:
 	var audio_data:Dictionary = {}
