@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://assets/audio/mx_panaderia.ogg" type="AudioStream" id=1]
 [ext_resource path="res://assets/fonts/Bangers-Regular.ttf" type="DynamicFontData" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://assets/images/panaderia/rollo_1.png" type="Texture" id=14]
 [ext_resource path="res://assets/images/panaderia/jugo.png" type="Texture" id=15]
 [ext_resource path="res://assets/images/panaderia/hit.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/panaderia/caldo_1.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/panaderia/caldo_2.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/panaderia/tamal_2.png" type="Texture" id=19]
 
 [sub_resource type="DynamicFont" id=1]
 size = 300
@@ -41,7 +44,7 @@ font_data = ExtResource( 2 )
 [sub_resource type="Animation" id=5]
 length = 34.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("Changua:rect_position")
+tracks/0/path = NodePath("Title/Changua:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -53,7 +56,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1406.64, 634.34 ), Vector2( 1049.7, 596.176 ), Vector2( -735.013, 120.253 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Perico:rect_scale")
+tracks/1/path = NodePath("Title/Perico:rect_scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -65,7 +68,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Perico:rect_position")
+tracks/2/path = NodePath("Title/Perico:rect_position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -77,7 +80,7 @@ tracks/2/keys = {
 "values": [ Vector2( 77.5254, 217.223 ), Vector2( 77.5254, 217.223 ), Vector2( 641.001, 533.758 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Perico:rect_rotation")
+tracks/3/path = NodePath("Title/Perico:rect_rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -89,7 +92,7 @@ tracks/3/keys = {
 "values": [ -28.4862, -28.4862, 903.2, -28.0, -28.4862, 903.2, -28.0, -28.4862, 903.2, -28.0, -28.4862, 903.2, -28.0, -28.4862, 903.2, -28.0, -28.4862, 903.2, -28.0 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Caldo:rect_position")
+tracks/4/path = NodePath("Title/Caldo:rect_position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -101,7 +104,7 @@ tracks/4/keys = {
 "values": [ Vector2( -708.073, 652.299 ), Vector2( -708.073, 652.299 ), Vector2( 1444.81, 124.742 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Tamal:rect_position")
+tracks/5/path = NodePath("Title/Tamal:rect_position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -113,7 +116,7 @@ tracks/5/keys = {
 "values": [ Vector2( 313.366, 1009.24 ), Vector2( 284.182, -600 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Tamal:rect_rotation")
+tracks/6/path = NodePath("Title/Tamal:rect_rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
@@ -125,7 +128,7 @@ tracks/6/keys = {
 "values": [ 0.0, 1080.0 ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Perico:rect_size")
+tracks/7/path = NodePath("Title/Perico:rect_size")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
@@ -137,7 +140,7 @@ tracks/7/keys = {
 "values": [ Vector2( 636, 303 ), Vector2( 0, 0 ) ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Changua_1:scale")
+tracks/8/path = NodePath("Pics/Changua_1:scale")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/imported = false
@@ -149,7 +152,7 @@ tracks/8/keys = {
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Changua_2:scale")
+tracks/9/path = NodePath("Pics/Changua_2:scale")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
@@ -161,7 +164,7 @@ tracks/9/keys = {
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Changua_2:position")
+tracks/10/path = NodePath("Pics/Changua_2:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
@@ -173,7 +176,7 @@ tracks/10/keys = {
 "values": [ Vector2( 290.995, 763.528 ), Vector2( 290.995, 763.528 ), Vector2( 290.995, 1315.53 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Changua_1:position")
+tracks/11/path = NodePath("Pics/Changua_1:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -185,7 +188,7 @@ tracks/11/keys = {
 "values": [ Vector2( 832.94, 320.362 ), Vector2( 832.94, 320.362 ), Vector2( 832.94, -319.638 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("Tamal_1:scale")
+tracks/12/path = NodePath("Pics/Tamal_1:scale")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -209,7 +212,7 @@ tracks/13/keys = {
 "values": [ false, true ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Tinto:scale")
+tracks/14/path = NodePath("Pics/Tinto:scale")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
@@ -221,7 +224,7 @@ tracks/14/keys = {
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ), Vector2( 0.7, 1 ), Vector2( 0.871, 0.7 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("Pony:scale")
+tracks/15/path = NodePath("Pics/Pony:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
@@ -233,7 +236,7 @@ tracks/15/keys = {
 "values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Pony:position")
+tracks/16/path = NodePath("Pics/Pony:position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -245,7 +248,7 @@ tracks/16/keys = {
 "values": [ Vector2( 642.741, 709.928 ), Vector2( 234.741, 709.928 ), Vector2( 234.741, 429.928 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("HuevoPerico:scale")
+tracks/17/path = NodePath("Pics/HuevoPerico:scale")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
@@ -257,7 +260,7 @@ tracks/17/keys = {
 "values": [ Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("HuevoPerico:position")
+tracks/18/path = NodePath("Pics/HuevoPerico:position")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/imported = false
@@ -269,7 +272,7 @@ tracks/18/keys = {
 "values": [ Vector2( 404.741, 713.928 ), Vector2( 852.741, 217.928 ), Vector2( 852.741, 217.928 ), Vector2( -587.259, 1369.93 ) ]
 }
 tracks/19/type = "value"
-tracks/19/path = NodePath("Combo_2:scale")
+tracks/19/path = NodePath("Pics/Combo_2:scale")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/imported = false
@@ -281,7 +284,7 @@ tracks/19/keys = {
 "values": [ Vector2( 1.5, 1.2 ), Vector2( 1.5, 1.2 ) ]
 }
 tracks/20/type = "value"
-tracks/20/path = NodePath("Combo_2:position")
+tracks/20/path = NodePath("Pics/Combo_2:position")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/imported = false
@@ -293,7 +296,7 @@ tracks/20/keys = {
 "values": [ Vector2( 988.174, 1266.52 ), Vector2( 985.654, 427.408 ), Vector2( 968.015, -381.461 ) ]
 }
 tracks/21/type = "value"
-tracks/21/path = NodePath("Combo_1:position")
+tracks/21/path = NodePath("Pics/Combo_1:position")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/imported = false
@@ -305,7 +308,7 @@ tracks/21/keys = {
 "values": [ Vector2( -233.95, 1132.96 ), Vector2( 285.138, 691.991 ) ]
 }
 tracks/22/type = "value"
-tracks/22/path = NodePath("Combo_1:scale")
+tracks/22/path = NodePath("Pics/Combo_1:scale")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/imported = false
@@ -317,7 +320,7 @@ tracks/22/keys = {
 "values": [ Vector2( 0.838711, 0.838711 ), Vector2( 1e-05, 1e-05 ), Vector2( 1.2, 1.2 ), Vector2( 1.82857, 1.82857 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/23/type = "value"
-tracks/23/path = NodePath("Rollito2:position")
+tracks/23/path = NodePath("Pics/Rollito2:position")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/imported = false
@@ -329,7 +332,7 @@ tracks/23/keys = {
 "values": [ Vector2( 635.939, 1261.92 ), Vector2( 674.08, -470.018 ) ]
 }
 tracks/24/type = "value"
-tracks/24/path = NodePath("Jugo:rotation_degrees")
+tracks/24/path = NodePath("Pics/Jugo:rotation_degrees")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/imported = false
@@ -341,7 +344,7 @@ tracks/24/keys = {
 "values": [ 0.0, 90.0, 180.0, 270.0, 0.0, 90.0, 180.0, 270.0, 0.0, 90.0, 180.0, 270.0, 0.0, 90.0, 180.0, 270.0, 360.0 ]
 }
 tracks/25/type = "value"
-tracks/25/path = NodePath("Jugo:position")
+tracks/25/path = NodePath("Pics/Jugo:position")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/imported = false
@@ -353,7 +356,7 @@ tracks/25/keys = {
 "values": [ Vector2( -136.795, 576.253 ), Vector2( 301.032, 442.769 ), Vector2( 301.032, 442.769 ), Vector2( 2556.91, -133.882 ) ]
 }
 tracks/26/type = "value"
-tracks/26/path = NodePath("Jugo2:position")
+tracks/26/path = NodePath("Pics/Jugo2:position")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/imported = false
@@ -365,7 +368,7 @@ tracks/26/keys = {
 "values": [ Vector2( -412.434, 1319.58 ), Vector2( 216.488, 700 ), Vector2( 216.488, 700 ), Vector2( 1233.76, -495.334 ) ]
 }
 tracks/27/type = "value"
-tracks/27/path = NodePath("Jugo3:position")
+tracks/27/path = NodePath("Pics/Jugo3:position")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/imported = false
@@ -375,6 +378,66 @@ tracks/27/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1704.2, 1280.78 ), Vector2( 1040.67, 700 ), Vector2( 1040.67, 700 ), Vector2( 285.228, -528.97 ) ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("Pics/Caldo1:scale")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 20.5, 23 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("Pics/Caldo1:position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 22.5, 24.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 631.959, 480.375 ), Vector2( -1058.13, -352.683 ) ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("Pics/Caldo2:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 22.4, 24.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 639.871, -408.386 ), Vector2( 639.871, 1479.61 ) ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("Pics/Rollito1:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 13.4, 16.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1614.97, 495.59 ), Vector2( -321.03, 495.59 ) ]
+}
+tracks/32/type = "value"
+tracks/32/path = NodePath("Pics/Tamal_2:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"times": PoolRealArray( 13.4, 16.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 675, -232.941 ), Vector2( 675, 1303.06 ) ]
 }
 
 [sub_resource type="AtlasTexture" id=6]
@@ -412,27 +475,29 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Changua_1" type="Sprite" parent="."]
+[node name="Pics" type="Node2D" parent="."]
+
+[node name="Changua_1" type="Sprite" parent="Pics"]
 position = Vector2( 832.94, 320.362 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 4 )
 
-[node name="Changua_2" type="Sprite" parent="."]
+[node name="Changua_2" type="Sprite" parent="Pics"]
 position = Vector2( 290.995, 763.528 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 5 )
 
-[node name="Tamal_1" type="Sprite" parent="."]
+[node name="Tamal_1" type="Sprite" parent="Pics"]
 position = Vector2( 653.377, 484.564 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 6 )
 
-[node name="Tinto" type="Sprite" parent="."]
+[node name="Tinto" type="Sprite" parent="Pics"]
 position = Vector2( 987.091, 327.956 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 12 )
 
-[node name="Pony" type="Sprite" parent="."]
+[node name="Pony" type="Sprite" parent="Pics"]
 position = Vector2( 642.741, 709.928 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 10 )
@@ -440,7 +505,7 @@ __meta__ = {
 "_editor_description_": "wq"
 }
 
-[node name="Combo_1" type="Sprite" parent="."]
+[node name="Combo_1" type="Sprite" parent="Pics"]
 position = Vector2( -233.95, 1132.96 )
 scale = Vector2( 0.83871, 0.83871 )
 texture = ExtResource( 8 )
@@ -448,7 +513,7 @@ __meta__ = {
 "_editor_description_": "wq"
 }
 
-[node name="Combo_2" type="Sprite" parent="."]
+[node name="Combo_2" type="Sprite" parent="Pics"]
 position = Vector2( 988.174, 1266.52 )
 scale = Vector2( 1.5, 1.2 )
 texture = ExtResource( 9 )
@@ -456,7 +521,7 @@ __meta__ = {
 "_editor_description_": "wq"
 }
 
-[node name="HuevoPerico" type="Sprite" parent="."]
+[node name="HuevoPerico" type="Sprite" parent="Pics"]
 position = Vector2( 404.741, 713.928 )
 scale = Vector2( 0.7, 0.7 )
 texture = ExtResource( 11 )
@@ -464,15 +529,15 @@ __meta__ = {
 "_editor_description_": "wq"
 }
 
-[node name="Rollito1" type="Sprite" parent="."]
-position = Vector2( 2097.54, 114.614 )
+[node name="Rollito1" type="Sprite" parent="Pics"]
+position = Vector2( 1614.97, 495.59 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 14 )
 __meta__ = {
 "_editor_description_": "wq"
 }
 
-[node name="Rollito2" type="Sprite" parent="."]
+[node name="Rollito2" type="Sprite" parent="Pics"]
 position = Vector2( 635.939, 1261.92 )
 scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 13 )
@@ -480,7 +545,11 @@ __meta__ = {
 "_editor_description_": "wq"
 }
 
-[node name="Jugo" type="Sprite" parent="."]
+[node name="Tamal_2" type="Sprite" parent="Pics"]
+position = Vector2( 675, -232.941 )
+texture = ExtResource( 19 )
+
+[node name="Jugo" type="Sprite" parent="Pics"]
 position = Vector2( -136.795, 576.253 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 15 )
@@ -488,7 +557,7 @@ __meta__ = {
 "_editor_description_": "wq"
 }
 
-[node name="Jugo2" type="Sprite" parent="."]
+[node name="Jugo2" type="Sprite" parent="Pics"]
 position = Vector2( -412.434, 1319.58 )
 rotation = 0.785398
 scale = Vector2( 1.70024, 1.67784 )
@@ -497,7 +566,7 @@ __meta__ = {
 "_editor_description_": "wq"
 }
 
-[node name="Jugo3" type="Sprite" parent="."]
+[node name="Jugo3" type="Sprite" parent="Pics"]
 position = Vector2( 1704.2, 1280.78 )
 rotation = -0.785398
 scale = Vector2( 1.70024, 1.67784 )
@@ -506,7 +575,30 @@ __meta__ = {
 "_editor_description_": "wq"
 }
 
-[node name="Tamal" type="Label" parent="."]
+[node name="Caldo2" type="Sprite" parent="Pics"]
+position = Vector2( 639.871, -408.386 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 18 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Caldo1" type="Sprite" parent="Pics"]
+position = Vector2( 631.959, 480.375 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_editor_description_": "wq"
+}
+
+[node name="Title" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tamal" type="Label" parent="Title"]
 margin_left = 313.366
 margin_top = 1009.24
 margin_right = 959.366
@@ -520,10 +612,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Changua" type="Label" parent="."]
+[node name="Changua" type="Label" parent="Title"]
 margin_left = 1406.64
 margin_top = 634.34
-margin_right = 2179.58
+margin_right = 2179.57
 margin_bottom = 901.344
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.45098, 0.254902, 0.235294, 1 )
@@ -532,7 +624,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Caldo" type="Label" parent="."]
+[node name="Caldo" type="Label" parent="Title"]
 margin_left = -708.073
 margin_top = 652.299
 margin_right = -89.073
@@ -545,7 +637,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Perico" type="Label" parent="."]
+[node name="Perico" type="Label" parent="Title"]
 margin_left = 77.5254
 margin_top = 217.223
 margin_right = 713.525
@@ -560,7 +652,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Minutos" type="Label" parent="."]
+[node name="Minutos" type="Label" parent="Title"]
 margin_left = 56.8971
 margin_top = 75.3058
 margin_right = 424.897
@@ -574,7 +666,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Recargas" type="Label" parent="."]
+[node name="Recargas" type="Label" parent="Title"]
 margin_left = 975.153
 margin_top = 787.065
 margin_right = 1198.15

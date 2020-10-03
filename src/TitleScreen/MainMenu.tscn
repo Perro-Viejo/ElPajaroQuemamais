@@ -338,6 +338,7 @@ margin_bottom = 960.0
 margin_left = 616.0
 margin_right = 663.0
 margin_bottom = 112.0
+rect_pivot_offset = Vector2( 23, 0 )
 size_flags_horizontal = 4
 size_flags_vertical = 3
 texture = ExtResource( 4 )
