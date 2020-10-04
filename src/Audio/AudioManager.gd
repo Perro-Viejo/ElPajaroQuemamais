@@ -49,8 +49,9 @@ func play_sound(source: String, sound: String, _position: Vector2 = Vector2(-160
 				audio.select_sound.connect('finished', self, '_on_finished', [source, sound])
 
 func play_dx(character: String, emotion: String):
+	print(character, emotion)
 	if not emotion:
-		emotion = 'Gen'
+		emotion = 'normal'
 	play_sound('DX/'+character, emotion, Vector2.ZERO)
 
 func stop_sound(source: String, sound: String) -> void:

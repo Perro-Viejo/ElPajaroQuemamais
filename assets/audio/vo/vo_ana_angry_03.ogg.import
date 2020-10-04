@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_ana_angry_03.ogg-5d94904e915bf09e08aad487f9237d0e.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_ana_angry_03.ogg"
+dest_files=[ "res://.import/vo_ana_angry_03.ogg-5d94904e915bf09e08aad487f9237d0e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_ana_thinking_01.ogg-ec89a5ad186aaa428fb9b9b12da22709.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_ana_thinking_01.ogg"
+dest_files=[ "res://.import/vo_ana_thinking_01.ogg-ec89a5ad186aaa428fb9b9b12da22709.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

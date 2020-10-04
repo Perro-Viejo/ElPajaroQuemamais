@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_lupe_excited_01.ogg-ecf41cd23c4409b802116907a56332ec.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_lupe_excited_01.ogg"
+dest_files=[ "res://.import/vo_lupe_excited_01.ogg-ecf41cd23c4409b802116907a56332ec.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

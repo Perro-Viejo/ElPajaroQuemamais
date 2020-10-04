@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_ana_sad_01.ogg-0d97c73eab8eebe81816d6f571ce46b8.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_ana_sad_01.ogg"
+dest_files=[ "res://.import/vo_ana_sad_01.ogg-0d97c73eab8eebe81816d6f571ce46b8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

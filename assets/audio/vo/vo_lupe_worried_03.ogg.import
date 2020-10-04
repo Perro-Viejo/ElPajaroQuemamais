@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_lupe_worried_03.ogg-e3f56956e3e96eb59aaaddea5ca80fc7.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_lupe_worried_03.ogg"
+dest_files=[ "res://.import/vo_lupe_worried_03.ogg-e3f56956e3e96eb59aaaddea5ca80fc7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

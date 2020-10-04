@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_ana_excited_01.ogg-3d235b7fb2394a8a067b4b2872dcb11c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_ana_excited_01.ogg"
+dest_files=[ "res://.import/vo_ana_excited_01.ogg-3d235b7fb2394a8a067b4b2872dcb11c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

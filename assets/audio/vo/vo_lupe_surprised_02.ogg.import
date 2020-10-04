@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_lupe_surprised_02.ogg-1e04f8ccaf9a9d714c61d703788165b8.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_lupe_surprised_02.ogg"
+dest_files=[ "res://.import/vo_lupe_surprised_02.ogg-1e04f8ccaf9a9d714c61d703788165b8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

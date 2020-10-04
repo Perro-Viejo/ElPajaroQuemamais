@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_lupe_angry_03.ogg-2461ad8babc9a01209050c10d57f7638.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_lupe_angry_03.ogg"
+dest_files=[ "res://.import/vo_lupe_angry_03.ogg-2461ad8babc9a01209050c10d57f7638.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

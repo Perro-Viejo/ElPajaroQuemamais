@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_lupe_thinking_01.ogg-cf155eec8a3d61ffcf66fff767df71ef.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_lupe_thinking_01.ogg"
+dest_files=[ "res://.import/vo_lupe_thinking_01.ogg-cf155eec8a3d61ffcf66fff767df71ef.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

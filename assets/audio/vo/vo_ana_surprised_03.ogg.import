@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_ana_surprised_03.ogg-ed575e96ff74c3dfbb8270ad8356aa7f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_ana_surprised_03.ogg"
+dest_files=[ "res://.import/vo_ana_surprised_03.ogg-ed575e96ff74c3dfbb8270ad8356aa7f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
