@@ -298,6 +298,7 @@ func _read_dialog_line() -> void:
 				opt.id = id
 				opt.tr_code = ('dlg_%d_%d_%s_opt_%d' % [_did, _nid, actor, id])\
 					.to_upper()
+				opt.ending = int(opt.ending)
 				
 				TranslationServer.set_locale('en')
 				opt.subs = tr(opt.tr_code)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/TitleScreen/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_72.tres" type="DynamicFont" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_regular_32.tres" type="DynamicFont" id=6]
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_64.tres" type="DynamicFont" id=7]
 [ext_resource path="res://assets/images/gui/quemamais_main_menu.png" type="Texture" id=8]
+[ext_resource path="res://assets/images/gui/illustration.png" type="Texture" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.278431, 0.176471, 0.235294, 0 )
@@ -69,8 +70,108 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 1280, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("BG/Bg2:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
 
 [sub_resource type="Animation" id=5]
+resource_name = "go_to_world"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG/MainOptions:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 0.5, 0.241484 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 960 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/GameName:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 2.7 ),
+"transitions": PoolRealArray( 1, 2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Bg:rect_position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 64, 24 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("BG/Bg:rect_rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.072013, 126.5, 0.0703587, 32.5 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "UI", "whoosh" ],
+"method": "_play_sfx"
+} ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BG/Bg:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 0.5, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("BG/Bg2:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("BG/Credits:visible")
@@ -120,9 +221,20 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( -1280, 0 ), Vector2( 0, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("BG/Bg2:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
 
-[sub_resource type="Animation" id=6]
-resource_name = "show_first_time"
+[sub_resource type="Animation" id=7]
 length = 1.5
 step = 0.05
 tracks/0/type = "value"
@@ -178,7 +290,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.1, 0.5, 0.85 ),
+"times": PoolRealArray( 0, 0.5, 0.85 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
 "args": [ "UI", "whoosh" ],
@@ -190,6 +302,18 @@ tracks/4/keys = {
 "args": [ "UI", "whoosh_2" ],
 "method": "_play_sfx"
 } ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BG/Bg2:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
 }
 
 [node name="MainMenu" type="CanvasLayer"]
@@ -224,8 +348,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Bg2" type="TextureRect" parent="BG"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="GameName" type="VBoxContainer" parent="BG"]
-modulate = Color( 1, 1, 1, 0.00409719 )
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = -2
@@ -256,8 +389,8 @@ align = 2
 [node name="MainOptions" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 954.159
-margin_bottom = 954.158
+margin_top = 960.0
+margin_bottom = 959.999
 custom_constants/margin_right = 16
 custom_constants/margin_top = 4
 custom_constants/margin_left = 16
@@ -326,12 +459,12 @@ __meta__ = {
 }
 
 [node name="Background" type="ColorRect" parent="BG/Credits"]
-margin_right = 1280.0
+margin_right = 1279.0
 margin_bottom = 960.0
 color = Color( 1, 0.74902, 0.505882, 1 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="BG/Credits"]
-margin_right = 1280.0
+margin_right = 1279.0
 margin_bottom = 960.0
 
 [node name="Logo" type="TextureRect" parent="BG/Credits/CreditsContainer"]
@@ -346,7 +479,7 @@ stretch_mode = 5
 
 [node name="Name" type="Label" parent="BG/Credits/CreditsContainer"]
 margin_top = 116.0
-margin_right = 1280.0
+margin_right = 1279.0
 margin_bottom = 234.0
 size_flags_horizontal = 5
 custom_styles/normal = SubResource( 2 )
@@ -361,7 +494,7 @@ __meta__ = {
 
 [node name="Devs" type="Label" parent="BG/Credits/CreditsContainer"]
 margin_top = 238.0
-margin_right = 1280.0
+margin_right = 1279.0
 margin_bottom = 844.0
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 6 )
@@ -392,8 +525,9 @@ text = "Back"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/credits_exit = SubResource( 4 )
-anims/show_credits = SubResource( 5 )
-anims/show_first_time = SubResource( 6 )
+anims/go_to_world = SubResource( 5 )
+anims/show_credits = SubResource( 6 )
+anims/show_first_time = SubResource( 7 )
 
 [node name="Tween" type="Tween" parent="."]
 

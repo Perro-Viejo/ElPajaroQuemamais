@@ -7,6 +7,12 @@ const FORCE_FOCUS := 'FORCE_FOCUS'
 const EPISODE := 'EPISODE'
 const CURRENT_TUTORIAL := 'CURRENT_TUTORIAL'
 
+var endings := {
+	1: 0,
+	2: 0,
+	3: 0
+}
+
 var _data := {}
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func get_data(key: String):

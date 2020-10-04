@@ -18,6 +18,9 @@ func _ready() -> void:
 	# Establecer valores por defecto
 	_player.show()
 	_setup_set(Data.get_data(Data.EPISODE))
+	Data.endings[1] = 0
+	Data.endings[2] = 0
+	Data.endings[3] = 0
 	
 	# Conectarse a señales de los hijos de la mamá
 	for actor in _actors.get_children():
@@ -108,6 +111,11 @@ func _setup_set(_episode: int) -> void:
 			_actors.get_node('Rico').hide()
 			$Cameras/StableCamera.make_current()
 			AudioEvent.emit_signal('play_requested', 'BG', 'Establo')
+		3:
+			$Cinematic.hide()
+			$Cameras/HouseCamera.make_current()
+			for actor in _actors.get_children():
+				actor.position = Vector2.ZERO
 		_:
 			for actor in _actors.get_children():
 				actor.position = Vector2.ZERO
@@ -132,6 +140,11 @@ func _end_episode(dialog_name) -> void:
 	match Data.get_data(Data.EPISODE):
 		1:
 			if dialog_name == 'Ep1Sc4':
+				WorldEvent.emit_signal('episode_ended')
+		2:
+			if dialog_name == 'Ep2Sc1':
+				yield($Cinematic.play_commercial(), 'completed')
+				$Cameras/StableCamera.make_current()
 				WorldEvent.emit_signal('episode_ended')
 
 

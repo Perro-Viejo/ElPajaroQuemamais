@@ -95,6 +95,7 @@ func show_options() -> void:
 
 
 func _on_option_clicked(opt: Dictionary) -> void:
+	Data.endings[opt.ending] += 1
 	SectionEvent.in_dialog = false
 	hide()
 	remove_options()

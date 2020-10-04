@@ -465,6 +465,7 @@ animations = [ {
 } ]
 
 [node name="Cinematic" type="Node2D"]
+z_index = 10
 script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -700,4 +701,8 @@ __meta__ = {
 position = Vector2( 636.396, 449.72 )
 scale = Vector2( 1.7, 2 )
 frames = SubResource( 10 )
+frame = 1
 playing = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 640, 480 )

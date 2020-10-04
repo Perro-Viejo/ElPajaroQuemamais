@@ -51,7 +51,7 @@ DLG_1_16_RICO,¡Pajarraco hijueputa!,Shut up Quemamais!
 DLG_1_17_ANA_MARÍA,No quiero ver cómo se machucan la popó,I better go
 ---- EPISODIO 1 ----,---- ESCENA 1 ----,
 EPISODE_1_INTRO,Una mañana de Agosto en la Hacienda Santa Catarina,Santa Catarina Hacienda. August. Morning. Hot.
-DLG_1_7_ANA_MARÍA,¡Necesito un abrecartas!,I need a letter opener
+DLG_1_7_ANA_MARÍA,¡Necesito un abrecartas!,I need a letter opener!
 DLG_1_5_ANA_MARÍA,Mamá Is debe tener uno por aquí,Mom should have one somewhere here
 ---- EPISODIO 1 ----,---- ESCENA 2 ----,
 DLG_2_2_ANA_MARÍA,¡Quemamais! ponte a buscar un abrecartas,Help me find a letter opener Quemamais
@@ -61,7 +61,7 @@ DLG_4_2_ANA_MARÍA,"El escritorio, claro. ¡Gracias Quemamais!","The desk! of co
 DLG_4_4_ANA_MARÍA,Aquí segurito que encuentro uno,There should be one here for sure
 DLG_4_5_ANA_MARÍA,A ver...,Lets see...
 DLG_4_7_ANA_MARÍA,...mmm...mmm...mmm,[ searching in spanish ]
-DLG_4_8_ANA_MARÍA,¿Qué es esto? ¿una carta para Agustina?,A letter for Agustina?
+DLG_4_8_ANA_MARÍA,¿Qué es esto? ¿una carta para Agustina?,What's this? A letter for Agustina?
 DLG_4_9_ANA_MARÍA,¿Qué hace en el escritorio de mi mamá?,What is this doing here?
 DLG_4_10_ANA_MARÍA,Lo mejor será leerla en voz alta,[ starts reading the letter ]
 AGUSTINA_LETTER,"Querida Agustina
@@ -71,64 +71,72 @@ No puedo esperar el momento en que tú y yo podamos por fin amarnos, con este am
 Siempre tuyo,
 Antonio de la Cruz","Dear Agustina
 
-Drinking water and staying hydrated will help the fluids in your sinuses from becoming sticky, which causes more snoring. There is a village in Russia called Tsovkra where every resident can tightrope walk. It is a tradition that dates back over 100 years but no one knows how it started. The fear of cooking is known as Mageirocophobia and is a recognized phobia. In 1993, Aleksandr A. Serebrov took his Game Boy to space. Later, it was auctioned for $1,220 and is said to have orbited earth 3,000 times. “Schnapsidee” is the German word for a ridiculous idea that only sounds good when you’re drunk.
+I can't wait to be by your side, my love... far from this town, somewhere we can finally be happy together. I wish I was kissing your lips, feeling this pure love, as beautiful as the mornings by your side, in our bed, where our love started. I can't stop thinking about you at nights when I'm alone and naked in my bed. I just want to have a family with you till death do us part.
 
 Always yours,
 Antonio de la Cruz"
 AGUSTINA_LETTER_BTN,Read it in English,Leer en español
-DLG_5_2_ANA_MARÍA,¡No puedo creerlo! ¿esta carta la escribió mi papá para Agustina la sirvienta?,He was an introvert that extroverts seemed to love.
-DLG_5_3_ANA_MARÍA,Y lo hizo el 12 de Diciembre de 1980…,Nothing is as cautiously cuddly as a pet porcupine.
-DLG_5_4_ANA_MARÍA,¿El día en que murió escribió esto?,Nothing seemed out of place except the washing machine in the bar.
-DLG_5_5_ANA_MARÍA,¿Pero a qué hora si lo atropellaron después del almuerzo?,They're playing the piano while flying in the plane.
-DLG_5_6_ANA_MARÍA,¿Y estaba enamorado de la mamá de Lupe?,The golden retriever loved the fireworks each Fourth of July.
-DLG_5_8_ANA_MARÍA,Esto está raro... tengo que investigar,"The tears of a clown make my lipstick run, but my shower cap is still intact."
+DLG_5_2_ANA_MARÍA,¡No puedo creerlo! ¿esta carta la escribió mi papá para Agustina la sirvienta?,"OMG this letter is from my dad to Agustina, Lupe's mom?!"
+DLG_5_3_ANA_MARÍA,Y lo hizo el 12 de Diciembre de 1980…,"This says December 12, 1980"
+DLG_5_4_ANA_MARÍA,¿El día en que murió escribió esto?,The day he died
+DLG_5_5_ANA_MARÍA,¿Pero a qué hora si lo atropellaron después del almuerzo?,But he died after lunch... I remember
+DLG_5_6_ANA_MARÍA,¿Y estaba enamorado de la mamá de Lupe?,Was he in love with Agustina?
+DLG_5_8_ANA_MARÍA,Esto está raro... tengo que investigar,Something smells bad here.....Should be the parrot
 ---- EPISODIO 2 ----,---- ESCENA 1 ----,
 EPISODE_2_INTRO,Varios días después,4 days later
-DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿qué haces?","Hola Lupe, ¿Qué tranza? ¿qué haces?"
-DLG_3_4_ANA_MARÍA,Siempre te encuentro aquí con los caballos a solas,Siempre te encuentro aquí con los caballos a solas
-DLG_3_5_ANA_MARÍA,¿Te gustan mucho o qué?,¿Te gustan mucho o qué?
+DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿qué haces?","Hey Lupe, what's up?"
+DLG_3_4_ANA_MARÍA,Siempre te encuentro aquí con los caballos a solas,Alone with the horses again?
+DLG_3_5_ANA_MARÍA,¿Te gustan mucho o qué?,Looks like you like them a lot
 DLG_3_6_LUPE,...,...
-DLG_3_7_ANA_MARÍA,Jijijiji. Nahhh te creas Lupe,Jijijiji. Nahhh te creas Lupe
-DLG_3_8_ANA_MARÍA,Ya sé que lo que te gusta es Mamá Is,Ya sé que lo que te gusta es Mamá Is
-DLG_3_9_ANA_MARÍA,He visto las miradas que le echas,He visto las miradas que le echas
-DLG_3_10_ANA_MARÍA,Pero tranquilo que tu secreto está seguro conmigo,Pero tranquilo que tu secreto está seguro conmigo
-DLG_3_11_PLAYER_OPT_0,Pero tú estás más rica,Pero tú estás más rica
-DLG_3_11_PLAYER_OPT_1,Me gustaría verte con ella,Me gustaría verte con ella
-DLG_3_11_PLAYER_OPT_2,Uyuyuy... le gusta la señora,Uyuyuy... le gusta la señora
-DLG_3_12_ANA_MARÍA,¿Khé?,¿Khé?
-DLG_3_13_LUPE,Ehhhmmm... bueno,Ehhhmmm... bueno
-DLG_3_14_ANA_MARÍA,"Maldito pájaro, ¡cállate!","Maldito pájaro, ¡cállate!"
-DLG_3_15_LUPE,¿Necesita algo señorita?,¿Necesita algo señorita?
-DLG_3_16_LUPE,¿Quiere que le prepare un caballo?,¿Quiere que le prepare un caballo?
-DLG_3_17_ANA_MARÍA,"No gracias, ya no como carne","No gracias, ya no como carne"
-DLG_3_18_ANA_MARÍA,"Quería preguntarte sobre Agustina, tu madre","Quería preguntarte sobre Agustina, tu madre"
-DLG_3_19_ANA_MARÍA,¿Sabes si era amiga de mi padre?,¿Sabes si era amiga de mi padre?
-DLG_3_20_LUPE,"Sólo sé lo que me han contado las otras sirvientas, patrona","Sólo sé lo que me han contado las otras sirvientas, patrona"
-DLG_3_22_ANA_MARÍA,"Ven, cuéntame acá Lupe","Ven, cuéntame acá Lupe"
-DLG_3_23_ANA_MARÍA,¿O qué? ¿te doy miedo? acércate...,¿O qué? ¿te doy miedo? acércate...
-DLG_3_24_PLAYER_OPT_0,"Lo que usted quiera, ricura","Lo que usted quiera, ricura"
-DLG_3_24_PLAYER_OPT_1,Te puedes sentar en mis piernas,Te puedes sentar en mis piernas
-DLG_3_24_PLAYER_OPT_2,¡Vayan a motel! ¡vayan a motel!,¡Vayan a motel! ¡vayan a motel!
-DLG_3_25_ANA_MARÍA,¿Qué dijites?,¿Qué dijites?
-DLG_3_26_LUPE,"Bueno, pero sin meterme la mano al pantalón","Bueno, pero sin meterme la mano al pantalón"
-DLG_3_27_LUPE,Pues no estaría nada mal...,Pues no estaría nada mal...
-DLG_3_28_ANA_MARÍA,Sólo quiero que estemos cómodos mientras platicamos,Sólo quiero que estemos cómodos mientras platicamos
-DLG_3_30_LUPE,Mi mamá empezó a trabajar en la Hacienda en 1976 cuando tenía 23 años,Mi mamá empezó a trabajar en la Hacienda en 1976 cuando tenía 23 años
-DLG_3_31_LUPE,Creo que huyó de su casa porque su papá la golpeaba...,Creo que huyó de su casa porque su papá la golpeaba...
-DLG_3_32_LUPE,"Cuando llegó, conoció al zapatero y se casaron a los 3 meses","Cuando llegó, conoció al zapatero y se casaron a los 3 meses"
-DLG_3_33_LUPE,Primero le dieron y luego se presentaron... jejeje,Primero le dieron y luego se presentaron... jejeje
-DLG_3_34_NARRATOR,3 horas después,3 horas después
-DLG_3_36_ANA_MARÍA,"Ay Lupe, ¡qué rico que platicas tú!","Ay Lupe, ¡qué rico que platicas tú!"
-DLG_3_37_ANA_MARÍA,No sé por qué no lo hicimos antes tanto,No sé por qué no lo hicimos antes tanto
-DLG_3_38_LUPE,"Es que yo no quiero molestarla, patrona","Es que yo no quiero molestarla, patrona"
-DLG_3_40_ANA_MARÍA,¡Pero mira la hora que es!,¡Pero mira la hora que es!
-DLG_3_41_ANA_MARÍA,¡Mi mamá me va a matar!,¡Mi mamá me va a matar!
-DLG_3_42_ANA_MARÍA,"Te busco luego, Lupe","Te busco luego, Lupe"
-DLG_3_43_LUPE,"Sí, como usted mande, patrona","Sí, como usted mande, patrona"
-DLG_3_45_RICO,¡Quién viera al Lupe!,¡Quién viera al Lupe!
-DLG_3_46_RICO,¡¿Conquistando a Ana María?!,¡¿Conquistando a Ana María?!
-DLG_3_47_RICO,"¡Ja! No tiene oportunidad con ella, de eso me encargo","¡Ja! No tiene oportunidad con ella, de eso me encargo"
+DLG_3_7_ANA_MARÍA,Jijijiji. Nahhh te creas Lupe,Jijijiji. just kidding
+DLG_3_8_ANA_MARÍA,Ya sé que lo que te gusta es Mamá Is,I know you like Mamá Is
+DLG_3_9_ANA_MARÍA,He visto las miradas que le echas,I've seen how you look at her
+DLG_3_10_ANA_MARÍA,Pero tranquilo que tu secreto está seguro conmigo,"It's fine, I won't tell anyone"
+DLG_3_11_PLAYER_OPT_0,Pero tú estás más rica,But you are more beautiful than her
+DLG_3_11_PLAYER_OPT_1,Me gustaría verte con ella,I would like to see you with her
+DLG_3_11_PLAYER_OPT_2,Uyuyuy... le gusta la señora,LOL He likes the old lady
+DLG_3_12_ANA_MARÍA,¿Khé?,What?
+DLG_3_13_LUPE,Ehhhmmm... bueno,Ehhhmmm... ok
+DLG_3_14_ANA_MARÍA,"Maldito pájaro, ¡cállate!",You bird...shut up!
+DLG_3_15_LUPE,¿Necesita algo señorita?,How can I help you?
+DLG_3_16_LUPE,¿Quiere que le prepare un caballo?,Would you like me to help you setup a horse?
+DLG_3_17_ANA_MARÍA,"No gracias, ya no como carne","I can do that alone, thanks"
+DLG_3_18_ANA_MARÍA,"Quería preguntarte sobre Agustina, tu madre","I wanted to ask you about Agustina, your mom"
+DLG_3_19_ANA_MARÍA,¿Sabes si era amiga de mi padre?,Was she friends with my dad?
+DLG_3_20_LUPE,"Sólo sé lo que me han contado las otras sirvientas, patrona","I don't know much, Miss Ana"
+DLG_3_22_ANA_MARÍA,"Ven, cuéntame acá Lupe","Well, let's find somewhere nice to sit"
+DLG_3_23_ANA_MARÍA,¿O qué? ¿te doy miedo? acércate...,Don't be afraid...come on
+DLG_3_24_PLAYER_OPT_0,"Lo que usted quiera, ricura","Just don't be too rough on me, please"
+DLG_3_24_PLAYER_OPT_1,Te puedes sentar en mis piernas,"What do you mean, we are just talking"
+DLG_3_24_PLAYER_OPT_2,¡Vayan a motel! ¡vayan a motel!,Just go get a room!
+DLG_3_25_ANA_MARÍA,¿Qué dijites?,What are you saying?
+DLG_3_26_LUPE,"Bueno, pero sin meterme la mano al pantalón","Fine, promise me no sneaky hands"
+DLG_3_27_LUPE,Pues no estaría nada mal...,"It wouldn't hurt anyone, though..."
+DLG_3_28_ANA_MARÍA,Sólo quiero que estemos cómodos mientras platicamos,"We will sit there Lupe, don't worry"
+DLG_3_30_LUPE,Mi mamá empezó a trabajar en la Hacienda en 1976 cuando tenía 23 años,My mom started working in the Hacienda in 1976 when she was 23 years old
+DLG_3_31_LUPE,Creo que huyó de su casa porque su papá la golpeaba...,I think she left home because her father used to hit her...
+DLG_3_32_LUPE,"Cuando llegó, conoció al zapatero y se casaron a los 3 meses","Few days after her arrival to this town, she met the mailman and married him 3 months later"
+DLG_3_33_LUPE,Primero le dieron y luego se presentaron... jejeje,You could say they had their priorities straight... hehehe
+DLG_3_34_NARRATOR,3 horas después,Few uncomfortable moments later
+DLG_3_36_ANA_MARÍA,"Ay Lupe, ¡qué rico que platicas tú!","wow Lupe, you are such a good listener, I don't want you to stop"
+DLG_3_37_ANA_MARÍA,No sé por qué no lo hicimos antes tanto,I can't believe this is the first time we do this
+DLG_3_38_LUPE,"Es que yo no quiero molestarla, patrona","I don't want to bother you, Miss Ana"
+DLG_3_40_ANA_MARÍA,¡Pero mira la hora que es!,Look at the time! 
+DLG_3_41_ANA_MARÍA,¡Mi mamá me va a matar!,My mom will kill me!
+DLG_3_42_ANA_MARÍA,"Te busco luego, Lupe","I'll call you later, Lupe. Don't go too far."
+DLG_3_43_LUPE,"Sí, como usted mande, patrona","As you wish, Miss Ana"
+DLG_3_45_RICO,¡Quién viera al Lupe!,Lupe?! The housekeeper?!
+DLG_3_46_RICO,¡¿Conquistando a Ana María?!,Being friendly with Ana María?
+DLG_3_47_RICO,"¡Ja! No tiene oportunidad con ella, de eso me encargo","Yeah sure, as if he had a chance!"
 ---- EPISODIO 3 ----,---- ESCENA 1 ----,
-DLG_6_2_PLAYER_OPT_0,Te la voy a meter hasta faca,They throw cabbage that turns your brain into emotional baggage.
-DLG_6_2_PLAYER_OPT_1,"Rico, ¿estás por aquí?",That was how he came to win $1 million.
-DLG_6_2_PLAYER_OPT_2,¡Les gusta por Detroit!,She had a habit of taking showers in lemonade.
+EPISODE_3_INTRO,Esa noche,Later that night
+DLG_X_XX_MAMA_IS,"Rico, tu si que sabes cómo tratar a una mujer","You do know how to treat a girl right, Rico"
+DLG_X_XX_MAMA_IS,Y yo que pensaba que los muchachos como tu solo juegan FIFA,And I thought kids like you just knew how to put on pants
+DLG_X_XX_RICO,"Uy pero con esas nalguitas, cómo no iba a tratarla bien",My respect for you will always be a priority
+DLG_X_XX_MAMA_IS,Bueno pero cuéntame qué viste en el establo.,So you were hidding in the barn
+DLG_X_XX_ISABELA,¿Ana María y Lupe? ¿De qué estaban hablando?,What were Ana Maria and Lupe talking about?
+DLG_X_XX_RICO,"Por la cara que traían, yo no creo que estuvieran sólo hablando.","By the look in their faces, I would say they were doing more than talking"
+DLG_X_XX_ISABELA,¡Tenía que ser hija mía esa chiquilla!,
+DLG_X_XX_ISABELA,¡Eso puede meternos en muchos problemas!...,
+DLG_X_XX_ISABELA,"Necesitamos que nuestras haciendas se unan, Rico",
+DLG_X_XX_RICO,¡Ya sé! Creí que nosotros nos casaríamos,
