@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/StateMachine/StateMachine.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/characters/ana_mar.png" type="Texture" id=2]
-[ext_resource path="res://src/StateMachine/State.gd" type="Script" id=3]
+[ext_resource path="res://src/Characters/NPC/Idle.gd" type="Script" id=3]
 [ext_resource path="res://src/Characters/NPC/NPC.gd" type="Script" id=4]
 [ext_resource path="res://assets/images/characters/ana_mar_expressions.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/characters/ana_mar_talk.png" type="Texture" id=6]
@@ -18,9 +18,9 @@ region = Rect2( 0, 0, 9, 10 )
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ SubResource( 1 ) ],
-"loop": true,
+"loop": false,
 "name": "default",
-"speed": 5.0
+"speed": 1.0
 } ]
 
 [sub_resource type="AtlasTexture" id=3]
@@ -324,7 +324,6 @@ fs_sfx_frames = [ 0, 7, 15, 23 ]
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Move"]
 scale = Vector2( 4, 4 )
 frames = SubResource( 64 )
-frame = 29
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

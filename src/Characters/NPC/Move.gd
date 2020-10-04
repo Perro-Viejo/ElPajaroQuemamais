@@ -5,5 +5,7 @@ func play_animation() -> bool:
 	return true
 
 func _on_frame_changed():
-	if sprite.frame in fs_sfx_frames:
+	# TODO:	Hacer algo menos chirri después de entender cómo funciona el mundo
+	#		Y la sociedad de consumo capitalista.
+	if _state_machine.state.name == 'Move' and  sprite.frame in fs_sfx_frames:
 		AudioEvent.emit_signal('play_requested', 'FS', owner.name)
