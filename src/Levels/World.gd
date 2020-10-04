@@ -116,6 +116,8 @@ func _setup_set(_episode: int) -> void:
 			$Cameras/HouseCamera.make_current()
 			for actor in _actors.get_children():
 				actor.position = Vector2.ZERO
+				if not actor.is_current_player:
+					actor.hide()
 		_:
 			for actor in _actors.get_children():
 				actor.position = Vector2.ZERO
@@ -153,7 +155,16 @@ func _load_next_episode() -> void:
 	Data.data_sumi(Data.EPISODE, 1)
 	yield(get_tree().create_timer(1.5), 'timeout')
 	_setup_set(Data.get_data(Data.EPISODE))
-	WorldEvent.emit_signal('episode_started')
+	
+	if Data.get_data(Data.EPISODE) > 2:
+		if Data.endings[1] == 2:
+			HudEvent.emit_signal('ending_requested', 1)
+		elif Data.endings[2] == 2:
+			HudEvent.emit_signal('ending_requested', 2)
+		else:
+			HudEvent.emit_signal('ending_requested', 3)
+	else:
+		WorldEvent.emit_signal('episode_started')
 
 
 func _setup_for_dialog(rules: Array) -> void:

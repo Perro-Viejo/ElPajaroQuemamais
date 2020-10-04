@@ -48,4 +48,5 @@ func _check_tutorial_after_dialog(dialog_name) -> void:
 			_show_tutorial(1)
 
 func _show_ending(ending):
+	show()
 	get_node('Endings/Ending_%d' % ending).show()
