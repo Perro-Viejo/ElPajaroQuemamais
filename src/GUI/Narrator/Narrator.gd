@@ -11,6 +11,7 @@ func _ready():
 	# Conectarse a eventos del universo
 	HudEvent.connect('tutorial_requested', self, '_show_tutorial')
 	DialogEvent.connect('dialog_finished', self, '_check_tutorial_after_dialog')
+	HudEvent.connect('ending_requested', self, '_show_ending')
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
@@ -45,3 +46,6 @@ func _check_tutorial_after_dialog(dialog_name) -> void:
 			_show_tutorial(0)
 		'Ep1Sc2':
 			_show_tutorial(1)
+
+func _show_ending(ending):
+	get_node('Endings/Ending_%d' % ending).show()
