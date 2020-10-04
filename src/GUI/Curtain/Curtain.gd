@@ -22,6 +22,7 @@ func _hide_curtain() -> void:
 	yield(get_tree().create_timer(3.0), 'timeout')
 	_episode_intro.hide()
 	DialogEvent.emit_signal('subs_done')
+	AudioEvent.emit_signal("play_requested", "UI", "transition_circle_out")
 	$AnimationPlayer.play('show_scene')
 	yield($AnimationPlayer, 'animation_finished')
 	_overlay.hide()
@@ -30,6 +31,7 @@ func _hide_curtain() -> void:
 
 func _show_curtain() -> void:
 	_overlay.show()
+	AudioEvent.emit_signal("play_requested", "UI", "transition_circle_in")
 	$AnimationPlayer.play_backwards('show_scene')
 	yield($AnimationPlayer, 'animation_finished')
 	_episode_intro.clear()

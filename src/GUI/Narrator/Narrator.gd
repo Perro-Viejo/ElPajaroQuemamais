@@ -19,6 +19,7 @@ func _on_input_event(event: InputEvent):
 		WorldEvent.emit_signal('tutorial_shown', current_tutorial)
 		Data.set_data(Data.CURRENT_TUTORIAL, current_tutorial + 1)
 		hide()
+		AudioEvent.emit_signal('play_requested', 'UI', 'popup_close')
 		DialogEvent.emit_signal('subs_done')
 
 
@@ -26,6 +27,7 @@ func _show_tutorial(tutorial := -1):
 	if tutorial < 0: return
 	current_tutorial = tutorial
 	DialogEvent.emit_signal('subs_requested', 'TUTORIAL_%d' % tutorial)
+	AudioEvent.emit_signal('play_requested', 'UI', 'popup_open')
 	show()
 	match tutorial:
 		0:

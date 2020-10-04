@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://src/Audio/AudioManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/ui_whoosh.ogg" type="AudioStream" id=2]
@@ -23,6 +23,24 @@
 [ext_resource path="res://assets/audio/ui_player_op.ogg" type="AudioStream" id=21]
 [ext_resource path="res://assets/audio/ui_player_hover_02.ogg" type="AudioStream" id=22]
 [ext_resource path="res://assets/audio/ui_player_show.ogg" type="AudioStream" id=23]
+[ext_resource path="res://assets/audio/bg_road.ogg" type="AudioStream" id=24]
+[ext_resource path="res://assets/audio/fs_ana_01.ogg" type="AudioStream" id=25]
+[ext_resource path="res://assets/audio/fs_ana_02.ogg" type="AudioStream" id=26]
+[ext_resource path="res://assets/audio/sfx_drawer_open.ogg" type="AudioStream" id=27]
+[ext_resource path="res://assets/audio/fs_is_01.ogg" type="AudioStream" id=28]
+[ext_resource path="res://assets/audio/fs_lupe_01.ogg" type="AudioStream" id=29]
+[ext_resource path="res://assets/audio/fs_lupe_02.ogg" type="AudioStream" id=30]
+[ext_resource path="res://assets/audio/fs_rico_03.ogg" type="AudioStream" id=31]
+[ext_resource path="res://assets/audio/fs_ana_03.ogg" type="AudioStream" id=32]
+[ext_resource path="res://assets/audio/bg_stable.ogg" type="AudioStream" id=33]
+[ext_resource path="res://assets/audio/fs_rico_02.ogg" type="AudioStream" id=34]
+[ext_resource path="res://assets/audio/fs_is_03.ogg" type="AudioStream" id=35]
+[ext_resource path="res://assets/audio/fs_is_02.ogg" type="AudioStream" id=36]
+[ext_resource path="res://assets/audio/fs_lupe_03.ogg" type="AudioStream" id=37]
+[ext_resource path="res://assets/audio/bg_hacienda.ogg" type="AudioStream" id=38]
+[ext_resource path="res://assets/audio/fs_rico_01.ogg" type="AudioStream" id=39]
+[ext_resource path="res://assets/audio/ui_transition_circle_out.ogg" type="AudioStream" id=40]
+[ext_resource path="res://assets/audio/ui_transition_circle_in.ogg" type="AudioStream" id=41]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource( 1 )
@@ -31,16 +49,18 @@ script = ExtResource( 1 )
 
 [node name="bubble_op" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource( 10 )
+volume_db = -5.0
 
 [node name="popup_close" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource( 12 )
 
 [node name="popup_open" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource( 3 )
+volume_db = -8.0
 
 [node name="sub" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource( 6 )
-volume_db = -3.0
+volume_db = -9.0
 pitch_scale = 1.5
 
 [node name="title" type="AudioStreamPlayer" parent="UI"]
@@ -48,6 +68,12 @@ stream = ExtResource( 9 )
 
 [node name="transition" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource( 7 )
+
+[node name="transition_circle_in" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 41 )
+
+[node name="transition_circle_out" type="AudioStreamPlayer" parent="UI"]
+stream = ExtResource( 40 )
 
 [node name="whoosh" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource( 2 )
@@ -99,7 +125,7 @@ max_pitch = 6.0
 
 [node name="write" type="AudioStreamPlayer" parent="UI/write"]
 stream = ExtResource( 15 )
-volume_db = -6.0
+volume_db = -9.0
 
 [node name="button_pop" type="Node2D" parent="UI"]
 script = ExtResource( 13 )
@@ -110,6 +136,7 @@ max_pitch = 3.0
 
 [node name="button_pop" type="AudioStreamPlayer" parent="UI/button_pop"]
 stream = ExtResource( 11 )
+volume_db = -10.0
 
 [node name="player_op" type="AudioStreamPlayer" parent="UI"]
 stream = ExtResource( 21 )
@@ -162,3 +189,89 @@ max_pitch = -2.0
 [node name="Fly" type="AudioStreamPlayer" parent="Player/Move"]
 stream = ExtResource( 16 )
 volume_db = -7.0
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="Hacienda" type="AudioStreamPlayer" parent="BG"]
+stream = ExtResource( 38 )
+
+[node name="Camino" type="AudioStreamPlayer" parent="BG"]
+stream = ExtResource( 24 )
+
+[node name="Establo" type="AudioStreamPlayer" parent="BG"]
+stream = ExtResource( 33 )
+
+[node name="FS" type="Node2D" parent="."]
+
+[node name="AnaMaria" type="Node2D" parent="FS"]
+script = ExtResource( 13 )
+random_volume = true
+min_volume = -2.0
+random_pitch = true
+min_pitch = -2.0
+max_pitch = 2.0
+
+[node name="FS_01" type="AudioStreamPlayer2D" parent="FS/AnaMaria"]
+stream = ExtResource( 25 )
+
+[node name="FS_02" type="AudioStreamPlayer2D" parent="FS/AnaMaria"]
+stream = ExtResource( 26 )
+
+[node name="FS_03" type="AudioStreamPlayer2D" parent="FS/AnaMaria"]
+stream = ExtResource( 32 )
+
+[node name="Is" type="Node2D" parent="FS"]
+script = ExtResource( 13 )
+random_volume = true
+min_volume = -2.0
+random_pitch = true
+min_pitch = -2.0
+max_pitch = 2.0
+
+[node name="FS_01" type="AudioStreamPlayer2D" parent="FS/Is"]
+stream = ExtResource( 28 )
+
+[node name="FS_02" type="AudioStreamPlayer2D" parent="FS/Is"]
+stream = ExtResource( 36 )
+
+[node name="FS_03" type="AudioStreamPlayer2D" parent="FS/Is"]
+stream = ExtResource( 35 )
+
+[node name="Lupe" type="Node2D" parent="FS"]
+script = ExtResource( 13 )
+random_volume = true
+min_volume = -2.0
+random_pitch = true
+min_pitch = -2.0
+max_pitch = 2.0
+
+[node name="FS_01" type="AudioStreamPlayer2D" parent="FS/Lupe"]
+stream = ExtResource( 29 )
+
+[node name="FS_02" type="AudioStreamPlayer2D" parent="FS/Lupe"]
+stream = ExtResource( 30 )
+
+[node name="FS_03" type="AudioStreamPlayer2D" parent="FS/Lupe"]
+stream = ExtResource( 37 )
+
+[node name="Rico" type="Node2D" parent="FS"]
+script = ExtResource( 13 )
+random_volume = true
+min_volume = -2.0
+random_pitch = true
+min_pitch = -2.0
+max_pitch = 2.0
+
+[node name="FS_01" type="AudioStreamPlayer2D" parent="FS/Rico"]
+stream = ExtResource( 39 )
+
+[node name="FS_02" type="AudioStreamPlayer2D" parent="FS/Rico"]
+stream = ExtResource( 34 )
+
+[node name="FS_03" type="AudioStreamPlayer2D" parent="FS/Rico"]
+stream = ExtResource( 31 )
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="drawer_op" type="AudioStreamPlayer" parent="Objects"]
+stream = ExtResource( 27 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ui_transition_circle_out.ogg-7beab6119b1a95e04571f5c890544671.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/ui_transition_circle_out.ogg"
+dest_files=[ "res://.import/ui_transition_circle_out.ogg-7beab6119b1a95e04571f5c890544671.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

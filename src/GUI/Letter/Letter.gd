@@ -28,6 +28,7 @@ func _on_gui_input(event: InputEvent) -> void:
 		and mouse_event.pressed:
 			TranslationServer.set_locale('es')
 			$AnimationPlayer.play('show_letter', -1.0, -2.0, true)
+			AudioEvent.emit_signal("play_requested", "UI", "popup_close")
 			yield($AnimationPlayer, 'animation_finished')
 			hide()
 
@@ -35,5 +36,6 @@ func _on_gui_input(event: InputEvent) -> void:
 func _play_animation() -> void:
 	if visible:
 		$AnimationPlayer.play('show_letter')
+		AudioEvent.emit_signal("play_requested", "UI", "popup_open")
 	else:
 		DialogEvent.emit_signal('dialog_requested', 'Ep1Sc4')

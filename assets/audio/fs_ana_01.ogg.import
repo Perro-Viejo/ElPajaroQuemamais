@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/fs_ana_01.ogg-e2842e738cd9209df8cca8851227c05d.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/fs_ana_01.ogg"
+dest_files=[ "res://.import/fs_ana_01.ogg-e2842e738cd9209df8cca8851227c05d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

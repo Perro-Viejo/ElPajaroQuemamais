@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/spec_horse_01.ogg-3f2cd80b9456febce339ac340ef41bcd.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/spec_horse_01.ogg"
+dest_files=[ "res://.import/spec_horse_01.ogg-3f2cd80b9456febce339ac340ef41bcd.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

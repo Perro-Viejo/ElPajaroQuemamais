@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bg_road.ogg-5267cf6eef492e2530d1a2d30a0a1239.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/bg_road.ogg"
+dest_files=[ "res://.import/bg_road.ogg-5267cf6eef492e2530d1a2d30a0a1239.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

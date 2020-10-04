@@ -95,6 +95,7 @@ func _setup_set(_episode: int) -> void:
 			_actors.get_node('Lupe').hide()
 			_actors.get_node('Rico').hide()
 			$Cameras/HouseCamera.make_current()
+			AudioEvent.emit_signal('play_requested', 'BG', 'Hacienda')
 		2:
 			_actors.get_node('AnaMaria').position = _rooms.get_node('Stable').get_point_position('Entrance')
 			_actors.get_node('Lupe').position = _rooms.get_node('Stable').get_point_position('Arrecha')
@@ -102,6 +103,7 @@ func _setup_set(_episode: int) -> void:
 			_actors.get_node('Lupe').show()
 			_actors.get_node('Rico').hide()
 			$Cameras/StableCamera.make_current()
+			AudioEvent.emit_signal('play_requested', 'BG', 'Establo')
 		_:
 			for actor in _actors.get_children():
 				actor.position = Vector2.ZERO

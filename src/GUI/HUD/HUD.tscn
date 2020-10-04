@@ -23,6 +23,7 @@ __meta__ = {
 visible = false
 
 [node name="Dialog" parent="Control" instance=ExtResource( 3 )]
+visible = false
 light_mask = 1025
 
 [node name="Letter" parent="Control" instance=ExtResource( 4 )]

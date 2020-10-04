@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bg_hacienda.ogg-934e1886fe61aefeb7141d039431e468.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/bg_hacienda.ogg"
+dest_files=[ "res://.import/bg_hacienda.ogg-934e1886fe61aefeb7141d039431e468.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

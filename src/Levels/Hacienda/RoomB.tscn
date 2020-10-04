@@ -38,21 +38,15 @@ position = Vector2( 26, 48 )
 
 [node name="Clickable" parent="Targets" index="0" instance=ExtResource( 3 )]
 position = Vector2( 68, 90 )
-interaction_type = "target"
 max_distance = 200.06
 trigger_dialog = "Ep1Sc2"
 look_to = 2
-enabled = true
-disable_after_interactions = 0
 
 [node name="Clickable" parent="Objects" index="0" instance=ExtResource( 3 )]
 modulate = Color( 1, 1, 0, 1 )
 position = Vector2( -38, 28 )
 interaction_type = "object"
 max_distance = 200.0
-trigger_dialog = ""
-look_to = 0
-enabled = true
 disable_after_interactions = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/Clickable" index="0"]

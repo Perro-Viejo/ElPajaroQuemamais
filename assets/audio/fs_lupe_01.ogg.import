@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/fs_lupe_01.ogg-e0c5da01417b920f6bebd744b7dfd869.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/fs_lupe_01.ogg"
+dest_files=[ "res://.import/fs_lupe_01.ogg-e0c5da01417b920f6bebd744b7dfd869.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
