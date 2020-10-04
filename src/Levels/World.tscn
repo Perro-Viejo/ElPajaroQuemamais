@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/World.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://src/Characters/NPC/Rico.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Levels/Hacienda/Stable.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Levels/Hacienda/RoomC.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Levels/Panaderia.tscn" type="PackedScene" id=11]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 337, 41.25, 358.692, 35.9437, 358.692, 46.4437, 340.692, 51.9437, 324.692, 51.9437, 279, 41.25, 279, 93.25, 324.692, 67.9437, 349, 93.25, 348.692, 85.9437, 300.692, 163.944, 300.5, 150.5, 324.5, 150.5, 345, 163.944, 344.692, 129.944, 324.5, 127.5, 287, 127.5, 287, 164, 280.192, 163.944, 280.192, 115.944, 348.692, 115.944, 348.692, 120.444, 355.192, 127.444, 355.192, 116.444, 348.692, 67.9437, 348.692, 77.9437, 375.692, 85.4437, 375.692, 94.4437, 375.692, 33.9437, 490.692, 33.9437, 490.692, 211.944, 375.692, 115.944, 375.692, 211.944, 375.692, 126.944, 370.692, 114.944, 370.692, 127.944 )
@@ -151,3 +152,5 @@ joint_mode = 1
 begin_cap_mode = 2
 end_cap_mode = 2
 antialiased = true
+
+[node name="Cinematic" parent="." instance=ExtResource( 11 )]
