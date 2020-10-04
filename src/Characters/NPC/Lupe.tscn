@@ -287,11 +287,14 @@ script = ExtResource( 1 )
 dialog_name = "Lupe"
 expressions = ExtResource( 5 )
 expressions_map = {
-"angry": -1,
-"excited": 0,
-"sad": -1,
-"thinking": -1,
-"worried": 1
+"angry": 0,
+"excited": 1,
+"happy": 2,
+"normal": 3,
+"sad": 4,
+"surprised": 5,
+"thinking": 6,
+"worried": 7
 }
 expressions_offset = Vector2( 20, -8 )
 voice = ExtResource( 10 )

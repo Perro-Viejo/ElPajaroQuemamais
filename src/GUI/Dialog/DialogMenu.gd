@@ -97,6 +97,7 @@ func show_options() -> void:
 func _on_option_clicked(opt: Dictionary) -> void:
 	SectionEvent.in_dialog = false
 	hide()
+	remove_options()
 	DialogEvent.emit_signal('dialog_option_clicked', opt)
 
 

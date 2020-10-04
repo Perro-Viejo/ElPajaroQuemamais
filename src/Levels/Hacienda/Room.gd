@@ -11,8 +11,12 @@ func get_point_position(point_name: String) -> Vector2:
 	return self.position + _get_child_position('Points', point_name)
 
 
-func get_target_position(point_name: String) -> Vector2:
-	return self.position + _get_child_position('Targets', point_name)
+func get_target_position(target_name: String) -> Vector2:
+	return self.position + _get_child_position('Targets', target_name)
+
+
+func get_target(target_name: String) -> Clickable:
+	return get_node('Targets/%s' % target_name) as Clickable
 
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒

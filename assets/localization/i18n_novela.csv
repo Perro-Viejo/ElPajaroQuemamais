@@ -3,24 +3,51 @@ DLG_1_5_ANA_MARÍA,Mamá Is debe tener uno por aquí,Mamá Is debe tener uno por
 DLG_1_7_ANA_MARÍA,¡Necesito un abrecartas!,¡Necesito un abrecartas!
 DLG_2_2_ANA_MARÍA,¡Quemamais! ponte a buscar un abrecartas,¡Quemamais! ponte a buscar un abrecartas
 DLG_2_3_ANA_MARÍA,Si me ayudas luego te daré una galletita,Si me ayudas luego te daré una galletita
-DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿Qué haces?","Hola Lupe, ¿Qué tranza? ¿Qué haces?"
-DLG_3_4_ANA_MARÍA,"Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?","Siempre te encuentro aquí con los caballos a solas, ¿te gustan mucho o qué?"
-DLG_3_5_ANA_MARÍA,jijijijijiji,jijijijijiji
-DLG_3_6_LUPE,Señorita Ana María. No esperaba verla aquí. ¿Necesita algo? ¿Quiere que le prepare un caballo?,Señorita Ana María. No esperaba verla aquí. ¿Necesita algo? ¿Quiere que le prepare un caballo?
-DLG_3_7_ANA_MARÍA,"No, ya no como carne. Gracias.","No, ya no como carne. Gracias."
-DLG_3_8_ANA_MARÍA,Quería hacerte una pregunta.,Quería hacerte una pregunta.
-DLG_3_9_LUPE,"Claro, lo que usted quiera.","Claro, lo que usted quiera."
-DLG_3_10_LUPE,"Puede preguntarme lo que quiera, para eso estamos patrona.","Puede preguntarme lo que quiera, para eso estamos patrona."
-DLG_3_11_ANA_MARÍA,¿Sabes si tu mamá era amiga de mi padre?,¿Sabes si tu mamá era amiga de mi padre?
-DLG_3_12_LUPE,¿Mi madre?,¿Mi madre?
-DLG_3_13_LUPE,"No sé patrona, la verdad no sé mucho sobre ella","No sé patrona, la verdad no sé mucho sobre ella"
-DLG_3_14_LUPE,Sólo lo que me han contado las otras sirvientas de la casa,Sólo lo que me han contado las otras sirvientas de la casa
-DLG_3_15_ANA_MARÍA,Tú no sabes una mierda Lupe...,Tú no sabes una mierda Lupe...
-DLG_3_17_ANA_MARÍA,Pero de todos modos quiero que me la metas,Pero de todos modos quiero que me la metas
-DLG_3_18_LUPE,Cuando quiera quiero,Cuando quiera quiero
-DLG_3_19_LUPE,Ya estoy cansado de jalarme el ganzo pensando en usted,Ya estoy cansado de jalarme el ganzo pensando en usted
-DLG_3_20_LUPE,Viera cómo lo tengo... todo hinchao,Viera cómo lo tengo... todo hinchao
-DLG_4_2_ANA_MARÍA,"El escritorio, claro. Gracias Quemamais.","El escritorio, claro. Gracias Quemamais."
+DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿qué haces?","Hola Lupe, ¿Qué tranza? ¿qué haces?"
+DLG_3_4_ANA_MARÍA,Siempre te encuentro aquí con los caballos a solas,Siempre te encuentro aquí con los caballos a solas
+DLG_3_5_ANA_MARÍA,¿Te gustan mucho o qué?,¿Te gustan mucho o qué?
+DLG_3_6_LUPE,...,...
+DLG_3_7_ANA_MARÍA,Jijijiji. Nahhh te creas Lupe,Jijijiji. Nahhh te creas Lupe
+DLG_3_8_ANA_MARÍA,Ya sé que lo que te gusta es Mamá Is,Ya sé que lo que te gusta es Mamá Is
+DLG_3_9_ANA_MARÍA,He visto las miradas que le echas,He visto las miradas que le echas
+DLG_3_10_ANA_MARÍA,Pero tranquilo que tu secreto está seguro conmigo,Pero tranquilo que tu secreto está seguro conmigo
+DLG_3_11_PLAYER_OPT_0,Pero tú estás más rica,Pero tú estás más rica
+DLG_3_11_PLAYER_OPT_1,Me gustaría verte con ella,Me gustaría verte con ella
+DLG_3_11_PLAYER_OPT_2,Uyuyuy... le gusta la señora,Uyuyuy... le gusta la señora
+DLG_3_12_ANA_MARÍA,¿Khé?,¿Khé?
+DLG_3_13_LUPE,Ehhhmmm... bueno,Ehhhmmm... bueno
+DLG_3_14_ANA_MARÍA,"Maldito pájaro, ¡cállate!","Maldito pájaro, ¡cállate!"
+DLG_3_15_LUPE,¿Necesita algo señorita?,¿Necesita algo señorita?
+DLG_3_16_LUPE,¿Quiere que le prepare un caballo?,¿Quiere que le prepare un caballo?
+DLG_3_17_ANA_MARÍA,"No gracias, ya no como carne","No gracias, ya no como carne"
+DLG_3_18_ANA_MARÍA,"Quería preguntarte sobre Agustina, tu madre","Quería preguntarte sobre Agustina, tu madre"
+DLG_3_19_ANA_MARÍA,¿Sabes si era amiga de mi padre?,¿Sabes si era amiga de mi padre?
+DLG_3_20_LUPE,"Sólo sé lo que me han contado las otras sirvientas, patrona","Sólo sé lo que me han contado las otras sirvientas, patrona"
+DLG_3_22_ANA_MARÍA,"Ven, cuéntame acá Lupe","Ven, cuéntame acá Lupe"
+DLG_3_23_ANA_MARÍA,¿O qué? ¿te doy miedo? acércate...,¿O qué? ¿te doy miedo? acércate...
+DLG_3_24_PLAYER_OPT_0,"Lo que usted quiera, ricura","Lo que usted quiera, ricura"
+DLG_3_24_PLAYER_OPT_1,Te puedes sentar en mis piernas,Te puedes sentar en mis piernas
+DLG_3_24_PLAYER_OPT_2,¡Vayan a motel! ¡vayan a motel!,¡Vayan a motel! ¡vayan a motel!
+DLG_3_25_ANA_MARÍA,¿Qué dijites?,¿Qué dijites?
+DLG_3_26_LUPE,"Bueno, pero sin meterme la mano al pantalón","Bueno, pero sin meterme la mano al pantalón"
+DLG_3_27_LUPE,Pues no estaría nada mal...,Pues no estaría nada mal...
+DLG_3_28_ANA_MARÍA,Sólo quiero que estemos cómodos mientras platicamos,Sólo quiero que estemos cómodos mientras platicamos
+DLG_3_30_LUPE,Mi mamá empezó a trabajar en la Hacienda en 1976 cuando tenía 23 años,Mi mamá empezó a trabajar en la Hacienda en 1976 cuando tenía 23 años
+DLG_3_31_LUPE,Creo que huyó de su casa porque su papá la golpeaba...,Creo que huyó de su casa porque su papá la golpeaba...
+DLG_3_32_LUPE,"Cuando llegó, conoció al zapatero y se casaron a los 3 meses","Cuando llegó, conoció al zapatero y se casaron a los 3 meses"
+DLG_3_33_LUPE,Primero le dieron y luego se presentaron... jejeje,Primero le dieron y luego se presentaron... jejeje
+DLG_3_34_NARRATOR,3 horas después,3 horas después
+DLG_3_36_ANA_MARÍA,"Ay Lupe, ¡qué rico que platicas tú!","Ay Lupe, ¡qué rico que platicas tú!"
+DLG_3_37_ANA_MARÍA,No sé por qué no lo hicimos antes tanto,No sé por qué no lo hicimos antes tanto
+DLG_3_38_LUPE,"Es que yo no quiero molestarla, patrona","Es que yo no quiero molestarla, patrona"
+DLG_3_40_ANA_MARÍA,¡Pero mira la hora que es!,¡Pero mira la hora que es!
+DLG_3_41_ANA_MARÍA,¡Mi mamá me va a matar!,¡Mi mamá me va a matar!
+DLG_3_42_ANA_MARÍA,"Te busco luego, Lupe","Te busco luego, Lupe"
+DLG_3_43_LUPE,"Sí, como usted mande, patrona","Sí, como usted mande, patrona"
+DLG_3_45_RICO,¡Quién viera al Lupe!,¡Quién viera al Lupe!
+DLG_3_46_RICO,¡¿Conquistando a Ana María?!,¡¿Conquistando a Ana María?!
+DLG_3_47_RICO,"¡Ja! No tiene oportunidad con ella, de eso me encargo","¡Ja! No tiene oportunidad con ella, de eso me encargo"
+DLG_4_2_ANA_MARÍA,"El escritorio, claro. ¡Gracias Quemamais!","El escritorio, claro. ¡Gracias Quemamais!"
 DLG_4_4_ANA_MARÍA,Aquí segurito que encuentro uno,Aquí segurito que encuentro uno
 DLG_4_5_ANA_MARÍA,A ver...,A ver...
 DLG_4_7_ANA_MARÍA,...mmm...mmm...mmm,...mmm...mmm...mmm
