@@ -288,13 +288,13 @@ dialog_name = "Ana María"
 expressions = ExtResource( 5 )
 expressions_map = {
 "angry": 0,
-"excited": -1,
-"happy": 1,
-"normal": 2,
-"sad": 3,
-"surprised": 4,
-"thinking": 5,
-"worried": -1
+"excited": 1,
+"happy": 2,
+"normal": 3,
+"sad": 4,
+"surprised": 5,
+"thinking": 6,
+"worried": 7
 }
 expressions_offset = Vector2( 0, -16 )
 voice = ExtResource( 10 )

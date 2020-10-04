@@ -319,6 +319,16 @@ func _read_dialog_line() -> void:
 
 			# Mostrar el botón que permite a Quemamais decir algo
 			_dialog_btn.toggle()
+		'PASS_TIME':
+			DialogEvent.emit_signal(
+				'curtain_requested',
+				('dlg_%d_%d_%s' % [_did, _nid, 'narrator']).to_upper()
+			)
+		'SETUP':
+			DialogEvent.emit_signal(
+				'scene_setup_requested',
+				line_dic.rules
+			)
 
 
 func _on_character_spoke(

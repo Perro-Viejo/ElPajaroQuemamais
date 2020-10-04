@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/Characters/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/World.gd" type="Script" id=2]
-[ext_resource path="res://assets/images/world/outside_a.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/world/outside.jpg" type="Texture" id=3]
 [ext_resource path="res://src/Levels/Hacienda/RoomA.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Levels/Hacienda/RoomB.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Characters/NPC/AnaMaria.tscn" type="PackedScene" id=6]
@@ -17,9 +17,9 @@ polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 5, 0, 4 ), PoolIntArra
 outlines = [ PoolVector2Array( 358.692, 46.4437, 340.692, 51.9437, 324.692, 51.9437, 324.692, 67.9437, 348.692, 67.9437, 348.692, 77.9437, 375.692, 85.4437, 375.692, 33.9437, 490.692, 33.9437, 490.692, 211.944, 375.692, 211.944, 375.692, 126.944, 370.692, 127.944, 355.192, 127.444, 344.692, 129.944, 345, 163.944, 300.692, 163.944, 300.5, 150.5, 324.5, 150.5, 324.5, 127.5, 287, 127.5, 287, 164, 280.192, 163.944, 280.192, 115.944, 348.692, 115.944, 348.692, 120.444, 355.192, 116.444, 370.692, 114.944, 375.692, 115.944, 375.692, 94.4437, 348.692, 85.9437, 349, 93.25, 279, 93.25, 279, 41.25, 337, 41.25, 358.692, 35.9437 ) ]
 
 [sub_resource type="NavigationPolygon" id=2]
-vertices = PoolVector2Array( 2140.85, 356.663, 2540.85, 356.663, 2540.85, 1172.66, 2140.85, 1172.66 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( 2140.85, 356.663, 2540.85, 356.663, 2540.85, 1172.66, 2140.85, 1172.66 ) ]
+vertices = PoolVector2Array( 2296, 506, 2296, 356, 2376, 356, 2376, 506, 2362, 638, 2394, 506, 2394, 638, 2316, 936, 2362, 702, 2394, 702, 2394, 864, 2364, 936, 2506, 864, 2506, 916, 2394, 916, 2394, 936, 2400, 996, 2400, 968, 2476, 968, 2476, 1056, 2424, 1056, 2364, 996, 2424, 1070, 2310, 1070, 2316, 998, 2310, 1140, 2204, 1140, 2204, 968, 2276, 998, 2276, 968, 2282, 936, 2282, 702, 2314.85, 702, 2222, 524, 2222, 480, 2276, 480, 2276, 506, 2280, 546, 2280.85, 638.663, 2314.85, 638.663 )
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4 ), PoolIntArray( 3, 5, 6, 4 ), PoolIntArray( 7, 8, 9, 10, 11 ), PoolIntArray( 10, 12, 13, 14 ), PoolIntArray( 14, 15, 11 ), PoolIntArray( 16, 17, 18, 19, 20 ), PoolIntArray( 21, 16, 20, 22, 23, 24 ), PoolIntArray( 23, 25, 26, 27, 28 ), PoolIntArray( 27, 29, 28 ), PoolIntArray( 23, 28, 24 ), PoolIntArray( 21, 24, 7, 11 ), PoolIntArray( 7, 30, 31, 32 ), PoolIntArray( 33, 34, 35, 36 ), PoolIntArray( 37, 33, 36, 0 ), PoolIntArray( 38, 37, 0, 4, 39 ), PoolIntArray( 32, 39, 4, 8, 7 ), PoolIntArray( 11, 10, 14 ) ]
+outlines = [ PoolVector2Array( 2296, 356, 2376, 356, 2376, 506, 2394, 506, 2394, 638, 2362, 638, 2362, 702, 2394, 702, 2394, 864, 2506, 864, 2506, 916, 2394, 916, 2394, 936, 2364, 936, 2364, 996, 2400, 996, 2400, 968, 2476, 968, 2476, 1056, 2424, 1056, 2424, 1070, 2310, 1070, 2310, 1140, 2204, 1140, 2204, 968, 2276, 968, 2276, 998, 2316, 998, 2316, 936, 2282, 936, 2282, 702, 2314.85, 702, 2314.85, 638.663, 2280.85, 638.663, 2280, 546, 2222, 524, 2222, 480, 2276, 480, 2276, 506, 2296, 506 ) ]
 
 [sub_resource type="Gradient" id=3]
 colors = PoolColorArray( 1, 1, 0, 1, 0, 1, 0, 1 )
@@ -29,6 +29,9 @@ position = Vector2( -124.849, 171.337 )
 script = ExtResource( 2 )
 
 [node name="Cameras" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="HouseCamera" type="Camera2D" parent="Cameras"]
 zoom = Vector2( 2, 2 )
@@ -49,17 +52,15 @@ limit_bottom = 1758
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 2560, 0 )
-
-[node name="Background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -124, 170 )
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 1210, 600 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 
 [node name="Rooms" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="RoomA" parent="Rooms" instance=ExtResource( 4 )]
 
@@ -73,10 +74,14 @@ position = Vector2( 468, 242 )
 position = Vector2( 2472, 948 )
 
 [node name="Actors" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Player" parent="Actors" instance=ExtResource( 1 )]
 z_index = 1
-collision_mask = 0
+collision_layer = 2
+collision_mask = 1
 expressions_map = {
 "angry": 0,
 "excited": 1,
@@ -88,6 +93,7 @@ expressions_map = {
 
 [node name="Rico" parent="Actors" instance=ExtResource( 8 )]
 visible = false
+collision_layer = 2
 expressions_map = {
 "angry": 0,
 "excited": -1,
@@ -98,26 +104,31 @@ expressions_map = {
 
 [node name="Lupe" parent="Actors" instance=ExtResource( 7 )]
 visible = false
+collision_layer = 2
 expressions_map = {
-"angry": -1,
-"excited": 0,
-"sad": -1,
-"thinking": -1,
-"worried": 1
+"angry": 0,
+"excited": 1,
+"happy": 2,
+"normal": 3,
+"sad": 4,
+"surprised": 5,
+"thinking": 6,
+"worried": 7
 }
 
 [node name="AnaMaria" parent="Actors" instance=ExtResource( 6 )]
 visible = false
+collision_layer = 2
 speed = 600
 expressions_map = {
 "angry": 0,
-"excited": -1,
-"happy": 1,
-"normal": 2,
-"sad": 3,
-"surprised": 4,
-"thinking": 5,
-"worried": -1
+"excited": 1,
+"happy": 2,
+"normal": 3,
+"sad": 4,
+"surprised": 5,
+"thinking": 6,
+"worried": 7
 }
 
 [node name="Navigation2D" type="Navigation2D" parent="."]

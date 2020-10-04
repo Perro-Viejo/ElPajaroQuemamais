@@ -31,6 +31,7 @@ func _ready() -> void:
 	GuiEvent.connect('curtain_hidden', self, '_start_episode')
 	DialogEvent.connect('dialog_finished', self, '_end_episode')
 	GuiEvent.connect('curtain_shown', self, '_load_next_episode')
+	DialogEvent.connect('scene_setup_requested', self, '_setup_for_dialog')
 
 	WorldEvent.emit_signal('world_entered')
 	WorldEvent.emit_signal('episode_started')
@@ -90,6 +91,7 @@ func _setup_set(_episode: int) -> void:
 	match _episode:
 		1:
 			_actors.get_node('Player').position = _rooms.get_node('RoomC').get_target_position('Clickable2')
+			_actors.get_node('Player').look_to(_rooms.get_node('RoomC').get_target('Clickable2').look_to)
 			_actors.get_node('AnaMaria').position = _rooms.get_node('RoomB').get_point_position('Entrance')
 			_actors.get_node('AnaMaria').show()
 			_actors.get_node('Lupe').hide()
@@ -97,7 +99,9 @@ func _setup_set(_episode: int) -> void:
 			$Cameras/HouseCamera.make_current()
 			AudioEvent.emit_signal('play_requested', 'BG', 'Hacienda')
 		2:
-			_actors.get_node('AnaMaria').position = _rooms.get_node('Stable').get_point_position('Entrance')
+			_actors.get_node('Player').position = _rooms.get_node('Stable').get_target_position('Clickable')
+			_actors.get_node('Player').look_to(_rooms.get_node('Stable').get_target('Clickable').look_to)
+			_actors.get_node('AnaMaria').position = _rooms.get_node('Stable').get_point_position('Outside')
 			_actors.get_node('Lupe').position = _rooms.get_node('Stable').get_point_position('Arrecha')
 			_actors.get_node('AnaMaria').show()
 			_actors.get_node('Lupe').show()
@@ -137,3 +141,14 @@ func _load_next_episode() -> void:
 	yield(get_tree().create_timer(1.5), 'timeout')
 	_setup_set(Data.get_data(Data.EPISODE))
 	WorldEvent.emit_signal('episode_started')
+
+
+func _setup_for_dialog(rules: Array) -> void:
+	for cfg in rules:
+		var actor: Actor = _actors.get_node(cfg.actor)
+		actor.position = _rooms.get_node(cfg.room).get_point_position(cfg.point)
+		actor.show()
+		if cfg.has('hidden'):
+			actor.hide()
+	DialogEvent.emit_signal('dialog_continued')
+	
