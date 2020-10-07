@@ -58,7 +58,6 @@ __meta__ = {
 }
 
 [node name="Panel" type="PanelContainer" parent="."]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -76,27 +75,26 @@ __meta__ = {
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 897.0
-margin_bottom = 83.0
+margin_bottom = 94.0
 
 [node name="Movement" type="VBoxContainer" parent="Panel/Tutorials"]
 visible = false
 margin_left = 358.0
-margin_top = -6.0
 margin_right = 523.0
-margin_bottom = 72.0
+margin_bottom = 78.0
 custom_constants/separation = 4
 alignment = 1
 
 [node name="RichTextLabel" type="Label" parent="Panel/Tutorials/Movement"]
-margin_right = 893.0
+margin_right = 165.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 2 )
 text = "TUTORIAL_0"
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Tutorials/Movement"]
-margin_left = 430.0
+margin_left = 66.0
 margin_top = 46.0
-margin_right = 462.0
+margin_right = 98.0
 margin_bottom = 78.0
 size_flags_horizontal = 4
 texture = ExtResource( 4 )
@@ -107,22 +105,21 @@ __meta__ = {
 [node name="Interact" type="VBoxContainer" parent="Panel/Tutorials"]
 visible = false
 margin_left = 359.0
-margin_top = -6.0
 margin_right = 522.0
-margin_bottom = 72.0
+margin_bottom = 78.0
 custom_constants/separation = 4
 alignment = 1
 
 [node name="RichTextLabel" type="Label" parent="Panel/Tutorials/Interact"]
-margin_right = 902.0
+margin_right = 163.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 2 )
 text = "TUTORIAL_1"
 
 [node name="TextureRect" type="TextureRect" parent="Panel/Tutorials/Interact"]
-margin_left = 435.0
+margin_left = 65.0
 margin_top = 46.0
-margin_right = 467.0
+margin_right = 97.0
 margin_bottom = 78.0
 size_flags_horizontal = 4
 texture = ExtResource( 6 )
