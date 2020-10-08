@@ -125,7 +125,7 @@ func stop(sound : String) -> void:
 func find_sound(sound : String) -> int:
 	var sound_index = -1
 	if not is_audio_file(sound):
-		sound = Audio_Files_Dictionary.get(sound, null)
+		sound = _find_sound_path(sound)
 	if sound != null and sound != "":
 		sound_index = sounds_playing.find(sound)
 	return sound_index
@@ -619,11 +619,16 @@ func play(sound_type : String, sound : String, from_position : float = 1.0, volu
 	var pitch = Default_Sounds_Properties[sound_type]["Pitch"] if pitch_scale < 0 else pitch_scale
 	var audiostream : AudioStreamPlayer
 	var sound_index = 0
+	var sound_dic := {}
+	var sound_idx := -1
 	
 	Audiostreams = self.get_children()
 	
 	if Audio_Files_Dictionary.has(sound):
-		sound_path = Audio_Files_Dictionary.get(sound)
+		var snd := _get_sound_path(sound)
+		sound_path = snd.path
+		sound_dic = snd.dic
+		sound_idx = snd.idx
 	elif sound.is_abs_path() and is_audio_file(sound.get_file()):
 		sound_path = sound
 	else:
@@ -667,13 +672,33 @@ func play(sound_type : String, sound : String, from_position : float = 1.0, volu
 		audiostream = Audiostreams[sound_index]
 		audiostream.set_stream(Stream)
 	
+	
 	audiostream.set_volume_db(volume)
 	audiostream.set_pitch_scale(pitch)
+	# The Perro Viejo way --------------------------------------------------
+	if sound_dic:
+		if sound_dic.has('random_volume'):
+			audiostream.volume_db += rand_range(
+				sound_dic.random_volume[0], sound_dic.random_volume[1]
+			)
+		if sound_dic.has('random_pitch'):
+			audiostream.pitch_scale += rand_range(
+				sound_dic.random_pitch[0], sound_dic.random_pitch[1]
+			)/24
+	# -------------------------------------------------- The Perro Viejo way
 	
 	
 	audiostream.play(from_position)
 	if audiostream.get_script() != null:
-		audiostream.set_sound_name(sound)
+		# The Perro Viejo way --------------------------------------------------
+		# Al tener un arreglo de posibles sonidos, hay que guardar una referencia
+		# a dicha posición pa' que luego pueda ser leída por las funciones que
+		# buscan el sonido. El formato es: nombre_del_grupo@índice_del_sonido
+		if sound_dic:
+			audiostream.set_sound_name('%s@%d' % [sound, sound_idx])
+		# -------------------------------------------------- The Perro Viejo way
+		else:
+			audiostream.set_sound_name(sound)
 	if sound_index < sounds_playing.size():
 		sounds_playing[sound_index] = sound_path
 	else:
@@ -775,3 +800,44 @@ func is_audio_file(file_name : String) -> bool:
 func is_import_file(file_name : String) -> bool:
 	return (file_name.get_extension() == "import" and
 			self.is_audio_file(file_name.get_basename()))
+
+# ▓▓▓▓ Perro Viejo ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+# Verifica si el sonido a obtener es una asignación simple o un diccionario de
+# los que definimos para tener más opciones en la reproducción de los sonidos
+func _get_sound_path(sound_name: String) -> Dictionary:
+	var response := {
+		path = '',
+		dic = {},
+		idx = -1
+	}
+
+	# ---- The Perro Viejo way -------------------------------------------------
+	if typeof(Audio_Files_Dictionary.get(sound_name)) == TYPE_DICTIONARY:
+		response.dic = Audio_Files_Dictionary.get(sound_name) as Dictionary
+		if response.dic.type == 'random':
+			var sounds: Array = response.dic.get('sounds')
+			randomize()
+			response.idx = randi() % sounds.size()
+			response.path = sounds[response.idx]
+	# ------------------------------------------------- The Perro Viejo way ----
+	else:
+		response.path = Audio_Files_Dictionary.get(sound_name)
+
+	return response
+
+# Obtiene la ruta del archivo para un sonido simple o que haga parte de un
+# diccionario definido por nosotros. El formato en el segundo caso es:
+# nombre_del_grupo@índice_del_sonido.
+func _find_sound_path(sound_name: String) -> String:
+	var response := ''
+
+	# El sonido se creo a partir de un diccionario definido por nosotros
+	if sound_name.find('@') != -1:
+		var parts := sound_name.split('@')
+		var sound_dic := Audio_Files_Dictionary.get(parts[0]) as Dictionary
+		response = sound_dic.sounds[int(parts[1])]
+	else:
+		 response = Audio_Files_Dictionary.get(sound_name) as String
+
+	return response
+# ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ Perro Viejo ▓▓▓▓

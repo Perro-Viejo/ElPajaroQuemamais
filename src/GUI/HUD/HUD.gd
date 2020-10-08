@@ -27,3 +27,9 @@ func _post_dialog_action(dialog_name: String) -> void:
 	match dialog_name:
 		'Ep1Sc3':
 			$Control/Letter.show()
+
+
+# Temporary function for testing the changes to the SoundManager ---------------
+func _on_Button_pressed():
+	SoundManager.play_se('spec_horse')
+# ------------------------------------------------------------------------------

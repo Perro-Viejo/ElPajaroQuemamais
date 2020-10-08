@@ -32,4 +32,16 @@ visible = false
 [node name="Curtain" parent="Control" instance=ExtResource( 5 )]
 visible = false
 
+[node name="Button" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -67.0
+margin_top = -10.0
+margin_right = 67.0
+margin_bottom = 10.0
+text = "Relinchaaaaaaaaaar"
+
 [node name="Tween" type="Tween" parent="."]
+[connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]
