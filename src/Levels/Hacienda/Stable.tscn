@@ -73,3 +73,7 @@ look_to = 1
 [node name="Clickable3" parent="Targets" index="2" instance=ExtResource( 7 )]
 position = Vector2( -88, 304 )
 look_to = 2
+
+[node name="AudioSpots" type="Node2D" parent="." index="8"]
+
+[node name="Node" type="Node" parent="AudioSpots" index="0"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/Game/Game.gd" type="Script" id=1]
 [ext_resource path="res://src/TitleScreen/MainMenu.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://src/GUI/OptionsMenu/OptionsMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/GUI/FadeLayer/TransitionLayer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/GUI/HTML5Focus/HTMLfocus.tscn" type="PackedScene" id=7]
-[ext_resource path="res://src/Audio/AudioManager.tscn" type="PackedScene" id=8]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -53,8 +52,6 @@ bus = "Music"
 pause_mode = 2
 volume_db = -80.0
 bus = "SFX"
-
-[node name="AudioManager" parent="." instance=ExtResource( 8 )]
 
 [node name="HTMLfocus" parent="." instance=ExtResource( 7 )]
 layer = 128

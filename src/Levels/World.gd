@@ -110,6 +110,7 @@ func _setup_set(_episode: int) -> void:
 			_actors.get_node('Lupe').show()
 			_actors.get_node('Rico').hide()
 			$Cameras/StableCamera.make_current()
+			AudioEvent.emit_signal('stop_requested', 'BG', 'Hacienda')
 			AudioEvent.emit_signal('play_requested', 'BG', 'Establo')
 		3:
 			$Cinematic.hide()
@@ -145,6 +146,7 @@ func _end_episode(dialog_name) -> void:
 				WorldEvent.emit_signal('episode_ended')
 		2:
 			if dialog_name == 'Ep2Sc1':
+				AudioEvent.emit_signal('stop_requested', 'BG', 'Establo')
 				yield($Cinematic.play_commercial(), 'completed')
 				$Cameras/StableCamera.make_current()
 				WorldEvent.emit_signal('episode_ended')
