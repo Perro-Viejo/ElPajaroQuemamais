@@ -17,11 +17,17 @@ position = Vector2( -134, -16 )
 [node name="Desk" type="Position2D" parent="Points" index="1"]
 position = Vector2( -106, 52 )
 
-[node name="Bed" type="Position2D" parent="Points" index="2"]
-position = Vector2( 64, -52 )
+[node name="BedA" type="Position2D" parent="Points" index="2"]
+position = Vector2( 94, -30 )
+
+[node name="BedB" type="Position2D" parent="Points" index="3"]
+position = Vector2( 94, 8 )
 
 [node name="Clickable" parent="Targets" index="0" instance=ExtResource( 3 )]
-modulate = Color( 0, 0, 1, 1 )
 position = Vector2( 134, -82 )
+interaction_type = "target"
+max_distance = 500.0
 trigger_dialog = "DialogTest"
 look_to = 1
+enabled = true
+disable_after_interactions = 0

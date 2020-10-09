@@ -16,7 +16,7 @@ names = {
 story = {
 1: {
 "available_nid": [  ],
-"groups": [  ],
+"groups": [ "Episodio 1" ],
 "human_readable_description": "Ana María en el estudio de su madre busca un abrecartas.",
 "name": "Ep1Sc1",
 "nodes": {
@@ -147,7 +147,7 @@ story = {
 },
 2: {
 "available_nid": [ 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
-"groups": [  ],
+"groups": [ "Episodio 1" ],
 "human_readable_description": "Ana María le pide a Quemamais que busque el abrecartas.",
 "name": "Ep1Sc2",
 "nodes": {
@@ -205,7 +205,7 @@ story = {
 },
 3: {
 "available_nid": [  ],
-"groups": [  ],
+"groups": [ "Episodio 2" ],
 "human_readable_description": "Ana María habla con Lupe en el establo acerca de la carta.",
 "name": "Ep2Sc1",
 "nodes": {
@@ -992,7 +992,7 @@ story = {
 },
 4: {
 "available_nid": [  ],
-"groups": [  ],
+"groups": [ "Episodio 1" ],
 "human_readable_description": "Quemamais abre el cajón y Ana María encuentra la carta.",
 "name": "Ep1Sc3",
 "nodes": {
@@ -1143,7 +1143,7 @@ story = {
 },
 5: {
 "available_nid": [ 9, 10, 11, 12 ],
-"groups": [  ],
+"groups": [ "Episodio 1" ],
 "human_readable_description": "Ana María reacciona al contenido de la carta para Agustina.",
 "name": "Ep1Sc4",
 "nodes": {
@@ -1279,14 +1279,14 @@ story = {
 },
 6: {
 "available_nid": [  ],
-"groups": [  ],
-"human_readable_description": "Diálogo temporal de pruebas",
+"groups": [ "", "Episodio 3" ],
+"human_readable_description": "Mama Is y Rico están en la cama después del setso.",
 "name": "Ep3Sc1",
 "nodes": {
 1: {
 "graph_offset": Vector2( 40, 60 ),
 "links": {
-0: 2
+0: 3
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
@@ -1294,37 +1294,297 @@ story = {
 "type": "line"
 },
 2: {
-"graph_offset": Vector2( 80, 220 ),
+"graph_offset": Vector2( 120, 380 ),
 "links": {
-0: 3
+0: 4
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y yo que pensaba que los muchachos como tú la tenían chiquita\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 80, 220 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La tienes bien gorda Rico\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 160, 540 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y usted tiene esa cuca como para un batallón\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 200, 700 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Bueno pero cuéntame. ¿Qué viste en el establo?\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 240, 860 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿De qué hablaron Ana María y Lupe?\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 280, 1020 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Hablar? Estaban era culiando como locos\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 320, 1180 ),
+"links": {
+0: 9
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Tenía que ser hija mía esa chiquilla!\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( 360, 1340 ),
+"links": {
+0: 10
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"jo jo jo jo jo\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( 400, 1500 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Mentira. Hablando en serio. ¡Eso puede meternos en muchos problemas!...\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( 440, 1660 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Nuestras haciendas deben unirse a como dé lugar\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( 480, 1820 ),
+"links": {
+0: 13
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y yo que quería ser el primero en abrir ese sapo\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( 520, 1980 ),
+"links": {
+0: 14
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Estaba que me la comía desde que éramos pequeños\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+14: {
+"graph_offset": Vector2( 560, 2140 ),
+"links": {
+0: 15,
+1: 16,
+2: 17
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 3,
 "text": "{
 	\"actor\": \"Player\",
 	\"action\": \"INTERACT\",
 	\"options\": [
 		{
-			\"line\": \"Te la voy a meter hasta faca\",
+			\"line\": \"Es su culpa, vieja gonorrea\",
 			\"time\": -1,
-			\"voice\": \"Rico\"
+			\"voice\": \"Rico\",
+			\"ending\": 2
 		},
 		{
-			\"line\": \"Rico, ¿estás por aquí?\",
+			\"line\": \"Seguro le gustan así todos sucios\",
 			\"time\": -1,
-			\"voice\": \"Ana María\"
+			\"voice\": \"Mama Is\",
+			\"ending\": 1
 		},
 		{
-			\"line\": \"¡Les gusta por Detroit!\",
+			\"line\": \"¡La desvirgó Lupe! ¡la desvirgó Lupe\",
 			\"time\": -1,
-			\"voice\": \"Quemamais\"
+			\"voice\": \"Quemamais\",
+			\"ending\": 3
 		}
 	]
 }",
 "type": "line"
 },
-3: {
-"graph_offset": Vector2( 120, 380 ),
+15: {
+"graph_offset": Vector2( 1000, 2000 ),
+"links": {
+0: 18
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"A mí no me eche la culpa... bobo marica\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+16: {
+"graph_offset": Vector2( 1000, 2160 ),
+"links": {
+0: 18
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Pues me la podría untar de mierda\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+17: {
+"graph_offset": Vector2( 1000, 2320 ),
+"links": {
+0: 18
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No puedo creer que hasta el pájaro lo sabe\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+18: {
+"graph_offset": Vector2( 1440, 2160 ),
+"links": {
+0: 19
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tenemos que separarlos como seya\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+19: {
+"graph_offset": Vector2( 1480, 2320 ),
+"links": {
+0: 20
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Se me hace severo caldo cuando te pones así\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+20: {
+"graph_offset": Vector2( 1520, 2480 ),
 "links": {
 
 },
@@ -1337,4 +1597,4 @@ story = {
 }
 }
 available_dids = [  ]
-groups = [  ]
+groups = [ "Episodio 1", "Episodio 2", "Episodio 3" ]

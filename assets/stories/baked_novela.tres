@@ -937,37 +937,229 @@ story = {
 "nodes": {
 1: {
 "links": {
-0: 2
+0: 3
 },
 "text": "start"
 },
 2: {
 "links": {
-0: 3
+0: 4
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y yo que pensaba que los muchachos como tú la tenían chiquita\",
+	\"emotion\": \"angry\"
+}"
+},
+3: {
+"links": {
+0: 2
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La tienes bien gorda Rico\",
+	\"emotion\": \"angry\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y usted tiene esa cuca como para un batallón\",
+	\"emotion\": \"thinking\"
+}"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Bueno pero cuéntame. ¿Qué viste en el establo?\",
+	\"emotion\": \"angry\"
+}"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿De qué hablaron Ana María y Lupe?\",
+	\"emotion\": \"angry\"
+}"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Hablar? Estaban era culiando como locos\",
+	\"emotion\": \"thinking\"
+}"
+},
+8: {
+"links": {
+0: 9
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Tenía que ser hija mía esa chiquilla!\",
+	\"emotion\": \"angry\"
+}"
+},
+9: {
+"links": {
+0: 10
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"jo jo jo jo jo\",
+	\"emotion\": \"angry\"
+}"
+},
+10: {
+"links": {
+0: 11
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Mentira. Hablando en serio. ¡Eso puede meternos en muchos problemas!...\",
+	\"emotion\": \"angry\"
+}"
+},
+11: {
+"links": {
+0: 12
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Nuestras haciendas deben unirse a como dé lugar\",
+	\"emotion\": \"angry\"
+}"
+},
+12: {
+"links": {
+0: 13
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y yo que quería ser el primero en abrir ese sapo\",
+	\"emotion\": \"thinking\"
+}"
+},
+13: {
+"links": {
+0: 14
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Estaba que me la comía desde que éramos pequeños\",
+	\"emotion\": \"thinking\"
+}"
+},
+14: {
+"links": {
+0: 15,
+1: 16,
+2: 17
 },
 "text": "{
 	\"actor\": \"Player\",
 	\"action\": \"INTERACT\",
 	\"options\": [
 		{
-			\"line\": \"Te la voy a meter hasta faca\",
+			\"line\": \"Es su culpa, vieja gonorrea\",
 			\"time\": -1,
-			\"voice\": \"Rico\"
+			\"voice\": \"Rico\",
+			\"ending\": 2
 		},
 		{
-			\"line\": \"Rico, ¿estás por aquí?\",
+			\"line\": \"Seguro le gustan así todos sucios\",
 			\"time\": -1,
-			\"voice\": \"Ana María\"
+			\"voice\": \"Mama Is\",
+			\"ending\": 1
 		},
 		{
-			\"line\": \"¡Les gusta por Detroit!\",
+			\"line\": \"¡La desvirgó Lupe! ¡la desvirgó Lupe\",
 			\"time\": -1,
-			\"voice\": \"Quemamais\"
+			\"voice\": \"Quemamais\",
+			\"ending\": 3
 		}
 	]
 }"
 },
-3: {
+15: {
+"links": {
+0: 18
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"A mí no me eche la culpa... bobo marica\",
+	\"emotion\": \"angry\"
+}"
+},
+16: {
+"links": {
+0: 18
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Pues me la podría untar de mierda\",
+	\"emotion\": \"thinking\"
+}"
+},
+17: {
+"links": {
+0: 18
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No puedo creer que hasta el pájaro lo sabe\",
+	\"emotion\": \"angry\"
+}"
+},
+18: {
+"links": {
+0: 19
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tenemos que separarlos como seya\",
+	\"emotion\": \"angry\"
+}"
+},
+19: {
+"links": {
+0: 20
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Se me hace severo caldo cuando te pones así\",
+	\"emotion\": \"angry\"
+}"
+},
+20: {
 "links": {
 
 },

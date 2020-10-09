@@ -1,16 +1,10 @@
 [remap]
 
-importer="csv_translation"
-type="Translation"
+importer="csv"
+type="TextFile"
 
 [deps]
 
-files=[ "res://assets/localization/i18n_novela.es.translation", "res://assets/localization/i18n_novela.en.translation" ]
-
 source_file="res://assets/localization/i18n_novela.csv"
-dest_files=[ "res://assets/localization/i18n_novela.es.translation", "res://assets/localization/i18n_novela.en.translation" ]
-
 [params]
 
-compress=true
-delimiter=0

@@ -89,6 +89,11 @@ func _actor_moved(actor: Actor) -> void:
 
 
 func _setup_set(_episode: int) -> void:
+	for actor in _actors.get_children():
+		actor.position = Vector2.ZERO
+		if not actor.is_current_player:
+			actor.hide()
+
 	# TODO	Que esto quede definido fuera de aquí en algún script que sirva como
 	# 		diccionario o algo así.
 	match _episode:
@@ -97,8 +102,7 @@ func _setup_set(_episode: int) -> void:
 			_actors.get_node('Player').look_to(_rooms.get_node('RoomC').get_target('Clickable2').look_to)
 			_actors.get_node('AnaMaria').position = _rooms.get_node('RoomB').get_point_position('Entrance')
 			_actors.get_node('AnaMaria').show()
-			_actors.get_node('Lupe').hide()
-			_actors.get_node('Rico').hide()
+
 			$Cameras/HouseCamera.make_current()
 			AudioEvent.emit_signal('play_requested', 'BG', 'Hacienda')
 		2:
@@ -108,22 +112,22 @@ func _setup_set(_episode: int) -> void:
 			_actors.get_node('Lupe').position = _rooms.get_node('Stable').get_point_position('Arrecha')
 			_actors.get_node('AnaMaria').show()
 			_actors.get_node('Lupe').show()
-			_actors.get_node('Rico').hide()
+
 			$Cameras/StableCamera.make_current()
 			AudioEvent.emit_signal('stop_requested', 'BG', 'Hacienda')
 			AudioEvent.emit_signal('play_requested', 'BG', 'Establo')
 		3:
 			$Cinematic.hide()
+
+			_actors.get_node('Player').position = _rooms.get_node('RoomA').get_target_position('Clickable')
+			_actors.get_node('Player').look_to(_rooms.get_node('RoomA').get_target('Clickable').look_to)
+			_actors.get_node('MamaIs').position = _rooms.get_node('RoomA').get_point_position('BedB')
+			_actors.get_node('Rico').position = _rooms.get_node('RoomA').get_point_position('BedA')
+			_actors.get_node('MamaIs').show()
+			_actors.get_node('Rico').show()
+
 			$Cameras/HouseCamera.make_current()
-			for actor in _actors.get_children():
-				actor.position = Vector2.ZERO
-				if not actor.is_current_player:
-					actor.hide()
 		_:
-			for actor in _actors.get_children():
-				actor.position = Vector2.ZERO
-				if not actor.is_current_player:
-					actor.hide()
 			$Cameras/HouseCamera.make_current()
 
 
@@ -158,7 +162,7 @@ func _load_next_episode() -> void:
 	yield(get_tree().create_timer(1.5), 'timeout')
 	_setup_set(Data.get_data(Data.EPISODE))
 	
-	if Data.get_data(Data.EPISODE) > 2:
+	if Data.get_data(Data.EPISODE) > 5:
 		if Data.endings[1] == 2:
 			HudEvent.emit_signal('ending_requested', 1)
 		elif Data.endings[2] == 2:
@@ -172,7 +176,10 @@ func _load_next_episode() -> void:
 func _setup_for_dialog(rules: Array) -> void:
 	for cfg in rules:
 		var actor: Actor = _actors.get_node(cfg.actor)
-		actor.position = _rooms.get_node(cfg.room).get_point_position(cfg.point)
+		if cfg.has('point'):
+			actor.position = _rooms.get_node(cfg.room).get_point_position(cfg.point)
+		elif cfg.has('target'):
+			actor.position = _rooms.get_node(cfg.room).get_target_position(cfg.target)
 		actor.show()
 		if cfg.has('hidden'):
 			actor.hide()

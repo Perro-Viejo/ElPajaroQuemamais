@@ -6,7 +6,7 @@
 [ext_resource path="res://src/Characters/NPC/Talk.gd" type="Script" id=7]
 [ext_resource path="res://src/Characters/NPC/Move.gd" type="Script" id=8]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [  ],
 "loop": false,
@@ -14,23 +14,23 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="SpriteFrames" id=33]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [  ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 30.0
 } ]
 
-[sub_resource type="SpriteFrames" id=64]
+[sub_resource type="SpriteFrames" id=44]
 animations = [ {
 "frames": [  ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 30.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=65]
+[sub_resource type="RectangleShape2D" id=45]
 extents = Vector2( 12, 12 )
 
 [node name="NPC" type="KinematicBody2D"]
@@ -44,14 +44,14 @@ script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Idle"]
 scale = Vector2( 4, 4 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 
 [node name="Talk" type="Node2D" parent="StateMachine"]
 script = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Talk"]
 scale = Vector2( 4, 4 )
-frames = SubResource( 33 )
+frames = SubResource( 2 )
 
 [node name="Move" type="Node2D" parent="StateMachine"]
 script = ExtResource( 8 )
@@ -60,8 +60,8 @@ fs_sfx_frames = [ 0, 7, 15, 23 ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Move"]
 scale = Vector2( 4, 4 )
-frames = SubResource( 64 )
+frames = SubResource( 44 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource( 65 )
+shape = SubResource( 45 )
