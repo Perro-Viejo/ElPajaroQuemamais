@@ -1,1 +1,23 @@
-{"Audio_Busses":{"BGM":"","BGS":"","ME":"","SE":""},"Audio_Files_Dictionary":{"spec_horse":{"random_pitch":[-12,12],"random_volume":[-12,2],"sounds":["res://assets/audio/spec_horse_01.ogg","res://assets/audio/spec_horse_02.ogg","res://assets/audio/spec_horse_03.ogg","res://assets/audio/spec_horse_04.ogg","res://assets/audio/spec_horse_06.ogg","res://assets/audio/spec_horse_07.ogg","res://assets/audio/spec_horse_08.ogg","res://assets/audio/spec_horse_09.ogg"],"type":"random"}},"DEFAULT_SOUNDS_PROPERTIES":{"BGM":{"Pitch":1,"Volume":0},"BGS":{"Pitch":1,"Volume":0},"ME":{"Pitch":1,"Volume":0},"SE":{"Pitch":1,"Volume":0}},"PREINSTANTIATE_NODES":false,"PRELOAD_RES":false}
+{
+  "Audio_Busses": { "BGM": "", "BGS": "", "ME": "", "SE": "" },
+  "Audio_Files_Dictionary": {
+    "spec_horse": {
+      "random_pitch": [-12, 12],
+      "random_volume": [-12, 2],
+      "sounds": ["res://assets/audio/spec_horse_01.ogg", "res://assets/audio/spec_horse_02.ogg", "res://assets/audio/spec_horse_03.ogg", "res://assets/audio/spec_horse_04.ogg", "res://assets/audio/spec_horse_06.ogg", "res://assets/audio/spec_horse_07.ogg", "res://assets/audio/spec_horse_08.ogg", "res://assets/audio/spec_horse_09.ogg"],
+      "type": "random"
+    },
+    "ui_hover": { "random_pitch": [-3, 5], "random_volume": [-2, 0], "sounds": ["res://assets/audio/ui_hover_01.ogg", "res://assets/audio/ui_hover_02.ogg"], "type": "random", "volume": -4 },
+    "ui_move": { "pitch": -5, "random_pitch": [-4, 8], "sounds": ["res://assets/audio/archive/ui_back.ogg"], "type": "random", "volume": -12 },
+    "ui_player_hover": { "random_pitch": [-1, 1], "sounds": ["res://assets/audio/ui_player_hover_01.ogg", "res://assets/audio/ui_player_hover_02.ogg"], "type": "random", "volume": -8 },
+    "ui_select": { "pitch": -2, "random_pitch": [-5, 8], "sounds": ["res://assets/audio/ui_select.ogg"], "type": "random", "volume": -6 },
+    "ui_title": { "sounds": ["res://assets/audio/ui_title.ogg"], "type": "random" },
+    "ui_whoosh_1": { "sounds": ["res://assets/audio/ui_whoosh.ogg"], "type": "random" },
+    "ui_whoosh_2": { "pitch": -7, "sounds": ["res://assets/audio/ui_whoosh.ogg"], "type": "random" },
+    "ui_whoosh_3": { "pitch": -10, "sounds": ["res://assets/audio/ui_whoosh.ogg"], "type": "random" },
+    "ui_write": { "random_pitch": [-5, 6], "sounds": ["res://assets/audio/ui_write.ogg"], "type": "random", "volume": -13 }
+  },
+  "DEFAULT_SOUNDS_PROPERTIES": { "BGM": { "Pitch": 1, "Volume": 0 }, "BGS": { "Pitch": 1, "Volume": 0 }, "ME": { "Pitch": 1, "Volume": 0 }, "SE": { "Pitch": 1, "Volume": 0 } },
+  "PREINSTANTIATE_NODES": false,
+  "PRELOAD_RES": false
+}

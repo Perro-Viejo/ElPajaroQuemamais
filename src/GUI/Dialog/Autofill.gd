@@ -114,7 +114,7 @@ func finish_and_hide() -> void:
 
 
 func _write_character():
-	AudioEvent.emit_signal("play_requested","UI", "write")
+	SoundManager.play_se('ui_write')
 	if text.length() < _text.length():
 		text += _text[_count]
 		_count += 1

@@ -112,7 +112,7 @@ func _on_option_hover(btn: DialogOption, hover: bool) -> void:
 	_tween_ref.start()
 	
 	if hover:
-		AudioEvent.emit_signal('play_requested', 'UI', 'move')
+		SoundManager.play_se('ui_move')
 		emit_signal('option_hovered', btn)
 		DialogEvent.emit_signal('subs_requested', btn.tr_code)
 	else:

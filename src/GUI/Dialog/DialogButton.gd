@@ -31,4 +31,4 @@ func is_in_view() -> bool:
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
 func _on_hover():
-	AudioEvent.emit_signal('play_requested', 'UI', 'player_hover')
+	SoundManager.play_se('ui_player_hover')

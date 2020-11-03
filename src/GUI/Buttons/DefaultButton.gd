@@ -16,7 +16,7 @@ func _ready() -> void:
 
 
 func _bounce() -> void:
-	AudioEvent.emit_signal("play_requested","UI", "hover")
+	SoundManager.play_se('ui_hover')
 	$Tween.interpolate_property(
 		self, 'rect_scale',
 		Vector2.DOWN, Vector2.ONE,
@@ -25,7 +25,7 @@ func _bounce() -> void:
 	$Tween.start()
 
 func _move() -> void:
-	AudioEvent.emit_signal("play_requested","UI", "move")
+	SoundManager.play_se('ui_move')
 	$Tween.interpolate_property(
 		self, 'rect_position:x',
 		_defaults.pos.x + 32.0, _defaults.pos.x,
@@ -34,4 +34,4 @@ func _move() -> void:
 	$Tween.start()
 
 func play_sfx():
-	AudioEvent.emit_signal("play_requested","UI", "select")
+	SoundManager.play_se('ui_select')

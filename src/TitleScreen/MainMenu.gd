@@ -84,8 +84,9 @@ func _on_Exit_pressed()->void:
 	GuiEvent.emit_signal('Exit')
 
 
-func _play_sfx(source, sound):
-	AudioEvent.emit_signal("play_requested", source, sound)
+func _play_sfx(key):
+	print(key)
+	SoundManager.play_se(key)
 
 
 func _start() -> void:

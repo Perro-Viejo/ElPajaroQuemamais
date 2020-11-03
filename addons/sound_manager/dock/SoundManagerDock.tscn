@@ -19,7 +19,7 @@ bg_color = Color( 0.34902, 0.372549, 0.431373, 1 )
 
 [node name="SoundManager" type="ScrollContainer"]
 anchor_bottom = 1.0
-margin_right = 357.0
+margin_right = 382.0
 scroll_horizontal_enabled = false
 script = ExtResource( 1 )
 __meta__ = {
@@ -27,35 +27,35 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 960.0
 rect_min_size = Vector2( 316, 140 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="BGMPropertiesPanel" type="VBoxContainer" parent="VBoxContainer"]
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 24.0
 hint_tooltip = "Default sound properties (volume and pitch) for BGMs"
 alignment = 1
 
 [node name="BGMPropertiesCheck" type="HBoxContainer" parent="VBoxContainer/BGMPropertiesPanel"]
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 24.0
 custom_constants/separation = 150
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/BGMPropertiesPanel/BGMPropertiesCheck"]
-margin_left = 41.0
+margin_left = 53.0
 margin_top = 5.0
-margin_right = 142.0
+margin_right = 154.0
 margin_bottom = 19.0
 rect_min_size = Vector2( 100, 14 )
 text = "BGM Properties"
 
 [node name="CheckBox" type="CheckBox" parent="VBoxContainer/BGMPropertiesPanel/BGMPropertiesCheck"]
-margin_left = 292.0
-margin_right = 316.0
+margin_left = 304.0
+margin_right = 328.0
 margin_bottom = 24.0
 
 [node name="BGMVolume" type="HBoxContainer" parent="VBoxContainer/BGMPropertiesPanel"]
@@ -136,28 +136,28 @@ icon = ExtResource( 4 )
 
 [node name="BGSPropertiesPanel" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 28.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 52.0
 hint_tooltip = "Default sound properties (volume and pitch) for BGSs"
 alignment = 1
 
 [node name="BGSPropertiesCheck" type="HBoxContainer" parent="VBoxContainer/BGSPropertiesPanel"]
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 24.0
 custom_constants/separation = 155
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/BGSPropertiesPanel/BGSPropertiesCheck"]
-margin_left = 39.0
+margin_left = 51.0
 margin_top = 5.0
-margin_right = 139.0
+margin_right = 151.0
 margin_bottom = 19.0
 rect_min_size = Vector2( 100, 14 )
 text = "BGS Properties"
 
 [node name="CheckBox" type="CheckBox" parent="VBoxContainer/BGSPropertiesPanel/BGSPropertiesCheck"]
-margin_left = 294.0
-margin_right = 318.0
+margin_left = 306.0
+margin_right = 330.0
 margin_bottom = 24.0
 
 [node name="BGSVolume" type="HBoxContainer" parent="VBoxContainer/BGSPropertiesPanel"]
@@ -238,28 +238,28 @@ icon = ExtResource( 4 )
 
 [node name="SEPropertiesPanel" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 56.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 80.0
 hint_tooltip = "Default sound properties (volume and pitch) for SFXs"
 alignment = 1
 
 [node name="SEPropertiesCheck" type="HBoxContainer" parent="VBoxContainer/SEPropertiesPanel"]
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 24.0
 custom_constants/separation = 159
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/SEPropertiesPanel/SEPropertiesCheck"]
-margin_left = 37.0
+margin_left = 49.0
 margin_top = 5.0
-margin_right = 137.0
+margin_right = 149.0
 margin_bottom = 19.0
 rect_min_size = Vector2( 100, 14 )
 text = "SE Properties"
 
 [node name="CheckBox" type="CheckBox" parent="VBoxContainer/SEPropertiesPanel/SEPropertiesCheck"]
-margin_left = 296.0
-margin_right = 320.0
+margin_left = 308.0
+margin_right = 332.0
 margin_bottom = 24.0
 
 [node name="SEVolume" type="HBoxContainer" parent="VBoxContainer/SEPropertiesPanel"]
@@ -342,28 +342,28 @@ icon = ExtResource( 4 )
 
 [node name="MEPropertiesPanel" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 84.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 108.0
 hint_tooltip = "Default sound properties (volume and pitch) for SFXs"
 alignment = 1
 
 [node name="MEPropertiesCheck" type="HBoxContainer" parent="VBoxContainer/MEPropertiesPanel"]
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 24.0
 custom_constants/separation = 153
 alignment = 1
 
 [node name="Label" type="Label" parent="VBoxContainer/MEPropertiesPanel/MEPropertiesCheck"]
-margin_left = 40.0
+margin_left = 52.0
 margin_top = 5.0
-margin_right = 140.0
+margin_right = 152.0
 margin_bottom = 19.0
 rect_min_size = Vector2( 100, 14 )
 text = "ME Properties"
 
 [node name="CheckBox" type="CheckBox" parent="VBoxContainer/MEPropertiesPanel/MEPropertiesCheck"]
-margin_left = 293.0
-margin_right = 317.0
+margin_left = 305.0
+margin_right = 329.0
 margin_bottom = 24.0
 
 [node name="MEVolume" type="HBoxContainer" parent="VBoxContainer/MEPropertiesPanel"]
@@ -546,19 +546,19 @@ placeholder_text = "Bus Name"
 
 [node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
 margin_top = 112.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 116.0
 
 [node name="AudioFilesLabel" type="Label" parent="VBoxContainer"]
 margin_top = 120.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 134.0
 text = "Audio Files"
 align = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 margin_top = 138.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 504.0
 rect_min_size = Vector2( 320, 50 )
 size_flags_vertical = 3
@@ -572,12 +572,12 @@ rect_min_size = Vector2( 320, 50 )
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
 margin_top = 508.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 512.0
 
 [node name="DictionaryLabel" type="Label" parent="VBoxContainer"]
 margin_top = 516.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 530.0
 hint_tooltip = "Audio Files Dictionary Configuration"
 mouse_filter = 0
@@ -586,7 +586,7 @@ align = 1
 
 [node name="DictionaryContainer" type="ScrollContainer" parent="VBoxContainer"]
 margin_top = 534.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 900.0
 rect_min_size = Vector2( 320, 120 )
 size_flags_horizontal = 3
@@ -601,7 +601,7 @@ custom_constants/separation = 1
 
 [node name="AddEntryButton" type="Button" parent="VBoxContainer"]
 margin_top = 904.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 924.0
 hint_tooltip = "Add a new empty entry in the dictionary"
 focus_mode = 0
@@ -610,16 +610,16 @@ text = "Add new entry"
 
 [node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
 margin_top = 928.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 932.0
 
 [node name="AdvancedOptions" type="VBoxContainer" parent="VBoxContainer"]
 margin_top = 936.0
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 960.0
 
 [node name="AdvancedPanel" type="HBoxContainer" parent="VBoxContainer/AdvancedOptions"]
-margin_right = 357.0
+margin_right = 382.0
 margin_bottom = 24.0
 custom_constants/separation = 50
 

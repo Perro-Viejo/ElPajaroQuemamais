@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=90 format=2]
 
 [ext_resource path="res://src/Audio/AudioManager.gd" type="Script" id=1]
 [ext_resource path="res://assets/audio/ui_whoosh.ogg" type="AudioStream" id=2]
@@ -88,6 +88,7 @@
 [ext_resource path="res://assets/audio/vo/vo_lupe_thinking_03.ogg" type="AudioStream" id=86]
 [ext_resource path="res://assets/audio/vo/vo_lupe_sad_02.ogg" type="AudioStream" id=87]
 [ext_resource path="res://assets/audio/vo/vo_lupe_surprised_02.ogg" type="AudioStream" id=88]
+[ext_resource path="res://assets/audio/C_Test.wav" type="AudioStream" id=89]
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource( 1 )
@@ -514,3 +515,7 @@ stream = ExtResource( 82 )
 
 [node name="vo_03" type="AudioStreamPlayer" parent="DX/lupe/worried"]
 stream = ExtResource( 83 )
+
+[node name="CTest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 89 )
+pitch_scale = 0.01

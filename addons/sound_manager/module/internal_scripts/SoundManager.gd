@@ -14,7 +14,7 @@ extends SoundManagerModule
 
 # Constants
 
-const DEBUG = true
+const DEBUG = false
 
 ###########
 
@@ -677,6 +677,10 @@ func play(sound_type : String, sound : String, from_position : float = 1.0, volu
 	audiostream.set_pitch_scale(pitch)
 	# The Perro Viejo way --------------------------------------------------
 	if sound_dic:
+		if sound_dic.has('volume'):
+			audiostream.set_volume_db(sound_dic.volume)
+		if sound_dic.has('pitch'):
+			audiostream.set_pitch_scale(1 + sound_dic.pitch/12)
 		if sound_dic.has('random_volume'):
 			audiostream.volume_db += rand_range(
 				sound_dic.random_volume[0], sound_dic.random_volume[1]
@@ -684,7 +688,7 @@ func play(sound_type : String, sound : String, from_position : float = 1.0, volu
 		if sound_dic.has('random_pitch'):
 			audiostream.pitch_scale += rand_range(
 				sound_dic.random_pitch[0], sound_dic.random_pitch[1]
-			)/24
+			)/12
 	# -------------------------------------------------- The Perro Viejo way
 	
 	

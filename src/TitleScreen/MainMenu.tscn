@@ -142,7 +142,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
-"args": [ "UI", "whoosh" ],
+"args": [ "ui_whoosh_3" ],
 "method": "_play_sfx"
 } ]
 }
@@ -290,16 +290,16 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.5, 0.85 ),
+"times": PoolRealArray( 0.05, 0.5, 0.85 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
-"args": [ "UI", "whoosh" ],
+"args": [ "ui_whoosh_1" ],
 "method": "_play_sfx"
 }, {
-"args": [ "UI", "title" ],
+"args": [ "ui_title" ],
 "method": "_play_sfx"
 }, {
-"args": [ "UI", "whoosh_2" ],
+"args": [ "ui_whoosh_2" ],
 "method": "_play_sfx"
 } ]
 }
@@ -337,11 +337,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 376.0
+margin_left = -1216.0
 margin_top = -936.0
-margin_right = 826.0
+margin_right = -766.0
 margin_bottom = 19.0
-rect_rotation = 45.0
 rect_pivot_offset = Vector2( 290, 936 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -358,7 +357,6 @@ __meta__ = {
 }
 
 [node name="GameName" type="VBoxContainer" parent="BG"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = -2
@@ -389,8 +387,7 @@ align = 2
 [node name="MainOptions" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 960.0
-margin_bottom = 959.999
+margin_bottom = -0.000793457
 custom_constants/margin_right = 16
 custom_constants/margin_top = 4
 custom_constants/margin_left = 16
@@ -452,19 +449,17 @@ text = "Salir"
 [node name="Credits" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1280.0
-margin_right = -1280.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Background" type="ColorRect" parent="BG/Credits"]
-margin_right = 1279.0
+margin_right = 1280.0
 margin_bottom = 960.0
 color = Color( 1, 0.74902, 0.505882, 1 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="BG/Credits"]
-margin_right = 1279.0
+margin_right = 1280.0
 margin_bottom = 960.0
 
 [node name="Logo" type="TextureRect" parent="BG/Credits/CreditsContainer"]
@@ -479,7 +474,7 @@ stretch_mode = 5
 
 [node name="Name" type="Label" parent="BG/Credits/CreditsContainer"]
 margin_top = 116.0
-margin_right = 1279.0
+margin_right = 1280.0
 margin_bottom = 234.0
 size_flags_horizontal = 5
 custom_styles/normal = SubResource( 2 )
@@ -494,7 +489,7 @@ __meta__ = {
 
 [node name="Devs" type="Label" parent="BG/Credits/CreditsContainer"]
 margin_top = 238.0
-margin_right = 1279.0
+margin_right = 1280.0
 margin_bottom = 844.0
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 6 )
