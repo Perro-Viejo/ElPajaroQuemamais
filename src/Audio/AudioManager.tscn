@@ -133,7 +133,6 @@ pitch_scale = 0.7
 [node name="select" type="Node2D" parent="UI"]
 script = ExtResource( 13 )
 volume = -3.0
-random_pitch = true
 min_pitch = -5.0
 max_pitch = 8.0
 

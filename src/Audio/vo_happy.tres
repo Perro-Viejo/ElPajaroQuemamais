@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Audio/AudioData.gd" type="Script" id=1]
+[ext_resource path="res://assets/audio/C_Test.wav" type="AudioStream" id=2]
+
+[resource]
+script = ExtResource( 1 )
+volume = -3.0
+clip = ExtResource( 2 )
+semitones = 25.0
+pitch = 4.23785
+randomize_pitch = false
+pitch_range = Vector2( -36, 36 )

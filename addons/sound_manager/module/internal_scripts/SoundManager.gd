@@ -51,6 +51,9 @@ var bgs_playing				: Array		= [ "BGS0" ]
 var se_playing				: Array		= [ "SE0" ]
 var me_playing				: Array		= [ "ME0" ]
 
+#Cambio proviosional de st a pitch
+var twelfthRootOfTwo: = pow(2, (1.0 / 12))
+
 var Audio_Busses : Dictionary = {
 	"BGM" : "Master",
 	"BGS" : "Master",
@@ -680,15 +683,18 @@ func play(sound_type : String, sound : String, from_position : float = 1.0, volu
 		if sound_dic.has('volume'):
 			audiostream.set_volume_db(sound_dic.volume)
 		if sound_dic.has('pitch'):
-			audiostream.set_pitch_scale(1 + sound_dic.pitch/12)
+			audiostream.set_pitch_scale(pow(twelfthRootOfTwo, sound_dic.pitch))
 		if sound_dic.has('random_volume'):
+			randomize()
 			audiostream.volume_db += rand_range(
 				sound_dic.random_volume[0], sound_dic.random_volume[1]
 			)
 		if sound_dic.has('random_pitch'):
-			audiostream.pitch_scale += rand_range(
+			randomize()
+			var new_pitch = rand_range(
 				sound_dic.random_pitch[0], sound_dic.random_pitch[1]
-			)/12
+			)
+			audiostream.set_pitch_scale(pow(twelfthRootOfTwo, new_pitch))
 	# -------------------------------------------------- The Perro Viejo way
 	
 	
