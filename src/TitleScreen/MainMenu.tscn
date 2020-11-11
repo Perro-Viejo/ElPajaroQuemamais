@@ -82,6 +82,20 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ) ]
 }
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "ui_whoosh_2" ],
+"method": "_play_sfx"
+} ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "go_to_world"
@@ -232,6 +246,20 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "ui_whoosh_1" ],
+"method": "_play_sfx"
+} ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -387,7 +415,7 @@ align = 2
 [node name="MainOptions" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = -0.000793457
+margin_bottom = -0.000854492
 custom_constants/margin_right = 16
 custom_constants/margin_top = 4
 custom_constants/margin_left = 16
@@ -459,23 +487,22 @@ margin_bottom = 960.0
 color = Color( 1, 0.74902, 0.505882, 1 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="BG/Credits"]
+margin_top = 25.0
 margin_right = 1280.0
 margin_bottom = 960.0
 
 [node name="Logo" type="TextureRect" parent="BG/Credits/CreditsContainer"]
-margin_left = 616.0
-margin_right = 663.0
-margin_bottom = 112.0
-rect_pivot_offset = Vector2( 23, 0 )
-size_flags_horizontal = 4
+margin_right = 1280.0
+margin_bottom = 99.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 4 )
-stretch_mode = 5
+stretch_mode = 6
 
 [node name="Name" type="Label" parent="BG/Credits/CreditsContainer"]
-margin_top = 116.0
+margin_top = 103.0
 margin_right = 1280.0
-margin_bottom = 234.0
+margin_bottom = 221.0
 size_flags_horizontal = 5
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = ExtResource( 7 )
@@ -488,9 +515,9 @@ __meta__ = {
 }
 
 [node name="Devs" type="Label" parent="BG/Credits/CreditsContainer"]
-margin_top = 238.0
+margin_top = 225.0
 margin_right = 1280.0
-margin_bottom = 844.0
+margin_bottom = 831.0
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0.321569, 0.964706, 1 )
@@ -512,9 +539,9 @@ __meta__ = {
 
 [node name="Back" parent="BG/Credits/CreditsContainer" instance=ExtResource( 3 )]
 margin_left = 582.0
-margin_top = 876.0
+margin_top = 857.0
 margin_right = 697.0
-margin_bottom = 932.0
+margin_bottom = 913.0
 size_flags_vertical = 6
 text = "Back"
 

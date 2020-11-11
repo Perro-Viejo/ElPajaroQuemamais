@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_mama_is_naughty_03.ogg-a94eacd89356d9b7a8a8a9b12596eb0b.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_mama_is_naughty_03.ogg"
+dest_files=[ "res://.import/vo_mama_is_naughty_03.ogg-a94eacd89356d9b7a8a8a9b12596eb0b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -157,7 +157,9 @@ func _should_speak(character_name, text, time, emotion) -> void:
 	if _its_me(character_name):
 		_in_dialog = true
 		speak(text, time)
-		AudioEvent.emit_signal('dx_requested' , character_name, emotion)
+		if emotion == '':
+			emotion = 'normal'
+		SoundManager.play_se('dx_' + character_name + '_' + emotion)
 
 
 # Hace que el actor se mueva a una coordenada dentro de la escena:

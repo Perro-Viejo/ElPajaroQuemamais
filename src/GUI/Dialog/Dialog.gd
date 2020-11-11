@@ -436,7 +436,7 @@ func _show_dialog_menu() -> void:
 	_dialog_btn.disabled = true
 
 	_dialog_mnu.show()
-	AudioEvent.emit_signal('play_requested', 'UI', 'player_op')
+	SoundManager.play_se('ui_player_open')
 	$AnimationPlayer.play('show_dialog_menu')
 	yield($AnimationPlayer, 'animation_finished')
 
@@ -444,7 +444,7 @@ func _show_dialog_menu() -> void:
 
 
 func _hide_dialog_menu(closed: bool = true) -> void:
-	AudioEvent.emit_signal('play_requested', 'UI', 'player_cl')
+	SoundManager.play_se('ui_player_close')
 	$AnimationPlayer.play('show_dialog_menu', -1.0, -1.5, true)
 
 	if closed:

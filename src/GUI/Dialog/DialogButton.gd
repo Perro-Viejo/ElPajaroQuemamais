@@ -21,7 +21,7 @@ func toggle(show := true) -> void:
 		Tween.EASE_OUT if show else Tween.EASE_IN
 	)
 	$Tween.start()
-	AudioEvent.emit_signal('play_requested', 'UI', 'player_show')
+	SoundManager.play_se('ui_player_show')
 	disabled = !show
 
 

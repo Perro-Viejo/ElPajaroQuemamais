@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_mama_is_normal_02.ogg-e82be2bd6c07d2d545149819ff10eafa.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_mama_is_normal_02.ogg"
+dest_files=[ "res://.import/vo_mama_is_normal_02.ogg-e82be2bd6c07d2d545149819ff10eafa.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_rico_thinking_03.ogg-5b55834b4ca7a52e636ea98a21f83cef.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_rico_thinking_03.ogg"
+dest_files=[ "res://.import/vo_rico_thinking_03.ogg-5b55834b4ca7a52e636ea98a21f83cef.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

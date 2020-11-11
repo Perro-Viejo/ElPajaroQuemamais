@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_rico_surprised_03.ogg-0a5ec3e8479ce4d3789282d3a3883425.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_rico_surprised_03.ogg"
+dest_files=[ "res://.import/vo_rico_surprised_03.ogg-0a5ec3e8479ce4d3789282d3a3883425.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

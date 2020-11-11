@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_mama_is_bored_03.ogg-fb271b286747391daa5530b104df70f4.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_mama_is_bored_03.ogg"
+dest_files=[ "res://.import/vo_mama_is_bored_03.ogg-fb271b286747391daa5530b104df70f4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

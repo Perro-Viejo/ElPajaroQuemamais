@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_rico_happy_02.ogg-ab358f11201e509458ae0b5381b2e463.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_rico_happy_02.ogg"
+dest_files=[ "res://.import/vo_rico_happy_02.ogg-ab358f11201e509458ae0b5381b2e463.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_rico_naughty_01.ogg-bc02517643ac4464ca78013625e29792.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_rico_naughty_01.ogg"
+dest_files=[ "res://.import/vo_rico_naughty_01.ogg-bc02517643ac4464ca78013625e29792.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
