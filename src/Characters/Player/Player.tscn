@@ -47,11 +47,13 @@ speed = 600
 dialog_name = "Quemamais"
 expressions = ExtResource( 7 )
 expressions_map = {
-"angry": 0,
+"angry": -1,
 "excited": 1,
-"normal": -1,
-"sad": 2,
-"thinking": 3,
+"happy": 0,
+"normal": 2,
+"sad": -1,
+"surprised": 3,
+"thinking": -1,
 "worried": -1
 }
 expressions_offset = Vector2( 76, 80 )

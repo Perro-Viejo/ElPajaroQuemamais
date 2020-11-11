@@ -14,10 +14,10 @@ onready var _room_b: Room = _rooms.get_node('RoomB')
 onready var _room_c: Room = _rooms.get_node('RoomC')
 onready var _stable: Room = _rooms.get_node('Stable')
 onready var _player: Player = _actors.get_node('Player')
-onready var _rico: Player = _actors.get_node('Rico')
-onready var _lupe: Player = _actors.get_node('Lupe')
-onready var _anamar: Player = _actors.get_node('AnaMaria')
-onready var _mamais: Player = _actors.get_node('MamaIs')
+onready var _rico: NPC = _actors.get_node('Rico')
+onready var _lupe: NPC = _actors.get_node('Lupe')
+onready var _anamar: NPC = _actors.get_node('AnaMaria')
+onready var _mamais: NPC = _actors.get_node('MamaIs')
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready() -> void:

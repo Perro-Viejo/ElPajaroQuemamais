@@ -365,10 +365,11 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1216.0
+margin_left = 376.0
 margin_top = -936.0
-margin_right = -766.0
+margin_right = 826.0
 margin_bottom = 19.0
+rect_rotation = 45.0
 rect_pivot_offset = Vector2( 290, 936 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -385,6 +386,7 @@ __meta__ = {
 }
 
 [node name="GameName" type="VBoxContainer" parent="BG"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = -2
@@ -415,7 +417,8 @@ align = 2
 [node name="MainOptions" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = -0.000854492
+margin_top = 924.617
+margin_bottom = 924.616
 custom_constants/margin_right = 16
 custom_constants/margin_top = 4
 custom_constants/margin_left = 16
@@ -487,22 +490,21 @@ margin_bottom = 960.0
 color = Color( 1, 0.74902, 0.505882, 1 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="BG/Credits"]
-margin_top = 25.0
 margin_right = 1280.0
 margin_bottom = 960.0
 
 [node name="Logo" type="TextureRect" parent="BG/Credits/CreditsContainer"]
 margin_right = 1280.0
-margin_bottom = 99.0
+margin_bottom = 112.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 4 )
 stretch_mode = 6
 
 [node name="Name" type="Label" parent="BG/Credits/CreditsContainer"]
-margin_top = 103.0
+margin_top = 116.0
 margin_right = 1280.0
-margin_bottom = 221.0
+margin_bottom = 234.0
 size_flags_horizontal = 5
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = ExtResource( 7 )
@@ -515,9 +517,9 @@ __meta__ = {
 }
 
 [node name="Devs" type="Label" parent="BG/Credits/CreditsContainer"]
-margin_top = 225.0
+margin_top = 238.0
 margin_right = 1280.0
-margin_bottom = 831.0
+margin_bottom = 844.0
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0.321569, 0.964706, 1 )
@@ -539,9 +541,9 @@ __meta__ = {
 
 [node name="Back" parent="BG/Credits/CreditsContainer" instance=ExtResource( 3 )]
 margin_left = 582.0
-margin_top = 857.0
+margin_top = 876.0
 margin_right = 697.0
-margin_bottom = 913.0
+margin_bottom = 932.0
 size_flags_vertical = 6
 text = "Back"
 
