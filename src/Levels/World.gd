@@ -55,7 +55,7 @@ func move_actor(actor: Actor, target: Vector2) -> void:
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos privados ▒▒▒▒
 func _move_player(clickable: Clickable) -> void:
-	AudioEvent.emit_signal("play_requested","Player","Move")
+	SoundManager.play_se('sfx_player_move')
 	_player.path = $Navigation2D.get_simple_path(
 		_player.position,
 		clickable.get_room_relative_position()
@@ -103,8 +103,8 @@ func _setup_set(_episode: int) -> void:
 		if not actor.is_current_player:
 			actor.hide()
 	$Cameras/HouseCamera.make_current()
-	AudioEvent.emit_signal('stop_requested', 'BG', 'Hacienda')
-	AudioEvent.emit_signal('stop_requested', 'BG', 'Establo')
+	SoundManager.stop('bg_hacienda')
+	SoundManager.stop('bg_stable')
 
 	# TODO	Que esto quede definido fuera de aquí en algún script que sirva como
 	# 		diccionario o algo así.
@@ -115,7 +115,7 @@ func _setup_set(_episode: int) -> void:
 			_anamar.position = _room_b.get_point_position('Entrance')
 			_anamar.show()
 
-			AudioEvent.emit_signal('play_requested', 'BG', 'Hacienda')
+			SoundManager.play_bgs('bg_hacienda')
 		2:
 			_player.position = _stable.get_target_position('Clickable')
 			_player.look_to(_stable.get_target('Clickable').look_to)
@@ -125,7 +125,8 @@ func _setup_set(_episode: int) -> void:
 			_lupe.show()
 
 			$Cameras/StableCamera.make_current()
-			AudioEvent.emit_signal('play_requested', 'BG', 'Establo')
+			SoundManager.set_volume_db(-12 ,'bg_hacienda')
+			SoundManager.play_bgs('bg_stable')
 		3:
 			$Cinematic.hide()
 
@@ -136,7 +137,7 @@ func _setup_set(_episode: int) -> void:
 			_mamais.show()
 			_rico.show()
 
-			AudioEvent.emit_signal('play_requested', 'BG', 'Hacienda')
+			SoundManager.play_bgs('bg_hacienda')
 		4:
 			_player.position = _room_a.get_target_position('Clickable')
 			_player.look_to(_room_a.get_target('Clickable').look_to)
@@ -145,7 +146,7 @@ func _setup_set(_episode: int) -> void:
 			_lupe.position = _room_b.get_point_position('Entrance')
 			_lupe.show()
 			
-			AudioEvent.emit_signal('play_requested', 'BG', 'Hacienda')
+			SoundManager.play_bgs('bg_hacienda')
 		_:
 			$Cameras/HouseCamera.make_current()
 
@@ -169,7 +170,8 @@ func _end_episode(dialog_name) -> void:
 				WorldEvent.emit_signal('episode_ended')
 		2:
 			if dialog_name == 'Ep2Sc1':
-				AudioEvent.emit_signal('stop_requested', 'BG', 'Establo')
+				SoundManager.stop('bg_stable')
+				SoundManager.stop('bg_hacienda')
 				yield($Cinematic.play_commercial(), 'completed')
 				$Cameras/StableCamera.make_current()
 				WorldEvent.emit_signal('episode_ended')

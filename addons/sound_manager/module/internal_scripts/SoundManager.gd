@@ -23,19 +23,19 @@ const DEBUG = false
 export (Dictionary) var Default_Sounds_Properties = {
 	"BGM" : {
 		"Volume" : 0,
-		"Pitch" : 1,
+		"Pitch" : 0,
 	},
 	"BGS" : {
 		"Volume" : 0,
-		"Pitch" : 1,
+		"Pitch" : 0,
 	},
 	"SE" : {
 		"Volume" : 0,
-		"Pitch" : 1,
+		"Pitch" : 0,
 	},
 	"ME" : {
 		"Volume" : 0,
-		"Pitch" : 1,
+		"Pitch" : 0,
 	},
 }
 
@@ -108,6 +108,7 @@ func play_me(music_effect : String, from_position : float = 0.0, volume_db : flo
 
 # Stops selected Sound
 func stop(sound : String) -> void:
+	sound = sound + '@0'
 	var sound_index = 0
 	if sound != "" and sound != null:
 		if self.is_playing(sound):
@@ -249,6 +250,7 @@ func get_me_pitch_scale() -> float:
 
 
 func set_volume_db(volume_db : float, sound : String) -> void:
+	sound = sound + '@0'
 	var sound_index = self.find_sound(sound)
 	if sound_index >= 0:
 		Audiostreams[sound_index].set_volume_db(volume_db)
@@ -677,21 +679,23 @@ func play(sound_type : String, sound : String, from_position : float = 1.0, volu
 	
 	
 	audiostream.set_volume_db(volume)
-	audiostream.set_pitch_scale(pitch)
+	audiostream.set_pitch_scale(pow(twelfthRootOfTwo, pitch))
 	# The Perro Viejo way --------------------------------------------------
 	if sound_dic:
 		if sound_dic.has('volume'):
+			volume = sound_dic.volume
 			audiostream.set_volume_db(sound_dic.volume)
 		if sound_dic.has('pitch'):
+			pitch = sound_dic.pitch
 			audiostream.set_pitch_scale(pow(twelfthRootOfTwo, sound_dic.pitch))
 		if sound_dic.has('random_volume'):
 			randomize()
-			audiostream.volume_db += rand_range(
+			volume += rand_range(
 				sound_dic.random_volume[0], sound_dic.random_volume[1]
 			)
 		if sound_dic.has('random_pitch'):
 			randomize()
-			var new_pitch = rand_range(
+			var new_pitch = pitch +  rand_range(
 				sound_dic.random_pitch[0], sound_dic.random_pitch[1]
 			)
 			audiostream.set_pitch_scale(pow(twelfthRootOfTwo, new_pitch))

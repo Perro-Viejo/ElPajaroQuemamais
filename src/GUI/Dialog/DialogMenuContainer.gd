@@ -30,7 +30,7 @@ func _process(delta):
 
 
 func _show_voice_icon(btn: DialogOption) -> void:
-	AudioEvent.emit_signal("play_requested", "UI", "player_change")
+	SoundManager.play_se('ui_player_change')
 	_voice_disappear_time = 0.0
 	if not _first_hover:
 		yield($Tween, 'tween_all_completed')

@@ -319,11 +319,14 @@ frames = SubResource( 33 )
 
 [node name="Move" type="Node2D" parent="StateMachine"]
 script = ExtResource( 8 )
+listen_anim_frames = true
+fs_sfx_frames = [ 0, 7, 15, 23 ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="StateMachine/Move"]
 position = Vector2( 0, -4 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 64 )
+frame = 28
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -4 )

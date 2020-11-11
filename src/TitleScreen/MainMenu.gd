@@ -53,10 +53,10 @@ func _exit_tree()->void:
 
 func _on_NewGame_pressed()->void:
 	$AnimationPlayer.play('go_to_world')
-	AudioEvent.emit_signal("play_requested","UI", "transition")
+	SoundManager.play_se('ui_transition')
 	yield($AnimationPlayer, 'animation_finished')
 	GuiEvent.emit_signal('NewGame')
-	GuiEvent.emit_signal('ChangeScene', first_level)
+	GuiEvent.emit_signal('ChangeScene', first_level)	
 
 
 func _on_Options_pressed()->void:
@@ -85,7 +85,6 @@ func _on_Exit_pressed()->void:
 
 
 func _play_sfx(key):
-	print(key)
 	SoundManager.play_se(key)
 
 

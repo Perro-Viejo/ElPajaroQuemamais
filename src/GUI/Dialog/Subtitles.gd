@@ -39,7 +39,7 @@ func put_out() -> void:
 func _play_subs_sfx(obj: Object, key: NodePath, elapsed: float, val: Object):
 	if _sub_shown and not _played and (obj as Control).rect_position.y < 905:
 		_played = true
-		AudioEvent.emit_signal('play_requested', 'UI', 'sub')
+		SoundManager.play_se('ui_subtitle')
 
 
 func _one_shot_subs(tr_code: String) -> void:
