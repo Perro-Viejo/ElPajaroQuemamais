@@ -6,6 +6,7 @@ export var episode := 1 setget _set_episode
 
 var _current_clickable: Clickable = null
 var _current_post_wait := 0
+var _available_dialogue := {}
 
 onready var _actors: Node2D = find_node('Actors')
 onready var _rooms: Node2D = find_node('Rooms')
@@ -85,9 +86,13 @@ func _actor_moved(actor: Actor) -> void:
 		$Line2D.points = PoolVector2Array()
 		if _current_clickable:
 			if not SectionEvent.in_dialog and _current_clickable.trigger_dialog:
-				DialogEvent.emit_signal(
-					'dialog_requested', _current_clickable.trigger_dialog
-				)
+				if _available_dialogue.has(_current_clickable.trigger_dialog):
+					if not _available_dialogue[_current_clickable.trigger_dialog].played:
+						DialogEvent.emit_signal(
+							'dialog_requested', _available_dialogue[_current_clickable.trigger_dialog].dialog_key
+						)
+						_available_dialogue[_current_clickable.trigger_dialog].played = true
+				
 			if _current_clickable.look_to != Clickable.DIR.NONE:
 				yield(get_tree(), 'idle_frame')
 				actor.look_to(_current_clickable.look_to)
@@ -110,6 +115,16 @@ func _setup_set(_episode: int) -> void:
 	# 		diccionario o algo así.
 	match _episode:
 		1:
+			_available_dialogue = {
+				Palito = {
+					dialog_key = 'Ep1Sc2',
+					played = false,
+				},
+				Desk = {
+					dialog_key = 'Ep1Sc3',
+					played = false,
+				},
+			}
 			_player.position = _room_c.get_target_position('Clickable2')
 			_player.look_to(_room_c.get_target('Clickable2').look_to)
 			_anamar.position = _room_b.get_point_position('Entrance')
@@ -139,6 +154,12 @@ func _setup_set(_episode: int) -> void:
 
 			SoundManager.play_bgs('bg_hacienda')
 		4:
+			_available_dialogue = {
+				Library = {
+					dialog_key = 'Ep4Sc2',
+					played = false,
+					},
+				}
 			_player.position = _room_a.get_target_position('Clickable')
 			_player.look_to(_room_a.get_target('Clickable').look_to)
 			_anamar.position = _room_b.get_point_position('Desk')

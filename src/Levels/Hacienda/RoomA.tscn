@@ -25,9 +25,5 @@ position = Vector2( 94, 8 )
 
 [node name="Clickable" parent="Targets" index="0" instance=ExtResource( 3 )]
 position = Vector2( 134, -82 )
-interaction_type = "target"
-max_distance = 500.0
 trigger_dialog = "DialogTest"
 look_to = 1
-enabled = true
-disable_after_interactions = 0
