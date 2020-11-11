@@ -43,6 +43,7 @@ func _show_curtain() -> void:
 func _show_for_dialog(tr_code: String) -> void:
 	_overlay.show()
 	$AnimationPlayer.play_backwards('show_scene')
+	SoundManager.play_se('ui_transition_circle_in')
 	yield($AnimationPlayer, 'animation_finished')
 	_episode_intro.clear()
 	_episode_intro.show()
@@ -53,5 +54,6 @@ func _show_for_dialog(tr_code: String) -> void:
 	DialogEvent.emit_signal('subs_done')
 	DialogEvent.emit_signal('dialog_continued')
 	$AnimationPlayer.play('show_scene')
+	SoundManager.play_se('ui_transition_circle_out')
 	yield($AnimationPlayer, 'animation_finished')
 	_overlay.hide()

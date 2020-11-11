@@ -87,8 +87,6 @@ func _check_collision(area: Node2D, grab: bool = false) -> void:
 func _should_speak(character_name, text, time, emotion) -> void:
 	if character.to_lower() == character_name:
 		DialogEvent.emit_signal('character_spoke', self, text, time)
-		if emotion == '':
-			emotion = 'normal'
 		SoundManager.play_se('dx_' + character_name + '_' + emotion)
 
 
