@@ -11,7 +11,9 @@ names = {
 "Ep1Sc3": 4,
 "Ep1Sc4": 5,
 "Ep2Sc1": 3,
-"Ep3Sc1": 6
+"Ep3Sc1": 6,
+"Ep4Sc1": 7,
+"Ep4Sc2": 8
 }
 story = {
 1: {
@@ -1591,6 +1593,634 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "end",
+"type": "line"
+}
+}
+},
+7: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Ana María y Lupe buscan pruebas del pasado de Antonio y Agustina.",
+"name": "Ep4Sc1",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "start",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 80, 200 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Desk\"
+	}
+}",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 120, 360 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Tiene que haber algo por aquí!\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 160, 520 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La madre que nuestros padres no murieron por casualidad el mismo día\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 200, 680 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Me quito una teta si mi mamaita no tuvo algo que ver\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 240, 840 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Uy no! con lo ricas que las tiene...\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 280, 1000 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Deja de coquetear y vigila que no venga naidens\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 320, 1160 ),
+"links": {
+0: 9
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Window\"
+	}
+}",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( 360, 1320 ),
+"links": {
+0: 10
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Si yo fuera ella, ¿dónde escondería algo importante?\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( 400, 1480 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Esa carta que me mostraste se veía muy sospechosa\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( 440, 1640 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Será que somos hermanos señorita Ana María?\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( 480, 1800 ),
+"links": {
+0: 13
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Cállese esos ojos\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( 520, 1960 ),
+"links": {
+0: 14
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"PictureB\"
+	}
+}",
+"type": "line"
+},
+14: {
+"graph_offset": Vector2( 560, 2120 ),
+"links": {
+0: 15
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No quisiera nunca más poder tenerte dentro\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+15: {
+"graph_offset": Vector2( 600, 2280 ),
+"links": {
+0: 16
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No sea pendejo... mejor siga buscando\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+16: {
+"graph_offset": Vector2( 640, 2440 ),
+"links": {
+0: 17
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Desk\"
+	}
+}",
+"type": "line"
+},
+17: {
+"graph_offset": Vector2( 680, 2600 ),
+"links": {
+0: 18
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La madre que tiene que estar aquí escondido\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+18: {
+"graph_offset": Vector2( 720, 2760 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "end",
+"type": "line"
+}
+}
+},
+8: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Quemamais encuentra el diario y Ana María lo lee en voz alta.",
+"name": "Ep4Sc2",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "start",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 80, 200 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Pájaro triplehijueputa, ¿¡otra vez jodiendo!?\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 120, 360 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Cuántas veces le he dicho que no mueva las cosas?\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 160, 520 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"COORDINATE\",
+		\"x\": 30,
+		\"y\": 0,
+		\"relative\": true,
+		\"post_wait\": 3
+	}
+}",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 200, 680 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Qué es esto... un libro de filosofía?\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 240, 840 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No imagino a mi mamá leyendo este tipo de libros\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 280, 1000 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Yo me la imagino haciendo cosas bien ricas\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 320, 1160 ),
+"links": {
+0: 9
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Qué dijistes?\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( 360, 1320 ),
+"links": {
+0: 10
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Ojo con eso hermanito... a yo no me gusta compartir la comida\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( 400, 1480 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No se enoje señorita. Era un chiste nomás.\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( 440, 1640 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Sí, cómo no. Hágase el pendejo y verá.\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( 480, 1800 ),
+"links": {
+0: 13
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No sé dónde más buscar Lupe...\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( 520, 1960 ),
+"links": {
+0: 14
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Puedo leer el libro señorita?\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+14: {
+"graph_offset": Vector2( 560, 2120 ),
+"links": {
+0: 15
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Claro papi. A mí me gustan así bien pilos\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+15: {
+"graph_offset": Vector2( 600, 2280 ),
+"links": {
+0: 16
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"PictureB\"
+	}
+}",
+"type": "line"
+},
+16: {
+"graph_offset": Vector2( 640, 2440 ),
+"links": {
+0: 17
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Aquí tienes. Podríamos leerlo juntos y discutirlo... en el establo... desnudos\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+17: {
+"graph_offset": Vector2( 680, 2600 ),
+"links": {
+0: 18
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Esa idea me gusta mucho muy señorita\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+18: {
+"graph_offset": Vector2( 720, 2760 ),
+"links": {
+0: 19
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Window\",
+		\"post_wait\": 5
+	}
+}",
+"type": "line"
+},
+19: {
+"graph_offset": Vector2( 760, 2920 ),
+"links": {
+0: 20
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Está escrito en primera persona\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+20: {
+"graph_offset": Vector2( 800, 3080 ),
+"links": {
+0: 21
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"...y con una prosa bastante particular\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+21: {
+"graph_offset": Vector2( 840, 3240 ),
+"links": {
+0: 22
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Déjame ver. Ese autor no suele escribir así\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+22: {
+"graph_offset": Vector2( 880, 3400 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"PictureA\"
+	}
+}",
 "type": "line"
 }
 }

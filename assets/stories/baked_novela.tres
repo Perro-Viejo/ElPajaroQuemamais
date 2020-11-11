@@ -1166,6 +1166,466 @@ story = {
 "text": "end"
 }
 }
+},
+7: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Desk\"
+	}
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Tiene que haber algo por aquí!\",
+	\"emotion\": \"angry\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La madre que nuestros padres no murieron por casualidad el mismo día\",
+	\"emotion\": \"angry\"
+}"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Me quito una teta si mi mamaita no tuvo algo que ver\",
+	\"emotion\": \"angry\"
+}"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Uy no! con lo ricas que las tiene...\",
+	\"emotion\": \"worried\"
+}"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Deja de coquetear y vigila que no venga naidens\",
+	\"emotion\": \"happy\"
+}"
+},
+8: {
+"links": {
+0: 9
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Window\"
+	}
+}"
+},
+9: {
+"links": {
+0: 10
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Si yo fuera ella, ¿dónde escondería algo importante?\",
+	\"emotion\": \"thinking\"
+}"
+},
+10: {
+"links": {
+0: 11
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Esa carta que me mostraste se veía muy sospechosa\",
+	\"emotion\": \"thinking\"
+}"
+},
+11: {
+"links": {
+0: 12
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Será que somos hermanos señorita Ana María?\",
+	\"emotion\": \"worried\"
+}"
+},
+12: {
+"links": {
+0: 13
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Cállese esos ojos\",
+	\"emotion\": \"worried\"
+}"
+},
+13: {
+"links": {
+0: 14
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"PictureB\"
+	}
+}"
+},
+14: {
+"links": {
+0: 15
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No quisiera nunca más poder tenerte dentro\",
+	\"emotion\": \"excited\"
+}"
+},
+15: {
+"links": {
+0: 16
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No sea pendejo... mejor siga buscando\",
+	\"emotion\": \"sad\"
+}"
+},
+16: {
+"links": {
+0: 17
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Desk\"
+	}
+}"
+},
+17: {
+"links": {
+0: 18
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"La madre que tiene que estar aquí escondido\",
+	\"emotion\": \"normal\"
+}"
+},
+18: {
+"links": {
+
+},
+"text": "end"
+}
+}
+},
+8: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Pájaro triplehijueputa, ¿¡otra vez jodiendo!?\",
+	\"emotion\": \"angry\"
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Cuántas veces le he dicho que no mueva las cosas?\",
+	\"emotion\": \"angry\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"COORDINATE\",
+		\"x\": 30,
+		\"y\": 0,
+		\"relative\": true,
+		\"post_wait\": 3
+	}
+}"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Qué es esto... un libro de filosofía?\",
+	\"emotion\": \"thinking\"
+}"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No imagino a mi mamá leyendo este tipo de libros\",
+	\"emotion\": \"thinking\"
+}"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Yo me la imagino haciendo cosas bien ricas\",
+	\"emotion\": \"excited\"
+}"
+},
+8: {
+"links": {
+0: 9
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Qué dijistes?\",
+	\"emotion\": \"angry\"
+}"
+},
+9: {
+"links": {
+0: 10
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Ojo con eso hermanito... a yo no me gusta compartir la comida\",
+	\"emotion\": \"angry\"
+}"
+},
+10: {
+"links": {
+0: 11
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No se enoje señorita. Era un chiste nomás.\",
+	\"emotion\": \"happy\"
+}"
+},
+11: {
+"links": {
+0: 12
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Sí, cómo no. Hágase el pendejo y verá.\",
+	\"emotion\": \"angry\"
+}"
+},
+12: {
+"links": {
+0: 13
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No sé dónde más buscar Lupe...\",
+	\"emotion\": \"sad\"
+}"
+},
+13: {
+"links": {
+0: 14
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Puedo leer el libro señorita?\",
+	\"emotion\": \"thinking\"
+}"
+},
+14: {
+"links": {
+0: 15
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Claro papi. A mí me gustan así bien pilos\",
+	\"emotion\": \"happy\"
+}"
+},
+15: {
+"links": {
+0: 16
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"PictureB\"
+	}
+}"
+},
+16: {
+"links": {
+0: 17
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Aquí tienes. Podríamos leerlo juntos y discutirlo... en el establo... desnudos\",
+	\"emotion\": \"excited\"
+}"
+},
+17: {
+"links": {
+0: 18
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Esa idea me gusta mucho muy señorita\",
+	\"emotion\": \"excited\"
+}"
+},
+18: {
+"links": {
+0: 19
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"Window\",
+		\"post_wait\": 5
+	}
+}"
+},
+19: {
+"links": {
+0: 20
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Está escrito en primera persona\",
+	\"emotion\": \"thinking\"
+}"
+},
+20: {
+"links": {
+0: 21
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"...y con una prosa bastante particular\",
+	\"emotion\": \"thinking\"
+}"
+},
+21: {
+"links": {
+0: 22
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Déjame ver. Ese autor no suele escribir así\",
+	\"emotion\": \"thinking\"
+}"
+},
+22: {
+"links": {
+
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomB\",
+		\"reference\": \"PictureA\"
+	}
+}"
+}
+}
 }
 }
 names = {
@@ -1174,5 +1634,7 @@ names = {
 "Ep1Sc3": 4,
 "Ep1Sc4": 5,
 "Ep2Sc1": 3,
-"Ep3Sc1": 6
+"Ep3Sc1": 6,
+"Ep4Sc1": 7,
+"Ep4Sc2": 8
 }

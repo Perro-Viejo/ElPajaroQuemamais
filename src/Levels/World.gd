@@ -9,7 +9,15 @@ var _current_post_wait := 0
 
 onready var _actors: Node2D = find_node('Actors')
 onready var _rooms: Node2D = find_node('Rooms')
+onready var _room_a: Room = _rooms.get_node('RoomA')
+onready var _room_b: Room = _rooms.get_node('RoomB')
+onready var _room_c: Room = _rooms.get_node('RoomC')
+onready var _stable: Room = _rooms.get_node('Stable')
 onready var _player: Player = _actors.get_node('Player')
+onready var _rico: Player = _actors.get_node('Rico')
+onready var _lupe: Player = _actors.get_node('Lupe')
+onready var _anamar: Player = _actors.get_node('AnaMaria')
+onready var _mamais: Player = _actors.get_node('MamaIs')
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ métodos de Godot ▒▒▒▒
 func _ready() -> void:
@@ -89,44 +97,55 @@ func _actor_moved(actor: Actor) -> void:
 
 
 func _setup_set(_episode: int) -> void:
+	# Establecer configuración por defecto para todas las escenas
 	for actor in _actors.get_children():
 		actor.position = Vector2.ZERO
 		if not actor.is_current_player:
 			actor.hide()
+	$Cameras/HouseCamera.make_current()
+	AudioEvent.emit_signal('stop_requested', 'BG', 'Hacienda')
+	AudioEvent.emit_signal('stop_requested', 'BG', 'Establo')
 
 	# TODO	Que esto quede definido fuera de aquí en algún script que sirva como
 	# 		diccionario o algo así.
 	match _episode:
 		1:
-			_actors.get_node('Player').position = _rooms.get_node('RoomC').get_target_position('Clickable2')
-			_actors.get_node('Player').look_to(_rooms.get_node('RoomC').get_target('Clickable2').look_to)
-			_actors.get_node('AnaMaria').position = _rooms.get_node('RoomB').get_point_position('Entrance')
-			_actors.get_node('AnaMaria').show()
+			_player.position = _room_c.get_target_position('Clickable2')
+			_player.look_to(_room_c.get_target('Clickable2').look_to)
+			_anamar.position = _room_b.get_point_position('Entrance')
+			_anamar.show()
 
-			$Cameras/HouseCamera.make_current()
 			AudioEvent.emit_signal('play_requested', 'BG', 'Hacienda')
 		2:
-			_actors.get_node('Player').position = _rooms.get_node('Stable').get_target_position('Clickable')
-			_actors.get_node('Player').look_to(_rooms.get_node('Stable').get_target('Clickable').look_to)
-			_actors.get_node('AnaMaria').position = _rooms.get_node('Stable').get_point_position('Outside')
-			_actors.get_node('Lupe').position = _rooms.get_node('Stable').get_point_position('Arrecha')
-			_actors.get_node('AnaMaria').show()
-			_actors.get_node('Lupe').show()
+			_player.position = _stable.get_target_position('Clickable')
+			_player.look_to(_stable.get_target('Clickable').look_to)
+			_anamar.position = _stable.get_point_position('Outside')
+			_lupe.position = _stable.get_point_position('Arrecha')
+			_anamar.show()
+			_lupe.show()
 
 			$Cameras/StableCamera.make_current()
-			AudioEvent.emit_signal('stop_requested', 'BG', 'Hacienda')
 			AudioEvent.emit_signal('play_requested', 'BG', 'Establo')
 		3:
 			$Cinematic.hide()
 
-			_actors.get_node('Player').position = _rooms.get_node('RoomA').get_target_position('Clickable')
-			_actors.get_node('Player').look_to(_rooms.get_node('RoomA').get_target('Clickable').look_to)
-			_actors.get_node('MamaIs').position = _rooms.get_node('RoomA').get_point_position('BedB')
-			_actors.get_node('Rico').position = _rooms.get_node('RoomA').get_point_position('BedA')
-			_actors.get_node('MamaIs').show()
-			_actors.get_node('Rico').show()
+			_player.position = _room_a.get_target_position('Clickable')
+			_player.look_to(_room_a.get_target('Clickable').look_to)
+			_mamais.position = _room_a.get_point_position('BedB')
+			_rico.position = _room_a.get_point_position('BedA')
+			_mamais.show()
+			_rico.show()
 
-			$Cameras/HouseCamera.make_current()
+			AudioEvent.emit_signal('play_requested', 'BG', 'Hacienda')
+		4:
+			_player.position = _room_a.get_target_position('Clickable')
+			_player.look_to(_room_a.get_target('Clickable').look_to)
+			_anamar.position = _room_b.get_point_position('Desk')
+			_anamar.show()
+			_lupe.position = _room_b.get_point_position('Entrance')
+			_lupe.show()
+			
+			AudioEvent.emit_signal('play_requested', 'BG', 'Hacienda')
 		_:
 			$Cameras/HouseCamera.make_current()
 
