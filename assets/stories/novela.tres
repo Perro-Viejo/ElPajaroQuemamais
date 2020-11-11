@@ -13,7 +13,8 @@ names = {
 "Ep2Sc1": 3,
 "Ep3Sc1": 6,
 "Ep4Sc1": 7,
-"Ep4Sc2": 8
+"Ep4Sc2": 8,
+"Ep4Sc3": 9
 }
 story = {
 1: {
@@ -1880,7 +1881,7 @@ story = {
 8: {
 "available_nid": [  ],
 "groups": [  ],
-"human_readable_description": "Quemamais encuentra el diario y Ana María lo lee en voz alta.",
+"human_readable_description": "Quemamais encuentra el diario y Ana María y Lupe lo leen en voz alta.",
 "name": "Ep4Sc2",
 "nodes": {
 1: {
@@ -2208,7 +2209,7 @@ story = {
 22: {
 "graph_offset": Vector2( 880, 3400 ),
 "links": {
-
+0: 23
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
@@ -2221,6 +2222,134 @@ story = {
 		\"reference\": \"PictureA\"
 	}
 }",
+"type": "line"
+},
+23: {
+"graph_offset": Vector2( 920, 3560 ),
+"links": {
+0: 24
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Grandísimo pendejo, este es el diario de Agustina!\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+24: {
+"graph_offset": Vector2( 960, 3720 ),
+"links": {
+0: 25
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Lupe, aquí debe estar todo!\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+25: {
+"graph_offset": Vector2( 1000, 3880 ),
+"links": {
+0: 26
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tenemos que leerla en voz alta\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+26: {
+"graph_offset": Vector2( 1040, 4040 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "end",
+"type": "line"
+}
+}
+},
+9: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Ana María y Lupe reaccionan al contenido de la carta.",
+"name": "Ep4Sc3",
+"nodes": {
+1: {
+"graph_offset": Vector2( 200, 0 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "start",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 240, 160 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡No somos hermanos, Lupe!\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 280, 320 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Vamos al establo a celebrarlo!\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 320, 480 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tengo un amigo que se emociona cuando te ve entre la paja\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 360, 640 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "end",
 "type": "line"
 }
 }

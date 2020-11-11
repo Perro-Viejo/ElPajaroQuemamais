@@ -6,7 +6,7 @@
 [ext_resource path="res://src/GUI/Letter/Letter.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
-resource_name = "show_letter"
+resource_name = "show"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Overlay:self_modulate")
 tracks/0/interp = 2
@@ -61,7 +61,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/show_letter = SubResource( 1 )
+anims/show = SubResource( 1 )
 
 [node name="Overlay" type="ColorRect" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )

@@ -4,12 +4,7 @@ var _spanish_text := ''
 var _english_text := ''
 var _in_spanish := true
 
-func _ready() -> void:
-#	_spanish_text = tr($TextWrapper/Label.text)
-#	TranslationServer.set_locale('en')
-#	_english_text = tr($TextWrapper/Label.text)
-#	TranslationServer.set_locale('es')
-	
+func _ready() -> void:	
 	self.connect('visibility_changed', self, '_play_animation')
 	$Overlay.connect('gui_input', self, '_on_gui_input')
 	$EnglishButton.connect('pressed', self, '_toggle_language')
@@ -27,7 +22,7 @@ func _on_gui_input(event: InputEvent) -> void:
 		and mouse_event.button_index == BUTTON_LEFT \
 		and mouse_event.pressed:
 			TranslationServer.set_locale('es')
-			$AnimationPlayer.play('show_letter', -1.0, -2.0, true)
+			$AnimationPlayer.play('show', -1.0, -2.0, true)
 			SoundManager.play_se('ui_popup_close')
 			yield($AnimationPlayer, 'animation_finished')
 			hide()
@@ -35,7 +30,7 @@ func _on_gui_input(event: InputEvent) -> void:
 
 func _play_animation() -> void:
 	if visible:
-		$AnimationPlayer.play('show_letter')
+		$AnimationPlayer.play('show')
 		SoundManager.play_se('ui_popup_open')
 	else:
-		DialogEvent.emit_signal('dialog_requested', 'Ep1Sc4')
+		DialogEvent.emit_signal('dialog_requested', 'Ep4Sc3')

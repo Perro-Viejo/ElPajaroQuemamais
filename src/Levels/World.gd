@@ -205,4 +205,3 @@ func _setup_for_dialog(rules: Array) -> void:
 		if cfg.has('hidden'):
 			actor.hide()
 	DialogEvent.emit_signal('dialog_continued')
-	
