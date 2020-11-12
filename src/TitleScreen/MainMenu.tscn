@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/TitleScreen/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_72.tres" type="DynamicFont" id=2]
@@ -21,6 +21,81 @@ content_margin_top = 2.0
 content_margin_bottom = 2.0
 
 [sub_resource type="Animation" id=4]
+resource_name = "SETUP"
+length = 0.001
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG/MainOptions:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/GameName:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 0.5 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Bg:rect_position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 0.5 ),
+"update": 0,
+"values": [ Vector2( 1656, 24 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("BG/Bg:rect_rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 45, -0.25, 0, 0.0750337, -127.5 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BG/Bg2:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BG/Credits:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1280, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("BG/Credits:visible")
@@ -97,8 +172,7 @@ tracks/5/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "go_to_world"
+[sub_resource type="Animation" id=6]
 length = 3.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("BG/MainOptions:rect_position")
@@ -185,7 +259,7 @@ tracks/6/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("BG/Credits:visible")
@@ -262,8 +336,8 @@ tracks/5/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=7]
-length = 1.5
+[sub_resource type="Animation" id=8]
+length = 5.0
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("BG/MainOptions:rect_position")
@@ -272,10 +346,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.7, 1.4 ),
-"transitions": PoolRealArray( 0.241484, 1 ),
+"times": PoolRealArray( 0, 4.1, 4.8 ),
+"transitions": PoolRealArray( 0.241484, 0.241484, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 960 ), Vector2( 0, 0 ) ]
+"values": [ Vector2( 0, 960 ), Vector2( 0, 960 ), Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("BG/GameName:modulate")
@@ -284,10 +358,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.4, 0.9 ),
-"transitions": PoolRealArray( 0.5, 0.5, 1 ),
+"times": PoolRealArray( 0, 1.05, 2.6, 3.1 ),
+"transitions": PoolRealArray( 0.5, 0.5, 0.5, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("BG/Bg:rect_position")
@@ -296,10 +370,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 0.5, 1 ),
+"times": PoolRealArray( 0, 1.05, 1.6 ),
+"transitions": PoolRealArray( 0.5, 0.5, 1 ),
 "update": 0,
-"values": [ Vector2( 1656, 24 ), Vector2( 64, 24 ) ]
+"values": [ Vector2( 1656, 24 ), Vector2( 1656, 24 ), Vector2( 64, 24 ) ]
 }
 tracks/3/type = "bezier"
 tracks/3/path = NodePath("BG/Bg:rect_rotation")
@@ -308,8 +382,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"points": PoolRealArray( 45, -0.25, 0, 0.0750337, -127.5, 0, -0.072013, 126.5, 0.0703587, 32.5 ),
-"times": PoolRealArray( 0, 0.4 )
+"points": PoolRealArray( 45, -0.25, 0, 0.37, -1.44141, 45, -0.25, 0, 0.17, -204.654, 0, -0.22, 209.447, 0.0703587, 32.5 ),
+"times": PoolRealArray( 0, 1.05, 1.6 )
 }
 tracks/4/type = "method"
 tracks/4/path = NodePath(".")
@@ -318,7 +392,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0.05, 0.5, 0.85 ),
+"times": PoolRealArray( 1.1, 2.6, 4.25 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "values": [ {
 "args": [ "ui_whoosh_1" ],
@@ -338,10 +412,10 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 1.05 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [node name="MainMenu" type="CanvasLayer"]
@@ -367,7 +441,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 376.0
 margin_top = -936.0
-margin_right = 826.0
+margin_right = 826.002
 margin_bottom = 19.0
 rect_rotation = 45.0
 rect_pivot_offset = Vector2( 290, 936 )
@@ -417,8 +491,8 @@ align = 2
 [node name="MainOptions" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 924.617
-margin_bottom = 924.616
+margin_top = 960.0
+margin_bottom = 960.0
 custom_constants/margin_right = 16
 custom_constants/margin_top = 4
 custom_constants/margin_left = 16
@@ -480,21 +554,23 @@ text = "Salir"
 [node name="Credits" type="MarginContainer" parent="BG"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -1280.0
+margin_right = -1280.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Background" type="ColorRect" parent="BG/Credits"]
-margin_right = 1280.0
+margin_right = 1279.0
 margin_bottom = 960.0
 color = Color( 1, 0.74902, 0.505882, 1 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="BG/Credits"]
-margin_right = 1280.0
+margin_right = 1279.0
 margin_bottom = 960.0
 
 [node name="Logo" type="TextureRect" parent="BG/Credits/CreditsContainer"]
-margin_right = 1280.0
+margin_right = 1279.0
 margin_bottom = 112.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -503,7 +579,7 @@ stretch_mode = 6
 
 [node name="Name" type="Label" parent="BG/Credits/CreditsContainer"]
 margin_top = 116.0
-margin_right = 1280.0
+margin_right = 1279.0
 margin_bottom = 234.0
 size_flags_horizontal = 5
 custom_styles/normal = SubResource( 2 )
@@ -518,7 +594,7 @@ __meta__ = {
 
 [node name="Devs" type="Label" parent="BG/Credits/CreditsContainer"]
 margin_top = 238.0
-margin_right = 1280.0
+margin_right = 1279.0
 margin_bottom = 844.0
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 6 )
@@ -548,10 +624,11 @@ size_flags_vertical = 6
 text = "Back"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/credits_exit = SubResource( 4 )
-anims/go_to_world = SubResource( 5 )
-anims/show_credits = SubResource( 6 )
-anims/show_first_time = SubResource( 7 )
+anims/SETUP = SubResource( 4 )
+anims/credits_exit = SubResource( 5 )
+anims/go_to_world = SubResource( 6 )
+anims/show_credits = SubResource( 7 )
+anims/show_first_time = SubResource( 8 )
 
 [node name="Tween" type="Tween" parent="."]
 
