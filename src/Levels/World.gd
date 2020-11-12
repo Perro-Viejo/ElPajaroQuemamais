@@ -196,6 +196,12 @@ func _end_episode(dialog_name) -> void:
 				yield($Cinematic.play_commercial(), 'completed')
 				$Cameras/StableCamera.make_current()
 				WorldEvent.emit_signal('episode_ended')
+		3: 
+			if dialog_name == 'Ep3Sc1':
+				WorldEvent.emit_signal('episode_ended')
+		4: 
+			if dialog_name == 'Ep4Sc3':
+				WorldEvent.emit_signal('episode_ended')
 
 
 func _load_next_episode() -> void:
