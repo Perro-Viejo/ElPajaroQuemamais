@@ -168,6 +168,19 @@ func _setup_set(_episode: int) -> void:
 			_lupe.show()
 			
 			SoundManager.play_bgs('bg_hacienda')
+		5:
+			_player.position = _room_c.get_target_position('LiquorPlatform')
+			_player.look_to(_room_c.get_target('LiquorPlatform').look_to)
+			_mamais.position = _room_c.get_point_position('LiquorA')
+			_mamais.show()
+			_rico.position = _room_c.get_point_position('LiquorB')
+			_rico.show()
+			_anamar.position = _room_c.get_point_position('Sofa1')
+			_anamar.show()
+			_lupe.position = _room_c.get_point_position('Corner1')
+			_lupe.show()
+			
+			SoundManager.play_bgs('bg_hacienda')
 		_:
 			$Cameras/HouseCamera.make_current()
 

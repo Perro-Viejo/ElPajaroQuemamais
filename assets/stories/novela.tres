@@ -14,7 +14,8 @@ names = {
 "Ep3Sc1": 6,
 "Ep4Sc1": 7,
 "Ep4Sc2": 8,
-"Ep4Sc3": 9
+"Ep4Sc3": 9,
+"Ep5Sc1": 10
 }
 story = {
 1: {
@@ -2350,6 +2351,435 @@ story = {
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "end",
+"type": "line"
+}
+}
+},
+10: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "Lupe escucha la conversación definitiva entre Rico y Mama Is.",
+"name": "Ep5Sc1",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "start",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 80, 200 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Queridos!\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 120, 360 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Muchas gracias a todos por acompañarnos el día de hoy\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 160, 520 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡En el cumpleaños de nuestro querido Rico!\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 200, 680 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Él tiene un anuncio mucho muy importante por hacer\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 240, 840 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Adelante querido\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 280, 1000 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Muchas gracias Isabela\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 320, 1160 ),
+"links": {
+0: 9
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomC\",
+		\"reference\": \"Center\"
+	}
+}",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( 360, 1320 ),
+"links": {
+0: 10
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Desde que era tan solo un niño, he soñado con este día\",
+	\"emotion\": \"thinking\"
+}",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( 400, 1480 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Frente a todos ustedes. Amigos, amigas, conocidos, conocidas, sirvientas, sirvientos...\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( 440, 1640 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"...animales, muebles, luces, paredes, plantitas, roquitas, baldositas...\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( 480, 1800 ),
+"links": {
+0: 13
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"...estrellitas, nubecitas, el sol, la luna y papito Dios\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( 520, 1960 ),
+"links": {
+0: 14
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Quiero que sepan que desde que era apenas un feto he amado a Ana María\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+14: {
+"graph_offset": Vector2( 560, 2120 ),
+"links": {
+0: 15
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Sin importar sus problemas de flatulencia y estreñimiento\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+15: {
+"graph_offset": Vector2( 600, 2280 ),
+"links": {
+0: 16
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y por eso quiero pedirle que se case conmigo\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+16: {
+"graph_offset": Vector2( 640, 2440 ),
+"links": {
+0: 17
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Ana María, ¿me darías el honor de ser tu esposo y desvirgar ese sapo santo?\",
+	\"emotion\": \"excited\"
+}",
+"type": "line"
+},
+17: {
+"graph_offset": Vector2( 680, 2600 ),
+"links": {
+0: 18
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Nooooo papi, prefiero que me empalen antes de casarme contigo\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+18: {
+"graph_offset": Vector2( 720, 2760 ),
+"links": {
+0: 19
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Qué son esas palabras señorita?\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+19: {
+"graph_offset": Vector2( 760, 2920 ),
+"links": {
+0: 20
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomC\",
+		\"reference\": \"Corner2\"
+	}
+}",
+"type": "line"
+},
+20: {
+"graph_offset": Vector2( 800, 3080 ),
+"links": {
+0: 21
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Usted cállese señora mamá!\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+21: {
+"graph_offset": Vector2( 840, 3240 ),
+"links": {
+0: 22
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Mi corazón le pertenece a Lupe... y también mi cuerpo\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+22: {
+"graph_offset": Vector2( 880, 3400 ),
+"links": {
+0: 23
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No puedo creer que digas eso, Ana María de la Cruz\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+23: {
+"graph_offset": Vector2( 920, 3560 ),
+"links": {
+0: 24
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tú eres una muchacha de la alta sociedad\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+24: {
+"graph_offset": Vector2( 960, 3720 ),
+"links": {
+0: 25
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No es de Dios que te juntes con la chusma\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+25: {
+"graph_offset": Vector2( 1000, 3880 ),
+"links": {
+0: 26
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Seguro que huele a jabón Rey y come con la boca abierta, como un marrano\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+26: {
+"graph_offset": Vector2( 1040, 4040 ),
+"links": {
+0: 27
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No me dejas otra alternativa que contarte una verdad que había preferido ocultarte\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+27: {
+"graph_offset": Vector2( 1080, 4200 ),
+"links": {
+0: 28
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Algo que por poco nos destruye\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+28: {
+"graph_offset": Vector2( 1120, 4360 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Qué, que mi papaito estaba enamorado de Agustina la sirvienta, la mamá de Lupe?\",
+	\"emotion\": \"thinking\"
+}",
 "type": "line"
 }
 }

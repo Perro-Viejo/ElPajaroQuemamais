@@ -1714,6 +1714,319 @@ story = {
 "text": "end"
 }
 }
+},
+10: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Queridos!\",
+	\"emotion\": \"happy\"
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Muchas gracias a todos por acompañarnos el día de hoy\",
+	\"emotion\": \"normal\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡En el cumpleaños de nuestro querido Rico!\",
+	\"emotion\": \"happy\"
+}"
+},
+5: {
+"links": {
+0: 6
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Él tiene un anuncio mucho muy importante por hacer\",
+	\"emotion\": \"excited\"
+}"
+},
+6: {
+"links": {
+0: 7
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Adelante querido\",
+	\"emotion\": \"happy\"
+}"
+},
+7: {
+"links": {
+0: 8
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Muchas gracias Isabela\",
+	\"emotion\": \"happy\"
+}"
+},
+8: {
+"links": {
+0: 9
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomC\",
+		\"reference\": \"Center\"
+	}
+}"
+},
+9: {
+"links": {
+0: 10
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Desde que era tan solo un niño, he soñado con este día\",
+	\"emotion\": \"thinking\"
+}"
+},
+10: {
+"links": {
+0: 11
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Frente a todos ustedes. Amigos, amigas, conocidos, conocidas, sirvientas, sirvientos...\",
+	\"emotion\": \"normal\"
+}"
+},
+11: {
+"links": {
+0: 12
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"...animales, muebles, luces, paredes, plantitas, roquitas, baldositas...\",
+	\"emotion\": \"normal\"
+}"
+},
+12: {
+"links": {
+0: 13
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"...estrellitas, nubecitas, el sol, la luna y papito Dios\",
+	\"emotion\": \"normal\"
+}"
+},
+13: {
+"links": {
+0: 14
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Quiero que sepan que desde que era apenas un feto he amado a Ana María\",
+	\"emotion\": \"happy\"
+}"
+},
+14: {
+"links": {
+0: 15
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Sin importar sus problemas de flatulencia y estreñimiento\",
+	\"emotion\": \"sad\"
+}"
+},
+15: {
+"links": {
+0: 16
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y por eso quiero pedirle que se case conmigo\",
+	\"emotion\": \"happy\"
+}"
+},
+16: {
+"links": {
+0: 17
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Ana María, ¿me darías el honor de ser tu esposo y desvirgar ese sapo santo?\",
+	\"emotion\": \"excited\"
+}"
+},
+17: {
+"links": {
+0: 18
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Nooooo papi, prefiero que me empalen antes de casarme contigo\",
+	\"emotion\": \"angry\"
+}"
+},
+18: {
+"links": {
+0: 19
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Qué son esas palabras señorita?\",
+	\"emotion\": \"angry\"
+}"
+},
+19: {
+"links": {
+0: 20
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomC\",
+		\"reference\": \"Corner2\"
+	}
+}"
+},
+20: {
+"links": {
+0: 21
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Usted cállese señora mamá!\",
+	\"emotion\": \"angry\"
+}"
+},
+21: {
+"links": {
+0: 22
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Mi corazón le pertenece a Lupe... y también mi cuerpo\",
+	\"emotion\": \"happy\"
+}"
+},
+22: {
+"links": {
+0: 23
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No puedo creer que digas eso, Ana María de la Cruz\",
+	\"emotion\": \"sad\"
+}"
+},
+23: {
+"links": {
+0: 24
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tú eres una muchacha de la alta sociedad\",
+	\"emotion\": \"angry\"
+}"
+},
+24: {
+"links": {
+0: 25
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No es de Dios que te juntes con la chusma\",
+	\"emotion\": \"normal\"
+}"
+},
+25: {
+"links": {
+0: 26
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Seguro que huele a jabón Rey y come con la boca abierta, como un marrano\",
+	\"emotion\": \"sad\"
+}"
+},
+26: {
+"links": {
+0: 27
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"No me dejas otra alternativa que contarte una verdad que había preferido ocultarte\",
+	\"emotion\": \"normal\"
+}"
+},
+27: {
+"links": {
+0: 28
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Algo que por poco nos destruye\",
+	\"emotion\": \"sad\"
+}"
+},
+28: {
+"links": {
+
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿Qué, que mi papaito estaba enamorado de Agustina la sirvienta, la mamá de Lupe?\",
+	\"emotion\": \"thinking\"
+}"
+}
+}
 }
 }
 names = {
@@ -1725,5 +2038,6 @@ names = {
 "Ep3Sc1": 6,
 "Ep4Sc1": 7,
 "Ep4Sc2": 8,
-"Ep4Sc3": 9
+"Ep4Sc3": 9,
+"Ep5Sc1": 10
 }
