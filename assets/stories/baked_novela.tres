@@ -2017,14 +2017,268 @@ story = {
 },
 28: {
 "links": {
-
+0: 29
 },
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¿Qué, que mi papaito estaba enamorado de Agustina la sirvienta, la mamá de Lupe?\",
+	\"line\": \"¿Qué? ¿que mi cucho estaba enamorado de Agustina la sirvienta, la mamá de Lupe?\",
 	\"emotion\": \"thinking\"
 }"
+},
+29: {
+"links": {
+0: 30
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Entonces ya sabrás que Lupe es tu hermano!\",
+	\"emotion\": \"angry\"
+}"
+},
+30: {
+"links": {
+0: 31
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Ja ja ja ja! Vieja pendeja. Lupe y yo no somos hermanos.\",
+	\"emotion\": \"happy\"
+}"
+},
+31: {
+"links": {
+0: 32
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Encontramos el diario de Agustina oculto entre tus libracos de finanzas y administración\",
+	\"emotion\": \"happy\"
+}"
+},
+32: {
+"links": {
+0: 33
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tengo una idea. ¿Qué tal si nos cuentas ¡cómo es que mi cucho y Agustina murieron el mismo día!?\",
+	\"emotion\": \"angry\"
+}"
+},
+33: {
+"links": {
+0: 34
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Porque la madre que eso no fue casualidad\",
+	\"emotion\": \"angry\"
+}"
+},
+34: {
+"links": {
+0: 35
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Calmación Ana María, amor mío. Calmación.\",
+	\"emotion\": \"worried\"
+}"
+},
+35: {
+"links": {
+0: 36
+},
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Mama Is sólo se preocupa por ti. Lupe te ha estado metiendo ideas raras en la cabeza.\",
+	\"emotion\": \"worried\"
+}"
+},
+36: {
+"links": {
+0: 37
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Oiga oiga! Le he metido varias cosas, pero ideas ¡jamás!\",
+	\"emotion\": \"angry\"
+}"
+},
+37: {
+"links": {
+0: 38
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Déjalos Rico, no saben de lo que hablan\",
+	\"emotion\": \"normal\"
+}"
+},
+38: {
+"links": {
+0: 39
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Yo sólo hice lo necesario para mantener a esta familia unida\",
+	\"emotion\": \"sad\"
+}"
+},
+39: {
+"links": {
+0: 40
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y la reputación de la familia De La Cruz\",
+	\"emotion\": \"happy\"
+}"
+},
+40: {
+"links": {
+0: 41
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿La reputación de la familia? ¿eso es todo lo que te importa?\",
+	\"emotion\": \"angry\"
+}"
+},
+41: {
+"links": {
+0: 42
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tú mataste a mi papá Antonio y a Agustina\",
+	\"emotion\": \"angry\"
+}"
+},
+42: {
+"links": {
+0: 43
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡JO JO JO JO JO JO JO JO JO JO!\",
+	\"emotion\": \"happy\"
+}"
+},
+43: {
+"links": {
+0: 44
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Está bien, lo acepto!\",
+	\"emotion\": \"happy\"
+}"
+},
+44: {
+"links": {
+0: 45
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Lo hice porque iban a destruir la hacienda y esta familia\",
+	\"emotion\": \"normal\"
+}"
+},
+45: {
+"links": {
+0: 46
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Huyendo como dos adolescentes enamorados\",
+	\"emotion\": \"normal\"
+}"
+},
+46: {
+"links": {
+0: 47
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tu padre no fue más que un tonto, pero eso ya está en el pasado\",
+	\"emotion\": \"normal\"
+}"
+},
+47: {
+"links": {
+0: 48
+},
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tu futuro y el de la hacienda son uno: Rico\",
+	\"emotion\": \"happy\"
+}"
+},
+48: {
+"links": {
+0: 49
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Vieja hijueputa! no te perdonaré jamás por esto\",
+	\"emotion\": \"angry\"
+}"
+},
+49: {
+"links": {
+0: 50
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomC\",
+		\"reference\": \"Outside\"
+	}
+}"
+},
+50: {
+"links": {
+0: 51
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomC\",
+		\"reference\": \"Outside\"
+	}
+}"
+},
+51: {
+"links": {
+
+},
+"text": "end"
 }
 }
 }

@@ -2372,7 +2372,7 @@ story = {
 "type": "line"
 },
 2: {
-"graph_offset": Vector2( 80, 200 ),
+"graph_offset": Vector2( 40, 200 ),
 "links": {
 0: 3
 },
@@ -2387,7 +2387,7 @@ story = {
 "type": "line"
 },
 3: {
-"graph_offset": Vector2( 120, 360 ),
+"graph_offset": Vector2( 40, 360 ),
 "links": {
 0: 4
 },
@@ -2402,7 +2402,7 @@ story = {
 "type": "line"
 },
 4: {
-"graph_offset": Vector2( 160, 520 ),
+"graph_offset": Vector2( 40, 520 ),
 "links": {
 0: 5
 },
@@ -2417,7 +2417,7 @@ story = {
 "type": "line"
 },
 5: {
-"graph_offset": Vector2( 200, 680 ),
+"graph_offset": Vector2( 40, 680 ),
 "links": {
 0: 6
 },
@@ -2432,7 +2432,7 @@ story = {
 "type": "line"
 },
 6: {
-"graph_offset": Vector2( 240, 840 ),
+"graph_offset": Vector2( 40, 840 ),
 "links": {
 0: 7
 },
@@ -2447,7 +2447,7 @@ story = {
 "type": "line"
 },
 7: {
-"graph_offset": Vector2( 280, 1000 ),
+"graph_offset": Vector2( 40, 1000 ),
 "links": {
 0: 8
 },
@@ -2462,7 +2462,7 @@ story = {
 "type": "line"
 },
 8: {
-"graph_offset": Vector2( 320, 1160 ),
+"graph_offset": Vector2( 40, 1160 ),
 "links": {
 0: 9
 },
@@ -2480,7 +2480,7 @@ story = {
 "type": "line"
 },
 9: {
-"graph_offset": Vector2( 360, 1320 ),
+"graph_offset": Vector2( 40, 1320 ),
 "links": {
 0: 10
 },
@@ -2495,7 +2495,7 @@ story = {
 "type": "line"
 },
 10: {
-"graph_offset": Vector2( 400, 1480 ),
+"graph_offset": Vector2( 40, 1480 ),
 "links": {
 0: 11
 },
@@ -2510,7 +2510,7 @@ story = {
 "type": "line"
 },
 11: {
-"graph_offset": Vector2( 440, 1640 ),
+"graph_offset": Vector2( 40, 1640 ),
 "links": {
 0: 12
 },
@@ -2525,7 +2525,7 @@ story = {
 "type": "line"
 },
 12: {
-"graph_offset": Vector2( 480, 1800 ),
+"graph_offset": Vector2( 40, 1800 ),
 "links": {
 0: 13
 },
@@ -2540,7 +2540,7 @@ story = {
 "type": "line"
 },
 13: {
-"graph_offset": Vector2( 520, 1960 ),
+"graph_offset": Vector2( 40, 1960 ),
 "links": {
 0: 14
 },
@@ -2555,7 +2555,7 @@ story = {
 "type": "line"
 },
 14: {
-"graph_offset": Vector2( 560, 2120 ),
+"graph_offset": Vector2( 40, 2120 ),
 "links": {
 0: 15
 },
@@ -2570,7 +2570,7 @@ story = {
 "type": "line"
 },
 15: {
-"graph_offset": Vector2( 600, 2280 ),
+"graph_offset": Vector2( 40, 2280 ),
 "links": {
 0: 16
 },
@@ -2585,7 +2585,7 @@ story = {
 "type": "line"
 },
 16: {
-"graph_offset": Vector2( 640, 2440 ),
+"graph_offset": Vector2( 40, 2440 ),
 "links": {
 0: 17
 },
@@ -2600,7 +2600,7 @@ story = {
 "type": "line"
 },
 17: {
-"graph_offset": Vector2( 680, 2600 ),
+"graph_offset": Vector2( 40, 2600 ),
 "links": {
 0: 18
 },
@@ -2615,7 +2615,7 @@ story = {
 "type": "line"
 },
 18: {
-"graph_offset": Vector2( 720, 2760 ),
+"graph_offset": Vector2( 40, 2760 ),
 "links": {
 0: 19
 },
@@ -2630,7 +2630,7 @@ story = {
 "type": "line"
 },
 19: {
-"graph_offset": Vector2( 760, 2920 ),
+"graph_offset": Vector2( 40, 2920 ),
 "links": {
 0: 20
 },
@@ -2648,7 +2648,7 @@ story = {
 "type": "line"
 },
 20: {
-"graph_offset": Vector2( 800, 3080 ),
+"graph_offset": Vector2( 40, 3080 ),
 "links": {
 0: 21
 },
@@ -2663,7 +2663,7 @@ story = {
 "type": "line"
 },
 21: {
-"graph_offset": Vector2( 840, 3240 ),
+"graph_offset": Vector2( 40, 3240 ),
 "links": {
 0: 22
 },
@@ -2678,7 +2678,7 @@ story = {
 "type": "line"
 },
 22: {
-"graph_offset": Vector2( 880, 3400 ),
+"graph_offset": Vector2( 40, 3400 ),
 "links": {
 0: 23
 },
@@ -2693,7 +2693,7 @@ story = {
 "type": "line"
 },
 23: {
-"graph_offset": Vector2( 920, 3560 ),
+"graph_offset": Vector2( 40, 3560 ),
 "links": {
 0: 24
 },
@@ -2708,7 +2708,7 @@ story = {
 "type": "line"
 },
 24: {
-"graph_offset": Vector2( 960, 3720 ),
+"graph_offset": Vector2( 40, 3720 ),
 "links": {
 0: 25
 },
@@ -2723,7 +2723,7 @@ story = {
 "type": "line"
 },
 25: {
-"graph_offset": Vector2( 1000, 3880 ),
+"graph_offset": Vector2( 40, 3880 ),
 "links": {
 0: 26
 },
@@ -2738,7 +2738,7 @@ story = {
 "type": "line"
 },
 26: {
-"graph_offset": Vector2( 1040, 4040 ),
+"graph_offset": Vector2( 40, 4040 ),
 "links": {
 0: 27
 },
@@ -2753,7 +2753,7 @@ story = {
 "type": "line"
 },
 27: {
-"graph_offset": Vector2( 1080, 4200 ),
+"graph_offset": Vector2( 40, 4200 ),
 "links": {
 0: 28
 },
@@ -2768,18 +2768,364 @@ story = {
 "type": "line"
 },
 28: {
-"graph_offset": Vector2( 1120, 4360 ),
+"graph_offset": Vector2( 40, 4360 ),
 "links": {
-
+0: 29
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "{
 	\"actor\": \"Ana María\",
 	\"action\": \"SPEAK\",
-	\"line\": \"¿Qué, que mi papaito estaba enamorado de Agustina la sirvienta, la mamá de Lupe?\",
+	\"line\": \"¿Qué? ¿que mi cucho estaba enamorado de Agustina la sirvienta, la mamá de Lupe?\",
 	\"emotion\": \"thinking\"
 }",
+"type": "line"
+},
+29: {
+"graph_offset": Vector2( 40, 4520 ),
+"links": {
+0: 30
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Entonces ya sabrás que Lupe es tu hermano!\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+30: {
+"graph_offset": Vector2( 40, 4680 ),
+"links": {
+0: 31
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Ja ja ja ja! Vieja pendeja. Lupe y yo no somos hermanos.\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+31: {
+"graph_offset": Vector2( 40, 4840 ),
+"links": {
+0: 32
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Encontramos el diario de Agustina oculto entre tus libracos de finanzas y administración\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+32: {
+"graph_offset": Vector2( 40, 5000 ),
+"links": {
+0: 33
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tengo una idea. ¿Qué tal si nos cuentas ¡cómo es que mi cucho y Agustina murieron el mismo día!?\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+33: {
+"graph_offset": Vector2( 40, 5160 ),
+"links": {
+0: 34
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Porque la madre que eso no fue casualidad\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+34: {
+"graph_offset": Vector2( 40, 5320 ),
+"links": {
+0: 35
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Calmación Ana María, amor mío. Calmación.\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+35: {
+"graph_offset": Vector2( 40, 5480 ),
+"links": {
+0: 36
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Rico\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Mama Is sólo se preocupa por ti. Lupe te ha estado metiendo ideas raras en la cabeza.\",
+	\"emotion\": \"worried\"
+}",
+"type": "line"
+},
+36: {
+"graph_offset": Vector2( 40, 5640 ),
+"links": {
+0: 37
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Oiga oiga! Le he metido varias cosas, pero ideas ¡jamás!\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+37: {
+"graph_offset": Vector2( 40, 5800 ),
+"links": {
+0: 38
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Déjalos Rico, no saben de lo que hablan\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+38: {
+"graph_offset": Vector2( 40, 5960 ),
+"links": {
+0: 39
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Yo sólo hice lo necesario para mantener a esta familia unida\",
+	\"emotion\": \"sad\"
+}",
+"type": "line"
+},
+39: {
+"graph_offset": Vector2( 40, 6120 ),
+"links": {
+0: 40
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Y la reputación de la familia De La Cruz\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+40: {
+"graph_offset": Vector2( 40, 6280 ),
+"links": {
+0: 41
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¿La reputación de la familia? ¿eso es todo lo que te importa?\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+41: {
+"graph_offset": Vector2( 40, 6440 ),
+"links": {
+0: 42
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tú mataste a mi papá Antonio y a Agustina\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+42: {
+"graph_offset": Vector2( 40, 6600 ),
+"links": {
+0: 43
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡JO JO JO JO JO JO JO JO JO JO!\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+43: {
+"graph_offset": Vector2( 40, 6760 ),
+"links": {
+0: 44
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Está bien, lo acepto!\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+44: {
+"graph_offset": Vector2( 40, 6920 ),
+"links": {
+0: 45
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Lo hice porque iban a destruir la hacienda y esta familia\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+45: {
+"graph_offset": Vector2( 40, 7080 ),
+"links": {
+0: 46
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Huyendo como dos adolescentes enamorados\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+46: {
+"graph_offset": Vector2( 40, 7240 ),
+"links": {
+0: 47
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tu padre no fue más que un tonto, pero eso ya está en el pasado\",
+	\"emotion\": \"normal\"
+}",
+"type": "line"
+},
+47: {
+"graph_offset": Vector2( 40, 7400 ),
+"links": {
+0: 48
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Mama Is\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tu futuro y el de la hacienda son uno: Rico\",
+	\"emotion\": \"happy\"
+}",
+"type": "line"
+},
+48: {
+"graph_offset": Vector2( 40, 7560 ),
+"links": {
+0: 49
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Vieja hijueputa! no te perdonaré jamás por esto\",
+	\"emotion\": \"angry\"
+}",
+"type": "line"
+},
+49: {
+"graph_offset": Vector2( 40, 7720 ),
+"links": {
+0: 50
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomC\",
+		\"reference\": \"Outside\"
+	}
+}",
+"type": "line"
+},
+50: {
+"graph_offset": Vector2( 40, 7880 ),
+"links": {
+0: 51
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"MOVE\",
+	\"position\": {
+		\"type\": \"REFERENCE\",
+		\"room\": \"RoomC\",
+		\"reference\": \"Outside\"
+	}
+}",
+"type": "line"
+},
+51: {
+"graph_offset": Vector2( 40, 8040 ),
+"links": {
+
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "end",
 "type": "line"
 }
 }

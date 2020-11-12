@@ -36,7 +36,7 @@ __meta__ = {
 }
 
 [node name="HouseCamera" type="Camera2D" parent="Cameras"]
-zoom = Vector2( 1.2, 1.2 )
+zoom = Vector2( 2, 2 )
 limit_left = -100000
 limit_top = -100000
 limit_right = 100000
@@ -46,7 +46,7 @@ editor_draw_drag_margin = true
 
 [node name="StableCamera" type="Camera2D" parent="Cameras"]
 position = Vector2( 2344, 798 )
-zoom = Vector2( 1.2, 1.2 )
+zoom = Vector2( 2, 2 )
 limit_left = 1064
 limit_top = -162
 limit_right = 3624

@@ -98,6 +98,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+dialog_on_close = "Ep4Sc3"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/SETUP = SubResource( 1 )

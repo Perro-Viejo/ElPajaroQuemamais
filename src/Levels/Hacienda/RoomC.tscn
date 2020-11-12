@@ -15,64 +15,67 @@ texture = ExtResource( 2 )
 [node name="Entrance" type="Position2D" parent="Points" index="0"]
 position = Vector2( 0, 336 )
 
-[node name="RoomB" type="Position2D" parent="Points" index="1"]
+[node name="Outside" type="Position2D" parent="Points" index="1"]
+position = Vector2( 0, 448 )
+
+[node name="RoomB" type="Position2D" parent="Points" index="2"]
 position = Vector2( -212, -4 )
 
-[node name="RoomA" type="Position2D" parent="Points" index="2"]
+[node name="RoomA" type="Position2D" parent="Points" index="3"]
 position = Vector2( -212, -128 )
 
-[node name="Liquor1" type="Position2D" parent="Points" index="3"]
+[node name="Liquor1" type="Position2D" parent="Points" index="4"]
 position = Vector2( -48, -312 )
 
-[node name="Liquor2" type="Position2D" parent="Points" index="4"]
+[node name="Liquor2" type="Position2D" parent="Points" index="5"]
 position = Vector2( -16, -312 )
 
-[node name="DiningTable1" type="Position2D" parent="Points" index="5"]
+[node name="DiningTable1" type="Position2D" parent="Points" index="6"]
 position = Vector2( 80, -260 )
 
-[node name="DiningTable2" type="Position2D" parent="Points" index="6"]
+[node name="DiningTable2" type="Position2D" parent="Points" index="7"]
 position = Vector2( 72, -140 )
 
-[node name="DiningTable3" type="Position2D" parent="Points" index="7"]
+[node name="DiningTable3" type="Position2D" parent="Points" index="8"]
 position = Vector2( -52, -124 )
 
-[node name="DiningTable4" type="Position2D" parent="Points" index="8"]
+[node name="DiningTable4" type="Position2D" parent="Points" index="9"]
 position = Vector2( -124, -196 )
 
-[node name="DiningTable5" type="Position2D" parent="Points" index="9"]
+[node name="DiningTable5" type="Position2D" parent="Points" index="10"]
 position = Vector2( 112, -204 )
 
-[node name="Bookcase1" type="Position2D" parent="Points" index="10"]
+[node name="Bookcase1" type="Position2D" parent="Points" index="11"]
 position = Vector2( 172, -80 )
 
-[node name="Bookcase2" type="Position2D" parent="Points" index="11"]
+[node name="Bookcase2" type="Position2D" parent="Points" index="12"]
 position = Vector2( 160, -32 )
 
-[node name="Bookcase3" type="Position2D" parent="Points" index="12"]
+[node name="Bookcase3" type="Position2D" parent="Points" index="13"]
 position = Vector2( 172, 20 )
 
-[node name="Sofa1" type="Position2D" parent="Points" index="13"]
+[node name="Sofa1" type="Position2D" parent="Points" index="14"]
 position = Vector2( 124, 128 )
 
-[node name="Sofa2" type="Position2D" parent="Points" index="14"]
+[node name="Sofa2" type="Position2D" parent="Points" index="15"]
 position = Vector2( 124, 196 )
 
-[node name="Sofa3" type="Position2D" parent="Points" index="15"]
+[node name="Sofa3" type="Position2D" parent="Points" index="16"]
 position = Vector2( 196, 224 )
 
-[node name="Sofa4" type="Position2D" parent="Points" index="16"]
+[node name="Sofa4" type="Position2D" parent="Points" index="17"]
 position = Vector2( 92, 252 )
 
-[node name="Sofa5" type="Position2D" parent="Points" index="17"]
+[node name="Sofa5" type="Position2D" parent="Points" index="18"]
 position = Vector2( 100, 60 )
 
-[node name="Center" type="Position2D" parent="Points" index="18"]
+[node name="Center" type="Position2D" parent="Points" index="19"]
 position = Vector2( 0, -48 )
 
-[node name="Corner1" type="Position2D" parent="Points" index="19"]
+[node name="Corner1" type="Position2D" parent="Points" index="20"]
 position = Vector2( 164, 324 )
 
-[node name="Corner2" type="Position2D" parent="Points" index="20"]
+[node name="Corner2" type="Position2D" parent="Points" index="21"]
 position = Vector2( 132, 324 )
 
 [node name="LiquorPlatform" parent="Targets" index="0" instance=ExtResource( 3 )]

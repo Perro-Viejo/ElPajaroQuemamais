@@ -1,5 +1,7 @@
 extends Control
 
+export var dialog_on_close := ''
+
 var _spanish_text := ''
 var _english_text := ''
 var _in_spanish := true
@@ -33,4 +35,4 @@ func _play_animation() -> void:
 		$AnimationPlayer.play('show')
 		SoundManager.play_se('ui_popup_open')
 	else:
-		DialogEvent.emit_signal('dialog_requested', 'Ep4Sc3')
+		DialogEvent.emit_signal('dialog_requested', dialog_on_close)

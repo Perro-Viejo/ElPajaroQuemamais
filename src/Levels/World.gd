@@ -171,9 +171,9 @@ func _setup_set(_episode: int) -> void:
 		5:
 			_player.position = _room_c.get_target_position('LiquorPlatform')
 			_player.look_to(_room_c.get_target('LiquorPlatform').look_to)
-			_mamais.position = _room_c.get_point_position('LiquorA')
+			_mamais.position = _room_c.get_point_position('Liquor1')
 			_mamais.show()
-			_rico.position = _room_c.get_point_position('LiquorB')
+			_rico.position = _room_c.get_point_position('Liquor2')
 			_rico.show()
 			_anamar.position = _room_c.get_point_position('Sofa1')
 			_anamar.show()
