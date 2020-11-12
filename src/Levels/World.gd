@@ -125,8 +125,8 @@ func _setup_set(_episode: int) -> void:
 					played = false,
 				},
 			}
-			_player.position = _room_c.get_target_position('Clickable2')
-			_player.look_to(_room_c.get_target('Clickable2').look_to)
+			_player.position = _room_c.get_target_position('BookcasePlatform')
+			_player.look_to(_room_c.get_target('BookcasePlatform').look_to)
 			_anamar.position = _room_b.get_point_position('Entrance')
 			_anamar.show()
 
