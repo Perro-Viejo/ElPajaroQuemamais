@@ -1613,7 +1613,7 @@ story = {
 },
 22: {
 "links": {
-
+0: 23
 },
 "text": "{
 	\"actor\": \"Lupe\",
@@ -1624,6 +1624,94 @@ story = {
 		\"reference\": \"PictureA\"
 	}
 }"
+},
+23: {
+"links": {
+0: 24
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Grandísimo pendejo, este es el diario de Agustina!\",
+	\"emotion\": \"happy\"
+}"
+},
+24: {
+"links": {
+0: 25
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Lupe, aquí debe estar todo!\",
+	\"emotion\": \"happy\"
+}"
+},
+25: {
+"links": {
+0: 26
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tenemos que leerla en voz alta\",
+	\"emotion\": \"normal\"
+}"
+},
+26: {
+"links": {
+
+},
+"text": "end"
+}
+}
+},
+9: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "start"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "{
+	\"actor\": \"Ana María\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡No somos hermanos, Lupe!\",
+	\"emotion\": \"happy\"
+}"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"¡Vamos al establo a celebrarlo!\",
+	\"emotion\": \"happy\"
+}"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "{
+	\"actor\": \"Lupe\",
+	\"action\": \"SPEAK\",
+	\"line\": \"Tengo un amigo que se emociona cuando te ve entre la paja\",
+	\"emotion\": \"excited\"
+}"
+},
+5: {
+"links": {
+
+},
+"text": "end"
 }
 }
 }
@@ -1636,5 +1724,6 @@ names = {
 "Ep2Sc1": 3,
 "Ep3Sc1": 6,
 "Ep4Sc1": 7,
-"Ep4Sc2": 8
+"Ep4Sc2": 8,
+"Ep4Sc3": 9
 }
