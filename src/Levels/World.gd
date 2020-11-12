@@ -158,10 +158,10 @@ func _setup_set(_episode: int) -> void:
 				Library = {
 					dialog_key = 'Ep4Sc2',
 					played = false,
-					},
-				}
-			_player.position = _room_a.get_target_position('Clickable')
-			_player.look_to(_room_a.get_target('Clickable').look_to)
+				},
+			}
+			_player.position = _room_b.get_target_position('Clickable')
+			_player.look_to(_room_b.get_target('Clickable').look_to)
 			_anamar.position = _room_b.get_point_position('Desk')
 			_anamar.show()
 			_lupe.position = _room_b.get_point_position('Entrance')

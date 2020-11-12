@@ -10,7 +10,7 @@
 [sub_resource type="CircleShape2D" id=1]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 17.8064, 50.5275 )
+extents = Vector2( 18, 50 )
 
 [node name="RoomB" instance=ExtResource( 2 )]
 script = ExtResource( 5 )
@@ -48,9 +48,12 @@ position = Vector2( 26, 48 )
 
 [node name="Clickable" parent="Targets" index="0" instance=ExtResource( 3 )]
 position = Vector2( 68, 90 )
+interaction_type = "target"
 max_distance = 200.06
 trigger_dialog = "Palito"
 look_to = 2
+enabled = true
+disable_after_interactions = 0
 
 [node name="Clickable" parent="Objects" index="0" instance=ExtResource( 3 )]
 modulate = Color( 1, 1, 0, 1 )
@@ -58,6 +61,8 @@ position = Vector2( -38, 28 )
 interaction_type = "object"
 max_distance = 200.0
 trigger_dialog = "Desk"
+look_to = 0
+enabled = true
 disable_after_interactions = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/Clickable" index="0"]
@@ -68,11 +73,13 @@ polygon = PoolVector2Array( 15.5, -17, 16.5, -17, 16.5, -1, 15.5, -1, 15.5, 2, -
 shape = SubResource( 1 )
 
 [node name="Clickable2" type="Area2D" parent="Objects" index="1"]
-modulate = Color( 0, 0, 1, 1 )
+modulate = Color( 1, 1, 0, 1 )
 script = ExtResource( 6 )
 interaction_type = "object"
 max_distance = 200.0
 trigger_dialog = "Library"
+look_to = 0
+enabled = true
 disable_after_interactions = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Clickable2" index="0"]

@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_regular_16.tres" type="DynamicFont" id=3]
 [ext_resource path="res://src/GUI/Letter/Letter.gd" type="Script" id=4]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "SETUP"
 length = 0.001
 tracks/0/type = "value"
@@ -45,8 +45,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "show"
+[sub_resource type="Animation" id=2]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Overlay:self_modulate")
 tracks/0/interp = 2
@@ -84,7 +83,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, 1 ), Vector2( 0, 1 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="StyleBoxTexture" id=2]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 1 )
 region_rect = Rect2( 0, 0, 458, 528 )
 margin_left = 65.0
@@ -101,8 +100,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/SETUP = SubResource( 3 )
-anims/show = SubResource( 1 )
+anims/SETUP = SubResource( 1 )
+anims/show = SubResource( 2 )
 
 [node name="Overlay" type="ColorRect" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -118,13 +117,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -229.0
+margin_left = -293.0
 margin_top = -264.0
-margin_right = 229.0
+margin_right = 293.0
 margin_bottom = 264.0
 rect_scale = Vector2( 1e-05, 1 )
-rect_pivot_offset = Vector2( 458, 264 )
-custom_styles/panel = SubResource( 2 )
+rect_pivot_offset = Vector2( 586, 264 )
+custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -132,21 +131,23 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="TextWrapper"]
 margin_left = 65.0
 margin_top = 29.0
-margin_right = 427.0
+margin_right = 555.0
 margin_bottom = 498.0
+custom_constants/separation = 24
 
 [node name="Date" type="Label" parent="TextWrapper/VBoxContainer"]
-margin_right = 362.0
+margin_right = 490.0
 margin_bottom = 28.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.211765, 0.211765, 0.211765, 1 )
 text = "AGUSTINA_JOURNAL_DATE"
+align = 2
 autowrap = true
 
 [node name="Text" type="Label" parent="TextWrapper/VBoxContainer"]
-margin_top = 32.0
-margin_right = 362.0
-margin_bottom = 60.0
+margin_top = 52.0
+margin_right = 490.0
+margin_bottom = 80.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.211765, 0.211765, 0.211765, 1 )
 text = "AGUSTINA_JOURNAL"

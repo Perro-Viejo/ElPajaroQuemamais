@@ -150,7 +150,8 @@ DLG_6_16_RICO,Pues me la podría untar de mierda,Iceland has a dating app that s
 DLG_6_17_MAMA_IS,No puedo creer que hasta el pájaro lo sabe,"In every scene of Fight Club, there is a Starbucks coffee cup"
 DLG_6_18_RICO,Tenemos que separarlos como seya,Every Pixar movie contains a reference to the Pixar movie that comes after it
 DLG_6_19_MAMA_IS,Se me hace severo caldo cuando te pones así,"When double rainbows occur, the colors of the second arc are always reversed"
----- EPISODIO 4 ----,,
+---- EPISODIO 4 ----,---- ESCENA 1 ----,
+EPISODE_4_INTRO,"Dos semanas, tres días, siete horas, cuarenta y cinco minutos y quince segundos después",Some time later
 DLG_7_3_ANA_MARÍA,¡Tiene que haber algo por aquí!,¡Tiene que haber algo por aquí!
 DLG_7_4_ANA_MARÍA,La madre que nuestros padres no murieron por casualidad el mismo día,La madre que nuestros padres no murieron por casualidad el mismo día
 DLG_7_5_ANA_MARÍA,Me quito una teta si mi mamaita no tuvo algo que ver,Me quito una teta si mi mamaita no tuvo algo que ver
@@ -161,8 +162,9 @@ DLG_7_10_LUPE,Esa carta que me mostraste se veía muy sospechosa,Esa carta que m
 DLG_7_11_LUPE,¿Será que somos hermanos señorita Ana María?,¿Será que somos hermanos señorita Ana María?
 DLG_7_12_ANA_MARÍA,Cállese esos ojos,Cállese esos ojos
 DLG_7_14_ANA_MARÍA,No quisiera nunca más poder tenerte dentro,No quisiera nunca más poder tenerte dentro
-DLG_7_15_LUPE,No sea pendejo... mejor siga buscando,No sea pendejo... mejor siga buscando
+DLG_7_15_LUPE,Ni yo dejar de besar ese sapo. Mejor siga buscando,Ni yo dejar de besar ese sapo. Mejor siga buscando
 DLG_7_17_ANA_MARÍA,La madre que tiene que estar aquí escondido,La madre que tiene que estar aquí escondido
+---- EPISODIO 4 ----,---- ESCENA 2 ----,
 DLG_8_2_ANA_MARÍA,"Pájaro triplehijueputa, ¿¡otra vez jodiendo!?","Pájaro triplehijueputa, ¿¡otra vez jodiendo!?"
 DLG_8_3_ANA_MARÍA,¿Cuántas veces le he dicho que no mueva las cosas?,¿Cuántas veces le he dicho que no mueva las cosas?
 DLG_8_5_ANA_MARÍA,¿Qué es esto... un libro de filosofía?,¿Qué es esto... un libro de filosofía?
@@ -180,11 +182,28 @@ DLG_8_17_LUPE,Esa idea me gusta mucho muy señorita,Esa idea me gusta mucho muy 
 DLG_8_19_LUPE,Está escrito en primera persona,Está escrito en primera persona
 DLG_8_20_LUPE,...y con una prosa bastante particular,...y con una prosa bastante particular
 DLG_8_21_ANA_MARÍA,Déjame ver. Ese autor no suele escribir así,Déjame ver. Ese autor no suele escribir así
-DLG_8_23_ANA_MARÍA,"¡Grandísimo pendejo, este es el diario de Agustina!","¡Grandísimo pendejo, este es el diario de Agustina!"
+DLG_8_23_ANA_MARÍA,"¡Serás imbécil, este es el diario de Agustina!","¡Serás imbécil, este es el diario de Agustina!"
 DLG_8_24_ANA_MARÍA,"¡Lupe, aquí debe estar todo!","¡Lupe, aquí debe estar todo!"
 DLG_8_25_ANA_MARÍA,Tenemos que leerla en voz alta,Tenemos que leerla en voz alta
+---- EPISODIO 4 ----,---- ESCENA 3 ----,
 DLG_9_2_ANA_MARÍA,"¡No somos hermanos, Lupe!","¡No somos hermanos, Lupe!"
 DLG_9_3_LUPE,¡Vamos al establo a celebrarlo!,¡Vamos al establo a celebrarlo!
 DLG_9_4_LUPE,Tengo un amigo que se emociona cuando te ve entre la paja,Tengo un amigo que se emociona cuando te ve entre la paja
 AGUSTINA_JOURNAL_DATE,"12 de diciembre, 1980","12 de diciembre, 1980"
-AGUSTINA_JOURNAL,"No quiero levantarme de la cama aún, estoy muy cansada. Ayer Andrés me gritó de nuevo y casi me golpea pero se detuvo en el último segundo. Tan solo de pensar en todos los años de maltrato me dan ganas de quitarme la vida, pero ahora tengo muchas razones para ser feliz. Antonio es tan bueno conmigo y lo amo más que nunca. A pesar de que este hijo que llevo dentro no es de él, su amor por mi es tan grande que está dispuesto a criarlo como suyo. Sé que nuestro amor es pecado porque él sigue casado con la señora Isabela pero nuestro amor es inevitable. Mañana por fin nos iremos lejos de este pueblo de mierda, donde nadie nos reconozca. Me siento un poco mareada desde anoche así que iré más tarde al doctor. Espero no esté afectando ese malestar a mi bebé. No puedo esperar a conocerlo.","No quiero levantarme de la cama aún, estoy muy cansada. Ayer Andrés me gritó de nuevo y casi me golpea pero se detuvo en el último segundo. Tan solo de pensar en todos los años de maltrato me dan ganas de quitarme la vida, pero ahora tengo muchas razones para ser feliz. Antonio es tan bueno conmigo y lo amo más que nunca. A pesar de que este hijo que llevo dentro no es de él, su amor por mi es tan grande que está dispuesto a criarlo como suyo. Sé que nuestro amor es pecado porque él sigue casado con la señora Isabela pero nuestro amor es inevitable. Mañana por fin nos iremos lejos de este pueblo de mierda, donde nadie nos reconozca. Me siento un poco mareada desde anoche así que iré más tarde al doctor. Espero no esté afectando ese malestar a mi bebé. No puedo esperar a conocerlo."
+AGUSTINA_JOURNAL,"No quiero levantarme de la cama aún, estoy muy cansada. Ayer Andrés me gritó de nuevo y casi me golpea pero se detuvo en el último segundo. Tan solo de pensar en todos los años de maltrato me dan ganas de quitarme la vida, pero ahora tengo muchas razones para ser feliz. Antonio es tan bueno conmigo y lo amo más que nunca. A pesar de que este hijo que llevo dentro no es de él, su amor por mi es tan grande que está dispuesto a criarlo como suyo. Sé que nuestro amor es pecado porque él sigue casado con la señora Isabela pero nuestro amor es inevitable. Mañana por fin nos iremos lejos de este pueblo de mierda, donde nadie nos reconozca. Me siento un poco mareada desde anoche así que iré más tarde al doctor. Espero no esté afectando ese malestar a mi bebé. No puedo esperar a conocerlo.","Up on Melancholy Hill, there's a plastic tree
+Are you here with me?
+Just looking out on the day of another dream
+Where you can't get what you want, but you can get me
+So let's set out to sea, love
+'Cause you are my medicine when you're close to me
+When you're close to me
+
+So call in the submarines, 'round the world we'll go
+Does anybody know her
+If we're looking out on the day of another dream?
+If you can't get what you want, then come with me
+Up on Melancholy Hill
+Sits the manatee, love
+Just looking out for the day when you're close to me
+When you're close to me
+When you're close to me"
