@@ -157,6 +157,11 @@ func _should_speak(character_name, text, time, emotion) -> void:
 	if _its_me(character_name):
 		_in_dialog = true
 		speak(text, time)
+		#dx Debug
+		if character_name == 'player' and emotion == '':
+			var emotions = ['excited','happy','normal','surprised']
+			emotion = emotions[randi() % emotions.size()]
+		print('dx_' + character_name + '_' + emotion)
 		SoundManager.play_se('dx_' + character_name + '_' + emotion)
 
 

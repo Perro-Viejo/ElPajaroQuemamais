@@ -25,6 +25,71 @@
             "type": "random",
             "volume": -4
         },
+        "dx_player_excited": {
+            "sounds": [
+                "res://assets/audio/vo/vo_player_excited_01.ogg",
+                "res://assets/audio/vo/vo_player_excited_02.ogg",
+                "res://assets/audio/vo/vo_player_excited_03.ogg"
+            ],
+            "type": "random"
+        },
+        "dx_player_happy": {
+            "sounds": [
+                "res://assets/audio/vo/vo_player_happy_01.ogg",
+                "res://assets/audio/vo/vo_player_happy_02.ogg",
+                "res://assets/audio/vo/vo_player_happy_03.ogg"
+            ],
+            "type": "random"
+        },
+        "dx_player_normal": {
+            "sounds": [
+                "res://assets/audio/vo/vo_player_normal_01.ogg",
+                "res://assets/audio/vo/vo_player_normal_02.ogg",
+                "res://assets/audio/vo/vo_player_normal_03.ogg",
+                "res://assets/audio/vo/vo_player_normal_04.ogg"
+            ],
+            "type": "random"
+        },
+        "dx_player_surprised": {
+            "sounds": [
+                "res://assets/audio/vo/vo_player_surprised_01.ogg",
+                "res://assets/audio/vo/vo_player_surprised_02.ogg",
+                "res://assets/audio/vo/vo_player_surprised_03.ogg"
+            ],
+            "type": "random"
+        },
+        "dx_player_ana": {
+            "sounds": [
+                "res://assets/audio/vo/vo_player_ana_01.ogg",
+                "res://assets/audio/vo/vo_player_ana_02.ogg",
+                "res://assets/audio/vo/vo_player_ana_03.ogg"
+            ],
+            "type": "random"
+        },
+        "dx_player_lupe": {
+            "sounds": [
+                "res://assets/audio/vo/vo_player_lupe_01.ogg",
+                "res://assets/audio/vo/vo_player_lupe_02.ogg",
+                "res://assets/audio/vo/vo_player_lupe_03.ogg"
+            ],
+            "type": "random"
+        },
+        "dx_player_mama_is": {
+            "sounds": [
+                "res://assets/audio/vo/vo_player_mama_is_01.ogg",
+                "res://assets/audio/vo/vo_player_mama_is_02.ogg",
+                "res://assets/audio/vo/vo_player_mama_is_03.ogg"
+            ],
+            "type": "random"
+        },
+        "dx_player_rico": {
+            "sounds": [
+                "res://assets/audio/vo/vo_player_rico_01.ogg",
+                "res://assets/audio/vo/vo_player_rico_02.ogg",
+                "res://assets/audio/vo/vo_player_rico_03.ogg"
+            ],
+            "type": "random"
+        },
         "dx_ana_maría_angry": {
             "sounds": [
                 "res://assets/audio/vo/vo_ana_angry_01.ogg",

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_player_rico_02.ogg-1d45e33de1f6478f60a973345fec0327.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_player_rico_02.ogg"
+dest_files=[ "res://.import/vo_player_rico_02.ogg-1d45e33de1f6478f60a973345fec0327.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

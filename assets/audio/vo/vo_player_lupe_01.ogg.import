@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_player_lupe_01.ogg-cb95efcf7846ae77ec9c7c5b949ee11c.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_player_lupe_01.ogg"
+dest_files=[ "res://.import/vo_player_lupe_01.ogg-cb95efcf7846ae77ec9c7c5b949ee11c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

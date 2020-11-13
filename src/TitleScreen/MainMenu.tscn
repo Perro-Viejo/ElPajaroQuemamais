@@ -350,6 +350,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_vertical_guides_": [ 160.218 ]
 }
+first_level = "res://src/Levels/World.tscn"
 
 [node name="BG" type="Panel" parent="."]
 pause_mode = 2
