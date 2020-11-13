@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_mama_is_sad_02.ogg-9d058fc688b2245f60de8cdbb59df768.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_mama_is_sad_02.ogg"
+dest_files=[ "res://.import/vo_mama_is_sad_02.ogg-9d058fc688b2245f60de8cdbb59df768.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

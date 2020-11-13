@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_rico_excited_01.ogg-1fc283963c6894decdef16bae7653fdf.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_rico_excited_01.ogg"
+dest_files=[ "res://.import/vo_rico_excited_01.ogg-1fc283963c6894decdef16bae7653fdf.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
