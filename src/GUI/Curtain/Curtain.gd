@@ -10,6 +10,7 @@ func _ready() -> void:
 	WorldEvent.connect('episode_started', self, '_hide_curtain')
 	WorldEvent.connect('episode_ended', self, '_show_curtain')
 	DialogEvent.connect('curtain_requested', self, '_show_for_dialog')
+	HudEvent.connect('curtain_toggle_requested', self, '_toggle_curtain')
 	
 	_overlay.hide()
 	_episode_intro.hide()
@@ -57,3 +58,6 @@ func _show_for_dialog(tr_code: String) -> void:
 	SoundManager.play_se('ui_transition_circle_out')
 	yield($AnimationPlayer, 'animation_finished')
 	_overlay.hide()
+
+func _toggle_curtain() -> void:
+	_overlay.visible = !_overlay.visible
