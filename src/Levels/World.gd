@@ -209,6 +209,9 @@ func _end_episode(dialog_name) -> void:
 		4: 
 			if dialog_name == 'Ep4Sc3':
 				WorldEvent.emit_signal('episode_ended')
+		5: 
+			if dialog_name == 'Ep5Sc1':
+				WorldEvent.emit_signal('episode_ended')
 
 
 func _load_next_episode() -> void:
