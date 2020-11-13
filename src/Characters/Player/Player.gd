@@ -40,6 +40,8 @@ func _set_fishing(value: bool) -> void:
 func _on_object_check(clickable: Clickable):
 	if clickable.is_near_to(self.global_position):
 		clickable.interact()
+		var emotions = ['excited','happy','normal','surprised']
+		SoundManager.play_se('dx_player_' + emotions[randi() % emotions.size()])
 	else:
 		speak('ta lejambres')
 

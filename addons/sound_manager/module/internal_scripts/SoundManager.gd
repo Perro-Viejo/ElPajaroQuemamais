@@ -831,7 +831,7 @@ func _get_sound_path(sound_name: String) -> Dictionary:
 		if response.dic.type == 'random':
 			var sounds: Array = response.dic.get('sounds')
 			randomize()
-			response.idx = randi() % sounds.size()
+			response.idx = int(rand_range(0, sounds.size()))
 			response.path = sounds[response.idx]
 	# ------------------------------------------------- The Perro Viejo way ----
 	else:
