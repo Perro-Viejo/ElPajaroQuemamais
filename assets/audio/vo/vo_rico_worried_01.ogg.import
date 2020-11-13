@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_rico_worried_01.ogg-2ebaaa8e776e65bcc5a55a624b0eac7f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_rico_worried_01.ogg"
+dest_files=[ "res://.import/vo_rico_worried_01.ogg-2ebaaa8e776e65bcc5a55a624b0eac7f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

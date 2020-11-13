@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vo_rico_sad_03.ogg-652c65bb8f3c66af0ce5ffb6db3965cb.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/vo/vo_rico_sad_03.ogg"
+dest_files=[ "res://.import/vo_rico_sad_03.ogg-652c65bb8f3c66af0ce5ffb6db3965cb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
