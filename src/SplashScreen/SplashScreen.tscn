@@ -42,18 +42,19 @@ tracks/1/keys = {
 
 [node name="SplashScreen" type="CanvasLayer"]
 follow_viewport_enable = true
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_vertical_guides_": [ 160.218 ]
 }
+main_menu = "res://src/TitleScreen/MainMenu.tscn"
+ignore_fade = true
 
 [node name="SplashScreen" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
-main_menu = "res://src/TitleScreen/MainMenu.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="SplashScreen"]
 visible = false

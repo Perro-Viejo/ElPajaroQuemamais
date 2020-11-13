@@ -49,10 +49,19 @@ func on_change_scene(scene):
 	else:
 		SceneLoader.load_scene(scene, {scene="Level"})
 
-	transition_state = TRANSITION_OUT
+	if not current_scene_instance.ignore_fade:
+		transition_state = TRANSITION_OUT
 
-	$TransitionLayer/TransitionTween.interpolate_property($TransitionLayer, "percent", 0.0, 1.0, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN, 0.0)
-	$TransitionLayer/TransitionTween.start()
+		$TransitionLayer/TransitionTween.interpolate_property(
+			$TransitionLayer, "percent",
+			0.0, 1.0,
+			0.5, Tween.TRANS_LINEAR, Tween.EASE_IN, 0.0
+		)
+		$TransitionLayer/TransitionTween.start()
+	else:
+		transition_state = IDLE
+		yield(self, "scene_is_loaded")
+		change_scene()
 
 func on_exit()->void:
 	if transition_state != IDLE:
@@ -92,7 +101,11 @@ func _on_TransitionTween_tween_completed(object, key)->void:
 				yield(self, "scene_is_loaded")
 			change_scene()
 			transition_state = TRANSITION_IN
-			$TransitionLayer/TransitionTween.interpolate_property($TransitionLayer, "percent", 1.0, 0.0, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN, 0.0)
+			$TransitionLayer/TransitionTween.interpolate_property(
+				$TransitionLayer, "percent",
+				1.0, 0.0,
+				0.5, Tween.TRANS_LINEAR, Tween.EASE_IN, 0.0
+			)
 			$TransitionLayer/TransitionTween.start()
 		TRANSITION_IN:
 			transition_state = IDLE

@@ -3,6 +3,7 @@ extends Node2D
 export(String, FILE, "*.tscn") var next_scene: String
 export var world_name := 'WORLD'
 export var episode := 1 setget _set_episode
+export var ignore_fade := false
 
 var _current_clickable: Clickable = null
 var _current_post_wait := 0

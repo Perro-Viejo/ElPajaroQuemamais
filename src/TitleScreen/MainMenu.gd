@@ -1,6 +1,7 @@
 extends CanvasLayer
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Variables ░░░░
 export (String, FILE, '*.tscn') var first_level: String
+export var ignore_fade := false
 
 var _is_credits := false
 
