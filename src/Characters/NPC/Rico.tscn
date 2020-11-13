@@ -284,11 +284,17 @@ dialog_name = "Rico"
 expressions = ExtResource( 5 )
 expressions_map = {
 "angry": 0,
-"excited": -1,
-"sad": -1,
-"thinking": 1,
+"decided": 1,
+"excited": 2,
+"happy": 3,
+"naughty": 4,
+"normal": 5,
+"sad": 6,
+"surprised": 7,
+"thinking": 8,
 "worried": -1
 }
+expressions_offset = Vector2( 8, -12 )
 voice = ExtResource( 10 )
 
 [node name="StateMachine" type="Node2D" parent="."]

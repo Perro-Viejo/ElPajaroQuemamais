@@ -98,9 +98,14 @@ visible = false
 collision_layer = 2
 expressions_map = {
 "angry": 0,
-"excited": -1,
-"sad": -1,
-"thinking": 1,
+"decided": 1,
+"excited": 2,
+"happy": 3,
+"naughty": 4,
+"normal": 5,
+"sad": 6,
+"surprised": 7,
+"thinking": 8,
 "worried": -1
 }
 
