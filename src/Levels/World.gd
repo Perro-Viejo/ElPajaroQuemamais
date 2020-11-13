@@ -143,8 +143,6 @@ func _setup_set(_episode: int) -> void:
 			SoundManager.set_volume_db(-12 ,'bg_hacienda')
 			SoundManager.play_bgs('bg_stable')
 		3:
-			$Cinematic.hide()
-
 			_player.position = _room_a.get_target_position('Clickable')
 			_player.look_to(_room_a.get_target('Clickable').look_to)
 			_mamais.position = _room_a.get_point_position('BedB')
@@ -204,10 +202,6 @@ func _end_episode(dialog_name) -> void:
 				WorldEvent.emit_signal('episode_ended')
 		2:
 			if dialog_name == 'Ep2Sc1':
-				SoundManager.stop('bg_stable')
-				SoundManager.stop('bg_hacienda')
-				yield($Cinematic.play_commercial(), 'completed')
-				$Cameras/StableCamera.make_current()
 				WorldEvent.emit_signal('episode_ended')
 		3: 
 			if dialog_name == 'Ep3Sc1':
@@ -221,8 +215,7 @@ func _load_next_episode() -> void:
 	# Sumar 1 al episodio actual pa' cargar el siguiente
 	Data.data_sumi(Data.EPISODE, 1)
 	yield(get_tree().create_timer(1.5), 'timeout')
-	_setup_set(Data.get_data(Data.EPISODE))
-	
+
 	if Data.get_data(Data.EPISODE) > 5:
 		if Data.endings[1] == 2:
 			HudEvent.emit_signal('ending_requested', 1)
@@ -231,6 +224,14 @@ func _load_next_episode() -> void:
 		else:
 			HudEvent.emit_signal('ending_requested', 3)
 	else:
+		if Data.get_data(Data.EPISODE) == 3:
+			HudEvent.emit_signal('curtain_toggle_requested')
+			SoundManager.stop('bg_stable')
+			SoundManager.stop('bg_hacienda')
+			yield($Cinematic.play_commercial(), 'completed')
+			HudEvent.emit_signal('curtain_toggle_requested')
+			$Cinematic.hide()
+		_setup_set(Data.get_data(Data.EPISODE))
 		WorldEvent.emit_signal('episode_started')
 
 

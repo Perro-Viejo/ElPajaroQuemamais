@@ -1,7 +1,7 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/TitleScreen/MainMenu.gd" type="Script" id=1]
-[ext_resource path="res://assets/resources/dynamic_fonts/opendyslexic_bold_72.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/fonts/akayla_script.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://src/GUI/Buttons/DefaultButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/images/gui/perro_viejo_logo.png" type="Texture" id=4]
 [ext_resource path="res://assets/resources/dynamic_fonts/m5x7_16.tres" type="DynamicFont" id=5]
@@ -13,15 +13,22 @@
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.278431, 0.176471, 0.235294, 0 )
 
-[sub_resource type="StyleBoxEmpty" id=2]
-content_margin_bottom = 6.0
+[sub_resource type="DynamicFont" id=2]
+size = 128
+outline_size = 25
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxEmpty" id=3]
+content_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxEmpty" id=4]
 content_margin_top = 2.0
 content_margin_bottom = 2.0
 
-[sub_resource type="Animation" id=4]
-resource_name = "SETUP"
+[sub_resource type="Animation" id=5]
 length = 0.001
 step = 0.05
 tracks/0/type = "value"
@@ -31,10 +38,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [  ]
+"values": [ Vector2( 0, 960 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("BG/GameName:modulate")
@@ -94,8 +101,20 @@ tracks/5/keys = {
 "update": 0,
 "values": [ Vector2( -1280, 0 ) ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("BG/Bg:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("BG/Credits:visible")
@@ -172,7 +191,7 @@ tracks/5/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 3.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("BG/MainOptions:rect_position")
@@ -259,7 +278,7 @@ tracks/6/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("BG/Credits:visible")
@@ -336,7 +355,7 @@ tracks/5/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 length = 5.0
 step = 0.05
 tracks/0/type = "value"
@@ -417,6 +436,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("BG/Bg:self_modulate")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = false
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2.9, 3.35 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.74902 ) ]
+}
 
 [node name="MainMenu" type="CanvasLayer"]
 follow_viewport_enable = true
@@ -441,7 +472,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 376.0
 margin_top = -936.0
-margin_right = 826.002
+margin_right = 826.0
 margin_bottom = 19.0
 rect_rotation = 45.0
 rect_pivot_offset = Vector2( 290, 936 )
@@ -470,11 +501,11 @@ __meta__ = {
 }
 
 [node name="GameName" type="Label" parent="BG/GameName"]
-margin_top = 417.0
+margin_top = 377.0
 margin_right = 1280.0
-margin_bottom = 543.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0.235294, 0.67451, 0.843137, 1 )
+margin_bottom = 582.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "El pájaro Quemamais"
 align = 1
 
@@ -505,14 +536,14 @@ __meta__ = {
 margin_left = 16.0
 margin_top = 4.0
 margin_right = 1264.0
-margin_bottom = 943.0
+margin_bottom = 944.0
 size_flags_vertical = 3
 alignment = 2
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="BG/MainOptions/VBoxMain"]
-margin_top = 709.0
+margin_top = 710.0
 margin_right = 1248.0
-margin_bottom = 939.0
+margin_bottom = 940.0
 size_flags_vertical = 8
 custom_constants/separation = 2
 alignment = 1
@@ -561,16 +592,16 @@ __meta__ = {
 }
 
 [node name="Background" type="ColorRect" parent="BG/Credits"]
-margin_right = 1279.0
+margin_right = 1280.0
 margin_bottom = 960.0
 color = Color( 1, 0.74902, 0.505882, 1 )
 
 [node name="CreditsContainer" type="VBoxContainer" parent="BG/Credits"]
-margin_right = 1279.0
+margin_right = 1280.0
 margin_bottom = 960.0
 
 [node name="Logo" type="TextureRect" parent="BG/Credits/CreditsContainer"]
-margin_right = 1279.0
+margin_right = 1280.0
 margin_bottom = 112.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -579,10 +610,10 @@ stretch_mode = 6
 
 [node name="Name" type="Label" parent="BG/Credits/CreditsContainer"]
 margin_top = 116.0
-margin_right = 1279.0
+margin_right = 1280.0
 margin_bottom = 234.0
 size_flags_horizontal = 5
-custom_styles/normal = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Perro Viejo [games]"
@@ -594,9 +625,9 @@ __meta__ = {
 
 [node name="Devs" type="Label" parent="BG/Credits/CreditsContainer"]
 margin_top = 238.0
-margin_right = 1279.0
+margin_right = 1280.0
 margin_bottom = 844.0
-custom_styles/normal = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0.321569, 0.964706, 1 )
 text = "Itzel \"Noisy Panda\" González Estrada
@@ -624,11 +655,11 @@ size_flags_vertical = 6
 text = "Back"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/SETUP = SubResource( 4 )
-anims/credits_exit = SubResource( 5 )
-anims/go_to_world = SubResource( 6 )
-anims/show_credits = SubResource( 7 )
-anims/show_first_time = SubResource( 8 )
+anims/SETUP = SubResource( 5 )
+anims/credits_exit = SubResource( 6 )
+anims/go_to_world = SubResource( 7 )
+anims/show_credits = SubResource( 8 )
+anims/show_first_time = SubResource( 9 )
 
 [node name="Tween" type="Tween" parent="."]
 
