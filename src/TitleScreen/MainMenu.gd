@@ -54,7 +54,8 @@ func _exit_tree()->void:
 
 func _on_NewGame_pressed()->void:
 	$AnimationPlayer.play('go_to_world')
-	SoundManager.play_se('ui_transition')
+	SoundManager.play_me('mx_opening')
+#	SoundManager.play_se('ui_transition')
 	yield($AnimationPlayer, 'animation_finished')
 	GuiEvent.emit_signal('NewGame')
 	GuiEvent.emit_signal('ChangeScene', first_level)	

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mx_opening.ogg-f80ad5232c48bee3b9b858d0ff00a2d4.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/mx/mx_opening.ogg"
+dest_files=[ "res://.import/mx_opening.ogg-f80ad5232c48bee3b9b858d0ff00a2d4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

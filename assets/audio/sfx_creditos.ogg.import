@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_creditos.ogg-d2c5246d211818f939e95cf68361fe37.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx_creditos.ogg"
+dest_files=[ "res://.import/sfx_creditos.ogg-d2c5246d211818f939e95cf68361fe37.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

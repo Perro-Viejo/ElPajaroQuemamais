@@ -9,3 +9,6 @@ func _ready():
 
 func _on_animation_finished(anim):
 	GuiEvent.emit_signal('ChangeScene', main_menu)
+
+func _play_sfx(key):
+	SoundManager.play_se(key)

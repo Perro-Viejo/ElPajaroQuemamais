@@ -45,6 +45,8 @@ func _show_for_dialog(tr_code: String) -> void:
 	_overlay.show()
 	$AnimationPlayer.play_backwards('show_scene')
 	SoundManager.play_se('ui_transition_circle_in')
+	if Data.get_data(Data.EPISODE) == 2:
+		SoundManager.play_me('mx_cue_03')
 	yield($AnimationPlayer, 'animation_finished')
 	_episode_intro.clear()
 	_episode_intro.show()

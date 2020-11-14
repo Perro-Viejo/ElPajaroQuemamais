@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/images/world/room_b.png" type="Texture" id=1]
 [ext_resource path="res://src/Levels/Hacienda/RoomTemplate.tscn" type="PackedScene" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://assets/images/world/room_b_desk.png" type="Texture" id=4]
 [ext_resource path="res://src/Levels/Hacienda/RoomB.gd" type="Script" id=5]
 [ext_resource path="res://src/Objects/Clickable.gd" type="Script" id=6]
+[ext_resource path="res://src/Audio/MusicTrigger.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8.84067, 46.2992 )
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -48,12 +52,20 @@ position = Vector2( 26, 48 )
 
 [node name="Clickable" parent="Targets" index="0" instance=ExtResource( 3 )]
 position = Vector2( 68, 90 )
-interaction_type = "target"
 max_distance = 200.06
 trigger_dialog = "Palito"
 look_to = 2
-enabled = true
-disable_after_interactions = 0
+
+[node name="MusicTrigger" type="Area2D" parent="." index="4"]
+position = Vector2( 68, 90 )
+input_pickable = false
+monitoring = false
+script = ExtResource( 7 )
+music_cue = "mx_cue_01"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MusicTrigger" index="0"]
+position = Vector2( -78.0111, -140.869 )
+shape = SubResource( 3 )
 
 [node name="Clickable" parent="Objects" index="0" instance=ExtResource( 3 )]
 modulate = Color( 1, 1, 0, 1 )
@@ -61,8 +73,6 @@ position = Vector2( -38, 28 )
 interaction_type = "object"
 max_distance = 200.0
 trigger_dialog = "Desk"
-look_to = 0
-enabled = true
 disable_after_interactions = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/Clickable" index="0"]
@@ -78,8 +88,6 @@ script = ExtResource( 6 )
 interaction_type = "object"
 max_distance = 200.0
 trigger_dialog = "Library"
-look_to = 0
-enabled = true
 disable_after_interactions = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Clickable2" index="0"]

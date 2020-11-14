@@ -170,6 +170,10 @@ run/main_scene="res://src/Game/Game.tscn"
 boot_splash/bg_color=Color( 0.854902, 0.12549, 0.878431, 1 )
 config/icon="res://icon.png"
 
+[audio]
+
+mix_rate=48000
+
 [autoload]
 
 SceneLoader="*res://src/Autoload/SceneLoader.gd"
