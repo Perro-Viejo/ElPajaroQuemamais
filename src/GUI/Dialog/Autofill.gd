@@ -9,7 +9,8 @@ export var animate_on_set_text := true
 export var typing := true
 export var disappear_wait := 3.0
 export var can_autohide := true
-export var max_width := 244.0
+
+var center := 160
 
 var _current_disappear: = 0.0
 var _chars: = []
@@ -18,9 +19,22 @@ var _text: String
 var _forced_update := false
 var _is_disappearing := false
 var _time_to_dissapear := 0.0
+var _config := {
+	default = {
+		max_width = 300.0,
+		center = 160,
+		stylebox = preload('res://src/GUI/Dialog/TalkingBubbleNormal.tres')
+	},
+	mamais = {
+		max_width = 360.0,
+		center = 284,
+		stylebox = preload('res://src/GUI/Dialog/TalkingBubbleMamais.tres')
+	}
+}
 
 onready var default_position = get_position()
 onready var default_size = get_size()
+onready var max_width: float = _config.default.max_width
 # ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Funciones ░░░░
 func _ready():
 	hide()
@@ -35,7 +49,7 @@ func _ready():
 func _process(delta: float) -> void:
 	if _forced_update:
 		_forced_update = false
-		rect_position.x = 160 - (rect_size.x / 2)
+		rect_position.x = center - (rect_size.x / 2)
 
 	if _is_disappearing:
 		_time_to_dissapear -= delta
@@ -45,7 +59,7 @@ func _process(delta: float) -> void:
 	if rect_size.x > max_width:
 		rect_size.x = max_width
 		autowrap = true
-		rect_position.x = 160 - (max_width / 2)
+		rect_position.x = center - (max_width / 2)
 
 
 func start_animation():
@@ -112,6 +126,22 @@ func finish_and_hide() -> void:
 	_finish()
 	_hide()
 
+func update_defaults(character_name := '') -> void:
+	if _config.has(character_name):
+		max_width = _config[character_name].max_width
+		center = _config[character_name].center
+		self.add_stylebox_override(
+			'normal',
+			_config[character_name].stylebox
+		)
+	else:
+		max_width = _config.default.max_width
+		center = _config.default.center
+		self.add_stylebox_override(
+			'normal',
+			_config.default.stylebox
+		)
+
 
 func _write_character():
 	SoundManager.play_se('ui_write')
@@ -119,7 +149,7 @@ func _write_character():
 		text += _text[_count]
 		_count += 1
 		# Reposicionar el elemento porque el texto va creciendo
-		rect_position.x = 160 - (rect_size.x / 2)
+		rect_position.x = center - (rect_size.x / 2)
 	else:
 		# El texto ya tiene todos los caracteres
 		_finish()

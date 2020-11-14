@@ -949,7 +949,7 @@ story = {
 	\"actor\": \"Mama Is\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Y yo que pensaba que los muchachos como tú la tenían chiquita\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"naughty\"
 }"
 },
 3: {
@@ -960,7 +960,7 @@ story = {
 	\"actor\": \"Mama Is\",
 	\"action\": \"SPEAK\",
 	\"line\": \"La tienes bien gorda Rico\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"happy\"
 }"
 },
 4: {
@@ -971,7 +971,7 @@ story = {
 	\"actor\": \"Rico\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Y usted tiene esa cuca como para un batallón\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"excited\"
 }"
 },
 5: {
@@ -982,7 +982,7 @@ story = {
 	\"actor\": \"Mama Is\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Bueno pero cuéntame. ¿Qué viste en el establo?\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"excited\"
 }"
 },
 6: {
@@ -993,7 +993,7 @@ story = {
 	\"actor\": \"Mama Is\",
 	\"action\": \"SPEAK\",
 	\"line\": \"¿De qué hablaron Ana María y Lupe?\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"normal\"
 }"
 },
 7: {
@@ -1004,7 +1004,7 @@ story = {
 	\"actor\": \"Rico\",
 	\"action\": \"SPEAK\",
 	\"line\": \"¿Hablar? Estaban era culiando como locos\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"angry\"
 }"
 },
 8: {
@@ -1015,7 +1015,7 @@ story = {
 	\"actor\": \"Mama Is\",
 	\"action\": \"SPEAK\",
 	\"line\": \"¡Tenía que ser hija mía esa chiquilla!\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"surprised\"
 }"
 },
 9: {
@@ -1026,7 +1026,7 @@ story = {
 	\"actor\": \"Mama Is\",
 	\"action\": \"SPEAK\",
 	\"line\": \"jo jo jo jo jo\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"happy\"
 }"
 },
 10: {
@@ -1037,7 +1037,7 @@ story = {
 	\"actor\": \"Mama Is\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Mentira. Hablando en serio. ¡Eso puede meternos en muchos problemas!...\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"thinking\"
 }"
 },
 11: {
@@ -1059,7 +1059,7 @@ story = {
 	\"actor\": \"Rico\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Y yo que quería ser el primero en abrir ese sapo\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"sad\"
 }"
 },
 13: {
@@ -1070,7 +1070,7 @@ story = {
 	\"actor\": \"Rico\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Estaba que me la comía desde que éramos pequeños\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"sad\"
 }"
 },
 14: {
@@ -1156,7 +1156,7 @@ story = {
 	\"actor\": \"Mama Is\",
 	\"action\": \"SPEAK\",
 	\"line\": \"Se me hace severo caldo cuando te pones así\",
-	\"emotion\": \"angry\"
+	\"emotion\": \"excited\"
 }"
 },
 20: {

@@ -331,15 +331,18 @@ dialog_name = "Mama Is"
 expressions = ExtResource( 2 )
 expressions_map = {
 "angry": 0,
-"excited": -1,
-"happy": -1,
-"normal": 1,
-"sad": -1,
-"surprised": -1,
+"bored": 1,
+"excited": 2,
+"happy": 3,
+"naugthy": 4,
+"normal": 5,
+"sad": 6,
+"surprised": 7,
 "thinking": -1,
 "worried": -1
 }
-expressions_offset = Vector2( 0, -64 )
+expressions_offset = Vector2( 32, -128 )
+expressions_scale = Vector2( 0.7, 0.7 )
 
 [node name="StateMachine" type="Node2D" parent="."]
 script = ExtResource( 1 )

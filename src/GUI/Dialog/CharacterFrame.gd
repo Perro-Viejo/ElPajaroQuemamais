@@ -53,13 +53,19 @@ func set_character(node: Actor, emotion: String) -> void:
 	
 	_char.hframes = expressions_count
 	_char.frame = 0
+	_char.scale = node.expressions_scale
 
-	if not emotion:
+	if not emotion \
+		or not node.expressions_map.has(emotion) \
+		or not node.expressions_map[emotion] > -1:
 		# Si no hay emoción, coger cualquiera entre los posibles fotogramas
 		randomize()
 		_char.frame = randi() % expressions_count
-	elif node.expressions_map.has(emotion):
+	else:
 		_char.frame = node.expressions_map[emotion]
+
+	# Desplazar el Autofill si es necesario
+	$Container/Autofill.update_defaults(node.name.to_lower())
 
 	_cnt.show()
 
