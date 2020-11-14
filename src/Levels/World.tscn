@@ -36,7 +36,8 @@ __meta__ = {
 }
 
 [node name="HouseCamera" type="Camera2D" parent="Cameras"]
-zoom = Vector2( 2, 2 )
+position = Vector2( 180, -60 )
+zoom = Vector2( 1.6, 1.6 )
 limit_left = -100000
 limit_top = -100000
 limit_right = 100000
@@ -45,8 +46,8 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="StableCamera" type="Camera2D" parent="Cameras"]
-position = Vector2( 2344, 798 )
-zoom = Vector2( 2, 2 )
+position = Vector2( 2472, 654 )
+zoom = Vector2( 1.6, 1.6 )
 limit_left = 1064
 limit_top = -162
 limit_right = 3624
@@ -55,6 +56,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="Background" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1210, 600 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
@@ -142,11 +144,13 @@ expressions_map = {
 visible = false
 expressions_map = {
 "angry": 0,
-"excited": -1,
-"happy": -1,
-"normal": 1,
-"sad": -1,
-"surprised": -1,
+"bored": 1,
+"excited": 2,
+"happy": 3,
+"naugthy": 4,
+"normal": 5,
+"sad": 6,
+"surprised": 7,
 "thinking": -1,
 "worried": -1
 }

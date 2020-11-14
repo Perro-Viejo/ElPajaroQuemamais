@@ -26,6 +26,7 @@ export var expressions_map := {
 export var expressions_offset := Vector2.ZERO
 export var is_current_player := false
 export var voice: Texture = null
+export var expressions_scale := Vector2.ONE
 
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒variables públicas ▒▒▒▒
 var path := PoolVector2Array() setget _set_path
