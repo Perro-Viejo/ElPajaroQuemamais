@@ -208,7 +208,7 @@ story = {
 }
 },
 3: {
-"available_nid": [  ],
+"available_nid": [ 49 ],
 "groups": [ "Episodio 2" ],
 "human_readable_description": "Ana María habla con Lupe en el establo acerca de la carta.",
 "name": "Ep2Sc1",
@@ -948,7 +948,8 @@ story = {
 	\"actor\": \"Rico\",
 	\"action\": \"SPEAK\",
 	\"line\": \"¡Quién viera al Lupe!\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"thinking\",
+	\"mx_trigger\": \"mx_cue_04\"
 }",
 "type": "line"
 },

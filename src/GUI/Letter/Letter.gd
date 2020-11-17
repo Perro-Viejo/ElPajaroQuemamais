@@ -1,6 +1,7 @@
 extends Control
 
 export var dialog_on_close := ''
+export var opcl_sfx_key := ''
 
 var _spanish_text := ''
 var _english_text := ''
@@ -26,6 +27,7 @@ func _on_gui_input(event: InputEvent) -> void:
 			TranslationServer.set_locale('es')
 			$AnimationPlayer.play('show', -1.0, -2.0, true)
 			SoundManager.play_se('ui_popup_close')
+			SoundManager.play_se('sfx_' + opcl_sfx_key + '_open')
 			yield($AnimationPlayer, 'animation_finished')
 			hide()
 
@@ -34,5 +36,6 @@ func _play_animation() -> void:
 	if visible:
 		$AnimationPlayer.play('show')
 		SoundManager.play_se('ui_popup_open')
+		SoundManager.play_se('sfx_' + opcl_sfx_key + '_close')
 	else:
 		DialogEvent.emit_signal('dialog_requested', dialog_on_close)

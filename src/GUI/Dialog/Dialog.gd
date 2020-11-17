@@ -170,6 +170,9 @@ func _read_dialog_line() -> void:
 	if line_dic.has('actor'):
 		actor = (line_dic.actor as String).replace(' ', '_')
 	
+	if line_dic.has('mx_trigger'):
+		SoundManager.play_me(line_dic.mx_trigger)
+	
 	var action: String = line_dic.get('action', 'SPEAK')
 	
 	match action:

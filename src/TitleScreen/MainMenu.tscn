@@ -397,7 +397,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 1.19 ),
+"times": PoolRealArray( 1 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [ "sfx_menu" ],
@@ -451,11 +451,11 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 377.152
+margin_left = 376.0
 margin_top = -936.0
-margin_right = 827.153
+margin_right = 826.001
 margin_bottom = 19.0
-rect_rotation = 44.9891
+rect_rotation = 45.0
 rect_pivot_offset = Vector2( 290, 936 )
 texture = ExtResource( 8 )
 __meta__ = {

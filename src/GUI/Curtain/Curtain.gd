@@ -20,6 +20,8 @@ func _hide_curtain() -> void:
 	var tr_code: String = _intro_format % Data.get_data(Data.EPISODE)
 	_overlay.show()
 	_episode_intro.show()
+	if Data.get_data(Data.EPISODE) == 2:
+		SoundManager.play_me('mx_cue_02')
 	_episode_intro.append_bbcode(_intro_wrapper % tr(tr_code))
 	DialogEvent.emit_signal('subs_requested', tr_code)
 	yield(get_tree().create_timer(3.0), 'timeout')

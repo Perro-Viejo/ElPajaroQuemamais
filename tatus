@@ -1,0 +1,812 @@
+[33mcommit 3d4fe33e905708c3a9cca95cfe7deddc378876a2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Sat Nov 14 01:55:11 2020 -0500
+
+    World background visible again
+
+[33mcommit 8402c765f024d806fef7fcf276c7cf50d3a1cb2c[m
+Merge: 72a66e8 e28b3ac
+Author: carenalga <mapedorr@gmail.com>
+Date:   Sat Nov 14 01:44:46 2020 -0500
+
+    Merge branch 'mama_is_expressions' into music_integration
+
+[33mcommit e28b3ac96e9c23463fac4faec2c5fad9ab1681c7[m[33m ([m[1;31morigin/mama_is_expressions[m[33m)[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Sat Nov 14 01:39:42 2020 -0500
+
+    Updated Mama Is expressions Sprite to have all of them.
+    
+    Improved functionality of Autofill so it can change how the talking bubble renders depending on the character that speaks.
+    Adjusted camera zoom and positioning for both the Hacienda and the Stable.
+    Updated all the dialogs so they are better structured in the graph.
+    Updated expressions for Rico and Mama Is in episodes 3 and 5.
+    Created sprite for Mama Is talking bubble.
+
+[33mcommit 72a66e80eaa8a52923d7881647a6273fd68466fb[m[33m ([m[1;31morigin/music_integration[m[33m, [m[1;32mmusic_integration[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Sat Nov 14 01:28:21 2020 -0500
+
+    added new intro sfx, music opening and music cues 1 and 3
+
+[33mcommit 7dc174a5dcf6e076ddba15d0ed53f0215e1877cf[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Fri Nov 13 14:06:57 2020 -0500
+
+    Updated sprite for Rico expressions
+
+[33mcommit 2d7dfa260b20c45894c25201192f71838bb5adbd[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Fri Nov 13 13:46:10 2020 -0500
+
+    added updated vo for rico and vo for player interacting
+
+[33mcommit b47162b7e938925c5cfc28349edf8f1b8495794f[m[33m ([m[1;32maudio_future[m[33m)[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Fri Nov 13 10:55:57 2020 -0500
+
+    Fade effect disabled for splash -> main menu transition
+
+[33mcommit c3f4e61ed8add23299c3d554c062967570b7ccfa[m
+Merge: 460995d 0b813e3
+Author: carenalga <mapedorr@gmail.com>
+Date:   Fri Nov 13 10:27:01 2020 -0500
+
+    Merge branch 'expressions' into audio_update
+
+[33mcommit 0b813e38858c3b78167c62812299c0a52ccd3894[m[33m ([m[1;31morigin/expressions[m[33m)[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Fri Nov 13 10:23:03 2020 -0500
+
+    Endings now appear after episode 5 finishes
+
+[33mcommit 460995d7eb8b9ab859a3d1dbfcda3f1736bbfa61[m[33m ([m[1;31morigin/audio_update[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Thu Nov 12 23:35:41 2020 -0500
+
+    added player vo sounds and splash screen
+
+[33mcommit 4b0c1ddabff57a36d7f1a253a7ecb7385662a535[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Thu Nov 12 23:17:31 2020 -0500
+
+    Commercial now shows after episode 2 has finished.
+    
+    Updated font for game name in main menu.
+
+[33mcommit 20731c9f73e9eaabd005f5ffabf5b1f63fb0646e[m
+Merge: 3979e58 594a2a0
+Author: carenalga <mapedorr@gmail.com>
+Date:   Thu Nov 12 20:54:25 2020 -0500
+
+    Merge branch 'audio_update' into transition_adjustments
+
+[33mcommit 594a2a04dd28c2184743e5a3b7545a3bb3bff5ff[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Thu Nov 12 20:50:37 2020 -0500
+
+    audio add for rico fs, missing emotions
+
+[33mcommit 3979e58ded1ec7d489f0de06ab6da137c9e8d612[m[33m ([m[1;31morigin/transition_adjustments[m[33m)[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Thu Nov 12 15:35:32 2020 -0500
+
+    Adjustments in main menu show animation
+
+[33mcommit 12177be1b945c54a6977168059720a0cba07f1b5[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Thu Nov 12 12:55:37 2020 -0500
+
+    Post merge fixes
+
+[33mcommit dd7923cd7ebcc7877e95d7e3b4f3fdbb5c07367b[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Thu Nov 12 12:34:08 2020 -0500
+
+    Finished graph for episode 5.
+    
+    Updated localization file with episode 5 lines.
+    Fixed bug on showing an episode 4 dialog after closing the letter in episode 1.
+    Fixed bug on positioning Mama Is and Rico in episode 5.
+
+[33mcommit c52533d007e19dba2ebc7f076a6bca8d30504c44[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Thu Nov 12 06:59:56 2020 -0500
+
+    Progress in episode 5 dialogs.
+    
+    Created placement Points for Room C (the living-dining-room).
+    Added the code to setup the set for episode 5.
+    Decreased the camera zoom in both the Hacienda and the Stable so things look bigger.
+
+[33mcommit b74387ba23ff1631557f0034036568df453da9ed[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Thu Nov 12 11:12:02 2020 -0500
+
+    ep flow fix
+
+[33mcommit fef486cc49e15773823e634e96c9b2fc70a61492[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Wed Nov 11 19:50:23 2020 -0500
+
+    Updated journal texture size so all the text fits inside screen.
+    
+    Updated localization to have the Episode 4 intro an temporary English text for the journal.
+    Updated some texts in the episode 4 Spanish version.
+
+[33mcommit ce441fac9b53014b1deba00c965413246eafd814[m
+Merge: 542e73f 250dba3
+Author: carenalga <mapedorr@gmail.com>
+Date:   Wed Nov 11 19:19:15 2020 -0500
+
+    Merge branch 'journal' into dialog_fix
+
+[33mcommit 250dba349cb7ca4410938499510858d32003afce[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Wed Nov 11 18:32:49 2020 -0500
+
+    Created Journal scene and journal sprite.
+    
+    Updated Journal's show animation so it opens changing the X scale.
+    Added Journal to HUD.
+    Finished dialogs for Episode 4.
+    Updated localization file so it has the dialogs for episode 4.
+
+[33mcommit 542e73fae4afa32351062de2b2dd65254041b874[m[33m ([m[1;31morigin/dialog_fix[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Wed Nov 11 13:54:25 2020 -0500
+
+    dialog fix for using only available dialog in episode and add ana worried assets
+
+[33mcommit a3726c931b601611e1f5e62c834da2420d25fb65[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Wed Nov 11 12:11:18 2020 -0500
+
+    Fixed bug of variable type for NPCs in World.gd
+    
+    Updated localization.csv with the dialogs for episode 4.
+
+[33mcommit 46b60d8cf2ee00b40f73407ef34ee749b1f9be69[m
+Merge: c798ce1 5736bac
+Author: carenalga <mapedorr@gmail.com>
+Date:   Wed Nov 11 11:27:18 2020 -0500
+
+    Merge branch 'soundManager' into episode_4
+
+[33mcommit c798ce10197247ace25ad57073c20415cde7b57a[m
+Author: carenalga <mapedorr@gmail.com>
+Date:   Wed Nov 11 11:02:48 2020 -0500
+
+    Progress in dialog for episode 4
+
+[33mcommit 5736bacda3fcce16345c2e75dd076e1cd4957882[m[33m ([m[1;31morigin/soundManager[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Wed Nov 11 10:58:41 2020 -0500
+
+    curtain audio and dx emotion useless fix
+
+[33mcommit bbb88dda1c35aecf4405db27d128fb6ed0bf29bf[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Tue Nov 10 23:51:05 2020 -0500
+
+    complete transfer all sound to new audio manager, fix a couple of issues that won't allow the system to stop or change a sound volume
+
+[33mcommit 21854770b017076337279fc043cb7888f88508f8[m[33m ([m[1;31morigin/soundmanager_update[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Tue Nov 10 11:00:45 2020 -0500
+
+    pitch scale set to semitTones
+
+[33mcommit 4a002bd011a3a2f405fd25b0ba9211cd555df83d[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Tue Nov 3 06:12:48 2020 -0500
+
+    added audio for different ui stuff, experimenting to improve pitch scale conversion
+
+[33mcommit eef922c32c01a483c04541dc96986eec7264bc52[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Tue Oct 13 18:39:34 2020 -0500
+
+    Updates in Mama Is animations
+
+[33mcommit fcb65d824114425358b882d9207fc62e5fcaae39[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Thu Oct 8 22:15:49 2020 -0500
+
+    Created first dialog for episode 3.
+    
+    Added set setup for episode 3.
+    Fixed a bug in Mama Is rendering.
+    Made español texts for episode 3 more real.
+    Decreased dimensions of Mama Is' expressions.
+    ---- Ready to work on allowing the dialog box to have an offset for Mama Is lines ----
+
+[33mcommit 0f1e23e1f5b58dd3495e011e2e29495f77237007[m[33m ([m[1;31morigin/sound_manager_test[m[33m)[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Thu Oct 8 16:12:53 2020 -0500
+
+    Fixed bug in SoundManager.gd@find_node.
+    
+    - Sounds created based on a Perro Viejo dictionary now have the format
+      group_name@file_index. This allows the plugin to delete the sound using
+      another custom function: _find_sound_path, which can look for the file
+      path in the objects defined by Perro Viejo.
+    - Created the _get_sound_path method for getting the path to a sound based
+      on its format: a single file, or one of our dictionaries.
+
+[33mcommit 6ce90bcc36e1896bd2e85ee8c5b40037218974ed[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Wed Oct 7 22:20:01 2020 -0500
+
+    soundManager test and horses
+
+[33mcommit d9aca9d23d4eb593d1bc21d8ac228ef0450e2f88[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Tue Oct 6 22:04:58 2020 -0500
+
+    Fixed bug that was hiding the tutorial.
+    
+    Added pixel verison of Mama Is.
+    Added walk and talk animations of Mama Is.
+    Created scene for Isabela (Mama Is).
+
+[33mcommit 8d9ba7c88ebd2913a29ba175a697fe51b47f418e[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sun Oct 4 02:08:07 2020 -0500
+
+    Set starting episode to 1
+
+[33mcommit 0118b57cc8139aa278295bd8b05efd2bf4e6273f[m
+Merge: 1c05245 cc38a48
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sun Oct 4 00:45:55 2020 -0500
+
+    Merge branch 'last_day_alive' into ending_satanic
+
+[33mcommit cc38a483f10ff7e022f38dfc1fcd81ffa56c5767[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sun Oct 4 00:43:49 2020 -0500
+
+    Added illustration after main menu.
+    
+    Increased subs font size.
+    Commercial is triggered after episode 2.
+    Options can determine the ending of the game.
+
+[33mcommit 1c05245b4096dbc3db5c3581fd2eba1e3d15ea04[m[33m ([m[1;31morigin/ending_satanic[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Sun Oct 4 00:40:25 2020 -0500
+
+    Endings
+
+[33mcommit 80d1be08197f9546e57272a815ef3b2a6199efe5[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Oct 3 23:30:28 2020 -0500
+
+    Chirrifix for steps in IDLE state
+
+[33mcommit 183daf91b99f08a3e0703058dad67174579453c5[m
+Merge: 6e1e41e 8bad944
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Oct 3 23:02:09 2020 -0500
+
+    Merge branch 'episode_2_updates' into AudioIntegration
+
+[33mcommit 8bad9442d80d9d63b52c55371a05b0bf54b25b62[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Oct 3 22:51:07 2020 -0500
+
+    Finished dialogs for episode 2.
+    
+    Added functionality to show curtain during conversations.
+    Added functionality to setup actors from dialog system.
+    Finished all emotion spritesheets for Ana María and Lupe.
+    Updated Stable background and props.
+
+[33mcommit 6e1e41e8eea35628a6abc624f427363edf381619[m[33m ([m[1;31morigin/AudioIntegration[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Sat Oct 3 22:32:12 2020 -0500
+
+    added dialog sounds for lupe and anamaria
+
+[33mcommit 52d7b40b804af24f1359b0f8434664df83ddd03a[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Sat Oct 3 19:37:51 2020 -0500
+
+    added sounds for fs, transitions and narrator stuff
+
+[33mcommit 3b4d16cdd08035365c6b8226e741d23babcf5a99[m
+Merge: 63fc682 e963601
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Oct 3 14:38:55 2020 -0500
+
+    Merge branch 'episodes_updates' into panaderia_audio
+
+[33mcommit 63fc68255d668eac41466965d2b287022e78517a[m[33m ([m[1;31morigin/panaderia_audio[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Sat Oct 3 14:15:42 2020 -0500
+
+    new commercial and creditsfix
+
+[33mcommit e9636015873f289b54c074be3cf6d09a9830ccb4[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Oct 3 12:55:26 2020 -0500
+
+    Episode 1 updated
+
+[33mcommit ad8877f23e4770e9d0197e13cbc8f582e69a1b05[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Oct 3 11:35:13 2020 -0500
+
+    Added .ico and updated cursor type for HTML5 button
+
+[33mcommit 1d1389b96e5e8a59267b570d0052c24b387667eb[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Oct 3 11:15:46 2020 -0500
+
+    Updated assets in options menus to match the game aesthetics.
+    
+    Added localization keys for options menu close buttons and the HTML5 focus button.
+    In HTML5 mode the main menu animation doesn't starts until the player clicks the focus button.
+    ---- Ready to work on updating Episode 2 flow ----
+
+[33mcommit 0c8ec8f24c8f370330b8e5b0b1f1a8d6d0676b10[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Oct 3 09:06:14 2020 -0500
+
+    Fixed bug in localization.csv after merge.
+    
+    Re-ordered Narrator and Dialog nodes in HUD for a better subtitles display for tutorials.
+
+[33mcommit d3539c128225709166cbe88ed4aee800012bbdb5[m
+Merge: d56bcc5 4bf9a2c
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Oct 3 08:57:44 2020 -0500
+
+    Merge branch 'tutorial' into dialog_options_subtitles
+
+[33mcommit 4bf9a2cd12f729ea1f1c72337d2b37e973da72e5[m[33m ([m[1;31morigin/tutorial[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Fri Oct 2 23:56:14 2020 -0500
+
+    desk outline and tutorial subs
+
+[33mcommit d56bcc5371bbe40ca891da08c03275e71a77761c[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Oct 2 22:46:44 2020 -0500
+
+    Dialog options now show subtitles.
+    
+    Fixed a bug in hiding the subtitles when were already hidden.
+
+[33mcommit d22573571076c1a8170ee60bca32b8ba8b1a764b[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Oct 2 21:54:22 2020 -0500
+
+    Created signal to show subtitles based on a i18n code.
+    
+    Added introductory text to scenes on black before performance.
+    Dialog MOVE nodes can now make actors wait X seconds before continuing with the dialog.
+
+[33mcommit b6dd8cf281474522cb17bf8010a1612005b3d199[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Oct 2 18:28:11 2020 -0500
+
+    Created scene to show episode's intro and outro.
+    
+    World can handle when an episode ends based on the last finished dialog.
+    Added a temporary functionality to handle actors' z-index based on their position relative to a room Y position.
+    ---- Ready to work on showing episode-pre-intro texts ----
+
+[33mcommit 6729b745f0d7345dc5a64645e253f0925f667912[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Oct 2 15:55:03 2020 -0500
+
+    Created scene to display the letter.
+    
+    The letter can be toggled to English and Spanish.
+    Letter animates when appears and before dissapearing.
+    Letter opens once Ep1Sc3 dialog finishes.
+    Created last dialog of Episode 1.
+    ---- Ready to work on episodes transition ----
+
+[33mcommit 9be30c22e57ca80ff1a16aa43b76715b0f08b601[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Oct 2 07:32:58 2020 -0500
+
+    Acting and tutorial sync.
+    
+    Added overlay ColorRect for tutorials.
+    Updated the setup of the cameras in World.
+    Added navigation polygon for Stable.
+    World can now setup the set before "starting and episode".
+    When a dialog finishes, listeners can now the name of the finished dialog.
+    Rooms can return the absolute position of Points and Targets.
+    Updated dialogs to match the script defined by Itzel.
+    ---- Ready to work on showing the letter and episode intros ----
+
+[33mcommit ebaee8ad4fe271393dae6d461ca52315442155ce[m
+Merge: 05365a4 d1f9bab
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Oct 2 04:29:53 2020 -0500
+
+    Merge branch 'scene_2' into Tutorial
+
+[33mcommit d1f9babffed0c1ebe44cac8bc080d698dc09d1a2[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Thu Oct 1 23:42:52 2020 -0500
+
+    Working on Stable scene
+
+[33mcommit 05365a48bb261c2ffc8543f592ca6de60f79f47b[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Thu Oct 1 23:00:19 2020 -0500
+
+    tutorial 0 and 1
+
+[33mcommit fe6e6895719c0cd57826757054981747b3137d39[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Thu Oct 1 21:00:47 2020 -0500
+
+    Narrator hidden because no está listo
+
+[33mcommit 82473cb1e5db74a9785d5383e1282c09794eb0e3[m
+Merge: bcf2ee8 a415ac0
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Thu Oct 1 20:57:19 2020 -0500
+
+    Merge branch 'panaderia' into first_novela_scene
+
+[33mcommit bcf2ee885ce4cc61f7ea1e80ed3003e17890c234[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Thu Oct 1 20:53:14 2020 -0500
+
+    First scene working.
+    
+    Clickables can trigger a signal on interact.
+    Clickables can be enabled/disabled manually or after a certain number of interactions.
+    Created Narrator scene to teach the player how to play the game.
+    ---- Ready to work on scene 2 ----
+
+[33mcommit 07e8aaab6c2f3467deb163bcb4a65b70c6ed0b82[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Wed Sep 30 22:16:33 2020 -0500
+
+    Removed "object" Clickables from World scene.
+    
+    Addded "object" Clickables to RoomC and RoomD.
+
+[33mcommit a415ac04567f1ca020caea3f3bb427cfcb4af2b0[m[33m ([m[1;31morigin/panaderia[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Wed Sep 30 22:07:31 2020 -0500
+
+    more panaderia work
+
+[33mcommit 464650890c0d4f71a84f1d1eacf0db8979253469[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Wed Sep 30 21:42:39 2020 -0500
+
+    Created Clickable scene for clickables.
+    
+    Updated RoomA and RoomB so they inherint from RoomTemplate.
+
+[33mcommit e219699d46ccdafc29d4ba49abcc83822176bb8c[m
+Merge: 3122950 5b39a7d
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Wed Sep 30 21:21:37 2020 -0500
+
+    Merge branch 'panaderia' into contextual_dialog_options
+
+[33mcommit 31229502e4f6127f6a617a945d9d2670346a8b29[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Wed Sep 30 21:20:09 2020 -0500
+
+    Removed "target" clickables from World scene.
+    
+    Now each room has its own Clickable "targets".
+    ---- Ready to work on the first novela scene ----
+
+[33mcommit 9a0fc34735fb2518815700135997ac32bc175344[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Wed Sep 30 21:07:59 2020 -0500
+
+    Added RoomTemplate to have a template for rooms.
+    
+    Added two more rooms: La sala and La oficina de Isabela.
+    Moved all the logic for DialogButton to an independent script.
+
+[33mcommit 5b39a7de0a6cf0baa10f85e784bfadddad174a0b[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Wed Sep 30 21:06:34 2020 -0500
+
+    panaderia adelanto
+
+[33mcommit d3c6a345aa770e92b40ec95a220d45e7abe77317[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Wed Sep 30 06:47:55 2020 -0500
+
+    Selecting an option in dialog menu makes it continue in a branch.
+    
+    Fixed a bug on using the selected dialog option.
+    Clickable can set a looking direction for an Actor when she reaches it.
+    ---- Ready to work on the first episode of the game ----
+
+[33mcommit a084ddc866fd58eda508d09d8ef6aa7771fd42cb[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Tue Sep 29 23:08:36 2020 -0500
+
+    Dialog options are set by the played dialog.
+    
+    Now voice icons are defined by each Actor and stored in the Data Manager.
+    Fixed bug that didn't allow players to interact with the world after closing the dialog menu.
+    ---- Ready to work on making the dialog options trigger dialog lines and finish the current dialog ----
+
+[33mcommit 464570b130bf37dc85c2a27eb45d1f798ec308cb[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Tue Sep 29 15:12:23 2020 -0500
+
+    Added spritesheets for Walk and Talk animations in NPCs.
+    
+    Updated NPC script so it changes states by default on certain events.
+    Updated the World's navigation path so Actors have more space for movement.
+    Fixed a bug in the Dialog flow that was preventing SPEAK nodes after MOVE nodes to trigger.
+    Added animation to CharacterFrame so it hides once an actor has spoken.
+    ---- Ready to work on building two new scenes for Ep. 1 and 2. ----
+
+[33mcommit 4b7b060237894de9cb8c91e980be76131ff3d41c[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Tue Sep 29 11:22:25 2020 -0500
+
+    Character frame hides after character spoke.
+    
+    Fixed that was making character speak ocurring before a previous movement finishes.
+    ---- Ready to work on adding Talk and Move animations for characters ----
+
+[33mcommit 0c8d302a2380c1a182e519fbbe4423f85bdab925[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Tue Sep 29 06:59:46 2020 -0500
+
+    Fixed player movement bug.
+    
+    Actors can move to points inside a room.
+    Actors notify when their movement started and finished.
+    World is listening when player finishes movement.
+    Actor can now by marked as is_current_player (something like Camera2D).
+    Updated Idle and Move animations for Player.
+    ---- Ready to work on the first episodes of the gaem ----
+
+[33mcommit 0f543871ae9ab5204eae556e9a734e1acd4282fb[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Mon Sep 28 23:25:17 2020 -0500
+
+    added sound for player dialog ui
+
+[33mcommit 4ddcdc9dd4d15b3d49dc288cb7700a672dae5d4e[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Mon Sep 28 22:37:54 2020 -0500
+
+    Updated the new way of defining dialogs and movement for characters.
+    
+    This applies to the EXP Story plugin.
+    All dialogs at the moment are of type (action) SPEAK while post-movement logic is implemented.
+
+[33mcommit b8c3be1227c96df8f67a85cfac8d49aebfd2755c[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Mon Sep 28 21:07:13 2020 -0500
+
+    Audio enabled
+
+[33mcommit 95e3321e5f011c5b06a56db8d67a75a153d9d33b[m
+Merge: 8a5cb0f 70a5f8f
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Mon Sep 28 21:04:48 2020 -0500
+
+    Merge branch 'dialog_menu_open_close' into panaderia
+
+[33mcommit 70a5f8fcac9f80b4b452efcfabce082eb9211829[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Mon Sep 28 21:01:24 2020 -0500
+
+    Updated arrow and pointing hand cursors.
+    
+    Dialog options trigger a dialog line on click and hide the menu.
+    Added button to hide the dialog menu without selecting and option.
+    Updated images of dialog button.
+
+[33mcommit 8a5cb0f1b7138747fbd77df2a62bbcac77d16d39[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Mon Sep 28 21:00:49 2020 -0500
+
+    Panaderia comercial y metronomo fail
+
+[33mcommit 83f4db1887ad7a0fb64bad623f3a0baf77dec202[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Sep 25 22:35:46 2020 -0500
+
+    Working on button to open dialog
+
+[33mcommit b7d1b02962b59de1e68b395e462592a7950e43e1[m[33m ([m[1;31morigin/player_dialog_part_b[m[33m)[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Sep 25 18:50:47 2020 -0500
+
+    Created animation to show the dialog menu.
+    
+    Dialog menu hides after the player clicks an option.
+    Added sound effects for dialog menu appearance and dialog options' hover.
+    Added temporary tooltip to dialog options.
+    Created Theme to customize the appearance of the dialog option's tooltip.
+    Improved how the subs sound effect plays so it matches better the animation.
+    ---- Ready to work on the Dialog button and some code refactoring ----
+
+[33mcommit 419fd9a4853227b5a945a08fedea9744aa52e8fb[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Sep 25 07:51:10 2020 -0500
+
+    Added logic to show Quemamais' voice icon.
+    
+    The icon has an animation that triggers when it change.
+    Created images for voice icons: Quemamais, Rico, Lupe and Ana María.
+    ---- Ready to work on the animation to show the menu and make it disappear when an option is clicked ----
+
+[33mcommit c66be4cb84664fba3e1e076e86dd1f573a1ebe63[m
+Merge: da7c40f 0eb2268
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Thu Sep 24 23:57:18 2020 -0500
+
+    Merge branch 'bird_movement' into player_dialog
+
+[33mcommit da7c40f9adf453c22ce6c4f129d2be2ae4787471[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Thu Sep 24 23:48:56 2020 -0500
+
+    Created DialogMenuContainer to have new look for dialog menu options.
+    
+    Updated DialoOption to use a texture as background for normal and hover states.
+    Working on make the voice icon appear and change based on the voice of the DialogOption.
+
+[33mcommit 0eb2268264855a9410ff32e683a5af0075985b4b[m[33m ([m[1;31morigin/bird_movement[m[33m)[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Thu Sep 24 23:47:38 2020 -0500
+
+    added movement for player, interaction with closer objects, created clickable objet for target and different interactable objects and added moving sound
+
+[33mcommit 5a9ac79526a2024fd9084a4ace1aaaba0316968e[m
+Author: QuietGeckoAudio <quietgecko@gmail.com>
+Date:   Tue Sep 22 23:43:18 2020 -0500
+
+    too much audio to mention and implementation
+
+[33mcommit 2fe9be7fffd4db96436dac359a22fe89de2cac1a[m[33m ([m[1;31morigin/subs[m[33m)[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Tue Sep 22 13:40:36 2020 -0500
+
+    Created starting animation for main menu.
+    
+    Added animations to DefaultButton. Two options available at the momento: bounce and move.
+    Cutted first image of Quemamais for the main menu.
+    Made a minor change in the scene with the game options so the texts and buttons are rendered inside the viewport.
+
+[33mcommit 6ec7a042781ca0df7090d225c88aa1d0a90a9e93[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Tue Sep 22 12:10:12 2020 -0500
+
+    First iteration of juicy character frame
+
+[33mcommit b5a39d91391b7d53e2583ed6e518551dbe066638[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Tue Sep 22 07:34:24 2020 -0500
+
+    Updated fonts to OpenDyslexic because accesibility.
+    
+    Added subtitles Label to Dialog scene to show subtitles to non-spanish-readers.
+    Added icon that shows the player she can continue the dialog.
+    Created show animations for subtitles and continue icon.
+    Updated the environment color for the game and colors in fonts and DefaultButton scene.
+    Updated the animation to show the credits and the layout of main menu.
+    ---- Ready to work on adding juice to the character frame ----
+
+[33mcommit f06495957d8ee6f51ddf147d4fcc501a4f5c28ee[m[33m ([m[1;31morigin/character_speak[m[33m)[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Mon Sep 21 13:38:43 2020 -0500
+
+    Character frame can now show the emotion of the character.
+    
+    Created spritesheets for Rico, Lupe and Ana María expressions.
+    Updated Actor so it allows us to define which frames correspond to an especific expression in the character's expressionsheet.
+    Increased font size of menus and character frame.
+    Sacaled up some GPI elements so they fit better on the new game resolution: needs more work.
+    Updated test story to have emotions for each line in the dialog.
+
+[33mcommit c6c08832e7cb622ad75e42d15c92946e3c27e364[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Mon Sep 21 07:30:55 2020 -0500
+
+    Character frame for dialogs renders on top of the talking character.
+    
+    Updated background and placeholder image for character frame.
+    Updated structure of CharacterFrame scene so it renders its light mask.
+    Renamed old CharacterFrame scene to TestCharacterFrame...because it was for testing nomás.
+    Updated Dialog and EXP-System-Dialog story editor script to replace white spaces in actor names by underscore.
+    Updated localization CSV to include the lines for the test dialog.
+    ---- Ready to work on showing the right spritesheet and expression for the talking character ----
+
+[33mcommit c85a4d93d00fa6ddb0d09bac6638f5e365a0386a[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sun Sep 20 22:28:05 2020 -0500
+
+    Added properties to actor to handle dialogs.
+    
+    Created test dialog for working on the character-speech-frame functionality.
+
+[33mcommit ee18c9acb6eb4bf7f32d25e6fa6e926d75e6212f[m[33m ([m[1;31morigin/talking_bubble[m[33m)[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sun Sep 20 20:30:31 2020 -0500
+
+    Rebase to `master` after navigatino paths.
+    
+    Upscaled background, rooms and characters to match the target game resolution.
+    Updated NavigationPolygon to match the new size of the rooms and have less non-rect-shit.
+
+[33mcommit 08cfac28c11ffb2dc5a48244bf78ee36393aa934[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sun Sep 20 18:31:17 2020 -0500
+
+    Autofill RichTextLabel resets size and position before next dialog.
+    
+    Added blocking-dialog-box plugin for testing. Looks promising but lacks of customization.
+    ---- Ready to work on the first scene for the game: José Antonio writes the letter ----
+
+[33mcommit 277a4c19ddb06ecc30f66f913c0a1a917bd169c2[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Sat Sep 19 01:38:45 2020 -0500
+
+    First version of talking bubble with RichTextLabel
+
+[33mcommit e68fa3a692ab120b422a421cb47b383fcbe0abd3[m[33m ([m[1;31morigin/path-finding[m[33m)[m
+Author: José Miguel Romero Espitia <jmromeroe@gmail.com>
+Date:   Sat Sep 19 01:54:02 2020 -0500
+
+    Adding simple path finding and movement for actors
+
+[33mcommit 0c00b9996daa76b5e28f04488392989e3a3bff1b[m
+Author: José Miguel Romero Espitia <jmromeroe@gmail.com>
+Date:   Sat Sep 19 00:03:25 2020 -0500
+
+    Adding initial scene
+
+[33mcommit 38779fd649d2d85d6189021daac00603025c8a6e[m
+Merge: 790e53e aa3bf02
+Author: José Miguel Romero Espitia <jmromeroe@gmail.com>
+Date:   Fri Sep 18 22:40:53 2020 -0500
+
+    Adding assets from first_assets branch and creating main scene entities
+
+[33mcommit 790e53e75923546fd24a5b685e9bb1b566486dbb[m
+Author: José Miguel Romero Espitia <jmromeroe@gmail.com>
+Date:   Fri Sep 18 22:28:12 2020 -0500
+
+    Adding NPC structure
+
+[33mcommit aa3bf020e7424e468980c28facbe3638e6c469bd[m[33m ([m[1;31morigin/first_assets[m[33m)[m
+Author: Carenalga <mapedorr@gmail.com>
+Date:   Fri Sep 18 22:24:20 2020 -0500
+
+    First batch of assets for testing
+
+[33mcommit 304f328e673e5a497ad3cb583c02b0e1c120356b[m
+Author: José Miguel Romero Espitia <jmromeroe@gmail.com>
+Date:   Fri Sep 18 21:24:37 2020 -0500
+
+    Update README.md
+
+[33mcommit 08cadcebfe619a5fc9fd8c0eaecc2b9a224679bc[m
+Author: José Miguel Romero Espitia <jmromeroe@gmail.com>
+Date:   Fri Sep 18 21:22:51 2020 -0500
+
+    Adding template
+
+[33mcommit 2ec2cd7cf36e6c7ba586f7c0517b3f4da0116da1[m
+Author: José Miguel Romero Espitia <jmromeroe@gmail.com>
+Date:   Fri Sep 18 21:08:53 2020 -0500
+
+    Initial commit

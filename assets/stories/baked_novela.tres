@@ -697,7 +697,8 @@ story = {
 	\"actor\": \"Rico\",
 	\"action\": \"SPEAK\",
 	\"line\": \"¡Quién viera al Lupe!\",
-	\"emotion\": \"thinking\"
+	\"emotion\": \"thinking\",
+	\"mx_trigger\": \"mx_cue_04\"
 }"
 },
 46: {
