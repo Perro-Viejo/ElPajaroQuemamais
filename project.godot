@@ -164,8 +164,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="ElPajaroQuemamais"
-config/description="Plantilla para juegos 2D bien chimbitas"
+config/name="El Pajaro Quemamais"
+config/description="Una historia de amor entre una mujer de una familia adinerada y su sirviente."
 run/main_scene="res://src/Game/Game.tscn"
 boot_splash/bg_color=Color( 0.854902, 0.12549, 0.878431, 1 )
 config/icon="res://icon.png"

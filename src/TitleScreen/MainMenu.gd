@@ -33,12 +33,8 @@ func _ready()->void:
 	Settings.connect('ReTranslate', self, 'retranslate') # Localización
 
 	retranslate()
-	
-	# Si estamos en HTML5 hay que esperar a que le den clic al de empezar
-	if not Settings.HTML5:
-		_start()
-	else:
-		GuiEvent.connect('html5_clicked', self, '_start')
+
+	_start()
 
 
 func _process(delta):
