@@ -19,6 +19,7 @@ func _ready()->void:
 	SectionEvent.MainMenu = true
 	GUIManager.gui_collect_focusgroup()
 	_credits.hide()
+	
 
 	if Settings.HTML5:
 		_exit.visible = false

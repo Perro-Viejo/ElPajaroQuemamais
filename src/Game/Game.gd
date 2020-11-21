@@ -60,7 +60,10 @@ func on_change_scene(scene):
 		$TransitionLayer/TransitionTween.start()
 	else:
 		transition_state = IDLE
-		yield(self, "scene_is_loaded")
+
+		if not Settings.HTML5:
+			yield(self, "scene_is_loaded")
+
 		change_scene()
 
 func on_exit()->void:
@@ -97,7 +100,6 @@ func _on_TransitionTween_tween_completed(object, key)->void:
 			pass
 		TRANSITION_OUT:
 			if next_scene == null:
-				print("Not loaded, please wait!")
 				yield(self, "scene_is_loaded")
 			change_scene()
 			transition_state = TRANSITION_IN

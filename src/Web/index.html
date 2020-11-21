@@ -312,10 +312,22 @@
           }
 
           const handleVisibilityChange = () => {
+            // En Godot 3.2.3 la cosa cambió con respecto a 3.2.2 y toca llegar
+            // al AudioContext por otro lado 👇👇👇
+            let audio_ctx = null
+            for (const key in engine.rtenv.IDHandler.ids) {
+              if (engine.rtenv.IDHandler.ids.hasOwnProperty(key)) {
+                const element = engine.rtenv.IDHandler.ids[key];
+                if (element.context) {
+                  audio_ctx = element.context
+                }
+              }
+            }
+
             if (document[hidden]) {
-              window.audioContext && window.audioContext.suspend()
+              audio_ctx && audio_ctx.suspend()
             } else {
-              window.audioContext && window.audioContext.resume()
+              audio_ctx && audio_ctx.resume()
             }
           }
 
