@@ -36,7 +36,7 @@ HTML_FOCUS,Haz clic para empezar (Click to start),Click to start (Haz clic para 
 CLOSE,Cerrar,Close
 TUTORIAL_0,Ház click en los palitos          de descanso para mover a Quemamais:,Click on the rest spots and Quemamais will fly there
 TUTORIAL_1,Quemamais puede interactuar con objetos a su alcance haciendo clíc:,Quemamais can interact with objects nearby clicking on them
-DLG_1_2_RICO,Oiga Lupe. ¿Quiere que se la chupe?,Hey Lupe. Wanna a candy?
+DLG_1_2_RICO,Oiga Lupe. ¿Quiere que se la chupe?,Hey Lupe. Wanna candy?
 DLG_1_3_LUPE,Pues sí pero pilas. Donde La señora nos vea...,"Ye...yes. But it doesn't taste like lemon, does it?"
 DLG_1_4_ANA_MARÍA,¡No puede ser! Lupe le pega con la zurda...,What!? Lupe doesn't like lemon?
 DLG_1_5_ANA_MARÍA,Tanto ir al gimnasio y hacer dieta pa' ni mierda,What have he done with those that I give him!
@@ -55,7 +55,7 @@ DLG_1_7_ANA_MARÍA,¡Necesito un abrecartas!,I need a letter opener!
 DLG_1_5_ANA_MARÍA,Mamá Is debe tener uno por aquí,Mom should have one somewhere here
 ---- EPISODIO 1 ----,---- ESCENA 2 ----,
 DLG_2_2_ANA_MARÍA,¡Quemamais! ponte a buscar un abrecartas,Help me find a letter opener Quemamais
-DLG_2_3_ANA_MARÍA,Si me ayudas luego te daré una galletita,Pleeeeeease
+DLG_2_3_ANA_MARÍA,Si me ayudas luego te daré una galletita,Pleeeeeease :3
 ---- EPISODIO 1 ----,---- ESCENA 3 ----,
 DLG_4_2_ANA_MARÍA,"El escritorio, claro. ¡Gracias Quemamais!","The desk! of course, thanks Quemamais"
 DLG_4_4_ANA_MARÍA,Aquí segurito que encuentro uno,There should be one here for sure
@@ -63,7 +63,7 @@ DLG_4_5_ANA_MARÍA,A ver...,Lets see...
 DLG_4_7_ANA_MARÍA,...mmm...mmm...mmm,[ searching in spanish ]
 DLG_4_8_ANA_MARÍA,¿Qué es esto? ¿una carta para Agustina?,What's this? A letter for Agustina?
 DLG_4_9_ANA_MARÍA,¿Qué hace en el escritorio de mi mamá?,What is this doing here?
-DLG_4_10_ANA_MARÍA,Lo mejor será leerla en voz alta,[ starts reading the letter ]
+DLG_4_10_ANA_MARÍA,Lo mejor será leerla en voz alta,[ reading letter out loud ]
 AGUSTINA_LETTER,"Querida Agustina
 
 No puedo esperar el momento en que tú y yo podamos por fin amarnos, con este amor tan bello y puro, a solas lejos de este pueblo. Los días a tu lado son como un suspiro que me acaricia los labios, tan hermosos como el amanecer en tus brazos en nuestro nido de amor, en aquel lugar donde nació eso que llevas dentro. Me consuelo por las noches, desnudo bajo las cobijas, con el recuerdo de tus caricias. Sólo quiero que un día podamos estar juntos y crecer como una familia, hasta el fin de mis días.
@@ -81,28 +81,28 @@ DLG_5_3_ANA_MARÍA,Y lo hizo el 12 de Diciembre de 1980…,"This says December 1
 DLG_5_4_ANA_MARÍA,¿El día en que murió escribió esto?,The day he died
 DLG_5_5_ANA_MARÍA,¿Pero a qué hora si lo atropellaron después del almuerzo?,But he died after lunch... I remember
 DLG_5_6_ANA_MARÍA,¿Y estaba enamorado de la mamá de Lupe?,Was he in love with Agustina?
-DLG_5_8_ANA_MARÍA,Esto está raro... tengo que investigar,Something smells bad here.....Should be the parrot
+DLG_5_8_ANA_MARÍA,Esto está raro... tengo que investigar,Something smells bad here... Must be the parrot
 ---- EPISODIO 2 ----,---- ESCENA 1 ----,
 EPISODE_2_INTRO,Varios días después,4 days later
 DLG_3_3_ANA_MARÍA,"Hola Lupe, ¿Qué tranza? ¿qué haces?","Hey Lupe, what's up?"
 DLG_3_4_ANA_MARÍA,Siempre te encuentro aquí con los caballos a solas,Alone with the horses again?
 DLG_3_5_ANA_MARÍA,¿Te gustan mucho o qué?,Looks like you like them a lot
 DLG_3_6_LUPE,...,...
-DLG_3_7_ANA_MARÍA,Jijijiji. Nahhh te creas Lupe,Jijijiji. just kidding
+DLG_3_7_ANA_MARÍA,Jijijiji. Nahhh te creas Lupe,lfmao. just kidding
 DLG_3_8_ANA_MARÍA,Ya sé que lo que te gusta es Mamá Is,I know you like Mamá Is
 DLG_3_9_ANA_MARÍA,He visto las miradas que le echas,I've seen how you look at her
 DLG_3_10_ANA_MARÍA,Pero tranquilo que tu secreto está seguro conmigo,"It's fine, I won't tell anyone"
-DLG_3_11_PLAYER_OPT_0,Pero tú estás más rica,But you are more beautiful than her
+DLG_3_11_PLAYER_OPT_0,Pero tú estás más rica,But you are prettier than her
 DLG_3_11_PLAYER_OPT_1,Me gustaría verte con ella,I would like to see you with her
 DLG_3_11_PLAYER_OPT_2,Uyuyuy... le gusta la señora,LOL He likes the old lady
 DLG_3_12_ANA_MARÍA,¿Khé?,What?
 DLG_3_13_LUPE,Ehhhmmm... bueno,Ehhhmmm... ok
-DLG_3_14_ANA_MARÍA,"Maldito pájaro, ¡cállate!",You bird...shut up!
+DLG_3_14_ANA_MARÍA,"Maldito pájaro, ¡cállate!",Stupid bird...shut up!
 DLG_3_15_LUPE,¿Necesita algo señorita?,How can I help you?
 DLG_3_16_LUPE,¿Quiere que le prepare un caballo?,Would you like me to help you setup a horse?
 DLG_3_17_ANA_MARÍA,"No gracias, ya no como carne","I can do that alone, thanks"
-DLG_3_18_ANA_MARÍA,"Quería preguntarte sobre Agustina, tu madre","I wanted to ask you about Agustina, your mom"
-DLG_3_19_ANA_MARÍA,¿Sabes si era amiga de mi padre?,Was she friends with my dad?
+DLG_3_18_ANA_MARÍA,"Quería preguntarte sobre Agustina, tu madre","I wanted to ask you about Agustina, your mommy"
+DLG_3_19_ANA_MARÍA,¿Sabes si era amiga de mi padre?,Was she my dad's bae?
 DLG_3_20_LUPE,"Sólo sé lo que me han contado las otras sirvientas, patrona","I don't know much, Miss Ana"
 DLG_3_22_ANA_MARÍA,"Ven, cuéntame acá Lupe","Well, let's find somewhere nice to sit"
 DLG_3_23_ANA_MARÍA,¿O qué? ¿te doy miedo? acércate...,Don't be afraid...come on
@@ -114,143 +114,127 @@ DLG_3_26_LUPE,"Bueno, pero sin meterme la mano al pantalón","Fine, promise me n
 DLG_3_27_LUPE,Pues no estaría nada mal...,"It wouldn't hurt anyone, though..."
 DLG_3_28_ANA_MARÍA,Sólo quiero que estemos cómodos mientras platicamos,"We will sit there Lupe, don't worry"
 DLG_3_30_LUPE,Mi mamá empezó a trabajar en la Hacienda en 1976 cuando tenía 23 años,My mom started working in the Hacienda in 1976 when she was 23 years old
-DLG_3_31_LUPE,Creo que huyó de su casa porque su papá la golpeaba...,I think she left home because her father used to hit her...
+DLG_3_31_LUPE,Creo que huyó de su casa porque su papá la golpeaba...,I think she left home because of her father mistreatment...
 DLG_3_32_LUPE,"Cuando llegó, conoció al zapatero y se casaron a los 3 meses","Few days after her arrival to this town, she met the mailman and married him 3 months later"
 DLG_3_33_LUPE,Primero le dieron y luego se presentaron... jejeje,You could say they had their priorities straight... hehehe
 DLG_3_34_NARRATOR,3 horas después,Few uncomfortable moments later
 DLG_3_36_ANA_MARÍA,"Ay Lupe, ¡qué rico que platicas tú!","wow Lupe, you are such a good listener, I don't want you to stop"
 DLG_3_37_ANA_MARÍA,No sé por qué no lo hicimos antes tanto,I can't believe this is the first time we do this
-DLG_3_38_LUPE,"Es que yo no quiero molestarla, patrona","I don't want to bother you, Miss Ana"
-DLG_3_40_ANA_MARÍA,¡Pero mira la hora que es!,Look at the time! 
-DLG_3_41_ANA_MARÍA,¡Mi mamá me va a matar!,My mom will kill me!
+DLG_3_38_LUPE,"Es que yo no quiero molestarla, patrona","I didn't want to bother you, Miss Ana"
+DLG_3_40_ANA_MARÍA,¡Pero mira la hora que es!,Look at the time!
+DLG_3_41_ANA_MARÍA,¡Mi mamá me va a matar!,My mom is gonna kill me!
 DLG_3_42_ANA_MARÍA,"Te busco luego, Lupe","I'll call you later, Lupe. Don't go too far."
 DLG_3_43_LUPE,"Sí, como usted mande, patrona","As you wish, Miss Ana"
 DLG_3_45_RICO,¡Quién viera al Lupe!,Lupe?! The housekeeper?!
-DLG_3_46_RICO,¡¿Conquistando a Ana María?!,Being friendly with Ana María?
+DLG_3_46_RICO,¡¿Conquistando a Ana María?!,"Being affectionate with Ana María, ah?"
 DLG_3_47_RICO,"¡Ja! No tiene oportunidad con ella, de eso me encargo","Yeah sure, as if he had a chance!"
 ---- EPISODIO 3 ----,---- ESCENA 1 ----,
-EPISODE_3_INTRO,Esa noche,Later that night
+EPISODE_3_INTRO,Un ratito despues,That afternoon
 DLG_6_3_MAMA_IS,La tienes bien gorda Rico,"You do know how to treat a girl right, Rico"
-DLG_6_2_MAMA_IS,Y yo que pensaba que los muchachos como tú la tenían chiquita,And I thought kids like you just knew how to put on pants
+DLG_6_2_MAMA_IS,Y yo que pensaba que los muchachos como tú la tenían chiquita,And I thought kids like you didn't even knew how to put pants properly
 DLG_6_4_RICO,Y usted tiene esa cuca como para un batallón,My respect for you will always be a priority
-DLG_6_5_MAMA_IS,Bueno pero cuéntame. ¿Qué viste en el establo?,So you were hidding in the barn
+DLG_6_5_MAMA_IS,Bueno pero cuéntame. ¿Qué viste en el establo?,So... you were hidding in the barn
 DLG_6_6_MAMA_IS,¿De qué hablaron Ana María y Lupe?,What were Ana Maria and Lupe talking about?
 DLG_6_7_RICO,¿Hablar? Estaban era culiando como locos,"By the look in their faces, I would say they were doing more than talking"
-DLG_6_8_MAMA_IS,¡Tenía que ser hija mía esa chiquilla!,BTS was the first K-Pop group to get their own Twitter emojis
-DLG_6_9_MAMA_IS,jo jo jo jo jo,Your earlobes line up with your nipples
-DLG_6_10_MAMA_IS,Mentira. Hablando en serio. ¡Eso puede meternos en muchos problemas!...,Money Doesn't Grow On Trees
-DLG_6_11_MAMA_IS,Nuestras haciendas deben unirse a como dé lugar,It takes Uranus 84 years to orbit the Sun once
-DLG_6_12_RICO,Y yo que quería ser el primero en abrir ese sapo,A standard 12oz jar of honey take 864 bees to produce
-DLG_6_13_RICO,Estaba que me la comía desde que éramos pequeños,Reindeer are one of the only mammals that can see UV light
-DLG_6_14_PLAYER_OPT_0,"Es su culpa, vieja gonorrea",Triskaidekaphobia is the fear of the number 13
-DLG_6_14_PLAYER_OPT_1,Seguro le gustan así todos sucios,Nearly every brand of hard liquor is vegan
-DLG_6_14_PLAYER_OPT_2,¡La desvirgó Lupe! ¡la desvirgó Lupe,The last picture taken of John Lennon while he was alive had his killer in the frame
-DLG_6_15_MAMA_IS,A mí no me eche la culpa... bobo marica,"The word “kimono”, literally means a “thing to wear”. Ki is “wear”, and mono is “thing”"
-DLG_6_16_RICO,Pues me la podría untar de mierda,Iceland has a dating app that stops you hooking up with your cousin
-DLG_6_17_MAMA_IS,No puedo creer que hasta el pájaro lo sabe,"In every scene of Fight Club, there is a Starbucks coffee cup"
-DLG_6_18_RICO,Tenemos que separarlos como seya,Every Pixar movie contains a reference to the Pixar movie that comes after it
-DLG_6_19_MAMA_IS,Se me hace severo caldo cuando te pones así,"When double rainbows occur, the colors of the second arc are always reversed"
+DLG_6_8_MAMA_IS,¡Tenía que ser hija mía esa chiquilla!,That's my little princess!
+DLG_6_9_MAMA_IS,jo jo jo jo jo,hoo hoo hoo hoo
+DLG_6_10_MAMA_IS,Mentira. Hablando en serio. ¡Eso puede meternos en muchos problemas!...,Jk... This is serious bussiness! 
+DLG_6_11_MAMA_IS,Nuestras haciendas deben unirse a como dé lugar,We need to team up asap
+DLG_6_12_RICO,Y yo que quería ser el primero en abrir ese sapo,I wanted to taste that sacred flower
+DLG_6_13_RICO,Estaba que me la comía desde que éramos pequeños,Been waiting for her love since we were children
+DLG_6_14_PLAYER_OPT_0,"Es su culpa, vieja gonorrea",I'm sorry but this is on you
+DLG_6_14_PLAYER_OPT_1,Seguro le gustan así todos sucios,She has a thing for cheap employees
+DLG_6_14_PLAYER_OPT_2,¡La desvirgó Lupe! ¡la desvirgó Lupe,Marry him! Marry Him!
+DLG_6_15_MAMA_IS,A mí no me eche la culpa... bobo marica,Don't blame me... silly boy
+DLG_6_16_RICO,Pues me la podría untar de mierda,I can change for her
+DLG_6_17_MAMA_IS,No puedo creer que hasta el pájaro lo sabe,This bird is such a tattler
+DLG_6_18_RICO,Tenemos que separarlos como seya,We need to act now
+DLG_6_19_MAMA_IS,Se me hace severo caldo cuando te pones así,So determined and HOT
 ---- EPISODIO 4 ----,---- ESCENA 1 ----,
 EPISODE_4_INTRO,"Dos semanas, tres días, siete horas, cuarenta y cinco minutos y quince segundos después",Some time later
-DLG_7_3_ANA_MARÍA,¡Tiene que haber algo por aquí!,¡Tiene que haber algo por aquí!
-DLG_7_4_ANA_MARÍA,La madre que nuestros padres no murieron por casualidad el mismo día,La madre que nuestros padres no murieron por casualidad el mismo día
-DLG_7_5_ANA_MARÍA,Me quito una teta si mi mamaita no tuvo algo que ver,Me quito una teta si mi mamaita no tuvo algo que ver
-DLG_7_6_LUPE,¡Uy no! con lo ricas que las tiene...,¡Uy no! con lo ricas que las tiene...
-DLG_7_7_ANA_MARÍA,Deja de coquetear y vigila que no venga naidens,Deja de coquetear y vigila que no venga naidens
-DLG_7_9_ANA_MARÍA,"Si yo fuera ella, ¿dónde escondería algo importante?","Si yo fuera ella, ¿dónde escondería algo importante?"
-DLG_7_10_LUPE,Esa carta que me mostraste se veía muy sospechosa,Esa carta que me mostraste se veía muy sospechosa
-DLG_7_11_LUPE,¿Será que somos hermanos señorita Ana María?,¿Será que somos hermanos señorita Ana María?
-DLG_7_12_ANA_MARÍA,Cállese esos ojos,Cállese esos ojos
-DLG_7_14_ANA_MARÍA,No quisiera nunca más poder tenerte dentro,No quisiera nunca más poder tenerte dentro
-DLG_7_15_LUPE,Ni yo dejar de besar ese sapo. Mejor siga buscando,Ni yo dejar de besar ese sapo. Mejor siga buscando
-DLG_7_17_ANA_MARÍA,La madre que tiene que estar aquí escondido,La madre que tiene que estar aquí escondido
+DLG_7_3_ANA_MARÍA,¡Tiene que haber algo por aquí!,Must be somwhere!
+DLG_7_4_ANA_MARÍA,La madre que nuestros padres no murieron por casualidad el mismo día,I won't leave our parents death a mystery
+DLG_7_5_ANA_MARÍA,Me quito una teta si mi mamaita no tuvo algo que ver,I swear by the holy molly they must have something to do with it
+DLG_7_6_LUPE,¡Uy no! con lo ricas que las tiene...,You look so sexy while praying...
+DLG_7_7_ANA_MARÍA,Deja de coquetear y vigila que no venga naidens,Stop saying nonsense and have a look around
+DLG_7_9_ANA_MARÍA,"Si yo fuera ella, ¿dónde escondería algo importante?",Where would I hide something important around here?
+DLG_7_10_LUPE,Esa carta que me mostraste se veía muy sospechosa,That's a suspicious written writing write
+DLG_7_11_LUPE,¿Será que somos hermanos señorita Ana María?,Are we brother and sister :O?
+DLG_7_12_ANA_MARÍA,Cállese esos ojos,Hopefully not
+DLG_7_14_ANA_MARÍA,No quisiera nunca más poder tenerte dentro,I can't live without you
+DLG_7_15_LUPE,Ni yo dejar de besar ese sapo. Mejor siga buscando,I love your soft skin
+DLG_7_17_ANA_MARÍA,La madre que tiene que estar aquí escondido,Must be somehow hidden somewhere
 ---- EPISODIO 4 ----,---- ESCENA 2 ----,
-DLG_8_2_ANA_MARÍA,"Pájaro triplehijueputa, ¿¡otra vez jodiendo!?","Pájaro triplehijueputa, ¿¡otra vez jodiendo!?"
-DLG_8_3_ANA_MARÍA,¿Cuántas veces le he dicho que no mueva las cosas?,¿Cuántas veces le he dicho que no mueva las cosas?
-DLG_8_5_ANA_MARÍA,¿Qué es esto... un libro de filosofía?,¿Qué es esto... un libro de filosofía?
-DLG_8_6_ANA_MARÍA,No imagino a mi mamá leyendo este tipo de libros,No imagino a mi mamá leyendo este tipo de libros
-DLG_8_7_LUPE,Yo me la imagino haciendo cosas bien ricas,Yo me la imagino haciendo cosas bien ricas
-DLG_8_8_ANA_MARÍA,¿Qué dijistes?,¿Qué dijistes?
-DLG_8_9_ANA_MARÍA,Ojo con eso hermanito... a yo no me gusta compartir la comida,Ojo con eso hermanito... a yo no me gusta compartir la comida
-DLG_8_10_LUPE,No se enoje señorita. Era un chiste nomás.,No se enoje señorita. Era un chiste nomás.
-DLG_8_11_ANA_MARÍA,"Sí, cómo no. Hágase el pendejo y verá.","Sí, cómo no. Hágase el pendejo y verá."
-DLG_8_12_ANA_MARÍA,No sé dónde más buscar Lupe...,No sé dónde más buscar Lupe...
-DLG_8_13_LUPE,¿Puedo leer el libro señorita?,¿Puedo leer el libro señorita?
-DLG_8_14_ANA_MARÍA,Claro papi. A mí me gustan así bien pilos,Claro papi. A mí me gustan así bien pilos
-DLG_8_16_ANA_MARÍA,Aquí tienes. Podríamos leerlo juntos y discutirlo... en el establo... desnudos,Aquí tienes. Podríamos leerlo juntos y discutirlo... en el establo... desnudos
-DLG_8_17_LUPE,Esa idea me gusta mucho muy señorita,Esa idea me gusta mucho muy señorita
-DLG_8_19_LUPE,Está escrito en primera persona,Está escrito en primera persona
-DLG_8_20_LUPE,...y con una prosa bastante particular,...y con una prosa bastante particular
-DLG_8_21_ANA_MARÍA,Déjame ver. Ese autor no suele escribir así,Déjame ver. Ese autor no suele escribir así
-DLG_8_23_ANA_MARÍA,"¡Serás imbécil, este es el diario de Agustina!","¡Serás imbécil, este es el diario de Agustina!"
-DLG_8_24_ANA_MARÍA,"¡Lupe, aquí debe estar todo!","¡Lupe, aquí debe estar todo!"
-DLG_8_25_ANA_MARÍA,Tenemos que leerla en voz alta,Tenemos que leerla en voz alta
+DLG_8_2_ANA_MARÍA,"Pájaro triplehijueputa, ¿¡otra vez jodiendo!?",Birrrrrrrd ¿¡are you kiding me!?
+DLG_8_3_ANA_MARÍA,¿Cuántas veces le he dicho que no mueva las cosas?,Please don't touch our belongings
+DLG_8_5_ANA_MARÍA,¿Qué es esto... un libro de filosofía?,is this... harry potter?
+DLG_8_6_ANA_MARÍA,No imagino a mi mamá leyendo este tipo de libros,Didn't knew mom could read
+DLG_8_7_LUPE,Yo me la imagino haciendo cosas bien ricas,I love watching her wash the dishes
+DLG_8_8_ANA_MARÍA,¿Qué dijistes?,Say whaaaat?
+DLG_8_9_ANA_MARÍA,Ojo con eso hermanito... a yo no me gusta compartir la comida,That hurts... don't say that ever again
+DLG_8_10_LUPE,No se enoje señorita. Era un chiste nomás.,jk lmfao lol. I was just teasing
+DLG_8_11_ANA_MARÍA,"Sí, cómo no. Hágase el pendejo y verá.","Jack of all trades, master of none"
+DLG_8_12_ANA_MARÍA,No sé dónde más buscar Lupe...,I don't know what to do now
+DLG_8_13_LUPE,¿Puedo leer el libro señorita?,Can I see the book's pictures?
+DLG_8_14_ANA_MARÍA,Claro papi. A mí me gustan así bien pilos,Of course my beloved papi
+DLG_8_16_ANA_MARÍA,Aquí tienes. Podríamos leerlo juntos y discutirlo... en el establo... desnudos,Here you go... I could read it to you as a bedtime story
+DLG_8_17_LUPE,Esa idea me gusta mucho muy señorita,I'd be very glad
+DLG_8_19_LUPE,Está escrito en primera persona,This pictures look like letters
+DLG_8_20_LUPE,...y con una prosa bastante particular,...and they seem to say something
+DLG_8_21_ANA_MARÍA,Déjame ver. Ese autor no suele escribir así,Let me see. I might have given you my fav magazine
+DLG_8_23_ANA_MARÍA,"¡Serás imbécil, este es el diario de Agustina!","It's Agustina's diary, you dummy!"
+DLG_8_24_ANA_MARÍA,"¡Lupe, aquí debe estar todo!","Lupe, I think we got it!"
+DLG_8_25_ANA_MARÍA,Tenemos que leerla en voz alta,[reading spanish outloud]
 ---- EPISODIO 4 ----,---- ESCENA 3 ----,
-DLG_9_2_ANA_MARÍA,"¡No somos hermanos, Lupe!","¡No somos hermanos, Lupe!"
-DLG_9_3_LUPE,¡Vamos al establo a celebrarlo!,¡Vamos al establo a celebrarlo!
-DLG_9_4_LUPE,Tengo un amigo que se emociona cuando te ve entre la paja,Tengo un amigo que se emociona cuando te ve entre la paja
-AGUSTINA_JOURNAL_DATE,"12 de diciembre, 1980","12 de diciembre, 1980"
-AGUSTINA_JOURNAL,"No quiero levantarme de la cama aún, estoy muy cansada. Ayer Andrés me gritó de nuevo y casi me golpea pero se detuvo en el último segundo. Tan solo de pensar en todos los años de maltrato me dan ganas de quitarme la vida, pero ahora tengo muchas razones para ser feliz. Antonio es tan bueno conmigo y lo amo más que nunca. A pesar de que este hijo que llevo dentro no es de él, su amor por mi es tan grande que está dispuesto a criarlo como suyo. Sé que nuestro amor es pecado porque él sigue casado con la señora Isabela pero nuestro amor es inevitable. Mañana por fin nos iremos lejos de este pueblo de mierda, donde nadie nos reconozca. Me siento un poco mareada desde anoche así que iré más tarde al doctor. Espero no esté afectando ese malestar a mi bebé. No puedo esperar a conocerlo.","Up on Melancholy Hill, there's a plastic tree
-Are you here with me?
-Just looking out on the day of another dream
-Where you can't get what you want, but you can get me
-So let's set out to sea, love
-'Cause you are my medicine when you're close to me
-When you're close to me
-
-So call in the submarines, 'round the world we'll go
-Does anybody know her
-If we're looking out on the day of another dream?
-If you can't get what you want, then come with me
-Up on Melancholy Hill
-Sits the manatee, love
-Just looking out for the day when you're close to me
-When you're close to me
-When you're close to me"
+DLG_9_2_ANA_MARÍA,"¡No somos hermanos, Lupe!",We are not related! 
+DLG_9_3_LUPE,¡Vamos al establo a celebrarlo!,Lets celebrate with a toast!
+DLG_9_4_LUPE,Tengo un amigo que se emociona cuando te ve entre la paja,I can't stop staring at your beautiful eyes
+AGUSTINA_JOURNAL_DATE,"12 de diciembre, 1980","December 12, 1980 but prettier"
+AGUSTINA_JOURNAL,"No quiero levantarme de la cama aún, estoy muy cansada. Ayer Andrés me gritó de nuevo y casi me golpea pero se detuvo en el último segundo. Tan solo de pensar en todos los años de maltrato me dan ganas de quitarme la vida, pero ahora tengo muchas razones para ser feliz. Antonio es tan bueno conmigo y lo amo más que nunca. A pesar de que este hijo que llevo dentro no es de él, su amor por mi es tan grande que está dispuesto a criarlo como suyo. Sé que nuestro amor es pecado porque él sigue casado con la señora Isabela pero nuestro amor es inevitable. Mañana por fin nos iremos lejos de este pueblo de mierda, donde nadie nos reconozca. Me siento un poco mareada desde anoche así que iré más tarde al doctor. Espero no esté afectando ese malestar a mi bebé. No puedo esperar a conocerlo.","I don't want to get up, I'm really tired. Andrés scream at me and threatend me again, he almost did it this time. When I think in all the time I've been standing this makes me think I want to die, but then I remember I have plenty of reasons to be happy. Antonio is so nice with me, I love him very much, more than ever. Even though this is not his child, he wants to raise him as his own. I know our love is forbidden because of Mrs. Isabela but our love is undeniable. Tomorrow we are going to leave this shit hole, far far away from here. I'm feeling a bit dizzy since last night, I might go to the doctor later. I hope it has nothing to do with the baby. I can't wait to meet him. "
 ---- EPISODIO 5 ----,---- ESCENA 1 ----,
 EPISODE_5_INTRO,En el cumpleaños de Rico,On Rico's birthday
-DLG_10_2_MAMA_IS,¡Queridos!,¡Queridos!
-DLG_10_3_MAMA_IS,Muchas gracias a todos por acompañarnos el día de hoy,Muchas gracias a todos por acompañarnos el día de hoy
-DLG_10_4_MAMA_IS,¡En el cumpleaños de nuestro querido Rico!,¡En el cumpleaños de nuestro querido Rico!
-DLG_10_5_MAMA_IS,Él tiene un anuncio mucho muy importante por hacer,Él tiene un anuncio mucho muy importante por hacer
-DLG_10_6_MAMA_IS,Adelante querido,Adelante querido
-DLG_10_7_RICO,Muchas gracias Isabela,Muchas gracias Isabela
-DLG_10_9_RICO,"Desde que era tan solo un niño, he soñado con este día","Desde que era tan solo un niño, he soñado con este día"
-DLG_10_10_RICO,"Frente a todos ustedes. Amigos, amigas, conocidos, conocidas, sirvientas, sirvientos...","Frente a todos ustedes. Amigos, amigas, conocidos, conocidas, sirvientas, sirvientos..."
-DLG_10_11_RICO,"...animales, muebles, luces, paredes, plantitas, roquitas, baldositas...","...animales, muebles, luces, paredes, plantitas, roquitas, baldositas..."
-DLG_10_12_RICO,"...estrellitas, nubecitas, el sol, la luna y papito Dios","...estrellitas, nubecitas, el sol, la luna y papito Dios"
-DLG_10_13_RICO,Quiero que sepan que desde que era apenas un feto he amado a Ana María,Quiero que sepan que desde que era apenas un feto he amado a Ana María
-DLG_10_14_RICO,Sin importar sus problemas de flatulencia y estreñimiento,Sin importar sus problemas de flatulencia y estreñimiento
-DLG_10_15_RICO,Y por eso quiero pedirle que se case conmigo,Y por eso quiero pedirle que se case conmigo
-DLG_10_16_RICO,"Ana María, ¿me darías el honor de ser tu esposo y desvirgar ese sapo santo?","Ana María, ¿me darías el honor de ser tu esposo y desvirgar ese sapo santo?"
-DLG_10_17_ANA_MARÍA,"Nooooo papi, prefiero que me empalen antes de casarme contigo","Nooooo papi, prefiero que me empalen antes de casarme contigo"
-DLG_10_18_MAMA_IS,¿Qué son esas palabras señorita?,¿Qué son esas palabras señorita?
-DLG_10_20_ANA_MARÍA,¡Usted cállese señora mamá!,¡Usted cállese señora mamá!
-DLG_10_21_ANA_MARÍA,Mi corazón le pertenece a Lupe... y también mi cuerpo,Mi corazón le pertenece a Lupe... y también mi cuerpo
-DLG_10_22_MAMA_IS,"No puedo creer que digas eso, Ana María de la Cruz","No puedo creer que digas eso, Ana María de la Cruz"
-DLG_10_23_MAMA_IS,Tú eres una muchacha de la alta sociedad,Tú eres una muchacha de la alta sociedad
-DLG_10_24_MAMA_IS,No es de Dios que te juntes con la chusma,No es de Dios que te juntes con la chusma
-DLG_10_25_MAMA_IS,"Seguro que huele a jabón Rey y come con la boca abierta, como un marrano","Seguro que huele a jabón Rey y come con la boca abierta, como un marrano"
-DLG_10_26_MAMA_IS,No me dejas otra alternativa que contarte una verdad que había preferido ocultarte,No me dejas otra alternativa que contarte una verdad que había preferido ocultarte
-DLG_10_27_MAMA_IS,Algo que por poco nos destruye,Algo que por poco nos destruye
-DLG_10_28_ANA_MARÍA,"¿Qué, que mi papaito estaba enamorado de Agustina la sirvienta, la mamá de Lupe?","¿Qué, que mi papaito estaba enamorado de Agustina la sirvienta, la mamá de Lupe?"
-DLG_10_29_MAMA_IS,¡Entonces ya sabrás que Lupe es tu hermano!,¡Entonces ya sabrás que Lupe es tu hermano!
-DLG_10_30_ANA_MARÍA,¡Ja ja ja ja! Vieja pendeja. Lupe y yo no somos hermanos.,¡Ja ja ja ja! Vieja pendeja. Lupe y yo no somos hermanos.
-DLG_10_31_ANA_MARÍA,Encontramos el diario de Agustina oculto entre tus libracos de finanzas y administración,Encontramos el diario de Agustina oculto entre tus libracos de finanzas y administración
-DLG_10_32_ANA_MARÍA,Tengo una idea. ¿Qué tal si nos cuentas ¡cómo es que mi cucho y Agustina murieron el mismo día!?,Tengo una idea. ¿Qué tal si nos cuentas ¡cómo es que mi cucho y Agustina murieron el mismo día!?
-DLG_10_33_ANA_MARÍA,Porque la madre que eso no fue casualidad,Porque la madre que eso no fue casualidad
-DLG_10_34_RICO,"Calmación Ana María, amor mío. Calmación.","Calmación Ana María, amor mío. Calmación."
-DLG_10_35_RICO,Mama Is sólo se preocupa por ti. Lupe te ha estado metiendo ideas raras en la cabeza.,Mama Is sólo se preocupa por ti. Lupe te ha estado metiendo ideas raras en la cabeza.
-DLG_10_36_LUPE,"¡Oiga oiga! Le he metido varias cosas, pero ideas ¡jamás!","¡Oiga oiga! Le he metido varias cosas, pero ideas ¡jamás!"
-DLG_10_37_MAMA_IS,"Déjalos Rico, no saben de lo que hablan","Déjalos Rico, no saben de lo que hablan"
-DLG_10_38_MAMA_IS,Yo sólo hice lo necesario para mantener a esta familia unida,Yo sólo hice lo necesario para mantener a esta familia unida
-DLG_10_39_MAMA_IS,Y la reputación de la familia De La Cruz,Y la reputación de la familia De La Cruz
-DLG_10_40_ANA_MARÍA,¿La reputación de la familia? ¿eso es todo lo que te importa?,¿La reputación de la familia? ¿eso es todo lo que te importa?
-DLG_10_41_ANA_MARÍA,Tú mataste a mi papá Antonio y a Agustina,Tú mataste a mi papá Antonio y a Agustina
-DLG_10_42_MAMA_IS,¡JO JO JO JO JO JO JO JO JO JO!,¡JO JO JO JO JO JO JO JO JO JO!
-DLG_10_43_MAMA_IS,"¡Está bien, lo acepto!","¡Está bien, lo acepto!"
-DLG_10_44_MAMA_IS,Lo hice porque iban a destruir la hacienda y esta familia,Lo hice porque iban a destruir la hacienda y esta familia
-DLG_10_45_MAMA_IS,Huyendo como dos adolescentes enamorados,Huyendo como dos adolescentes enamorados
-DLG_10_46_MAMA_IS,"Tu padre no fue más que un tonto, pero eso ya está en el pasado","Tu padre no fue más que un tonto, pero eso ya está en el pasado"
-DLG_10_47_MAMA_IS,Tu futuro y el de la hacienda son uno: Rico,Tu futuro y el de la hacienda son uno: Rico
-DLG_10_48_ANA_MARÍA,¡Vieja hijueputa! no te perdonaré jamás por esto,¡Vieja hijueputa! no te perdonaré jamás por esto
+DLG_10_2_MAMA_IS,¡Queridos!,Respectable guests!
+DLG_10_3_MAMA_IS,Muchas gracias a todos por acompañarnos el día de hoy,I'm very glad we are gathering here today
+DLG_10_4_MAMA_IS,¡En el cumpleaños de nuestro querido Rico!,at our honorable friend Rico's birthday!
+DLG_10_5_MAMA_IS,Él tiene un anuncio mucho muy importante por hacer,There's something utterly important he must say
+DLG_10_6_MAMA_IS,Adelante querido,Go on dear
+DLG_10_7_RICO,Muchas gracias Isabela,Greetings Isabela
+DLG_10_9_RICO,"Desde que era tan solo un niño, he soñado con este día","I've been waiting for this moment, for many years"
+DLG_10_10_RICO,"Frente a todos ustedes. Amigos, amigas, conocidos, conocidas, sirvientas, sirvientos...","In front of all of you. Friends, Unfriends, Servants, Employees..."
+DLG_10_11_RICO,"...animales, muebles, luces, paredes, plantitas, roquitas, baldositas...","...animals, furniture, decoration, structure, grass, stones, phones..."
+DLG_10_12_RICO,"...estrellitas, nubecitas, el sol, la luna y papito Dios","...stars, scars, the moon, the sun and holy mighty god"
+DLG_10_13_RICO,Quiero que sepan que desde que era apenas un feto he amado a Ana María,"Ever since I was just mere dust, I've loved Ana María"
+DLG_10_14_RICO,Sin importar sus problemas de flatulencia y estreñimiento,Despite of all the adversity
+DLG_10_15_RICO,Y por eso quiero pedirle que se case conmigo,And I want to marry her forever and ever
+DLG_10_16_RICO,"Ana María, ¿me darías el honor de ser tu esposo y desvirgar ese sapo santo?","Ana María, ¿would you mary me, mami?"
+DLG_10_17_ANA_MARÍA,"Nooooo papi, prefiero que me empalen antes de casarme contigo","I can't do it, my heart doesn't belong to you"
+DLG_10_18_MAMA_IS,¿Qué son esas palabras señorita?,what are you trying to say?
+DLG_10_20_ANA_MARÍA,¡Usted cállese señora mamá!,Stop it mom!
+DLG_10_21_ANA_MARÍA,Mi corazón le pertenece a Lupe... y también mi cuerpo,My heart and soul belong to this stud
+DLG_10_22_MAMA_IS,"No puedo creer que digas eso, Ana María de la Cruz","I can't believe this is happening, Ana María de la Cruz"
+DLG_10_23_MAMA_IS,Tú eres una muchacha de la alta sociedad,You are out of his league
+DLG_10_24_MAMA_IS,No es de Dios que te juntes con la chusma,god didn't meant this for you
+DLG_10_25_MAMA_IS,"Seguro que huele a jabón Rey y come con la boca abierta, como un marrano",He doesn't even know our traditions or the common tounge
+DLG_10_26_MAMA_IS,No me dejas otra alternativa que contarte una verdad que había preferido ocultarte,I can't stand hiding this anymore 
+DLG_10_27_MAMA_IS,Algo que por poco nos destruye,Something that put us in danger
+DLG_10_28_ANA_MARÍA,"¿Qué, que mi papaito estaba enamorado de Agustina la sirvienta, la mamá de Lupe?",are you talking about all the secrets and lies? Dad with Agustina?
+DLG_10_29_MAMA_IS,¡Entonces ya sabrás que Lupe es tu hermano!,So you know what your doing is incestuous and sick!
+DLG_10_30_ANA_MARÍA,¡Ja ja ja ja! Vieja pendeja. Lupe y yo no somos hermanos.,"lol you fool old lady, we are not brothers but lovers"
+DLG_10_31_ANA_MARÍA,Encontramos el diario de Agustina oculto entre tus libracos de finanzas y administración,We found Agustina's confession inside an old book the other day
+DLG_10_32_ANA_MARÍA,Tengo una idea. ¿Qué tal si nos cuentas ¡cómo es que mi cucho y Agustina murieron el mismo día!?,Let's play a game. Why don't you tell everybody your murderous secrets? Dad? Agustina?
+DLG_10_33_ANA_MARÍA,Porque la madre que eso no fue casualidad,A bird in the hand is worth two in the bush
+DLG_10_34_RICO,"Calmación Ana María, amor mío. Calmación.","Chillax Ana María, my love"
+DLG_10_35_RICO,Mama Is sólo se preocupa por ti. Lupe te ha estado metiendo ideas raras en la cabeza.,Mama Is is a very loving mother and wants the best for you
+DLG_10_36_LUPE,"¡Oiga oiga! Le he metido varias cosas, pero ideas ¡jamás!","Hey hey! Chill the pill, I'm innocent"
+DLG_10_37_MAMA_IS,"Déjalos Rico, no saben de lo que hablan",Don't hear them Rico
+DLG_10_38_MAMA_IS,Yo sólo hice lo necesario para mantener a esta familia unida,I just wanted our family to be together and happy for eternity
+DLG_10_39_MAMA_IS,Y la reputación de la familia De La Cruz,the Mighty De La Cruz family
+DLG_10_40_ANA_MARÍA,¿La reputación de la familia? ¿eso es todo lo que te importa?,Family? are you serious?
+DLG_10_41_ANA_MARÍA,Tú mataste a mi papá Antonio y a Agustina,You killed Dad and Agustina
+DLG_10_42_MAMA_IS,¡JO JO JO JO JO JO JO JO JO JO!,¡HO HO HO HO HO HO HO HO HO HO!
+DLG_10_43_MAMA_IS,"¡Está bien, lo acepto!",I won't deny it anymore!
+DLG_10_44_MAMA_IS,Lo hice porque iban a destruir la hacienda y esta familia,They were putting our lifestyle and family on risk
+DLG_10_45_MAMA_IS,Huyendo como dos adolescentes enamorados,Running like two fierce teenage kids
+DLG_10_46_MAMA_IS,"Tu padre no fue más que un tonto, pero eso ya está en el pasado",Your dad was weak and now he's dead
+DLG_10_47_MAMA_IS,Tu futuro y el de la hacienda son uno: Rico,The future is ahead and it's name is: Rico
+DLG_10_48_ANA_MARÍA,¡Vieja hijueputa! no te perdonaré jamás por esto,I hate you very mucho and will cry forever

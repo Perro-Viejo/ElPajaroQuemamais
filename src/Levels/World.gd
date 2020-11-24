@@ -221,6 +221,7 @@ func _load_next_episode() -> void:
 	yield(get_tree().create_timer(1.5), 'timeout')
 
 	if Data.get_data(Data.EPISODE) > 5:
+		SoundManager.stop('bg_hacienda')
 		if Data.endings[1] == 2:
 			HudEvent.emit_signal('ending_requested', 1)
 		elif Data.endings[2] == 2:
