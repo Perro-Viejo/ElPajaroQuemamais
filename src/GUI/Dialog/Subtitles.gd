@@ -4,7 +4,7 @@ extends Label
 var _sub_shown = false
 var _played = false
 var _visible_position_y := 900.0
-onready var _out_position_y := OS.window_size.y
+onready var _out_position_y := _visible_position_y + 100.0
 
 func _ready() -> void:
 	$Tween.connect('tween_step', self, '_play_subs_sfx')
@@ -16,12 +16,14 @@ func _ready() -> void:
 func toggle_subs(show := true) -> void:
 	if not show and self.rect_position.y == _out_position_y: return
 	
+	var offset := get_line_height() * get_visible_line_count() - 53
+	
 	_sub_shown = show
 	_played = false
 	$Tween.interpolate_property(
 		self, 'rect_position:y',
-		_out_position_y if show else _visible_position_y,
-		_visible_position_y if show else _out_position_y,
+		_out_position_y if show else _visible_position_y - offset,
+		_visible_position_y - offset if show else _out_position_y,
 		0.3 if show else 0.1,
 		Tween.TRANS_BOUNCE if show else Tween.TRANS_SINE,
 		Tween.EASE_OUT if show else Tween.EASE_IN

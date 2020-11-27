@@ -75,13 +75,14 @@ __meta__ = {
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 897.0
-margin_bottom = 94.0
+margin_bottom = 83.0
 
 [node name="Movement" type="VBoxContainer" parent="Panel/Tutorials"]
 visible = false
 margin_left = 358.0
+margin_top = -6.0
 margin_right = 523.0
-margin_bottom = 78.0
+margin_bottom = 72.0
 custom_constants/separation = 4
 alignment = 1
 
@@ -105,8 +106,9 @@ __meta__ = {
 [node name="Interact" type="VBoxContainer" parent="Panel/Tutorials"]
 visible = false
 margin_left = 359.0
+margin_top = -6.0
 margin_right = 522.0
-margin_bottom = 78.0
+margin_bottom = 72.0
 custom_constants/separation = 4
 alignment = 1
 
@@ -149,12 +151,12 @@ __meta__ = {
 }
 
 [node name="Outline" type="TextureRect" parent="MovementIcons"]
-margin_left = 662.008
-margin_top = 694.314
-margin_right = 672.008
-margin_bottom = 709.314
+margin_left = 556.114
+margin_top = 785.652
+margin_right = 566.114
+margin_bottom = 800.652
 rect_rotation = -90.0
-rect_scale = Vector2( 2, 2 )
+rect_scale = Vector2( 2.5, 2.5 )
 size_flags_horizontal = 4
 texture = ExtResource( 5 )
 __meta__ = {
@@ -170,11 +172,11 @@ __meta__ = {
 }
 
 [node name="Outline" type="TextureRect" parent="Interact"]
-margin_left = 586.008
-margin_top = 610.314
-margin_right = 621.008
-margin_bottom = 648.314
-rect_scale = Vector2( 2, 2 )
+margin_left = 460.315
+margin_top = 678.953
+margin_right = 495.315
+margin_bottom = 716.953
+rect_scale = Vector2( 2.5, 2.5 )
 size_flags_horizontal = 4
 texture = ExtResource( 7 )
 __meta__ = {
